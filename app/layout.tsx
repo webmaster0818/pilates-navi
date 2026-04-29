@@ -14,8 +14,8 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "ピラティスナビ｜おすすめピラティススタジオ比較・ランキング",
-    template: "%s｜ピラティスナビ",
+    default: "ピラテス｜おすすめピラティススタジオ比較・ランキング",
+    template: "%s｜ピラテス",
   },
   description:
     "ピラティススタジオ15社を徹底比較。料金・口コミ・特徴からあなたにぴったりのスタジオが見つかります。zen place pilates、ピラティスK、CLUB PILATESなど人気スタジオを厳選紹介。",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    siteName: "ピラティスナビ",
+    siteName: "ピラテス",
   },
   other: {
     "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -56,7 +56,7 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-[#7C3AED]">ピラティスナビ</span>
+              <span className="text-xl font-bold text-[#7C3AED]">ピラテス</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
               {navLinks.map((link) => (
@@ -88,7 +88,7 @@ export default function RootLayout({
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <span className="text-lg font-bold text-white">ピラティスナビ</span>
+                <span className="text-lg font-bold text-white">ピラテス</span>
                 <p className="mt-2 text-sm text-gray-400">
                   あなたに合ったピラティススタジオが見つかる比較サイト
                 </p>
@@ -112,7 +112,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-500">
-              &copy; 2024 ピラティスナビ All Rights Reserved.
+              &copy; 2024 ピラテス All Rights Reserved.
             </div>
           </div>
         </footer>
