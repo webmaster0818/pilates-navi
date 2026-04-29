@@ -7,12 +7,12 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://pilates-navi.pages.dev/' },
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://pilatest.com/' },
       ...items.map((item, i) => ({
         '@type': 'ListItem',
         position: i + 2,
         name: item.name,
-        ...(item.href ? { item: `https://pilates-navi.pages.dev${item.href}` } : {}),
+        ...(item.href ? { item: `https://pilatest.com${item.href}` } : {}),
       })),
     ],
   };

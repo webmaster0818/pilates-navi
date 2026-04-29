@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description:
     "ピラティススタジオ15社を徹底比較。料金・口コミ・特徴からあなたにぴったりのスタジオが見つかります。zen place pilates、ピラティスK、CLUB PILATESなど人気スタジオを厳選紹介。",
-  metadataBase: new URL("https://pilates-navi.pages.dev"),
+  metadataBase: new URL("https://pilatest.com"),
   openGraph: {
     type: "website",
     locale: "ja_JP",
