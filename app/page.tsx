@@ -85,16 +85,20 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="bg-[#F5F3FF] py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/hero-pilates.jpg" alt="ピラティススタジオ" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight drop-shadow-lg">
             あなたに合った<br className="sm:hidden" />ピラティススタジオが見つかる
           </h1>
-          <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto drop-shadow">
             人気ピラティススタジオ15社を料金・口コミ・特徴で徹底比較。初心者から経験者まで、最適なスタジオ選びをサポートします。
           </p>
           <div className="mt-8">
-            <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors">
+            <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-lg">
               ランキングを見る
             </a>
           </div>
