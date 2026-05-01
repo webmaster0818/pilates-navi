@@ -198,8 +198,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Studio List */}
       <section className="py-16 bg-[#F5F3FF]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">スタジオ一覧</h2>
+          <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "zen place pilates", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/" },
+              { name: "ピラティスK", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/" },
+              { name: "CLUB PILATES", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/" },
+              { name: "the SILK", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/" },
+              { name: "BDC PILATES", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/" },
+              { name: "Celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/" },
+            ].map((studio) => (
+              <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <h3 className="font-bold text-gray-900 mb-1">{studio.name}</h3>
+                <p className="text-sm text-gray-500 mb-3">{studio.desc}</p>
+                <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">
             ピラティスに関するよくある質問
