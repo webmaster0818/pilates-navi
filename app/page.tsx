@@ -10,7 +10,7 @@ const studios = [
     pros: ["業界最安級の料金設定", "全店舗相互利用が可能", "初心者からプロまで対応"],
     cons: ["店舗によって設備差がある", "人気の時間帯は予約が取りにくい"],
     recommend: "コスパ重視で長く通いたい方におすすめ",
-    reviewPath: "/review/zenplace/",
+    slug: "zenplace", reviewPath: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/",
   },
   {
     rank: 2,
@@ -21,7 +21,7 @@ const studios = [
     pros: ["体験レッスンが無料", "女性専用で安心", "SNS映えする空間"],
     cons: ["男性は利用不可", "店舗数がまだ限られる"],
     recommend: "おしゃれな空間で楽しくボディメイクしたい女性におすすめ",
-    reviewPath: "/review/pilates-k/",
+    slug: "pilates-k", reviewPath: "/review/pilates-k/", url: "https://pilates-k.jp/",
   },
   {
     rank: 3,
@@ -32,7 +32,7 @@ const studios = [
     pros: ["レベルに合ったレッスンを受けられる", "グローバル基準の高品質", "多様なレッスン形式"],
     cons: ["料金がやや高め", "都市部中心の店舗展開"],
     recommend: "段階的にレベルアップしたい方におすすめ",
-    reviewPath: "/review/club-pilates/",
+    slug: "club-pilates", reviewPath: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/",
   },
   {
     rank: 4,
@@ -43,7 +43,7 @@ const studios = [
     pros: ["駅から近くて通いやすい", "モチベーションが上がる空間演出", "女性専用で集中できる"],
     cons: ["店舗数が少ない", "男性は利用不可"],
     recommend: "日常を忘れて没頭できる空間を求める方におすすめ",
-    reviewPath: "/review/the-silk/",
+    slug: "the-silk", reviewPath: "/review/the-silk/", url: "https://the-silk.co.jp/",
   },
   {
     rank: 5,
@@ -54,7 +54,7 @@ const studios = [
     pros: ["プロ考案の独自メソッド", "少人数で丁寧な指導", "しなやかな身体づくりに最適"],
     cons: ["店舗が東京に集中", "料金が高め"],
     recommend: "しなやかで美しい身体を目指す方におすすめ",
-    reviewPath: "/review/bdc/",
+    slug: "bdc", reviewPath: "/review/bdc/", url: "https://bdcpilates.com/",
   },
 ];
 
@@ -147,6 +147,14 @@ export default function HomePage() {
 
                 <div className="px-6 py-5">
                   <p className="text-gray-600 mb-4">{s.tagline}</p>
+
+                  {/* Screenshot */}
+                  <Link href={s.reviewPath}>
+                    <div className="rounded-lg overflow-hidden border border-gray-200 mb-4">
+                      <img src={`/ss-${s.slug}.jpg`} alt={`${s.name} 公式サイト`} className="w-full h-auto" />
+                      <p className="text-[10px] text-gray-400 p-1 text-right">画像引用: <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
+                    </div>
+                  </Link>
 
                   {/* Features */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-5">
