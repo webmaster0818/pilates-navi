@@ -205,17 +205,23 @@ export default function HomePage() {
           <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: "zen place pilates", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/" },
-              { name: "ピラティスK", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/" },
-              { name: "CLUB PILATES", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/" },
-              { name: "the SILK", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/" },
-              { name: "BDC PILATES", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/" },
-              { name: "Celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/" },
+              { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/" },
+              { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/" },
+              { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/" },
+              { name: "the SILK", slug: "the-silk", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/" },
+              { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/" },
+              { name: "Celestia", slug: "celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/" },
             ].map((studio) => (
-              <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-1">{studio.name}</h3>
-                <p className="text-sm text-gray-500 mb-3">{studio.desc}</p>
-                <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
+              <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <div className="aspect-video overflow-hidden">
+                  <img src={`/ss-${studio.slug}.jpg`} alt={`${studio.name} 公式サイト`} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold text-gray-900 mb-1">{studio.name}</h3>
+                  <p className="text-sm text-gray-500 mb-2">{studio.desc}</p>
+                  <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
+                </div>
+                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: 公式サイトより</p>
               </Link>
             ))}
           </div>

@@ -50,6 +50,16 @@ export default function ZenPlaceReview() {
         </div>
       </section>
 
+      {/* Screenshot */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-8">
+            <img src="/ss-zenplace.jpg" alt="zen place pilates 公式サイト" className="w-full h-auto" />
+            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: 公式サイトより</p>
+          </div>
+        </div>
+      </section>
+
       {/* Overview Table */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
