@@ -205,12 +205,12 @@ export default function HomePage() {
           <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/" },
-              { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/" },
-              { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/" },
-              { name: "the SILK", slug: "the-silk", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/" },
-              { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/" },
-              { name: "Celestia", slug: "celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/" },
+              { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/" },
+              { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/", url: "https://pilates-k.jp/" },
+              { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/" },
+              { name: "the SILK", slug: "the-silk", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
+              { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/", url: "https://bdcpilates.com/" },
+              { name: "Celestia", slug: "celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/", url: "https://celes-pilates.jp/" },
             ].map((studio) => (
               <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                 <div className="aspect-video overflow-hidden">
@@ -221,7 +221,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-500 mb-2">{studio.desc}</p>
                   <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
                 </div>
-                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: 公式サイトより</p>
+                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: <a href={studio.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600" onClick={(e) => e.stopPropagation()}>公式サイト</a>より</p>
               </Link>
             ))}
           </div>

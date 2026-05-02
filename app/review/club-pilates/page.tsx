@@ -52,7 +52,7 @@ export default function ClubPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-8">
             <img src="/ss-club-pilates.jpg" alt="CLUB PILATES 公式サイト" className="w-full h-auto" />
-            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: 公式サイトより</p>
+            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: <a href="https://www.clubpilates.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
           </div>
         </div>
       </section>
