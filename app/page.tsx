@@ -221,7 +221,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-500 mb-2">{studio.desc}</p>
                   <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
                 </div>
-                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: <a href={studio.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600" onClick={(e) => e.stopPropagation()}>公式サイト</a>より</p>
+                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: <a href={studio.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
               </Link>
             ))}
           </div>
