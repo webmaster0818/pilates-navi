@@ -97,10 +97,13 @@ export default function HomePage() {
           <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto drop-shadow">
             人気ピラティススタジオ15社を料金・口コミ・特徴で徹底比較。初心者から経験者まで、最適なスタジオ選びをサポートします。
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-lg">
               ランキングを見る
             </a>
+            <Link href="/concierge/" className="inline-block bg-white text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#F5F3FF] transition-colors shadow-lg border border-white/80">
+              無料診断で選ぶ
+            </Link>
           </div>
         </div>
       </section>
