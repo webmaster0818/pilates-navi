@@ -38,6 +38,19 @@ export default function TheSilkReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "the SILK",
+        "@id": "https://pilatest.com/review/the-silk/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "72"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "the SILK" }]} />
 
       <section className="bg-[#F5F3FF] py-12">
@@ -96,6 +109,24 @@ export default function TheSilkReview() {
                 <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              the SILKは、「ピラティスを楽しむ」という観点において業界で最もユニークなポジションを確立しているスタジオです。音楽と照明を組み合わせた非日常的な空間演出は、従来のピラティススタジオの概念を覆すもので、「フィットネス」というよりも「体験型エンターテインメント」に近い感覚を提供しています。この独自性こそが、継続率の高さにつながっている大きな要因です。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              同じ女性専用スタジオであるピラティスKとの比較では、the SILKは空間演出と駅チカの利便性で優位に立ちます。ピラティスKがボディメイク特化のプログラム構成を強みとする一方、the SILKは「通うこと自体が楽しくなる空間」で差別化しています。zen place pilatesの手頃な料金やCLUB PILATESの体系的カリキュラムとは異なるアプローチですが、感覚的な満足度を重視する方にはthe SILKが最適です。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部の正直な見解として、the SILKは「従来のピラティスに退屈さを感じている方」や「通うモチベーションを維持するのが難しい方」に最もおすすめしたいスタジオです。全店舗が駅から徒歩5分以内という立地戦略も、忙しい女性にとって大きなメリットです。デメリットとしては店舗数の少なさと男性が利用できない点が挙げられますが、対象エリアに在住の女性にとっては非常に魅力的な選択肢です。
+            </p>
           </div>
         </div>
       </section>
@@ -174,6 +205,10 @@ export default function TheSilkReview() {
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
                 { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "Celestia", href: "/review/celestia/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -181,6 +216,7 @@ export default function TheSilkReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>

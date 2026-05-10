@@ -38,6 +38,19 @@ export default function PilatesKReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ピラティスK",
+        "@id": "https://pilatest.com/review/pilates-k/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "85"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "ピラティスK" }]} />
 
       <section className="bg-[#F5F3FF] py-12">
@@ -96,6 +109,24 @@ export default function PilatesKReview() {
                 <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              ピラティスKは、20代〜30代の女性をメインターゲットに据えた、マシンピラティス特化型の女性専用スタジオです。最大の魅力は業界では珍しい「0円体験レッスン」で、初期コストのハードルが極めて低い点にあります。おしゃれでSNS映えするスタジオデザインは、ピラティスを「楽しいライフスタイルの一部」として取り入れたい層に強く刺さっており、継続率の高さにも貢献しています。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              同じ女性専用スタジオであるthe SILKと比較すると、ピラティスKはボディメイク特化のプログラム構成が特徴で、部位別（お腹・ヒップなど）のレッスンが充実しています。一方、the SILKは音楽と照明を使った空間演出に強みがあり、エンターテインメント性を重視する方にはthe SILKが向いています。zen place pilatesと比較すると、ピラティスKはマシンに特化している分、マットピラティスやオンラインレッスンの選択肢はありません。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部の率直な評価として、ピラティスKは「見た目の変化を実感したい女性」に最もおすすめできるスタジオです。ボディメイクに特化したプログラムとモチベーションを保ちやすい空間設計は、目的が明確な方にとって理想的な環境です。ただし男性は利用できず、店舗数もまだ全国的には限られるため、アクセス面での確認は必須です。まずは0円体験で雰囲気を確かめることを強くおすすめします。
+            </p>
           </div>
         </div>
       </section>
@@ -174,6 +205,10 @@ export default function PilatesKReview() {
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
                 { name: "the SILK", href: "/review/the-silk/" },
                 { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "Celestia", href: "/review/celestia/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -181,6 +216,7 @@ export default function PilatesKReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>

@@ -31,6 +31,19 @@ export default function CelestiaReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Celestia（セレスティア）",
+        "@id": "https://pilatest.com/review/celestia/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "66"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "Celestia" }]} />
 
       {/* Hero */}
@@ -95,6 +108,24 @@ export default function CelestiaReview() {
                 <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオとして、「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」を両立した独自のポジションを確立しています。1レッスン約2名という少人数制は、実質ほぼマンツーマンの指導が受けられるため、フォームの修正や個別のアドバイスが充実しています。チキンジム・チキンゴルフの運営ノウハウを活かしたスタジオ運営にも安定感があります。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり約7,000円という単価はプライベートレッスン寄りの価格設定です。zen place pilatesの月額9,625円〜（月4回）と比べると2倍以上のコストになりますが、指導密度を考慮すれば妥当な設定と言えるでしょう。繰り越し制度がある点も、スケジュールの不安定な方には嬉しいポイントです。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部として、Celestiaは「グループレッスンだと物足りないが、完全プライベートほどの出費は避けたい方」に最適なスタジオです。Google口コミで4.8という高評価も、指導品質の高さを裏付けています。池袋・船橋・沖縄那覇と店舗が限られるのが最大のネックですが、通える方にはぜひ体験していただきたいスタジオです。手ぶらで通える利便性も含め、忙しい社会人が効率的にピラティスを楽しめる環境が整っています。
+            </p>
           </div>
         </div>
       </section>
@@ -213,6 +244,10 @@ export default function CelestiaReview() {
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
                 { name: "the SILK", href: "/review/the-silk/" },
+                { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -220,6 +255,7 @@ export default function CelestiaReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>

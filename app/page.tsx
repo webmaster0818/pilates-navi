@@ -56,6 +56,39 @@ const studios = [
     recommend: "しなやかで美しい身体を目指す方におすすめ",
     slug: "bdc", reviewPath: "/review/bdc/", url: "https://bdcpilates.com/",
   },
+  {
+    rank: 6,
+    name: "BREST PILATES & BODYMAKE",
+    tagline: "30才からのピラティス×ボディメイク特化スタジオ",
+    monthlyFee: "要問い合わせ",
+    features: ["ボディメイク特化", "30代以上向け", "マシンピラティス", "年齢別プログラム"],
+    pros: ["30代以上の体の悩みに特化", "ピラティス×ボディメイクの相乗効果", "マシンピラティスで効率的"],
+    cons: ["店舗数がまだ限られる", "20代以下には向かない場合あり"],
+    recommend: "30代以上でボディメイクも重視したい方におすすめ",
+    slug: "brest", reviewPath: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727",
+  },
+  {
+    rank: 7,
+    name: "URBAN CLASSIC PILATES",
+    tagline: "クラシカルピラティスをベースにしたスタイリッシュスタジオ",
+    monthlyFee: "要問い合わせ",
+    features: ["クラシカルピラティス", "スタイリッシュ空間", "レベル別クラス", "本格指導"],
+    pros: ["正統派クラシカルピラティスが学べる", "洗練された空間", "初心者から経験者まで対応"],
+    cons: ["店舗展開がまだ限定的", "クラシカルスタイルが合わない方もいる"],
+    recommend: "正統派のピラティスメソッドを学びたい方におすすめ",
+    slug: "urban-classic", reviewPath: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727",
+  },
+  {
+    rank: 8,
+    name: "メルメイク",
+    tagline: "完全プライベート空間でのパーソナルトレーニング",
+    monthlyFee: "要問い合わせ",
+    features: ["完全個室", "パーソナル指導", "オーダーメイドプラン", "プライベートジム"],
+    pros: ["完全個室で周りの目を気にしない", "オーダーメイドプラン", "マンツーマン指導"],
+    cons: ["パーソナルジムのため料金は高め", "グループの雰囲気を求める方には不向き"],
+    recommend: "人目を気にせずマンツーマンで指導を受けたい方におすすめ",
+    slug: "melmake", reviewPath: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727",
+  },
 ];
 
 const faqs = [
@@ -222,6 +255,9 @@ export default function HomePage() {
               { name: "the SILK", slug: "the-silk", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
               { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/", url: "https://bdcpilates.com/" },
               { name: "Celestia", slug: "celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/", url: "https://celes-pilates.jp/" },
+              { name: "BREST PILATES & BODYMAKE", slug: "brest", desc: "30才からのピラティス×ボディメイク", href: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727" },
+              { name: "URBAN CLASSIC PILATES", slug: "urban-classic", desc: "クラシカルピラティス、スタイリッシュ", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
+              { name: "メルメイク", slug: "melmake", desc: "プライベートジム、パーソナル指導", href: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" },
             ].map((studio) => (
               <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                 <div className="aspect-video overflow-hidden">

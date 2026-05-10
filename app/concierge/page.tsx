@@ -86,6 +86,39 @@ const studios: Studio[] = [
     reviewPath: '/review/celestia/',
     url: 'https://celes-pilates.jp/',
   },
+  {
+    name: 'BREST PILATES & BODYMAKE',
+    slug: 'brest',
+    lessonType: ['マシン'],
+    tags: ['体験レッスンあり'],
+    price: '要問い合わせ',
+    priceCategory: '10k-20k',
+    description: '30才からのピラティス×ボディメイク特化スタジオ。年齢に合わせた無理のないプログラムで、マシンピラティスとボディメイクを掛け合わせたアプローチが特徴。',
+    reviewPath: '/review/brest/',
+    url: 'https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727',
+  },
+  {
+    name: 'URBAN CLASSIC PILATES',
+    slug: 'urban-classic',
+    lessonType: ['マシン', 'マット'],
+    tags: ['体験レッスンあり', 'おしゃれな空間'],
+    price: '要問い合わせ',
+    priceCategory: '10k-20k',
+    description: 'クラシカルピラティスをベースにしたスタイリッシュなスタジオ。伝統的なメソッドと現代的なアプローチを融合し、初心者から経験者まで対応。',
+    reviewPath: '/review/urban-classic/',
+    url: 'https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727',
+  },
+  {
+    name: 'メルメイク',
+    slug: 'melmake',
+    lessonType: ['マシン', 'マット'],
+    tags: ['プライベートレッスン'],
+    price: '要問い合わせ',
+    priceCategory: '20k-30k',
+    description: '完全プライベート空間でのパーソナルトレーニング。専属トレーナーによるマンツーマン指導で、一人ひとりの目標に合わせたオーダーメイドプランを提供。',
+    reviewPath: '/review/melmake/',
+    url: 'https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727',
+  },
 ];
 
 /* ==========================================================================
@@ -116,11 +149,11 @@ function scoreStudio(studio: Studio, answers: Answers): number {
 
   // Purpose matching (up to 30 points)
   const purposeMap: Record<string, string[]> = {
-    'ダイエット': ['zen place pilates', 'ピラティスK', 'the SILK'],
-    '姿勢改善': ['zen place pilates', 'CLUB PILATES', 'BDC PILATES'],
-    '体幹強化': ['BDC PILATES', 'CLUB PILATES', 'zen place pilates'],
+    'ダイエット': ['zen place pilates', 'ピラティスK', 'the SILK', 'BREST PILATES & BODYMAKE', 'メルメイク'],
+    '姿勢改善': ['zen place pilates', 'CLUB PILATES', 'BDC PILATES', 'URBAN CLASSIC PILATES'],
+    '体幹強化': ['BDC PILATES', 'CLUB PILATES', 'zen place pilates', 'URBAN CLASSIC PILATES'],
     'リハビリ': ['zen place pilates', 'CLUB PILATES'],
-    '柔軟性向上': ['BDC PILATES', 'zen place pilates', 'Celestia'],
+    '柔軟性向上': ['BDC PILATES', 'zen place pilates', 'Celestia', 'URBAN CLASSIC PILATES'],
     'ストレス解消': ['the SILK', 'Celestia', 'ピラティスK'],
   };
   if (answers.purpose.length > 0) {

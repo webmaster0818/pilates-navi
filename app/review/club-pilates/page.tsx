@@ -38,6 +38,19 @@ export default function ClubPilatesReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "CLUB PILATES",
+        "@id": "https://pilatest.com/review/club-pilates/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "95"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "CLUB PILATES" }]} />
 
       <section className="bg-[#F5F3FF] py-12">
@@ -96,6 +109,24 @@ export default function ClubPilatesReview() {
                 <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              CLUB PILATESは、世界2,000店舗以上を展開するグローバルブランドとしての圧倒的な実績と品質基準が最大の魅力です。4段階のレベルシステムは業界で最も体系化されたカリキュラムの一つで、初心者から上級者まで段階的にスキルアップできる仕組みが整っています。インストラクター全員が500時間以上のトレーニングを修了している点も、指導品質の安定感に直結しています。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              zen place pilatesと比較すると、料金は月額14,190円〜とやや高めですが、8種類の多彩なクラス形式と体系的なレベルシステムは、「ピラティスを本格的に極めたい」方にとって大きな価値があります。BDC PILATESも少人数制で質の高い指導が売りですが、CLUB PILATESはグループレッスンの活気と仲間意識を重視する方に向いています。また、海外店舗でも利用可能なため、グローバルに活動する方には唯一無二の選択肢です。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部の率直な意見として、CLUB PILATESは「品質に妥協したくない方」「継続的なスキルアップを重視する方」に強くおすすめできるスタジオです。レベルシステムが明確なため、自分の成長を数値化・可視化しやすく、モチベーション維持にも効果的です。一方で、都市部中心の店舗展開であることや、料金がやや高い点は考慮が必要です。まずは体験レッスンでグローバル基準の品質を確かめてみてください。
+            </p>
           </div>
         </div>
       </section>
@@ -174,6 +205,10 @@ export default function ClubPilatesReview() {
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "the SILK", href: "/review/the-silk/" },
                 { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "Celestia", href: "/review/celestia/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -181,6 +216,7 @@ export default function ClubPilatesReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>

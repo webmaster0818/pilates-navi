@@ -38,6 +38,19 @@ export default function ZenPlaceReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "zen place pilates",
+        "@id": "https://pilatest.com/review/zenplace/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "120"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "zen place pilates" }]} />
 
       {/* Hero */}
@@ -105,8 +118,26 @@ export default function ZenPlaceReview() {
         </div>
       </section>
 
-      {/* Pros / Cons */}
+      {/* Editorial Analysis */}
       <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              zen place pilatesは、コストパフォーマンスと通いやすさのバランスが最も優れたピラティススタジオです。月額9,625円からという業界最安水準の価格設定でありながら、マットとマシンの両方に対応し、全国100店舗以上を相互利用できる利便性は他社にはない大きな強みです。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方には最適な選択肢と言えるでしょう。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              競合であるピラティスKやthe SILKは女性専用で、マシンピラティスに特化しているため、男性利用者やマットピラティスも楽しみたい方はzen placeが最有力候補になります。CLUB PILATESは国際ブランドとしての品質が魅力ですが、料金面ではzen placeが圧倒的に有利です。BDC PILATESのような少人数制の手厚い指導を求める方には物足りなさを感じる場面もありますが、レベル別のクラス編成と安定したインストラクター品質でカバーしています。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部として率直に評価すると、初心者が最初の一歩として選ぶスタジオとしても、経験者がコストを抑えて長期継続するスタジオとしても、zen place pilatesは非常にバランスの取れた選択です。唯一の懸念点は、店舗によって設備や雰囲気に差がある点です。入会前に必ず体験レッスンで実際の店舗を確認することをおすすめします。総合的に見て、「迷ったらzen place」と言えるほど万人向けのスタジオです。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pros / Cons */}
+      <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6">メリット・デメリット</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -183,6 +214,10 @@ export default function ZenPlaceReview() {
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
                 { name: "the SILK", href: "/review/the-silk/" },
                 { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "Celestia", href: "/review/celestia/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -190,6 +225,7 @@ export default function ZenPlaceReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>

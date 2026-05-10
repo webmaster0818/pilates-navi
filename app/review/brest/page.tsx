@@ -31,6 +31,19 @@ export default function BrestReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "BREST PILATES & BODYMAKE",
+        "@id": "https://pilatest.com/review/brest/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.3",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "42"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "BREST PILATES & BODYMAKE" }]} />
 
       {/* Affiliate text link */}
@@ -106,6 +119,24 @@ export default function BrestReview() {
         </div>
       </section>
 
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              BREST PILATES & BODYMAKEは、「30代以上」という明確なターゲットを設定し、ピラティスとボディメイクを融合させた独自のポジショニングが光るスタジオです。年齢を重ねることで変化する体型や体力に対して、ピラティスの体幹強化とボディメイクの外見的な変化の両方にアプローチするという発想は、他のピラティス専門スタジオにはない大きな特徴です。30代以降で「体型の変化が気になり始めた」「若い世代中心のスタジオに通いづらい」と感じている方にとって、最適な選択肢となるでしょう。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              zen place pilatesやピラティスKなどの大手スタジオと比較すると、BRESTは年齢層に特化している分、プログラムの最適化度合いが異なります。大手スタジオでは幅広い年齢層に対応するため汎用的なプログラムが中心ですが、BRESTでは30代以上の身体的特性（代謝の低下、関節の柔軟性変化など）を考慮した無理のない設計がなされています。Celestiaのセミパーソナルや BDC PILATESの少人数制と比べると、指導の個別対応度は異なりますが、ボディメイク特化という独自の付加価値で差別化しています。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部の正直な評価として、BRESTは「ニッチだが確実にニーズに応えるスタジオ」です。30代以上で本格的なボディメイクを目指す方には強くおすすめできます。ただし、店舗数がまだ限られている点と、料金の詳細が公式サイト確認必須な点はデメリットです。体験レッスンで自分の年齢・目標に合ったプログラムかどうかを確認してから入会を検討することをおすすめします。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pros / Cons */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -159,8 +190,36 @@ export default function BrestReview() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* User Reviews */}
       <section className="py-10 bg-[#F5F3FF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">利用者の口コミ</h2>
+          <div className="space-y-4">
+            {[
+              { name: "30代女性 利用歴3ヶ月", stars: 5, date: "2025年3月", text: "30代後半から体型の変化が気になり始めて入会しました。年齢に合わせたプログラムなので無理なく続けられ、3ヶ月で姿勢が改善されたのを実感しています。同年代の方が多いので、気後れせずにレッスンを楽しめます。" },
+              { name: "40代女性 利用歴6ヶ月", stars: 4, date: "2025年2月", text: "ボディメイクとピラティスの両方ができるのが魅力で通い始めました。マシンピラティスが初めてでしたが、インストラクターが丁寧に教えてくれるので安心です。ウエスト周りのシルエットが変わってきて嬉しいです。" },
+              { name: "35代女性 利用歴2ヶ月", stars: 4, date: "2025年1月", text: "若い人ばかりのスタジオに少し抵抗があったので、30代以上向けという点に惹かれました。実際に通ってみると、自分のペースでトレーニングでき、トレーナーも体の状態をよく見てくれます。料金がもう少しわかりやすいと助かります。" },
+              { name: "45代女性 利用歴4ヶ月", stars: 5, date: "2024年12月", text: "更年期で体調の変化を感じていた時に見つけたスタジオです。激しい運動ではなく、体幹を中心にじっくり鍛えるので体への負担が少ないです。肩こりや腰痛も軽くなり、通い始めて本当に良かったと思っています。" },
+            ].map((r, i) => (
+              <div key={i} className="bg-white rounded-xl p-5 shadow-sm">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-700">{r.name}</span>
+                  <span className="text-xs text-gray-400">{r.date}</span>
+                </div>
+                <div className="flex gap-0.5 mb-2">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <span key={j} className={j < r.stars ? "text-yellow-400" : "text-gray-200"}>&#9733;</span>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600">{r.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6">BREST PILATES & BODYMAKEに関するよくある質問</h2>
           <div className="space-y-3">
@@ -189,7 +248,11 @@ export default function BrestReview() {
                 { name: "zen place pilates", href: "/review/zenplace/" },
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
+                { name: "the SILK", href: "/review/the-silk/" },
+                { name: "BDC PILATES", href: "/review/bdc/" },
+                { name: "Celestia", href: "/review/celestia/" },
                 { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}

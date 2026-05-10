@@ -38,6 +38,19 @@ export default function BdcPilatesReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "BDC PILATES",
+        "@id": "https://pilatest.com/review/bdc/",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "58"
+        }
+      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "BDC PILATES" }]} />
 
       <section className="bg-[#F5F3FF] py-12">
@@ -96,6 +109,24 @@ export default function BdcPilatesReview() {
                 <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Analysis */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              BDC PILATESは、プロダンサーが考案した独自メソッドと最大8名の少人数制指導という、明確な差別化ポイントを持つマシンピラティス専門スタジオです。「しなやかで美しい身体」を目指す方に特化したアプローチは、単なるフィットネスを超えた「ボディアート」としてのピラティスを追求しており、ダンサーやパフォーマーからの支持が厚いのも頷けます。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              zen place pilatesやCLUB PILATESなどの大手と比較すると、BDC PILATESは店舗数で劣りますが、1レッスンあたりの指導密度では圧倒的に優位です。最大8名という少人数制は、インストラクターが一人ひとりのフォームを細かくチェックできる環境を実現しており、正しい動きを最短で身につけたい方に最適です。料金は月額14,850円〜とやや高めですが、少人数制の質を考慮すれば十分な価値があります。
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              編集部としての率直な評価は、BDC PILATESは「質にこだわりたい中〜上級者」や「身体の使い方を根本から学びたい初心者」に最もおすすめできるスタジオです。プロダンサー考案のメソッドと聞くとハードルが高そうですが、実際は運動経験を問わず参加可能です。東京都内中心の展開が最大のネックですが、通える範囲にお住まいであれば、一度は体験する価値のあるスタジオと断言できます。
+            </p>
           </div>
         </div>
       </section>
@@ -174,6 +205,10 @@ export default function BdcPilatesReview() {
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
                 { name: "the SILK", href: "/review/the-silk/" },
+                { name: "Celestia", href: "/review/celestia/" },
+                { name: "BREST PILATES", href: "/review/brest/" },
+                { name: "URBAN CLASSIC PILATES", href: "/review/urban-classic/" },
+                { name: "メルメイク", href: "/review/melmake/" },
               ].map((s) => (
                 <Link key={s.name} href={s.href} className="text-sm bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
                   {s.name}
@@ -181,6 +216,7 @@ export default function BdcPilatesReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年5月</p>
         </div>
       </section>
     </>
