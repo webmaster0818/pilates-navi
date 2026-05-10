@@ -122,7 +122,13 @@ export default function BrestReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               BREST PILATES & BODYMAKEは、「30代以上」という明確なターゲットを設定し、ピラティスとボディメイクを融合させた独自のポジショニングが光るスタジオです。年齢を重ねることで変化する体型や体力に対して、ピラティスの体幹強化とボディメイクの外見的な変化の両方にアプローチするという発想は、他のピラティス専門スタジオにはない大きな特徴です。30代以降で「体型の変化が気になり始めた」「若い世代中心のスタジオに通いづらい」と感じている方にとって、最適な選択肢となるでしょう。

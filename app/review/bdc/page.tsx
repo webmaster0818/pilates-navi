@@ -116,7 +116,13 @@ export default function BdcPilatesReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               BDC PILATESは、プロダンサーが考案した独自メソッドと最大8名の少人数制指導という、明確な差別化ポイントを持つマシンピラティス専門スタジオです。「しなやかで美しい身体」を目指す方に特化したアプローチは、単なるフィットネスを超えた「ボディアート」としてのピラティスを追求しており、ダンサーやパフォーマーからの支持が厚いのも頷けます。

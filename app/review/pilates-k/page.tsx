@@ -116,7 +116,13 @@ export default function PilatesKReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               ピラティスKは、20代〜30代の女性をメインターゲットに据えた、マシンピラティス特化型の女性専用スタジオです。最大の魅力は業界では珍しい「0円体験レッスン」で、初期コストのハードルが極めて低い点にあります。おしゃれでSNS映えするスタジオデザインは、ピラティスを「楽しいライフスタイルの一部」として取り入れたい層に強く刺さっており、継続率の高さにも貢献しています。

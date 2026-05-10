@@ -121,7 +121,13 @@ export default function ZenPlaceReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               zen place pilatesは、コストパフォーマンスと通いやすさのバランスが最も優れたピラティススタジオです。月額9,625円からという業界最安水準の価格設定でありながら、マットとマシンの両方に対応し、全国100店舗以上を相互利用できる利便性は他社にはない大きな強みです。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方には最適な選択肢と言えるでしょう。

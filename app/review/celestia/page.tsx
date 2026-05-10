@@ -115,7 +115,13 @@ export default function CelestiaReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオとして、「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」を両立した独自のポジションを確立しています。1レッスン約2名という少人数制は、実質ほぼマンツーマンの指導が受けられるため、フォームの修正や個別のアドバイスが充実しています。チキンジム・チキンゴルフの運営ノウハウを活かしたスタジオ運営にも安定感があります。

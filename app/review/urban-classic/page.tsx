@@ -122,7 +122,13 @@ export default function UrbanClassicReview() {
       {/* Editorial Analysis */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">編集部の評価</h2>
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/editor-pilates.png" alt="ピラテスナビ編集部" className="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">編集部の評価</h2>
+                <p className="text-xs text-gray-500">ピラテスナビ編集部</p>
+              </div>
+            </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
               URBAN CLASSIC PILATESは、ジョセフ・ピラティスが考案したオリジナルメソッドに忠実な「クラシカルピラティス」を提供する、業界でも数少ない本格派スタジオです。近年のピラティスブームではモダンピラティスや独自アレンジを加えたスタジオが増えていますが、URBAN CLASSICは伝統的なメソッドの体系性を大切にしながらも、スタイリッシュな空間で現代的な通いやすさを両立させています。「本物のピラティスを学びたい」という明確な目的を持つ方に最適なスタジオです。
