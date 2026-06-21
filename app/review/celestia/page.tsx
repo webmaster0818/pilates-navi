@@ -246,6 +246,7 @@ export default function CelestiaReview() {
             <h3 className="text-sm font-semibold text-gray-700 mb-3">他のスタジオも比較する</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
+                { name: "💴 料金比較（9スタジオ一覧）", href: "/price-comparison/" },
                 { name: "zen place pilates", href: "/review/zenplace/" },
                 { name: "ピラティスK", href: "/review/pilates-k/" },
                 { name: "CLUB PILATES", href: "/review/club-pilates/" },
