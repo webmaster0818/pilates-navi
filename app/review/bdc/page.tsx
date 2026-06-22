@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "BDC PILATES の口コミ・評判｜料金・特徴を徹底解説",
+  title: "BDC PILATESの口コミ・評判｜料金・体験レッスン・特徴を解説【2026年】",
   description:
     "BDC PILATESの口コミ・評判を徹底調査。月額14,850円〜、マシン専門、プロダンサー考案メソッド、少人数制の特徴や料金プラン、実際の利用者の声を詳しく紹介します。",
 };

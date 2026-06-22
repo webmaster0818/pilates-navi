@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "CLUB PILATES の口コミ・評判｜料金・特徴を徹底解説",
+  title: "CLUB PILATESの口コミ・評判｜料金・体験レッスン・特徴を解説【2026年】",
   description:
     "CLUB PILATESの口コミ・評判を徹底調査。月額14,190円〜、世界最大級のピラティスブランド、4段階レベル分けの特徴や料金プラン、実際の利用者の声を詳しく紹介します。",
 };
