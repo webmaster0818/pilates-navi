@@ -190,6 +190,25 @@ export default function ZenPlaceReview() {
       </section>
 
       {/* FAQ */}
+      <section className="py-10 bg-[#F5F3FF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">zen place pilatesの体験レッスンの流れと料金</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            zen place pilatesは全国約150店舗の国内最大級ピラティススタジオで、入会前に<strong>体験レッスン</strong>を受けられます。マシン（リフォーマー等）とマットの両方に対応し、グループ・プライベートから選べます。全店相互利用できるため、自宅・職場の近くなど複数店舗を使い分けたい方にも向いています。
+          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
+            <li><strong>予約</strong>：公式サイトから最寄りスタジオと日時・レッスン形式（グループ/プライベート）を選んで申し込み。</li>
+            <li><strong>来店・カウンセリング</strong>：動きやすい服装で来店し、目的や体の状態をヒアリング。</li>
+            <li><strong>体験レッスン</strong>：インストラクターの指導でマシン/マットを実際に体験。</li>
+            <li><strong>説明・入会案内</strong>：月額プランの説明。その場で入会しなくても大丈夫です。</li>
+          </ol>
+          <p className="text-xs text-gray-500 leading-relaxed mb-2">
+            ※体験レッスンの料金・入会特典・持ち物はキャンペーンやスタジオで異なるため、申し込み時に公式サイトでご確認ください。料金は月額の通い放題・回数制が中心です。
+          </p>
+          <p className="text-sm text-gray-700">月額プランの詳細は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。</p>
+        </div>
+      </section>
+
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6">zen place pilatesに関するよくある質問</h2>

@@ -182,6 +182,25 @@ export default function BdcPilatesReview() {
         </div>
       </section>
 
+      <section className="py-10 bg-[#F5F3FF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">BDC PILATESの体験レッスンの流れと料金</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            BDC PILATESでは、入会前に<strong>体験レッスン</strong>を受けられます。マシンピラティス専門スタジオで、グループ・プライベートいずれも<strong>1回約55分</strong>が目安です。初めての方でもインストラクターが使い方を案内するので、マシン未経験でも参加できます。
+          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
+            <li><strong>予約</strong>：公式サイトから希望のスタジオ（表参道・銀座・恵比寿など都内中心の8店舗）と日時を選んで申し込み。</li>
+            <li><strong>来店・カウンセリング</strong>：当日は動きやすい服装で来店。目的や体の悩みをヒアリング。</li>
+            <li><strong>体験レッスン（約55分）</strong>：マシン（リフォーマー等）の使い方を学びながら実際に体験。</li>
+            <li><strong>説明・入会案内</strong>：料金プランの説明。その場で入会しなくても問題ありません。</li>
+          </ol>
+          <p className="text-xs text-gray-500 leading-relaxed mb-2">
+            ※体験レッスンの料金・当日の入会特典・持ち物（ウェア・靴下のレンタル有無）はキャンペーンやスタジオで異なるため、申し込み時に公式サイトでご確認ください。料金プランは月額制（通い放題・回数制）が中心です。
+          </p>
+          <p className="text-sm text-gray-700">月額の料金プランの詳細は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。</p>
+        </div>
+      </section>
+
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6">BDC PILATESに関するよくある質問</h2>
