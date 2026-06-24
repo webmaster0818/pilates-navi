@@ -182,6 +182,25 @@ export default function ClubPilatesReview() {
         </div>
       </section>
 
+      <section className="py-10 bg-[#F5F3FF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">CLUB PILATESの体験レッスンの流れと料金</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            CLUB PILATESは米国発・世界1,000店舗以上のマシンピラティス専門スタジオで、国内も東京（約38店舗）を中心に全国16都道府県に展開しています。入会前に<strong>体験レッスン</strong>を受けられるので、グローバル基準のメソッドを試してから検討できます。
+          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
+            <li><strong>予約</strong>：公式サイトから最寄りスタジオ・日時を選んで体験レッスンを申し込み（要問い合わせの場合あり）。</li>
+            <li><strong>来店・カウンセリング</strong>：動きやすい服装で来店し、目的や体の状態をヒアリング。</li>
+            <li><strong>体験レッスン</strong>：インストラクターの指導でリフォーマー等のマシンを体験。</li>
+            <li><strong>説明・入会案内</strong>：月額プランの説明。その場で入会しなくても問題ありません。</li>
+          </ol>
+          <p className="text-xs text-gray-500 leading-relaxed mb-2">
+            ※料金は月額制（通い放題プランなど14,190円〜22,990円が目安）。体験レッスンの料金・特典・持ち物はキャンペーンやスタジオで異なるため、申し込み時に公式サイトでご確認ください。
+          </p>
+          <p className="text-sm text-gray-700">月額プランの比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。</p>
+        </div>
+      </section>
+
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-6">CLUB PILATESに関するよくある質問</h2>
