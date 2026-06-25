@@ -31,19 +31,6 @@ export default function UrbanClassicReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "URBAN CLASSIC PILATES",
-        "@id": "https://pilatest.com/review/urban-classic/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.2",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "38"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "URBAN CLASSIC PILATES" }]} />
 
       {/* Affiliate text link */}

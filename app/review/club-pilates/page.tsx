@@ -38,19 +38,6 @@ export default function ClubPilatesReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "CLUB PILATES",
-        "@id": "https://pilatest.com/review/club-pilates/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "95"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "CLUB PILATES" }]} />
 
       <section className="bg-[#F5F3FF] py-12">
@@ -100,7 +87,7 @@ export default function ClubPilatesReview() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">CLUB PILATESの強み</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { title: "グローバルブランド", desc: "世界2,000店舗以上。グローバル基準の高品質レッスン" },
+              { title: "グローバルブランド", desc: "世界1,000店舗以上。グローバル基準の高品質レッスン" },
               { title: "4段階レベルシステム", desc: "初心者から上級者まで、レベルに応じた最適なレッスン" },
               { title: "有資格インストラクター", desc: "500時間以上の研修を修了した専門家が指導" },
             ].map((s) => (
@@ -125,7 +112,7 @@ export default function ClubPilatesReview() {
             </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              CLUB PILATESは、世界2,000店舗以上を展開するグローバルブランドとしての圧倒的な実績と品質基準が最大の魅力です。4段階のレベルシステムは業界で最も体系化されたカリキュラムの一つで、初心者から上級者まで段階的にスキルアップできる仕組みが整っています。インストラクター全員が500時間以上のトレーニングを修了している点も、指導品質の安定感に直結しています。
+              CLUB PILATESは、世界1,000店舗以上を展開するグローバルブランドとしての圧倒的な実績と品質基準が最大の魅力です。4段階のレベルシステムは業界で最も体系化されたカリキュラムの一つで、初心者から上級者まで段階的にスキルアップできる仕組みが整っています。インストラクター全員が500時間以上のトレーニングを修了している点も、指導品質の安定感に直結しています。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               zen place pilatesと比較すると、料金は月額14,190円〜とやや高めですが、8種類の多彩なクラス形式と体系的なレベルシステムは、「ピラティスを本格的に極めたい」方にとって大きな価値があります。BDC PILATESも少人数制で質の高い指導が売りですが、CLUB PILATESはグループレッスンの活気と仲間意識を重視する方に向いています。また、海外店舗でも利用可能なため、グローバルに活動する方には唯一無二の選択肢です。

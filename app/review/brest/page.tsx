@@ -31,19 +31,6 @@ export default function BrestReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "BREST PILATES & BODYMAKE",
-        "@id": "https://pilatest.com/review/brest/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.3",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "42"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "BREST PILATES & BODYMAKE" }]} />
 
       {/* Affiliate text link */}

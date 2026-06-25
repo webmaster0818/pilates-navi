@@ -38,19 +38,6 @@ export default function TheSilkReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "the SILK",
-        "@id": "https://pilatest.com/review/the-silk/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "72"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "the SILK" }]} />
 
       <section className="bg-[#F5F3FF] py-12">

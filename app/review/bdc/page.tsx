@@ -38,19 +38,6 @@ export default function BdcPilatesReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "BDC PILATES",
-        "@id": "https://pilatest.com/review/bdc/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "58"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "BDC PILATES" }]} />
 
       <section className="bg-[#F5F3FF] py-12">

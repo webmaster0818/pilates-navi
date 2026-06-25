@@ -31,19 +31,6 @@ export default function CelestiaReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Celestia（セレスティア）",
-        "@id": "https://pilatest.com/review/celestia/",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "66"
-        }
-      }) }} />
       <Breadcrumb items={[{ name: "口コミ・レビュー", href: "/#ranking" }, { name: "Celestia" }]} />
 
       {/* Hero */}
@@ -53,6 +40,21 @@ export default function CelestiaReview() {
             Celestia（セレスティア）の口コミ・評判
           </h1>
           <p className="mt-3 text-gray-600">セミパーソナルでほぼマンツーマン。マシンピラティス専門スタジオの実力を徹底解説</p>
+        </div>
+      </section>
+
+      <section className="py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="rounded-xl border border-[#7C3AED]/20 bg-[#F5F3FF] p-5">
+            <h2 className="font-bold text-gray-900 mb-3">結論：Celestiaはこんな人におすすめ</h2>
+            <ul className="space-y-1.5 text-sm text-gray-700">
+              <li>・<strong>料金</strong>：月4回28,000円（1回あたり約7,000円）。グループより手厚く、プライベートより手頃な中間価格</li>
+              <li>・<strong>約2名のセミパーソナル</strong>＝ほぼマンツーマンで指導が受けられる。フォームをしっかり見てほしい人向け</li>
+              <li>・マシンピラティス専門。未消化分の繰り越しが可能で通いやすい</li>
+              <li>・一方、大人数グループでワイワイ・最安重視の人にはグループ型（zen place等）が向く</li>
+            </ul>
+            <p className="text-xs text-gray-500 mt-3">料金・体験の詳細は公式でご確認ください。グループ型との比較は<a href="/price-comparison/" className="text-[#7C3AED] underline">ピラティス料金比較</a>もご覧ください。</p>
+          </div>
         </div>
       </section>
 
