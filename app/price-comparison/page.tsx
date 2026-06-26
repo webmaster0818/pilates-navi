@@ -45,7 +45,12 @@ export default function PriceComparisonPage() {
         <p className="text-gray-600 leading-relaxed mb-4">
           主要ピラティススタジオ9社の月額料金・タイプ・特徴を一覧で比較しました。マシンピラティス専門スタジオを中心に、「月額の安さ」「セミパーソナルかグループか」「女性専用か」で選べます。
         </p>
-        <p className="text-xs text-gray-500 mb-8">料金は当サイト各レビューの調査値（2026年時点）です。入会金・キャンペーン・最新料金は各公式サイトでご確認ください。</p>
+        <p className="text-xs text-gray-500 mb-4">料金は当サイト各レビューの調査値（2026年時点）です。入会金・キャンペーン・最新料金は各公式サイトでご確認ください。</p>
+
+        <div className="rounded-xl overflow-hidden mb-8">
+          <img src="/gen/mat-pilates.jpg" alt="マットピラティスでストレッチをする様子のイメージ" className="w-full h-auto" loading="lazy" />
+          <p className="text-[10px] text-gray-400 mt-1">※イメージ画像</p>
+        </div>
 
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">月額料金 比較表</h2>

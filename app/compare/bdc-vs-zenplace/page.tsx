@@ -45,6 +45,10 @@ export default function BdcVsZenplacePage() {
 
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="rounded-xl overflow-hidden mb-8">
+            <img src="/gen/machine-pilates.jpg" alt="マシンピラティス（リフォーマー）でエクササイズする様子のイメージ" className="w-full h-auto" loading="lazy" />
+            <p className="text-[10px] text-gray-400 mt-1">※イメージ画像</p>
+          </div>
           <div className="rounded-xl border border-[#7C3AED]/20 bg-[#F5F3FF] p-5 mb-8">
             <h2 className="font-bold text-gray-900 mb-2">結論：コスパ・全国展開ならzen place、少人数の丁寧さならBDC</h2>
             <p className="text-sm text-gray-700">月額が手頃（9,625円〜）で全国約150店舗・マット/マシン両対応の<strong>zen place</strong>は通いやすさとコスパ重視の人向け。マシン専門・少人数制でフォームを丁寧に見てくれる<strong>BDC</strong>は、じっくり指導を受けたい人向けです。</p>
