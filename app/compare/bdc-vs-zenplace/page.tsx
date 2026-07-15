@@ -103,6 +103,11 @@ export default function BdcVsZenplacePage() {
               <Link href="/price-comparison/" className="inline-block bg-[#7C3AED] text-white px-6 py-3 rounded-full font-bold">料金で比較する</Link>
               <Link href="/" className="inline-block border border-[#7C3AED] text-[#7C3AED] px-6 py-3 rounded-full font-bold">おすすめランキング</Link>
             </div>
+            <div className="mt-4 flex flex-wrap justify-center gap-3">
+              <Link href="/review/celestia/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">Celestiaのレビュー</Link>
+              <Link href="/review/brest/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">BREST PILATESのレビュー</Link>
+              <Link href="/review/melmake/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">メルメイクのレビュー</Link>
+            </div>
           </div>
         </div>
       </section>

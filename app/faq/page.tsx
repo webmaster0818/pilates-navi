@@ -101,6 +101,11 @@ export default function FaqPage() {
           <a href="/" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors">
             ランキングを見る
           </a>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a href="/review/celestia/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">Celestiaの口コミ・料金</a>
+            <a href="/review/brest/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">BREST PILATESの口コミ・料金</a>
+            <a href="/review/melmake/" className="inline-block bg-white border border-gray-200 px-5 py-2 rounded-full text-sm text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">メルメイクの口コミ・料金</a>
+          </div>
         </div>
       </section>
     </>
