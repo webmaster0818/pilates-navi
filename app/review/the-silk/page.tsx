@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "the SILKの料金プランは？", a: "公式情報では月4回プランが月額12,980円〜、通い放題プランが月額18,480円〜が目安です。プラン構成・最新価格・キャンペーン適用後の金額はスタジオや時期で変わるため、申し込み前に公式サイトで必ずご確認ください（要確認）。" },
+  { q: "the SILKの料金プランは？", a: "公式料金ページ（2026年7月20日確認）では、月3回のLight 3が月額12,280円〜13,280円、月4回のStandard 4が月額14,370円〜15,280円、通い放題のFullが月額19,980円〜22,280円です（店舗エリアA/Bで金額が異なる・別途施設利用料月700円）。キャンペーン適用後の金額は時期で変わるため、申し込み前に公式サイトで最新をご確認ください。" },
   { q: "the SILKの口コミ・評判は良い？", a: "「音楽と照明の空間演出が魅力的で通うのが楽しい」「全店駅チカで仕事帰りに寄りやすい」といった声が見られる一方、「店舗数が少なく通える人が限られる」「男性は利用できない」という指摘もあります。評価は受講者の目的や住むエリアによって分かれます。" },
   { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。体験料金や当日入会の特典はキャンペーン・スタジオで異なるため、公式サイトでご確認ください（要確認）。" },
   { q: "男性は利用できますか？", a: "いいえ、the SILKは女性専用スタジオです。男性の利用はできません。" },
@@ -46,8 +46,9 @@ const concernPoints = [
 ];
 
 const prices = [
-  { plan: "月4回プラン", price: "月額 12,980円〜（目安）", note: "公式で確認できる代表的な月額プラン。店舗・時期で変動の可能性。" },
-  { plan: "通い放題プラン", price: "月額 18,480円〜（目安）", note: "回数制限なく通えるプラン。頻度高めに通う人向け。" },
+  { plan: "Light 3（月3回）", price: "月額 12,280円〜13,280円", note: "店舗エリア（A/B）で金額が異なる。2026年7月20日公式確認。" },
+  { plan: "Standard 4（月4回）", price: "月額 14,370円〜15,280円", note: "店舗エリア（A/B）で金額が異なる。2026年7月20日公式確認。" },
+  { plan: "Full（通い放題）", price: "月額 19,980円〜22,280円", note: "回数制限なし。平日昼間限定のFull(Day)は17,780円〜19,280円。別途施設利用料 月700円。" },
   { plan: "プライベートレッスン", price: "要確認", note: "マンツーマン指導の有無・価格は公式参照。" },
   { plan: "体験レッスン", price: "要確認（キャンペーン有）", note: "料金・特典は時期で変動。申込時に公式で確認を。" },
 ];
@@ -61,6 +62,7 @@ export default function TheSilkReview() {
       <section className="bg-[#F5F3FF] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">the SILK（ザ・シルク）の口コミ・料金・体験レッスンを解説</h1>
+          <p className="text-sm text-gray-500 mt-2">情報引用元：<a href="https://the-silk.co.jp/" target="_blank" rel="noopener noreferrer" className="text-[#7C3AED] underline underline-offset-2">the SILK</a>（公式サイト）</p>
           <p className="mt-3 text-gray-600">音楽と照明が彩る非日常空間。全店駅チカの女性専用マシンピラティスの評判をまとめました。</p>
         </div>
       </section>
@@ -71,7 +73,7 @@ export default function TheSilkReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">結論：the SILKはこんな人に向いている</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              the SILKは、<strong>音楽×照明の空間演出</strong>と<strong>全店駅チカの通いやすさ</strong>を特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月4回12,980円〜・通い放題18,480円〜（目安）</strong>。「運動を続けるモチベーションを空間の力で保ちたい」「仕事帰りに無理なく通いたい」女性に向いています。一方で、店舗数が限られるため通えるエリアが限定され、男性は利用できません。通える範囲にあるなら、まず体験で雰囲気を確かめる価値があります。
+              the SILKは、<strong>音楽×照明の空間演出</strong>と<strong>全店駅チカの通いやすさ</strong>を特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月3回12,280円〜・通い放題19,980円〜（2026年7月20日公式確認・店舗エリアで変動）</strong>。「運動を続けるモチベーションを空間の力で保ちたい」「仕事帰りに無理なく通いたい」女性に向いています。一方で、店舗数が限られるため通えるエリアが限定され、男性は利用できません。通える範囲にあるなら、まず体験で雰囲気を確かめる価値があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>通うこと自体を楽しみたい女性／仕事帰りに駅チカで通いたい人</li>
@@ -102,7 +104,7 @@ export default function TheSilkReview() {
               <tbody>
                 {[
                   ["スタジオ名", "the SILK（ザ・シルク）"],
-                  ["月額料金", "月額12,980円〜（月4回プラン・目安／公式要確認）"],
+                  ["月額料金", "月額12,280円〜（月3回・エリアB／2026年7月20日公式確認）"],
                   ["店舗", "都市部中心に展開（全店駅チカをうたう）※最新は公式参照"],
                   ["レッスン形式", "マシングループレッスン"],
                   ["対象", "女性専用"],
@@ -135,7 +137,7 @@ export default function TheSilkReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">the SILKの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            the SILKの料金は月額制（回数制・通い放題）が中心です。公式で確認できる代表的なプランは<strong>月4回・月額12,980円〜</strong>、<strong>通い放題・月額18,480円〜</strong>が目安です。下表はあくまで<strong>目安</strong>で、店舗・時期・キャンペーンで変動します。最新の正確な金額は必ず公式でご確認ください。
+            the SILKの料金は月額制（回数制・通い放題）で、<strong>店舗のエリア区分（A/B）によって金額が異なります</strong>。公式料金ページ（2026年7月20日確認）の主なプランは下表のとおりです（別途施設利用料 月700円）。キャンペーンで変動するため、最新の正確な金額は必ず公式でご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">

@@ -38,7 +38,7 @@ const studios = [
     rank: 4,
     name: "the SILK",
     tagline: "音楽と照明が彩る非日常のピラティス体験",
-    monthlyFee: "月額12,980円〜",
+    monthlyFee: "月額12,280円〜",
     features: ["女性専用スタジオ", "全店駅チカ立地", "音楽×照明の非日常空間", "マシンピラティス専門"],
     pros: ["駅から近くて通いやすい", "モチベーションが上がる空間演出", "女性専用で集中できる"],
     cons: ["店舗数が少ない", "男性は利用不可"],
@@ -183,6 +183,9 @@ export default function HomePage() {
 
                 <div className="px-6 py-5">
                   <p className="text-gray-600 mb-4">{s.tagline}</p>
+                  {s.slug === "the-silk" && (
+                    <p className="text-xs text-gray-500 mb-3">情報引用元：<a href="https://the-silk.co.jp/" target="_blank" rel="noopener noreferrer" className="text-[#7C3AED] underline underline-offset-2">the SILK</a>（公式サイト）</p>
+                  )}
 
                   {/* Screenshot */}
                   <Link href={s.reviewPath}>

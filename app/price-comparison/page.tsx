@@ -14,7 +14,7 @@ type Studio = { slug: string; name: string; price: string; type: string; note: s
 const studios: Studio[] = [
   { slug: "zenplace", name: "zen place pilates", price: "月額9,625円〜", type: "マシン/マットピラティス", note: "全国展開・店舗数最多クラス。グループ中心で通いやすい価格" },
   { slug: "pilates-k", name: "ピラティスK", price: "月額11,220円〜（入会金0円キャンペーンあり）", type: "女性専用マシンピラティス", note: "女性専用・マシン専門。駅近店舗が多い" },
-  { slug: "the-silk", name: "the SILK", price: "月額12,980円〜", type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
+  { slug: "the-silk", name: "the SILK", price: "月額12,280円〜（月3回・エリアB）", type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
   { slug: "club-pilates", name: "CLUB PILATES", price: "月額14,190円〜", type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系" },
   { slug: "bdc", name: "BDC PILATES", price: "月額14,850円〜", type: "マシンピラティス", note: "都心中心。本格志向向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: "月4回 28,000円（1回約7,000円）", type: "セミパーソナル（約2名）", note: "ほぼマンツーマン。グループでは物足りない人向け" },
