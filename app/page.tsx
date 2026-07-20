@@ -305,6 +305,9 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/area/tokyo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">東京のピラティススタジオ</Link>
             <Link href="/area/osaka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">大阪のピラティススタジオ</Link>
+            <Link href="/area/yokohama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">横浜のピラティススタジオ</Link>
+            <Link href="/area/nagoya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">名古屋のピラティススタジオ</Link>
+            <Link href="/area/fukuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">福岡のピラティススタジオ</Link>
           </div>
         </div>
       </section>

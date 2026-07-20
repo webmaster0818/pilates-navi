@@ -19,10 +19,13 @@ const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
   { match: /urban ?classic|アーバンクラシック/i, href: "/review/urban-classic/", label: "URBAN CLASSIC PILATESの詳細レビュー" },
 ];
 
-export default function AreaStudios({ area, areaName }: { area: "tokyo" | "osaka"; areaName: string }) {
+export default function AreaStudios({ area, areaName, addressFilter }: { area: string; areaName: string; addressFilter?: string }) {
   const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data-places.json"), "utf-8"));
-  const all: Studio[] = raw[area] || [];
+  let all: Studio[] = raw[area] || [];
+  if (addressFilter) all = all.filter((s) => s.address.includes(addressFilter));
   const studios = all.filter((s) => s.count >= 10).slice(0, 30);
+  // 口コミ3〜9件のスタジオは簡易リストで掲載(実在+最低限の評価シグナルがあるもののみ・0〜2件は掲載見送り)
+  const minor = all.filter((s) => s.count >= 3 && s.count < 10).slice(0, 30);
   const surveyedAt: string = raw.surveyedAt;
 
   const itemListLd = {
@@ -37,7 +40,7 @@ export default function AreaStudios({ area, areaName }: { area: "tokyo" | "osaka
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <p className="text-gray-600 leading-relaxed mb-2">
-        {areaName}の実在ピラティススタジオを、<strong>Googleマップの実データ（評点・口コミ件数）</strong>をもとに口コミ件数順で掲載しています（{surveyedAt}取得・全{all.length}スタジオを調査し、口コミ10件以上の{studios.length}スタジオを掲載）。評点・件数は当サイトの創作ではなくGoogleマップ上の実数です。料金・キャンペーンは変動が大きいため、各スタジオの公式サイトでご確認ください。
+        {areaName}の実在ピラティススタジオを、<strong>Googleマップの実データ（評点・口コミ件数）</strong>をもとに口コミ件数順で掲載しています（{surveyedAt}取得・全{all.length}スタジオを調査し、口コミ10件以上の{studios.length}スタジオを中心に掲載）。評点・件数は当サイトの創作ではなくGoogleマップ上の実数です。料金・キャンペーンは変動が大きいため、各スタジオの公式サイトでご確認ください。
       </p>
       <p className="text-xs text-gray-400 mb-8">出典: Google マップ（Google Places API・{surveyedAt}時点）。掲載順=口コミ件数順。評点・件数はその後変動している場合があります。</p>
 
@@ -80,6 +83,27 @@ export default function AreaStudios({ area, areaName }: { area: "tokyo" | "osaka
           );
         })}
       </div>
+
+      {minor.length > 0 && (
+        <div className="mt-10">
+          <h2 className="font-bold text-xl text-gray-800 mb-2">そのほかの{areaName}のピラティススタジオ</h2>
+          <p className="text-xs text-gray-400 mb-4">Google口コミ3〜9件のスタジオ（{surveyedAt}時点・実在確認済み）。評価がまだ少ないため、詳細はGoogleマップと公式サイトでご確認ください。</p>
+          <ul className="divide-y divide-gray-100 bg-white rounded-2xl border border-gray-200">
+            {minor.map((s, i) => (
+              <li key={s.name + i} className="p-4 flex items-start justify-between gap-3 flex-wrap">
+                <div className="min-w-0">
+                  <p className="font-semibold text-gray-800 text-sm">{s.name}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{s.address}</p>
+                </div>
+                <div className="shrink-0 flex items-center gap-3 text-xs font-bold">
+                  {typeof s.rating === "number" && <span className="text-amber-500">★ {s.rating.toFixed(1)}（{s.count}件）</span>}
+                  {s.mapsUri && <a href={s.mapsUri} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-700 underline underline-offset-2">Googleマップ</a>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="mt-10 bg-rose-50 rounded-2xl p-6 border border-rose-100">
         <p className="font-bold text-gray-800 mb-2">スタジオ選びに迷ったら</p>
