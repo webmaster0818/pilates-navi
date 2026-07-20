@@ -297,6 +297,18 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
+      {/* エリアから探す(Googleマップ実データの一覧) */}
+      <section className="py-16 bg-[#F5F3FF]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">エリアからスタジオを探す</h2>
+          <p className="text-gray-600 mb-8">Googleマップの実データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/area/tokyo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">東京のピラティススタジオ</Link>
+            <Link href="/area/osaka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">大阪のピラティススタジオ</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">

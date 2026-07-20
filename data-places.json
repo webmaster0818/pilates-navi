@@ -1,0 +1,1943 @@
+{
+ "tokyo": [
+  {
+   "name": "La pilates恵比寿店《整体×マシンピラティス》ラ ピラティス",
+   "rating": 4.9,
+   "count": 526,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿南１丁目２−８ 雨宮ビル 401号室",
+   "mapsUri": "https://maps.google.com/?cid=11357627331868299278&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/schedule?shopId=9c627b55-b7ae-44fb-9f49-3b8d966040e8&menuId=RSV0012&selectedMenuId=RSV0012"
+  },
+  {
+   "name": "ピラティススタジオ the SILK吉祥寺店",
+   "rating": 4.8,
+   "count": 510,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目１２−９ Vort 吉祥寺 3階",
+   "mapsUri": "https://maps.google.com/?cid=16159453377771997249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/kichijoji/?utm_source=google&utm_medium=GBP&utm_campaign=kichijoji"
+  },
+  {
+   "name": "ピラティススタジオ the SILK新宿店",
+   "rating": 4.9,
+   "count": 454,
+   "address": "日本、〒160-0023 東京都新宿区西新宿７丁目１−８ ヒノデビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=7280635253342045933&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/shinjuku/?utm_source=google&utm_medium=GBP&utm_campaign=shinjuku"
+  },
+  {
+   "name": "ピラティススタジオ the SILK東京八重洲店",
+   "rating": 4.7,
+   "count": 439,
+   "address": "日本、〒103-0028 東京都中央区八重洲１丁目５−９ 5階",
+   "mapsUri": "https://maps.google.com/?cid=1925666839397398847&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/yaesu/?utm_source=google&utm_medium=GBP&utm_campaign=yaesu"
+  },
+  {
+   "name": "ピラティススタジオ the SILK池袋西口店",
+   "rating": 4.8,
+   "count": 364,
+   "address": "日本、〒171-0021 東京都豊島区西池袋１丁目２１−２ ハイブリッヂ西池袋 6階",
+   "mapsUri": "https://maps.google.com/?cid=6071506922233463565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ikebukuro-west/?utm_source=google&utm_medium=GBP&utm_campaign=ikebukuro-west"
+  },
+  {
+   "name": "ピラティススタジオ the SILK 銀座店",
+   "rating": 4.8,
+   "count": 341,
+   "address": "日本、〒104-0061 東京都中央区銀座５丁目９−１２ ダイヤモンドビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=6434629956820854883&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ginza/?utm_source=google&utm_medium=GBP&utm_campaign=ginza"
+  },
+  {
+   "name": "Repilates",
+   "rating": 4.8,
+   "count": 338,
+   "address": "日本、〒171-0021 東京都豊島区西池袋３丁目２２−９ パークアクシス池袋 １F",
+   "mapsUri": "https://maps.google.com/?cid=4161181142452821002&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://repilates.jp/"
+  },
+  {
+   "name": "ピラティススタジオ the SILK渋谷店",
+   "rating": 4.8,
+   "count": 335,
+   "address": "日本、〒150-0041 東京都渋谷区神南１丁目１１−１ 渋谷市野ビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=13817822357582262860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/shibuya/?utm_source=google&utm_medium=GBP&utm_campaign=shibuya"
+  },
+  {
+   "name": "ピラティススタジオ the SILK池袋東口店",
+   "rating": 4.8,
+   "count": 324,
+   "address": "日本、〒171-0022 東京都豊島区南池袋１丁目２３−６ ＫＤＧ池袋ビル 9階",
+   "mapsUri": "https://maps.google.com/?cid=6278445109586701333&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ikebukuro-east/?utm_source=google&utm_medium=GBP&utm_campaign=ikebukuro-east"
+  },
+  {
+   "name": "URBAN CLASSIC PILATES 水天宮",
+   "rating": 4.8,
+   "count": 309,
+   "address": "日本、〒103-0014 東京都中央区日本橋蛎殻町１丁目２９−５ ウィンド水天宮ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=11384256863381606824&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://urbanclassic.jp/suitengu/"
+  },
+  {
+   "name": "La pilates 池袋店《整体×マシンピラティス》ラピラティス",
+   "rating": 4.8,
+   "count": 303,
+   "address": "日本、〒171-0022 東京都豊島区南池袋２丁目１１−９ 後藤ビル 1階",
+   "mapsUri": "https://maps.google.com/?cid=12144604182957721146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=9db45408-aa3a-4016-8d6d-7268f4489fb0&menuId=RSV0012"
+  },
+  {
+   "name": "lapilates《整体》ラピラティス",
+   "rating": 4.9,
+   "count": 300,
+   "address": "日本、〒107-0062 東京都港区南青山５丁目１２−２ 8階",
+   "mapsUri": "https://maps.google.com/?cid=15827534999182217184&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=9c627b56-897c-454e-99c6-fa3352c870fc&menuId=RSV0012"
+  },
+  {
+   "name": "the SILK",
+   "rating": 4.8,
+   "count": 299,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目５−８ ギンザウィローアヴェニュービル 4階",
+   "mapsUri": "https://maps.google.com/?cid=12599402492869321500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ginza-itchome/?utm_source=google&utm_medium=GBP&utm_campaign=ginza-itchome"
+  },
+  {
+   "name": "La pilates",
+   "rating": 4.9,
+   "count": 284,
+   "address": "日本、〒180-0003 東京都武蔵野市吉祥寺南町２丁目４−３ 劇団前進座 601",
+   "mapsUri": "https://maps.google.com/?cid=17472492829441068748&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/menu?shopId=9e596bc2-406f-46a6-8162-592acdf409d4"
+  },
+  {
+   "name": "zen place ピラティス 五反田東口",
+   "rating": 4.9,
+   "count": 274,
+   "address": "日本、〒141-0022 東京都品川区東五反田１丁目２２−６ 五反田さくらビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=2609807496155673112&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-gotandahigashi?utm_source=gmb&utm_medium=zen_place16"
+  },
+  {
+   "name": "ピラティスK 銀座店",
+   "rating": 4.6,
+   "count": 252,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目６−１０ 銀座上一ビルディング 7F",
+   "mapsUri": "https://maps.google.com/?cid=11438095074034601452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/ginza?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=ginza"
+  },
+  {
+   "name": "ピラティスK 池袋店",
+   "rating": 4.6,
+   "count": 240,
+   "address": "日本、〒170-0013 東京都豊島区東池袋１丁目３−６ 池袋山手ビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=13362510840343963555&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/ikebukuro?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=ikebukuro"
+  },
+  {
+   "name": "La pilates銀座店",
+   "rating": 4.9,
+   "count": 234,
+   "address": "日本、〒104-0061 東京都中央区銀座４丁目１４−８ VORT銀座イーストIII 6階",
+   "mapsUri": "https://maps.google.com/?cid=8579706471668981532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=019db952-88f9-71eb-9b00-953b5b1b22c0&menuId=RSV0012"
+  },
+  {
+   "name": "マシンピラティスRintosull 新宿西口駅前店",
+   "rating": 4.6,
+   "count": 230,
+   "address": "日本、〒160-0023 東京都新宿区西新宿１丁目５−１１ 4F",
+   "mapsUri": "https://maps.google.com/?cid=5405241630329919814&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/shinjukunishi/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "CLUB PILATES 恵比寿ガーデンプレイス店 マシンピラティススタジオ",
+   "rating": 4.8,
+   "count": 227,
+   "address": "日本、〒150-6090 東京都渋谷区恵比寿４丁目２０−４ ガーデンプレイス グラススクエア棟 1F",
+   "mapsUri": "https://maps.google.com/?cid=10975602700099010993&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/yebisugardenplace#utm_source=GoogleMap&utm_medium=ygp_gmap"
+  },
+  {
+   "name": "CLUB PILATES 目白店 マシンピラティススタジオ",
+   "rating": 4.8,
+   "count": 201,
+   "address": "日本、〒171-0031 東京都豊島区目白２丁目３９−１ TRAD目白 ２F",
+   "mapsUri": "https://maps.google.com/?cid=6229938175217044853&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/mejiro#utm_source=GoogleMap&utm_medium=mjr_gmap"
+  },
+  {
+   "name": "Ipu 南青山本店 マシンピラティススタジオ",
+   "rating": 4.9,
+   "count": 199,
+   "address": "日本、〒107-0062 東京都港区南青山２丁目１２−16 5 6 8F（6F 受付フロント",
+   "mapsUri": "https://maps.google.com/?cid=3090180274133753302&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://ipu-aoyama.com/"
+  },
+  {
+   "name": "ピラティススタジオ the SILK五反田店",
+   "rating": 4.8,
+   "count": 196,
+   "address": "日本、〒141-0031 東京都品川区西五反田１丁目２９−２ 吾作ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=5026851311792488252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.the-silk.co.jp/reserve/schedule/63/55?is_trial=true&utm_source=google&utm_medium=GBP&utm_campaign=gotanda"
+  },
+  {
+   "name": "bites studio恵比寿ANNEX店 パーソナルマシンピラティス専門店",
+   "rating": 4.9,
+   "count": 184,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目２２−８ 恵比寿ファーストプレイスビル 1103",
+   "mapsUri": "https://maps.google.com/?cid=3028731373308206974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bites-studio.jp/?fbclid=PAAaZ1of3W3dkIQK5sO1Ye3Mpy9jqSOr2mPYXs6C4-wBAjwAcj3uTAYMza_BE_aem_AUNFj_QJnnBqCenkEFxOEzoZkUEAkZST2QUmLmxMTVWfAwhULwZbcaiFia6FbE5bFdE"
+  },
+  {
+   "name": "マシンピラティスRintosull 吉祥寺店",
+   "rating": 4.7,
+   "count": 184,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目１１−９ 常総ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=955741320662535867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/kichijoji/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK 吉祥寺店",
+   "rating": 4.7,
+   "count": 167,
+   "address": "日本、〒180-0003 東京都武蔵野市吉祥寺南町１丁目７−７ HULIC & New KICHIJOJI 3F",
+   "mapsUri": "https://maps.google.com/?cid=15411083558697934664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tokyo/kichijoji/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=kichijoji"
+  },
+  {
+   "name": "bites studio恵比寿本店",
+   "rating": 4.8,
+   "count": 165,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿南１丁目１１−１９ 中島ビル 303",
+   "mapsUri": "https://maps.google.com/?cid=13022691534965006749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bites-studio.jp/?fbclid=PAAaZ1of3W3dkIQK5sO1Ye3Mpy9jqSOr2mPYXs6C4-wBAjwAcj3uTAYMza_BE_aem_AUNFj_QJnnBqCenkEFxOEzoZkUEAkZST2QUmLmxMTVWfAwhULwZbcaiFia6FbE5bFdE"
+  },
+  {
+   "name": "マシンピラティスRintosull 銀座店",
+   "rating": 4.7,
+   "count": 152,
+   "address": "日本、〒104-0061 東京都中央区銀座４丁目４−１ B2F",
+   "mapsUri": "https://maps.google.com/?cid=16321315337836002796&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/ginza-3rd/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "AURA PILATES & BODYMAKE STUDIO",
+   "rating": 5,
+   "count": 146,
+   "address": "日本、〒150-0012 東京都渋谷区広尾１丁目９−１６ 広尾宮田ビル 地下1階",
+   "mapsUri": "https://maps.google.com/?cid=15036698383314480082&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://aurapilate.com/"
+  },
+  {
+   "name": "Pilates & BodyMake Studio Viel Aoyama",
+   "rating": 4.9,
+   "count": 138,
+   "address": "日本、〒107-0061 東京都港区北青山１丁目４−５ Vort青山一丁目Dual's 303",
+   "mapsUri": "https://maps.google.com/?cid=10992137406648485673&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://viel.hacomono.jp/"
+  },
+  {
+   "name": "Pilates Studio excel 日本橋店",
+   "rating": 4.9,
+   "count": 138,
+   "address": "日本、〒103-0002 東京都中央区日本橋馬喰町１丁目６−１ Ju Sky Tower 日本橋 8F",
+   "mapsUri": "https://maps.google.com/?cid=5545775409978311411&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-excel.com/lp/?studio=nihonbashi"
+  },
+  {
+   "name": "zen place ピラティス 池袋",
+   "rating": 4.8,
+   "count": 135,
+   "address": "日本、〒171-0022 東京都豊島区南池袋２丁目２７−８ 南水ビル 8階",
+   "mapsUri": "https://maps.google.com/?cid=10777274914844908564&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-ikebukuro?utm_source=gmb&utm_medium=zen_place35"
+  },
+  {
+   "name": "ピラティススタジオ the SILK目黒店",
+   "rating": 4.7,
+   "count": 131,
+   "address": "日本、〒141-0021 東京都品川区上大崎２丁目１２−２ 目黒ミズホビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=16899797855368455664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/meguro/?utm_source=google&utm_medium=GBP&utm_campaign=meguro"
+  },
+  {
+   "name": "Beat Pilates(ビート ピラティス)日本橋小伝馬町店",
+   "rating": 4.9,
+   "count": 125,
+   "address": "日本、〒103-0011 東京都中央区日本橋大伝馬町１１−８ ＨＡＴビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=8731588418739776599&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://beat-pilates.com/nihonbashi/"
+  },
+  {
+   "name": "ピラティスK 渋谷店",
+   "rating": 4.5,
+   "count": 123,
+   "address": "日本、〒150-0043 東京都渋谷区道玄坂２丁目１６−８ ビジネスVIP 渋谷 道玄坂坂本ビル 1F",
+   "mapsUri": "https://maps.google.com/?cid=17580910577199140784&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tokyo/shibuya/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=shibuya"
+  },
+  {
+   "name": "ピラティスK 新宿店",
+   "rating": 4.6,
+   "count": 122,
+   "address": "日本、〒160-0022 東京都新宿区新宿３丁目２−４ M&E SQUARE 3F",
+   "mapsUri": "https://maps.google.com/?cid=10552205407081902340&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tokyo/shinjuku/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=shinjuku"
+  },
+  {
+   "name": "Pilates Mee 恵比寿店",
+   "rating": 5,
+   "count": 120,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目２１−１１",
+   "mapsUri": "https://maps.google.com/?cid=17862497710016993240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://m-pilates.com/shop/tokyo/ebisu/?utm_source=google&utm_medium=map"
+  },
+  {
+   "name": "マシンピラティススタジオ the SILK 恵比寿",
+   "rating": 4.9,
+   "count": 111,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿南１丁目１７−１５ EX恵比寿南ビル 3F-B",
+   "mapsUri": "https://maps.google.com/?cid=14278467665187336862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ebisu-2/?utm_source=google&utm_medium=GBP&utm_campaign=ebisu"
+  },
+  {
+   "name": "paddleピラティス表参道",
+   "rating": 4.9,
+   "count": 108,
+   "address": "日本、〒150-0001 東京都渋谷区神宮前５丁目４６−１８ アデオアオヤマ 202",
+   "mapsUri": "https://maps.google.com/?cid=99286245234341886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://paddle-gym.com/gym/omotesando/?utm_source=google&utm_medium=gbp&utm_campaign=overview&utm_content=omotesando"
+  },
+  {
+   "name": "Celestia 池袋店",
+   "rating": 4.8,
+   "count": 104,
+   "address": "日本、〒170-0013 東京都豊島区東池袋１丁目２１−１３ 11F",
+   "mapsUri": "https://maps.google.com/?cid=2223069696977736528&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.celes-pilates.jp/reserve/schedule/1/8?trial=true"
+  },
+  {
+   "name": "YUZU 池袋店｜パーソナルマシンピラティス",
+   "rating": 4.9,
+   "count": 103,
+   "address": "日本、〒171-0021 東京都豊島区西池袋３丁目３０−１１ 610",
+   "mapsUri": "https://maps.google.com/?cid=6267041888498500048&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://yuzu-pilates.com/studios/ikebukuro/?utm_source=google&utm_medium=meo&utm_campaign=reach_ikebukuro&argument=liZmpQM9&dmai=a67c517c10d798"
+  },
+  {
+   "name": "KX Pilates（KXピラティス） 東新宿店",
+   "rating": 4.9,
+   "count": 102,
+   "address": "日本、〒160-0022 東京都新宿区新宿６丁目２７−１２ ユニオン新宿ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=4249218384289599204&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://kxpilates.jp/"
+  },
+  {
+   "name": "CLUB PILATES 吉祥寺",
+   "rating": 5,
+   "count": 100,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町２丁目１４−２７ 1F",
+   "mapsUri": "https://maps.google.com/?cid=3014164790093229344&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/kichijoji#utm_source=GoogleMap&utm_medium=kjj_gmap"
+  },
+  {
+   "name": "ELEMENT 恵比寿・目黒店（エレメント",
+   "rating": 4.8,
+   "count": 95,
+   "address": "日本、〒153-0062 東京都目黒区三田２丁目７−６ 目黒フラット 101",
+   "mapsUri": "https://maps.google.com/?cid=6885767356880265607&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://element-gym.com/element-top/pilates/pilates-all/ebisu-meguro-pilates/"
+  },
+  {
+   "name": "La pilates２号店",
+   "rating": 5,
+   "count": 93,
+   "address": "日本、〒104-0061 東京都中央区銀座４丁目８−２ 三福ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=8842980900921620417&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/menu?shopId=9e596bc2-406f-46a6-8162-592acdf409d4"
+  },
+  {
+   "name": "CLUB PILATES 不動前",
+   "rating": 4.8,
+   "count": 89,
+   "address": "日本、〒141-0031 東京都品川区西五反田５丁目９−２ アスペンシティ 2階",
+   "mapsUri": "https://maps.google.com/?cid=9847754401530241944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/fudomae#utm_source=GoogleMap&utm_medium=fdm_gmap"
+  },
+  {
+   "name": "La pilates 新宿御苑店《整体×マシンピラティス》ラピラティス",
+   "rating": 4.9,
+   "count": 84,
+   "address": "日本、〒160-0022 東京都新宿区新宿２丁目８−３ AOI HOUSE SHINJUKU １１階",
+   "mapsUri": "https://maps.google.com/?cid=1802748626575858269&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=a12741fc-776c-46af-9c33-2c72cef9c489&menuId=RSV0012"
+  },
+  {
+   "name": "パーソナルピラティススタジオMaison96東日本橋店",
+   "rating": 4.9,
+   "count": 84,
+   "address": "日本、〒103-0004 東京都中央区東日本橋３丁目１２−１１ リブラ東日本橋 Ⅵ B1F",
+   "mapsUri": "https://maps.google.com/?cid=10307074436712373331&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://maison96-pilates.com/"
+  },
+  {
+   "name": "パーソナルピラティススタジオMaison96戸越銀座店",
+   "rating": 4.8,
+   "count": 83,
+   "address": "日本、〒142-0063 東京都品川区荏原１丁目１３−３ TaiseiBase2E",
+   "mapsUri": "https://maps.google.com/?cid=11467855084394677134&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://maison96-site.com/"
+  },
+  {
+   "name": "マシンピラティスRintosull 恵比寿東口店",
+   "rating": 4.4,
+   "count": 80,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目１３−１０ 恵比寿壱番館 2F",
+   "mapsUri": "https://maps.google.com/?cid=13188506193644213041&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/ebisuhigashiguchi/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "La pilates 目黒店",
+   "rating": 4.9,
+   "count": 79,
+   "address": "日本、〒153-0063 東京都目黒区目黒１丁目５−１６ 経研第一ビル 7F",
+   "mapsUri": "https://maps.google.com/?cid=10006111168602647033&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "ピラティススタジオNOA 吉祥寺スタジオ",
+   "rating": 4.6,
+   "count": 77,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目１３−２ 6F",
+   "mapsUri": "https://maps.google.com/?cid=3761417566060631609&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.noapilates.jp/studio/kichijoji-annex/?utm_source=google&utm_medium=maps"
+  },
+  {
+   "name": "24/7ピラティス渋谷店《個室パーソナルピラティススタジオ》",
+   "rating": 4.9,
+   "count": 75,
+   "address": "日本、〒150-0002 東京都渋谷区渋谷２丁目６−１２ 1F",
+   "mapsUri": "https://maps.google.com/?cid=7942661254366814864&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://247-sports.jp/pilates/lp/rp/md/md_ad_cam_mn_off_shibuya_2502/?acckey=pilates1-googmybu-gbp0-2470-pila0000-00000000"
+  },
+  {
+   "name": "ピラティス アランチャ渋谷本店",
+   "rating": 4.9,
+   "count": 70,
+   "address": "日本、〒150-0031 東京都渋谷区桜丘町４−１７ PORTAL Apartment&Art POINT 1104",
+   "mapsUri": "https://maps.google.com/?cid=2595896655627919002&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.arancia78.jp/"
+  },
+  {
+   "name": "the SILKさくら通り店",
+   "rating": 4.8,
+   "count": 68,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目８−２ 銀座プルミエビル 7階",
+   "mapsUri": "https://maps.google.com/?cid=12245687293118677803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/tokyo/ginza_sakura_street/?utm_source=google&utm_medium=GBP&utm_campaign="
+  },
+  {
+   "name": "ピラティススタジオ『ルルト』池袋店",
+   "rating": 4.9,
+   "count": 65,
+   "address": "日本、〒171-0014 東京都豊島区池袋２丁目３１−１１ ダイヤビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=14746825936238863499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://luluto.kabushikigaisya-rigakubody.co.jp/tenpo/pilates_ikebukuro/?utm_source=gbp&utm_medium=gbp_profile&utm_content=shinjukusantyome"
+  },
+  {
+   "name": "CLUB PILATES 西新宿",
+   "rating": 4.9,
+   "count": 63,
+   "address": "日本、〒160-0023 東京都新宿区西新宿６丁目２０−７ コンシェリア西新宿Tower's West 1F",
+   "mapsUri": "https://maps.google.com/?cid=14956283550119085584&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/nishishinjuku#utm_source=GoogleMap&utm_medium=nsj_gmap"
+  },
+  {
+   "name": "パーソナルマシンピラティスELEMENT 池袋店（エレメント）",
+   "rating": 4.8,
+   "count": 61,
+   "address": "日本、〒171-0022 東京都豊島区南池袋３丁目９−５ サトミビル B1F パーソナルマシンピラティスELEMENT池袋店",
+   "mapsUri": "https://maps.google.com/?cid=9586595651425053980&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://element-gym.com/element-top/pilates/pilates-all/ikebukuro/"
+  },
+  {
+   "name": "Pilates KASANE",
+   "rating": 4.9,
+   "count": 60,
+   "address": "日本、〒150-0001 東京都渋谷区神宮前６丁目３４−２２ 神宮前634ビル Ｂ１Ｆ",
+   "mapsUri": "https://maps.google.com/?cid=12340914696822051538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-kasane.jp/studio/studio-omotesando/?utm_source=google&utm_medium=meo&utm_campaign=studio-omotesando"
+  },
+  {
+   "name": "マシンピラティスRintosull 大井町店",
+   "rating": 4.7,
+   "count": 58,
+   "address": "日本、〒140-0014 東京都品川区大井１丁目１１−３ 8f",
+   "mapsUri": "https://maps.google.com/?cid=17955714537457196324&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/oimachi/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "zen place ピラティス 戸越",
+   "rating": 4.9,
+   "count": 58,
+   "address": "日本、〒142-0051 東京都品川区平塚２丁目６−１３ マツモトスバルビル 5F・B号室",
+   "mapsUri": "https://maps.google.com/?cid=2230961279473062786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-togoshi?utm_source=gmb&utm_medium=zen_place46"
+  },
+  {
+   "name": "bloom pilates",
+   "rating": 5,
+   "count": 56,
+   "address": "日本、〒104-0061 東京都中央区銀座７丁目９−１６ ロータリービル 6F",
+   "mapsUri": "https://maps.google.com/?cid=6164537448930807455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bloompilates.jp/"
+  },
+  {
+   "name": "pilatesstudiotou東京",
+   "rating": 4.9,
+   "count": 56,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目３−先 北有楽ビル 1階12号室",
+   "mapsUri": "https://maps.google.com/?cid=4232440717302664942&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudiotou.com/"
+  },
+  {
+   "name": "ピラティスレガシースタジオ東京目黒店",
+   "rating": 5,
+   "count": 54,
+   "address": "日本、〒153-0064 東京都目黒区下目黒１丁目２−２１ 泰山堂ビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=6423327725957925266&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-legacy.com/"
+  },
+  {
+   "name": "Succy pilates studio 銀座店",
+   "rating": 4.9,
+   "count": 53,
+   "address": "日本、〒104-0031 東京都中央区京橋３丁目４−１ ＴＭ銀座ビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=2884560806681968557&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://succy-pilates.etltd-japan.info/"
+  },
+  {
+   "name": "zen place ピラティス 五反田西口",
+   "rating": 4.4,
+   "count": 53,
+   "address": "日本、〒141-0031 東京都品川区西五反田１丁目２５−１ 5階",
+   "mapsUri": "https://maps.google.com/?cid=9165394221502441564&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-gotanda?utm_source=gmb&utm_medium=zen_place42"
+  },
+  {
+   "name": "zen place ピラティス 不動前",
+   "rating": 4.9,
+   "count": 52,
+   "address": "日本、〒141-0031 東京都品川区西五反田４丁目２７−１０ 印刷産業ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=10739327055546849476&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-fudomae?utm_source=gmb&utm_medium=zen_place246"
+  },
+  {
+   "name": "ピラティスK 新宿西口店",
+   "rating": 4.8,
+   "count": 51,
+   "address": "日本、〒160-0023 東京都新宿区西新宿１丁目１２−１ 高倉第一ビル 5F",
+   "mapsUri": "https://maps.google.com/?cid=13183311896192581495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tokyo/shinjuku-nishiguchi/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=shinjuku-nishiguchi"
+  },
+  {
+   "name": "Pilates isM(イズム) 東銀座店",
+   "rating": 4.9,
+   "count": 51,
+   "address": "日本、〒104-0061 東京都中央区銀座４丁目１３−８ ソフィアスクエア 3階",
+   "mapsUri": "https://maps.google.com/?cid=5831865056245883905&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-ism.com/"
+  },
+  {
+   "name": "ピラティススタジオ『ルルト』池袋2号店",
+   "rating": 4.9,
+   "count": 50,
+   "address": "日本、〒171-0022 東京都豊島区南池袋２丁目２９−１６ ルボワ平喜 404",
+   "mapsUri": "https://maps.google.com/?cid=6055795544346368535&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://luluto.kabushikigaisya-rigakubody.co.jp/tenpo/pilates_ikebukuro2/"
+  },
+  {
+   "name": "Pilates Mirror 吉祥寺",
+   "rating": 4.7,
+   "count": 50,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目２０−９",
+   "mapsUri": "https://maps.google.com/?cid=5846485346108072663&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.konami.com/sportsclub/pilatesmirror/kichijoji/"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)新宿店",
+   "rating": 4.9,
+   "count": 48,
+   "address": "日本、〒160-0023 東京都新宿区西新宿７丁目１１−１７ ブレステン西新宿 8階",
+   "mapsUri": "https://maps.google.com/?cid=8525943044085031220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/shinjuku/"
+  },
+  {
+   "name": "ピラティススタジオ『ルルト』新宿店",
+   "rating": 5,
+   "count": 48,
+   "address": "日本、〒160-0022 東京都新宿区新宿５丁目１−１ ローヤルマンションビル 506",
+   "mapsUri": "https://maps.google.com/?cid=972402048269181739&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://luluto.kabushikigaisya-rigakubody.co.jp/tenpo/pilates_shinjuku/?utm_source=gbp&utm_medium=gbp_profile&utm_content=shinjuku"
+  },
+  {
+   "name": "paddleピラティス銀座",
+   "rating": 5,
+   "count": 47,
+   "address": "日本、〒104-0041 東京都中央区新富１丁目５−１２ 5階",
+   "mapsUri": "https://maps.google.com/?cid=9641917105200334662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://paddle-gym.com/gym/ginza/?utm_source=google&utm_medium=gbp&utm_campaign=overview&utm_content=ginza"
+  },
+  {
+   "name": "ピラティスK 表参道店",
+   "rating": 4.7,
+   "count": 47,
+   "address": "日本、〒107-0061 東京都港区北青山３丁目１２−７ 秋月ビル 3F 301",
+   "mapsUri": "https://maps.google.com/?cid=11835033629281234116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tokyo/omotesando/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=omotesando"
+  },
+  {
+   "name": "zen place ピラティス 恵比寿",
+   "rating": 4.7,
+   "count": 46,
+   "address": "日本、〒150-0012 東京都渋谷区広尾１丁目１５−３ 増田ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=16395801888665350944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-ebisu?utm_source=gmb&utm_medium=zen_place4"
+  },
+  {
+   "name": "FLATTE（フラッテ）パーソナルマシンピラティス目黒店",
+   "rating": 5,
+   "count": 46,
+   "address": "日本、〒141-0021 東京都品川区上大崎３丁目３−９ 秀和目黒駅前レジデンス 1106号 【11階】",
+   "mapsUri": "https://maps.google.com/?cid=14618842784890628734&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://flatte.jp/pilates/location/meguro/"
+  },
+  {
+   "name": "パーソナルマシンピラティスSAKURA恵比寿店",
+   "rating": 5,
+   "count": 42,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目７−１２ 西原ビル ４階",
+   "mapsUri": "https://maps.google.com/?cid=1625579144182396941&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://sakura-pilates.jp/studios/ebisu/"
+  },
+  {
+   "name": "BDC PILATES 吉祥寺【少人数制マシンピラティス】",
+   "rating": 4.6,
+   "count": 42,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町２丁目２−１４ HN BLDG 4階",
+   "mapsUri": "https://maps.google.com/?cid=17395557086653003878&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bdcpilates.com/kichijoji"
+  },
+  {
+   "name": "YUZU 五反田店｜パーソナルマシンピラティス",
+   "rating": 5,
+   "count": 42,
+   "address": "日本、〒141-0031 東京都品川区西五反田２丁目１３−５ 豊三西五反田ハイツ 701",
+   "mapsUri": "https://maps.google.com/?cid=47095416784425762&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://yuzu-pilates.com/studios/gotanda/?utm_source=google&utm_medium=meo&utm_campaign=reach_gotanda&argument=liZmpQM9&dmai=a67c517c10d798"
+  },
+  {
+   "name": "マシンピラティス BDC PILATES 銀座並木通り",
+   "rating": 4.7,
+   "count": 41,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目４−５ GINZA URBAN 21 8F",
+   "mapsUri": "https://maps.google.com/?cid=8994035480803303731&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bdcpilates.com/ginzanamiki"
+  },
+  {
+   "name": "PilatesGreen池袋店",
+   "rating": 4.9,
+   "count": 41,
+   "address": "日本、〒171-0021 東京都豊島区西池袋５丁目２−３ 平凡立教前ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=13390356325976819345&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-green.jp/"
+  },
+  {
+   "name": "ピラティススタジオBB 恵比寿",
+   "rating": 5,
+   "count": 41,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿４丁目１０−３ Ｋ２ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=14879391934044945571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-bb.com/"
+  },
+  {
+   "name": "STUDIO BREATH",
+   "rating": 4.9,
+   "count": 40,
+   "address": "日本、〒107-0062 東京都港区南青山６丁目２−１３ ファイン青山 ３階",
+   "mapsUri": "https://maps.google.com/?cid=4993234729330495977&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://studiobreath.com/?utm_source=google&utm_medium=map"
+  },
+  {
+   "name": "Spine Conditioning Center",
+   "rating": 4.9,
+   "count": 40,
+   "address": "日本、〒104-0032 東京都中央区八丁堀４丁目９−９ フロンティアビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=3263780296891843762&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.spine-conditioning-center.com/"
+  },
+  {
+   "name": "Dr.ピラティス 池袋店",
+   "rating": 5,
+   "count": 39,
+   "address": "日本、〒171-0021 東京都豊島区西池袋１丁目２２−２ ナカヤビル 5階",
+   "mapsUri": "https://maps.google.com/?cid=12457100250360655279&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://drpilates.drtraining.jp/location/ikebukuro/"
+  },
+  {
+   "name": "zen place ピラティス 八重洲",
+   "rating": 4.5,
+   "count": 39,
+   "address": "日本、〒103-0027 東京都中央区日本橋２丁目３−２１ 八重洲セントラルビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=17148798408339792425&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-yaesu?utm_source=gmb&utm_medium=zen_place216"
+  },
+  {
+   "name": "zen place ピラティス 吉祥寺",
+   "rating": 4.8,
+   "count": 39,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目４−１１ 吉祥寺ナインビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=317342405836139160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-kichijoji?utm_source=gmb&utm_medium=zen_place51"
+  },
+  {
+   "name": "ピラティススタジオNOA 新宿スタジオ",
+   "rating": 4.6,
+   "count": 37,
+   "address": "日本、〒160-0023 東京都新宿区西新宿１丁目３−１４ 9F",
+   "mapsUri": "https://maps.google.com/?cid=14381346067356040300&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.noapilates.jp/studio/shinjuku/?utm_source=google&utm_medium=maps"
+  },
+  {
+   "name": "SOU PILATES 銀座店 (マシンピラティス＆ボディメイクピラティス)",
+   "rating": 4.9,
+   "count": 36,
+   "address": "日本、〒104-0061 東京都中央区銀座４丁目１４−１９ 第二片山ビル2階",
+   "mapsUri": "https://maps.google.com/?cid=11185161026420736886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://sou-pilates.com/"
+  },
+  {
+   "name": "Minapilates 渋谷（パーソナルピラティス）",
+   "rating": 5,
+   "count": 35,
+   "address": "日本、〒150-0002 東京都渋谷区渋谷１丁目１−１０ ニューハイツ青山 802",
+   "mapsUri": "https://maps.google.com/?cid=15086492987550662763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mina-pilates.site/preopen/?utm_source=google&utm_medium=gmb"
+  },
+  {
+   "name": "BDC PILATES 池袋【少人数制マシンピラティス】",
+   "rating": 4.9,
+   "count": 35,
+   "address": "日本、〒171-0022 東京都豊島区南池袋１丁目２２−２ Flcビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=9956485994556548608&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bdcpilates.com/ikebukuro"
+  },
+  {
+   "name": "パーソナルマシンピラティスSAKURA五反田店",
+   "rating": 4.9,
+   "count": 33,
+   "address": "日本、〒141-0031 東京都品川区西五反田８丁目１−７ ダイアパレス西五反田 ７０２",
+   "mapsUri": "https://maps.google.com/?cid=11665792620159443275&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://sakura-pilates.jp/studios/gotanda/?argument=VGuhjouI&dmai=map_gotanda"
+  },
+  {
+   "name": "Sky Pilates Tokyo 表参道店",
+   "rating": 5,
+   "count": 32,
+   "address": "日本、〒150-0001 東京都渋谷区神宮前３丁目４−７ 3F エルム青山",
+   "mapsUri": "https://maps.google.com/?cid=5714531098299286822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://skypilatestokyo.com/"
+  },
+  {
+   "name": "Celestia 新宿店",
+   "rating": 4.8,
+   "count": 31,
+   "address": "日本、〒160-0023 東京都新宿区西新宿７丁目１６−１１ FORECAST西新宿 2F",
+   "mapsUri": "https://maps.google.com/?cid=6022052209363634516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.celes-pilates.jp/reserve/schedule/3/10?trial=true"
+  },
+  {
+   "name": "ピラティススタジオ piqué pilates 新富町八丁堀",
+   "rating": 5,
+   "count": 31,
+   "address": "日本、〒104-0042 東京都中央区入船２丁目３−９ 平成新富町ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=7897547910608589978&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://site.pilates-pique.com/p/JVegUed84nbJ"
+  },
+  {
+   "name": "Sky Pilates Tokyo 青山本店",
+   "rating": 4.8,
+   "count": 30,
+   "address": "日本、〒107-0062 東京都港区南青山３丁目３−１６ ＩＱビルディング GF",
+   "mapsUri": "https://maps.google.com/?cid=13386400702573155877&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://skypilatestokyo.com/"
+  },
+  {
+   "name": "マシンピラティス＆フィットネス ソエルスタジオ東日本橋店",
+   "rating": 4.2,
+   "count": 30,
+   "address": "日本、〒103-0004 東京都中央区東日本橋３丁目８−１ コーポラス 1F",
+   "mapsUri": "https://maps.google.com/?cid=1022185417297698071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lp.soelu.com/studio_new_higashinihonbashi/index.html?utm_source=realstudio&utm_medium=gbp&utm_campaign=higashinihonbashi_gbp"
+  },
+  {
+   "name": "pilates Gemma Ebisu",
+   "rating": 5,
+   "count": 27,
+   "address": "日本、〒150-0011 東京都渋谷区東３丁目１２−１０ 永野ハイツ",
+   "mapsUri": "https://maps.google.com/?cid=10327802767782887206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.instagram.com/gemma__pilates?igsh=cmFqYnpndTJxazZy&utm_source=qr"
+  },
+  {
+   "name": "BDC PILATES 表参道 A Studio【少人数制マシンピラティス】",
+   "rating": 4.5,
+   "count": 27,
+   "address": "日本、〒107-0062 東京都港区南青山５丁目７−１７ 青山小原ビル 8F",
+   "mapsUri": "https://maps.google.com/?cid=18379403555396185576&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bdcpilates.com/omotesando"
+  },
+  {
+   "name": "Kintsugi Pilates Studio",
+   "rating": 5,
+   "count": 26,
+   "address": "日本、〒107-0061 東京都港区北青山３丁目８−４ サンテックス岡本 302",
+   "mapsUri": "https://maps.google.com/?cid=7603930756148712143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://www.kintsugipilates.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=3091026209509396615"
+  },
+  {
+   "name": "パーソナルピラティススタジオMaison96五反田店",
+   "rating": 4.8,
+   "count": 26,
+   "address": "日本、〒141-0022 東京都品川区東五反田２丁目５−４",
+   "mapsUri": "https://maps.google.com/?cid=7123128284719552462&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://maison96-nu.com/"
+  },
+  {
+   "name": "K Village Pilates（ケービレッジピラティス）新宿西口店",
+   "rating": 4.9,
+   "count": 25,
+   "address": "日本、〒160-0023 東京都新宿区西新宿１丁目２３−２３ TK 新都心ビル B1F",
+   "mapsUri": "https://maps.google.com/?cid=8099314766764635839&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatestokyo.jp/"
+  },
+  {
+   "name": "Studio Be",
+   "rating": 5,
+   "count": 22,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町２丁目７−５ 402 吉祥寺 ピラティス",
+   "mapsUri": "https://maps.google.com/?cid=8792519010072931737&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://studiobe.hp.peraichi.com/"
+  },
+  {
+   "name": "Pilates Mee吉祥寺店",
+   "rating": 4.8,
+   "count": 21,
+   "address": "日本、〒180-0005 東京都武蔵野市御殿山１丁目６−９ エルドラド吉祥寺 303",
+   "mapsUri": "https://maps.google.com/?cid=15295459405950228455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://m-pilates.com/shop/tokyo/kichijoji/?utm_source=google&utm_medium=map"
+  },
+  {
+   "name": "Aoyama",
+   "rating": 5,
+   "count": 20,
+   "address": "日本、〒107-0062 東京都港区南青山５丁目３−２５ OHビル ３F",
+   "mapsUri": "https://maps.google.com/?cid=1947057412982534985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://www.pilatesaoyama.tokyo/"
+  },
+  {
+   "name": "L ピラティス渋谷店",
+   "rating": 5,
+   "count": 19,
+   "address": "日本、〒150-0041 東京都渋谷区神南１丁目１４−１ コーポナポリ 201号室",
+   "mapsUri": "https://maps.google.com/?cid=12747628340258450934&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://b.hpr.jp/kr/hp/H000678344"
+  },
+  {
+   "name": "VERT Bilingual Pilates Studio",
+   "rating": 5,
+   "count": 19,
+   "address": "日本、〒107-0062 東京都港区南青山３丁目１０−４１ 9階",
+   "mapsUri": "https://maps.google.com/?cid=8651501096136370537&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lit.link/bilingualpilatesstudiovert?fbclid=PAZXh0bgNhZW0CMTEAAaYH__w6eB-ADJjFqM2F3_f9pteRWfDVx0rsYBP8XE4GATcuVHuqS2FoLwc_aem_AYTgKXh0S4kN0Bsz7zMx-PrgNSTv_CDY28BsrkPStWR39HnbuJQ2Tx1Xo1oAraAsLP-fTC-VLPbAP__LUhu5VrPF"
+  },
+  {
+   "name": "マシンピラティスRintosull 戸越公園店",
+   "rating": 4.5,
+   "count": 19,
+   "address": "日本、〒142-0041 東京都品川区戸越５丁目６−８ 大木ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=4419477811584789820&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/tokyo/togoshikouen/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "Re StudioTokyo",
+   "rating": 5,
+   "count": 18,
+   "address": "日本、〒107-0061 東京都港区北青山３丁目１２−７",
+   "mapsUri": "https://maps.google.com/?cid=7242554605188499399&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://re-pilates.amebaownd.com/"
+  },
+  {
+   "name": "Succy pilates studio 日本橋店",
+   "rating": 5,
+   "count": 18,
+   "address": "日本、〒503 東京都中央区日本橋２丁目１６−３ 日本橋ビル 日本橋ビル JP 103-0027",
+   "mapsUri": "https://maps.google.com/?cid=12677129011114148718&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://succy-pilates.etltd-japan.info/"
+  },
+  {
+   "name": "YUZU 吉祥寺店｜パーソナルマシンピラティス",
+   "rating": 5,
+   "count": 18,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目４−１１ ライオンズステーションプラザ吉祥寺 901",
+   "mapsUri": "https://maps.google.com/?cid=8593223716937987349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://yuzu-pilates.com/studios/kichijoji/?utm_source=google&utm_medium=meo&utm_campaign=reach_kichijoji&argument=liZmpQM9&dmai=a67c517c10d798"
+  },
+  {
+   "name": "ピラティスガーデン",
+   "rating": 4.8,
+   "count": 17,
+   "address": "日本、〒104-0061 東京都中央区銀座３丁目１４−１３ 第一厚生館ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=6594196319052079663&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://www.ginza-garden.com/"
+  },
+  {
+   "name": "Pilates Beauté Ginza",
+   "rating": 4.9,
+   "count": 16,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目５−５ 明興ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=5342382749110836831&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://beaute-machinepilates.com/"
+  },
+  {
+   "name": "Harmony Pilates Studio",
+   "rating": 5,
+   "count": 16,
+   "address": "日本、〒150-0012 東京都渋谷区広尾５丁目１５−２ 日計広尾コーポ",
+   "mapsUri": "https://maps.google.com/?cid=4561404478851563357&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.harmonypilates-studio.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2999424971893536584"
+  },
+  {
+   "name": "「カラダメンテ」",
+   "rating": 4.9,
+   "count": 16,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目１０−６ 清園ビル 1F・2F",
+   "mapsUri": "https://maps.google.com/?cid=9752889603657830744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://karadamainte.com/"
+  },
+  {
+   "name": "Dr.ピラティス 吉祥寺店",
+   "rating": 5,
+   "count": 16,
+   "address": "日本、〒180-0005 東京都武蔵野市御殿山１丁目３−９ 御殿山フラット 2F",
+   "mapsUri": "https://maps.google.com/?cid=5038957553493319395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://drpilates.drtraining.jp/location/kichijoji/"
+  },
+  {
+   "name": "LaLa Pilates（ララピラティス）吉祥寺スタジオ",
+   "rating": 5,
+   "count": 16,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目２−７ 5F-501",
+   "mapsUri": "https://maps.google.com/?cid=13257934595096298472&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lalaaasha.jp/studio/p_kichijoji/"
+  },
+  {
+   "name": "zen place ピラティス 新宿南口",
+   "rating": 4.7,
+   "count": 15,
+   "address": "日本、〒160-0022 東京都新宿区新宿４丁目１−２２ 2階",
+   "mapsUri": "https://maps.google.com/?cid=2814223865582113780&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-shinjuku?utm_source=gmb&utm_medium=zen_place29"
+  },
+  {
+   "name": "ピラティススタジオTumugi",
+   "rating": 5,
+   "count": 15,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿南２丁目８−３",
+   "mapsUri": "https://maps.google.com/?cid=11757433897219184588&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bodymakepilatestumugi.com/"
+  },
+  {
+   "name": "澪/mio Pilates Studio",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒104-0061 東京都中央区銀座１丁目２０−１１ 銀座１２０ビル 9F",
+   "mapsUri": "https://maps.google.com/?cid=7686283242731126396&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mio-pilates.com/"
+  },
+  {
+   "name": "ピラティススタジオ【サルーテ】",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒150-0031 東京都渋谷区桜丘町１４−１０ 渋谷コープ 403号室",
+   "mapsUri": "https://maps.google.com/?cid=1391547066866858312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.instagram.com/hyuga.pilates?igsh=bWdvdHA2MmF4dmhn&utm_source=qr"
+  },
+  {
+   "name": "ピラティススタジオイグネス 池袋西口店",
+   "rating": 4.7,
+   "count": 14,
+   "address": "日本、〒171-0021 東京都豊島区西池袋２丁目３９−８ ローズベイ池袋ビル 801号室",
+   "mapsUri": "https://maps.google.com/?cid=10087074580246476294&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://exness-pilates.com/"
+  },
+  {
+   "name": "ピラティスアライアンス",
+   "rating": 4.4,
+   "count": 14,
+   "address": "2nd Floor, ＬＵＣＥ ＭＩＮＡＭＩＡＯＹＡＭＡ Building, 5, ５丁目-５-4 南青山 港区 東京都 107-0062 日本",
+   "mapsUri": "https://maps.google.com/?cid=5925615459735445311&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://www.pilates-all.com/"
+  },
+  {
+   "name": "ハロ ピラティス/halo pilates",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒108-0071 東京都港区白金台２丁目１５−４",
+   "mapsUri": "https://maps.google.com/?cid=13389834956939610132&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://pilates-halo.com/"
+  },
+  {
+   "name": "Dee Pilates - 四ツ谷マシンピラティス",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒160-0004 東京都新宿区四谷１丁目１８ belle四谷 6F",
+   "mapsUri": "https://maps.google.com/?cid=5049643794505951494&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dee-pilates.jp/location/yotsuya/"
+  },
+  {
+   "name": "パーソナルピラティス 渋谷sani studio",
+   "rating": 4.9,
+   "count": 13,
+   "address": "日本、〒150-0041 東京都渋谷区神南１丁目１１−５ ダイネス壱番館 801",
+   "mapsUri": "https://maps.google.com/?cid=6347915627285270144&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://beauty.hotpepper.jp/kr/slnH000715097/?vos=cpahpbprosmaf131118006"
+  },
+  {
+   "name": "Pilates Studio Beê 五反田店",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒141-0031 東京都品川区西五反田２丁目１２−１５ 五反田リーラハイタウン 607",
+   "mapsUri": "https://maps.google.com/?cid=148203251746954265&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://bee-pilates.com/"
+  },
+  {
+   "name": "マシンピラティス ウィング 東京日本橋",
+   "rating": 5,
+   "count": 12,
+   "address": "日本、〒103-0024 東京都中央区日本橋小舟町１１−３",
+   "mapsUri": "https://maps.google.com/?cid=5041941561336393026&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://wingpilates.amebaownd.com/"
+  },
+  {
+   "name": "Dr.ピラティス",
+   "rating": 4.4,
+   "count": 11,
+   "address": "日本、〒104-0061 東京都中央区銀座７丁目５−５ 長谷第一ビル 3階B室",
+   "mapsUri": "https://maps.google.com/?cid=5265839866822484493&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://drpilates.drtraining.jp/location/ginza/"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)東京駅店",
+   "rating": 4.9,
+   "count": 11,
+   "address": "日本、〒104-0028 東京都中央区八重洲２丁目９−１ 八重洲地下街 B2階",
+   "mapsUri": "https://maps.google.com/?cid=6844625105868146934&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/tokyoeki/"
+  },
+  {
+   "name": "pilates LAGOON｜マタニティ/産後・姿勢改善ピラティス(代官山・恵比寿・渋谷)",
+   "rating": 5,
+   "count": 10,
+   "address": "日本、〒150-0034 東京都渋谷区代官山町１６",
+   "mapsUri": "https://maps.google.com/?cid=4453617401523462467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilateslagoon.com/"
+  },
+  {
+   "name": "ピラティススタジオDEP恵比寿店｜恵比寿 マシンピラティス",
+   "rating": 4.9,
+   "count": 10,
+   "address": "日本、〒150-0013 東京都渋谷区恵比寿１丁目２２−１０ グランデュオ恵比寿 III 3F",
+   "mapsUri": "https://maps.google.com/?cid=18312334661462860886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/"
+  },
+  {
+   "name": "FLATTE（フラッテ）パーソナルマシンピラティス 吉祥寺店",
+   "rating": 5,
+   "count": 10,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町１丁目２０−１ 吉祥寺永谷シティプラザ 701",
+   "mapsUri": "https://maps.google.com/?cid=5722810323195978103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://flatte.jp/pilates/location/kichijoji/"
+  },
+  {
+   "name": "Dee Pilates - 渋谷マシンピラティススタジオ",
+   "rating": 5,
+   "count": 9,
+   "address": "日本、〒150-0011 東京都渋谷区東１丁目１−３８ 303",
+   "mapsUri": "https://maps.google.com/?cid=7924387997910785963&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dee-pilates.jp/"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)池袋店",
+   "rating": 4.8,
+   "count": 9,
+   "address": "日本、〒171-0021 東京都豊島区西池袋１丁目３８−５ セイコービル 7階",
+   "mapsUri": "https://maps.google.com/?cid=6028550456006077385&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/ikebukuro/?utm_source=google&utm_medium=organic&utm_campaign=gbp_ikebukuro"
+  },
+  {
+   "name": "ピラティススタジオ Olive pilates by the SILK 新宿店",
+   "rating": 5,
+   "count": 7,
+   "address": "日本、〒160-0022 東京都新宿区新宿５丁目１７−６ 中田ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=2305287991556875119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://olive-pilates.jp/"
+  },
+  {
+   "name": "Pilates Studio Pono Aoyama",
+   "rating": 5,
+   "count": 7,
+   "address": "日本、〒107-0061 東京都港区北青山１丁目３−１ アールキューブ青山 6階",
+   "mapsUri": "https://maps.google.com/?cid=14529967984083620672&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pono-pilates.jp/"
+  },
+  {
+   "name": "MORE PILATES",
+   "rating": 4.9,
+   "count": 7,
+   "address": "日本、〒103-0007 東京都中央区日本橋浜町２丁目４２−９ FLAPビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=17041195560461483867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://morepilates.jpn.com/"
+  },
+  {
+   "name": "イズム銀座ファイブ店",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒104-0061 東京都中央区銀座５丁目１−１ 銀座ファイブ 2F",
+   "mapsUri": "https://maps.google.com/?cid=9331930624695194821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-ism.com/"
+  },
+  {
+   "name": "The Personal Pilates",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒150-0002 東京都渋谷区渋谷３丁目１８−５ 佐藤エステートビル本館 7F",
+   "mapsUri": "https://maps.google.com/?cid=14798012348094915716&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://thepersonalpilates.co.jp/"
+  },
+  {
+   "name": "パーソナルマシンピラティスSAKURA池袋店",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒171-0022 東京都豊島区南池袋１丁目１１−１３ リフュージュ・Ｉ サウス 301",
+   "mapsUri": "https://maps.google.com/?cid=7674592692613627861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://sakura-pilates.jp/studios/ikebukuro/"
+  },
+  {
+   "name": "LOVESOME pilates studio",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒171-0022 東京都豊島区南池袋３丁目１６−４ アートハイム南池袋 205",
+   "mapsUri": "https://maps.google.com/?cid=6884809114103524990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lspilates.com/"
+  },
+  {
+   "name": "I&B ピラティス",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒103-0004 東京都中央区東日本橋３丁目８−１ ３F",
+   "mapsUri": "https://maps.google.com/?cid=5488793254644782392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://pilates.iandb-golf.com/"
+  },
+  {
+   "name": "TSUTAYA Conditioning PILATES キラリナ京王吉祥寺店",
+   "rating": 3.5,
+   "count": 6,
+   "address": "日本、〒180-0003 東京都武蔵野市吉祥寺南町２丁目１−２５ 京王 吉祥寺駅 9F",
+   "mapsUri": "https://maps.google.com/?cid=2808909261752116509&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://tc.tsite.jp/pilates/2737"
+  },
+  {
+   "name": "Mapila(マピラ)新宿",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒160-0022 東京都新宿区新宿４丁目２−２３ CALDO新宿 地下2階 内",
+   "mapsUri": "https://maps.google.com/?cid=17434882540180211766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-mapila.jp/shinjuku/"
+  },
+  {
+   "name": "RING Tokyo ピラティススタジオ",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒164-0001 東京都中野区中野２丁目２９−１５ サンハイツ中野 703",
+   "mapsUri": "https://maps.google.com/?cid=11750262087352660793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://kiku-juku.com/pilates2/"
+  },
+  {
+   "name": "Dee Pilates - 目黒マシンピラティス",
+   "rating": 4.8,
+   "count": 5,
+   "address": "日本、〒153-0064 東京都目黒区下目黒２丁目２１−２４ 304",
+   "mapsUri": "https://maps.google.com/?cid=12895680124674402968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dee-pilates.jp/location/meguro/"
+  },
+  {
+   "name": "SENREN STUDIO",
+   "rating": 5,
+   "count": 4,
+   "address": "日本、〒107-0062 東京都港区南青山２丁目２０−１ 平野ビル 501",
+   "mapsUri": "https://maps.google.com/?cid=15289750379198444796&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://tol-app.jp/s/senren-studio"
+  },
+  {
+   "name": "FLATTE（フラッテ）パーソナルマシンピラティス 大崎店",
+   "rating": 5,
+   "count": 4,
+   "address": "日本、〒141-0032 東京都品川区大崎３丁目１０−１１ FLATTEパーソナルマシンピラティス大崎店 A号室",
+   "mapsUri": "https://maps.google.com/?cid=11324311384425675905&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://flatte.jp/pilates/location/osaki/"
+  },
+  {
+   "name": "PILATES STUDIO √",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒162-0825 東京都新宿区神楽坂５丁目２４ タイヨウビル 5階",
+   "mapsUri": "https://maps.google.com/?cid=15354198901832560247&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilatesstudioroot.jp/"
+  },
+  {
+   "name": "24/7ピラティス 池袋東口店《個室パーソナルピラティススタジオ》",
+   "rating": 4.7,
+   "count": 3,
+   "address": "日本、〒170-0013 東京都豊島区東池袋４丁目２９−１２ サンフラット佐藤 2F",
+   "mapsUri": "https://maps.google.com/?cid=4919862185144781006&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://247-sports.jp/pilates/lp/rp/md/md_ad_cam_mn_off_ikebukurohigashiguti_2603/?acckey=pilates1-googmybu-gbp0-2470-pila0000-00000000"
+  },
+  {
+   "name": "Dee Pilates-恵比寿マシンピラティススタジオ",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿南１丁目１９−１０ 103",
+   "mapsUri": "https://maps.google.com/?cid=16781046871154951789&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dee-pilates.jp/location/ebisu/"
+  },
+  {
+   "name": "Pilates STAGE AOYAMA",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒107-0062 東京都港区南青山２丁目２−１５ 3階",
+   "mapsUri": "https://maps.google.com/?cid=14755773067469325177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000766535%20,%20https://spacemarket.com/p/TuPrShTF3EGnOoNQ"
+  },
+  {
+   "name": "ボディメイクピラティス表参道Studio-BMP",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒107-0062 東京都港区南青山６丁目２−９ NYKビル 9階",
+   "mapsUri": "https://maps.google.com/?cid=3237676324429655726&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.b-m-p-studio.com/"
+  },
+  {
+   "name": "zen place ピラティス 浜町",
+   "rating": 4,
+   "count": 3,
+   "address": "日本、〒103-0007 東京都中央区日本橋浜町３丁目２５−１０ 日本橋浜町ポストビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=9014887960782278094&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-hamacho?utm_source=gmb&utm_medium=zen_place274"
+  },
+  {
+   "name": "新宿サンボーテピラティススタジオ＆スクール",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒160-0022 東京都新宿区新宿３丁目３２−５ 日原ビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=15283343935929475423&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesschool.jp/"
+  },
+  {
+   "name": "STUDIOFLAG新宿2号店/マシンピラティスレンタルスタジオ",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒160-0023 東京都新宿区西新宿７丁目１−７ ダイカンプラザA館",
+   "mapsUri": "https://maps.google.com/?cid=17407007507444095865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://studioflaginfo.com/"
+  },
+  {
+   "name": "YOKO-SO PILATES OMOTESANDO",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒107-0062 東京都港区南青山５丁目１０−５ 青山ハイツ 705",
+   "mapsUri": "https://maps.google.com/?cid=14341001707726898708&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://yoko-so-pilates.co.jp/"
+  },
+  {
+   "name": "Dee Pilates - 中野マシンピラティス",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒164-0001 東京都中野区中野５丁目３２−１１ 3階",
+   "mapsUri": "https://maps.google.com/?cid=8101916141829015736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dee-pilates.jp/location/nakano/"
+  },
+  {
+   "name": "STUDIOFLAG新宿1号店/マシンピラティスレンタルスタジオ",
+   "rating": 3,
+   "count": 1,
+   "address": "日本、〒160-0022 東京都新宿区新宿４丁目２−１ ライオンズマンション新宿御苑 504号室",
+   "mapsUri": "https://maps.google.com/?cid=10818729373399343838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://studioflaginfo.com/"
+  },
+  {
+   "name": "BASI Pilates Japan Ginza",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒104-0061 東京都中央区銀座３丁目１４−１５ 第二厚生館ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=952480837932230077&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://basipilatesjp.com/"
+  },
+  {
+   "name": "Pilates 245",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒150-0022 東京都渋谷区恵比寿４丁目３",
+   "mapsUri": "https://maps.google.com/?cid=10236026675949816071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://tol-app.jp/s/shokopiltaes"
+  },
+  {
+   "name": "re pilates",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町２丁目１８",
+   "mapsUri": "https://maps.google.com/?cid=11006682973238715038&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://repilates2023.net/"
+  },
+  {
+   "name": "STUDIO IVY 吉祥寺店【パーソナルマシンピラティス】",
+   "rating": null,
+   "count": 0,
+   "address": "日本、〒180-0004 東京都武蔵野市吉祥寺本町３丁目１０−１２ J-ARC吉祥寺 302",
+   "mapsUri": "https://maps.google.com/?cid=11692722798601806351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-ivy.jp/studio/kichijouji"
+  }
+ ],
+ "osaka": [
+  {
+   "name": "CLUB PILATES 南森町 マシンピラティススタジオ",
+   "rating": 4.9,
+   "count": 414,
+   "address": "日本、〒530-0044 大阪府大阪市北区東天満２丁目６−８ 篠原東天満ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=17207450086576632679&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/minamimorimachi#utm_source=GoogleMap&utm_medium=mmm_gmap"
+  },
+  {
+   "name": "デイズピラティス 心斎橋店",
+   "rating": 4.9,
+   "count": 358,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋１丁目１−１０ 5F",
+   "mapsUri": "https://maps.google.com/?cid=17663272467407683409&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dayspilates.com/"
+  },
+  {
+   "name": "ピラティスK 梅田店（NU茶屋町）",
+   "rating": 4.7,
+   "count": 351,
+   "address": "日本、〒530-0013 大阪府大阪市北区茶屋町１０−１２ NU茶屋町 7F",
+   "mapsUri": "https://maps.google.com/?cid=16326531757159641480&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/nuchayamachi?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=nuchayamachi"
+  },
+  {
+   "name": "La pilates江坂店《整体×マシンピラティススタジオ》ラピラティス",
+   "rating": 4.9,
+   "count": 334,
+   "address": "日本、〒564-0053 大阪府吹田市江の木町１−８ 田中ビル 5階",
+   "mapsUri": "https://maps.google.com/?cid=6920560098807550224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.google.com/url?q=https://line.la-pilates.jp/reservations/create?shopId%3D9c627b59-6206-4009-96b5-bde502220ea8%26menuId%3DRSV0012&sa=D&source=editors&ust=1756438645842532&usg=AOvVaw24YNCGVYyp9x4fjOzyeRxR"
+  },
+  {
+   "name": "ピラティスK 西梅田店",
+   "rating": 4.8,
+   "count": 304,
+   "address": "日本、〒530-0001 大阪府大阪市北区梅田２丁目１−２２ 野村不動産西梅田ビル 地下1F",
+   "mapsUri": "https://maps.google.com/?cid=8436770180434042141&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/osaka/nishi-umeda/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=nishi-umeda"
+  },
+  {
+   "name": "マシンピラティスRintosull 天王寺店",
+   "rating": 4.8,
+   "count": 254,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋１丁目５−３６ 4F",
+   "mapsUri": "https://maps.google.com/?cid=4586632356364232581&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/osaka/tennoji/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK 心斎橋店",
+   "rating": 4.8,
+   "count": 243,
+   "address": "日本、〒542-0085 大阪府大阪市中央区心斎橋筋１丁目４−２９ ココテラス心斎橋 6F",
+   "mapsUri": "https://maps.google.com/?cid=1039442267538989461&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/osaka/shinsaibashi/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=shinsaibashi"
+  },
+  {
+   "name": "ピラティスK なんば店",
+   "rating": 4.8,
+   "count": 241,
+   "address": "日本、〒542-0076 大阪府大阪市中央区難波３丁目６−１１ なんば池田ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=4968512454515485937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/namba?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=namba"
+  },
+  {
+   "name": "DAYS PILATES【デイズピラティス】梅田店",
+   "rating": 4.9,
+   "count": 203,
+   "address": "日本、〒530-0051 大阪府大阪市北区太融寺町８−２ 4階",
+   "mapsUri": "https://maps.google.com/?cid=4885698830480449532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dayspilates.com/"
+  },
+  {
+   "name": "マシンピラティスRintosull 江坂店",
+   "rating": 4.8,
+   "count": 203,
+   "address": "日本、〒564-0051 大阪府吹田市豊津町１０−２ 江坂T・Kビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=5379808224521516683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/osaka/esaka/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK 天王寺店",
+   "rating": 4.8,
+   "count": 201,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋１丁目５−３１ きんえいアポロビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=1328885625105060376&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/tennoji?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=tennoji"
+  },
+  {
+   "name": "La pilates梅田店《整体×マシンピラティススタジオ》ラピラティス",
+   "rating": 4.9,
+   "count": 182,
+   "address": "日本、〒530-0003 大阪府大阪市北区堂島２丁目２−３４ StoRK堂島 4F",
+   "mapsUri": "https://maps.google.com/?cid=6911661192754379043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "ピラティススタジオ the SILK大阪梅田店",
+   "rating": 4.7,
+   "count": 181,
+   "address": "日本、〒530-0012 大阪府大阪市北区芝田１丁目４−１４ 芝田町ビル 9階 F・G室",
+   "mapsUri": "https://maps.google.com/?cid=13048958104555971534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/osaka/umeda/?utm_source=google&utm_medium=GBP&utm_campaign=umeda"
+  },
+  {
+   "name": "La pilates 天王寺店《整体×マシンピラティススタジオ》ラピラティス",
+   "rating": 4.9,
+   "count": 174,
+   "address": "日本、〒543-0055 大阪府大阪市天王寺区悲田院町９−２０ 阿部野橋ビル 8F",
+   "mapsUri": "https://maps.google.com/?cid=10734121428233215863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/schedule?shopId=9c627b59-104c-4faa-81d8-e2d2dd1713e7&menuId=RSV0012&selectedMenuId=RSV0012"
+  },
+  {
+   "name": "ピラティスK 東梅田店",
+   "rating": 4.9,
+   "count": 161,
+   "address": "日本、〒530-0057 大阪府大阪市北区曾根崎２丁目７−４ エムヴォランテウメダ 9F",
+   "mapsUri": "https://maps.google.com/?cid=1444830309910376213&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/osaka/higashi-umeda/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=higashi-umeda"
+  },
+  {
+   "name": "CLUB PILATES大阪上本町 マシンピラティススタジオ",
+   "rating": 4.9,
+   "count": 159,
+   "address": "日本、〒543-0001 大阪府大阪市天王寺区上本町６丁目２−３ メトロテラス上本町",
+   "mapsUri": "https://maps.google.com/?cid=12468745505673798576&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/osakauehommachi#utm_source=GoogleMap&utm_medium=ouh_gmap"
+  },
+  {
+   "name": "ピラティススタジオDEP 心斎橋店｜大阪 マシンピラティス",
+   "rating": 4.9,
+   "count": 142,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋２丁目１０−２４ プレビュービル 402",
+   "mapsUri": "https://maps.google.com/?cid=12509320335718874813&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/kinki/sinsaibashi/"
+  },
+  {
+   "name": "CLUB PILATES 江坂店 マシンピラティススタジオ",
+   "rating": 4.8,
+   "count": 125,
+   "address": "日本、〒564-0063 大阪府吹田市江坂町１丁目１８−１２ 1F",
+   "mapsUri": "https://maps.google.com/?cid=5070338814926236312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/esaka/#utm_source=GoogleMap&utm_medium=esk_gmap"
+  },
+  {
+   "name": "maemo atomo studio 広芝町店（江坂）",
+   "rating": 5,
+   "count": 124,
+   "address": "日本、〒564-0052 大阪府吹田市広芝町４−３４ 江坂第一ビル 501",
+   "mapsUri": "https://maps.google.com/?cid=6533902966494321011&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://maemo-atomo-studio.com/"
+  },
+  {
+   "name": "zen place ピラティス 梅田",
+   "rating": 4.7,
+   "count": 121,
+   "address": "日本、〒530-0001 大阪府大阪市北区梅田１丁目１２−１７ 10階",
+   "mapsUri": "https://maps.google.com/?cid=17532045837472719245&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-umeda?utm_source=gmb&utm_medium=zen_place68"
+  },
+  {
+   "name": "ピラティススタジオPILATES STUDIO TO U 大阪心斎橋店",
+   "rating": 4.8,
+   "count": 121,
+   "address": "日本、〒542-0083 大阪府大阪市中央区東心斎橋１丁目１３−１１ 3F",
+   "mapsUri": "https://maps.google.com/?cid=8456285334950482019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudiotou.com/"
+  },
+  {
+   "name": "ピラティススタジオPILATES STUDIO TO U 大阪梅田店",
+   "rating": 4.8,
+   "count": 85,
+   "address": "日本、〒530-0057 大阪府大阪市北区曾根崎２丁目１５−２９ 5階",
+   "mapsUri": "https://maps.google.com/?cid=16461989517352605821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudiotou.com/"
+  },
+  {
+   "name": "La pilates上本町店",
+   "rating": 4.9,
+   "count": 82,
+   "address": "日本、〒542-0063 大阪府大阪市中央区東平２丁目５−６ プロスピリティ谷九駅前ビル 5F",
+   "mapsUri": "https://maps.google.com/?cid=2117541873222356455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=a17234fd-888e-4a27-95d6-3f844a850440&menuId=RSV0012"
+  },
+  {
+   "name": "zen place ピラティス 天王寺",
+   "rating": 4.8,
+   "count": 80,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋１丁目３−１５ 6階",
+   "mapsUri": "https://maps.google.com/?cid=14760356585027369742&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-tennoji?utm_source=gmb&utm_medium=zen_place72"
+  },
+  {
+   "name": "URBAN CLASSIC PILATES なんば千日前",
+   "rating": 4.8,
+   "count": 77,
+   "address": "日本、〒542-0074 大阪府大阪市中央区千日前１丁目３−５ KOKO HOTEL 大阪なんば千日前 2F",
+   "mapsUri": "https://maps.google.com/?cid=9720567589484306798&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://urbanclassic.jp/pilates-studio/sennichimae/"
+  },
+  {
+   "name": "ピラティススタジオ the SILK天王寺MIO店",
+   "rating": 4.8,
+   "count": 69,
+   "address": "日本、〒543-0055 大阪府大阪市天王寺区悲田院町１０−４８ 天王寺Mioプラザ館 7階 705",
+   "mapsUri": "https://maps.google.com/?cid=8833056272681148390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://the-silk.co.jp/studios/osaka/tennoji-mio/?utm_source=google&utm_medium=GBP&utm_campaign=tennoji-mio"
+  },
+  {
+   "name": "ピラティスアヴニール天王寺店",
+   "rating": 4.9,
+   "count": 69,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋３丁目１０−１ あべのベルタ事務所棟 4F-A",
+   "mapsUri": "https://maps.google.com/?cid=11353390132497767542&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates.avenir-training.com/stores/tennoji/"
+  },
+  {
+   "name": "ピラティススタジオBB 心斎橋スタジオ",
+   "rating": 5,
+   "count": 66,
+   "address": "日本、〒550-0014 大阪府大阪市西区北堀江１丁目１−２６ 5F",
+   "mapsUri": "https://maps.google.com/?cid=18275193929229508722&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-bb.com/studio-list/shinsaibashi/"
+  },
+  {
+   "name": "上本町マシンピラティス mAst Pilates",
+   "rating": 4.9,
+   "count": 63,
+   "address": "日本、〒543-0021 大阪府大阪市天王寺区東高津町９−１５ ナカモリ第２ビル 三階",
+   "mapsUri": "https://maps.google.com/?cid=6904977685534679106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mast-pilates.com/"
+  },
+  {
+   "name": "zen place ピラティス 江坂",
+   "rating": 4.9,
+   "count": 62,
+   "address": "日本、〒564-0051 大阪府吹田市豊津町９−４４ ハートランド江坂 5階",
+   "mapsUri": "https://maps.google.com/?cid=12213725435254344128&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-esaka?utm_source=gmb&utm_medium=zen_place71"
+  },
+  {
+   "name": "La pilates NITTO梅田ビル店《整体×マシンピラティス》ラピラティス",
+   "rating": 4.9,
+   "count": 58,
+   "address": "日本、〒530-0012 大阪府大阪市北区芝田２丁目９−１８ ＮＩＴＴＯ梅田ビル 5F西",
+   "mapsUri": "https://maps.google.com/?cid=16502463671679881683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://la-pilates.jp/"
+  },
+  {
+   "name": "THE EN shinsaibashi",
+   "rating": 4.9,
+   "count": 56,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋１丁目５−２７ 6階",
+   "mapsUri": "https://maps.google.com/?cid=10560244211493647220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.theen.jp/"
+  },
+  {
+   "name": "EN pilates studio",
+   "rating": 4.9,
+   "count": 54,
+   "address": "日本、〒531-0071 大阪府大阪市北区中津１丁目１０−１３ 東洋生興ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=18056820244418913629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://en-pilates-studio.amebaownd.com/"
+  },
+  {
+   "name": "zen place ピラティス 心斎橋",
+   "rating": 4.6,
+   "count": 52,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋１丁目４−５ 御堂筋ビルディング 8階",
+   "mapsUri": "https://maps.google.com/?cid=816965942980858506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-shinsaibashi?utm_source=gmb&utm_medium=zen_place69"
+  },
+  {
+   "name": "Celestia 梅田店",
+   "rating": 5,
+   "count": 44,
+   "address": "日本、〒530-0047 大阪府大阪市北区西天満４丁目１５−１８ プラザ梅新ビルB1F",
+   "mapsUri": "https://maps.google.com/?cid=5209621428591909297&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.celes-pilates.jp/reserve/schedule/9/22?trial=true"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)リンクス梅田店",
+   "rating": 4.8,
+   "count": 41,
+   "address": "日本、〒530-0011 大阪府大阪市北区大深町１−１ リンクス梅田 7階",
+   "mapsUri": "https://maps.google.com/?cid=130169689627371208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/links/?utm_source=google&utm_medium=organic&utm_campaign=gbp_links"
+  },
+  {
+   "name": "STUDIO IVY 心斎橋店【パーソナルマシンピラティス】",
+   "rating": 4.9,
+   "count": 39,
+   "address": "日本、〒541-0058 大阪府大阪市中央区南久宝寺町４丁目６−９ 南久宝寺Fukue2023 602",
+   "mapsUri": "https://maps.google.com/?cid=13260826608833845943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-ivy.jp/studio/shinsaibashi?utm_source=google&utm_medium=google_map&utm_campaign=t_map_shinsaibashi"
+  },
+  {
+   "name": "マシンピラティス専門店ピラシェ 大阪福島店",
+   "rating": 4.8,
+   "count": 38,
+   "address": "日本、〒553-0003 大阪府大阪市福島区福島３丁目５−２",
+   "mapsUri": "https://maps.google.com/?cid=14848552698342823277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilache.jp/"
+  },
+  {
+   "name": "ピラティススタジオ エミライズ 天王寺店",
+   "rating": 5,
+   "count": 37,
+   "address": "日本、〒545-0053 大阪府大阪市阿倍野区松崎町２丁目３−５０ 303",
+   "mapsUri": "https://maps.google.com/?cid=7024813772429983116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://emiraise-tennoji.com/"
+  },
+  {
+   "name": "ピラティススタジオAym.大阪堀江店",
+   "rating": 5,
+   "count": 35,
+   "address": "日本、〒550-0014 大阪府大阪市西区北堀江１丁目６−２４ Y's ピア アクセス心斎橋 701",
+   "mapsUri": "https://maps.google.com/?cid=14967084574489570396&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.instagram.com/pilatesstudioaym?igsh=MXZlcjZxdmpmYWdmeA%3D%3D&utm_source=qr"
+  },
+  {
+   "name": "ピラティス・トトヤセ 天王寺店",
+   "rating": 4.8,
+   "count": 33,
+   "address": "日本、〒543-0056 大阪府大阪市天王寺区堀越町９−６ レジデンスJUKO天王寺 501",
+   "mapsUri": "https://maps.google.com/?cid=16377011273603828173&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-totoyase.com/tennoji/"
+  },
+  {
+   "name": "パーソナルピラティス studio Grow Grace（スタジオグローグレイス）",
+   "rating": 4.8,
+   "count": 31,
+   "address": "日本、〒545-0053 大阪府大阪市阿倍野区松崎町２丁目４−２１ 幸梅ハイツ 3階",
+   "mapsUri": "https://maps.google.com/?cid=12104632061255129445&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-growgrace.studio.site/"
+  },
+  {
+   "name": "Yon Pilates",
+   "rating": 4.9,
+   "count": 31,
+   "address": "日本、〒564-0053 大阪府吹田市江の木町５−３ レーベンハウス江坂 304",
+   "mapsUri": "https://maps.google.com/?cid=3989794326842942300&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://yonpilates.com/"
+  },
+  {
+   "name": "ピラティスアクス 江坂店",
+   "rating": 4.7,
+   "count": 29,
+   "address": "日本、〒564-0053 大阪府吹田市江の木町１−３９ 4F",
+   "mapsUri": "https://maps.google.com/?cid=1588694815615992102&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesaxe.jp/esaka/"
+  },
+  {
+   "name": "Pilates Synergy大阪福島スタジオ",
+   "rating": 5,
+   "count": 29,
+   "address": "日本、〒531-0075 大阪府大阪市北区大淀南１丁目９−１９ 301",
+   "mapsUri": "https://maps.google.com/?cid=11781821673671402559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-synergy.com/studio/osaka-fukushima/"
+  },
+  {
+   "name": "BASI Pilates Japan 大阪",
+   "rating": 4.9,
+   "count": 28,
+   "address": "M.VOLATE UMEDA 12F, ２丁目-７-4 曾根崎 北区 大阪市 大阪府 530-0057 日本",
+   "mapsUri": "https://maps.google.com/?cid=11789190042405046946&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://basipilatesjp.com/"
+  },
+  {
+   "name": "THE PILATES 心斎橋店",
+   "rating": 5,
+   "count": 28,
+   "address": "日本、〒542-0081 大阪府大阪市中央区南船場４丁目１０−２６ 小倉屋山本本店ビル ３Ｆ",
+   "mapsUri": "https://maps.google.com/?cid=17340905521339018247&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.the-pilates.com/"
+  },
+  {
+   "name": "女性専用マシンピラティス専門パーソナルスタジオfis.pilates上本町",
+   "rating": 4.9,
+   "count": 28,
+   "address": "日本、〒543-0031 大阪府大阪市天王寺区石ケ辻町３−１０ 202",
+   "mapsUri": "https://maps.google.com/?cid=2561168894363177938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://fis-pilates.studio/shop-list/uehonmati/"
+  },
+  {
+   "name": "Gene Pilates Umeda",
+   "rating": 5,
+   "count": 27,
+   "address": "日本、〒530-0015 大阪府大阪市北区中崎西１丁目８−２４ 401",
+   "mapsUri": "https://maps.google.com/?cid=3432487409549267184&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://gene-pilates.com/lp"
+  },
+  {
+   "name": "ピラティス&トレーニングスタジオLB 江坂本店",
+   "rating": 4.9,
+   "count": 27,
+   "address": "日本、〒564-0054 大阪府吹田市芳野町３−３ アルモニア江坂 201",
+   "mapsUri": "https://maps.google.com/?cid=15022408706887235597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudio-lifebase.com/"
+  },
+  {
+   "name": "pilates studio Sunny",
+   "rating": 5,
+   "count": 27,
+   "address": "日本、〒550-0004 大阪府大阪市西区勒本町１丁目１４−１１ RE-014502号室",
+   "mapsUri": "https://maps.google.com/?cid=3738026235240211273&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "Pilates Synergyなんばスタジオ",
+   "rating": 5,
+   "count": 26,
+   "address": "日本、〒556-0011 大阪府大阪市浪速区難波中１丁目３−１ RE-016ビル 402号",
+   "mapsUri": "https://maps.google.com/?cid=11190302104574217864&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-synergy.com/studio/osaka-namba/"
+  },
+  {
+   "name": "URBAN CLASSIC PILATES 中津",
+   "rating": 4.8,
+   "count": 25,
+   "address": "日本、〒531-0071 大阪府大阪市北区中津１丁目２−１８ 桜井産商ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=13662548875638272416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://urbanclassic.jp/pilates-studio/nakatsu/"
+  },
+  {
+   "name": "女性専用マシンピラティス専門パーソナルスタジオfis.pilates江坂",
+   "rating": 4.9,
+   "count": 25,
+   "address": "日本、〒564-0053 大阪府吹田市江の木町７−２３ 中路ビル 3階B",
+   "mapsUri": "https://maps.google.com/?cid=10772685835775122898&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://fis-pilates.studio/shop-list/esaka/"
+  },
+  {
+   "name": "La pilates 難波店《整体×マシンピラティス》ラピラティス",
+   "rating": 5,
+   "count": 23,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋２丁目４−２ なんば日興 3階",
+   "mapsUri": "https://maps.google.com/?cid=4516577406101545625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://la-pilates.jp/"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)天王寺店",
+   "rating": 4.9,
+   "count": 22,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋２丁目１−４０ あべのand3",
+   "mapsUri": "https://maps.google.com/?cid=1825165838304877449&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/tennoji/"
+  },
+  {
+   "name": "はじめてのマシンピラティス｜Lien Blanc 京橋",
+   "rating": 5,
+   "count": 18,
+   "address": "日本、〒534-0024 大阪府大阪市都島区東野田町２丁目２−１６ ビラ六曜舎 601",
+   "mapsUri": "https://maps.google.com/?cid=17123872221638254783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lienblanc.my.canva.site/pilates-studio"
+  },
+  {
+   "name": "POL STUDIO心斎橋店【クラシカルピラティス】",
+   "rating": 4.7,
+   "count": 17,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋１丁目１０−１０ 心斎橋Ｍビル 307",
+   "mapsUri": "https://maps.google.com/?cid=735707852732664043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://polstudio.hacomono.jp/reserve/schedule/9/13?trial=true"
+  },
+  {
+   "name": "ダイヤモンドピラティス",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒530-0001 大阪府大阪市北区梅田１丁目２−２ 大阪駅前第二ビル 1階2号",
+   "mapsUri": "https://maps.google.com/?cid=15893250000714112034&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.diamond-pilates.club/"
+  },
+  {
+   "name": "マシンピラティススタジオ BOMI 心斎橋店",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒542-0081 大阪府大阪市中央区南船場２丁目６−２１ グラン・ビルド心斎橋 403",
+   "mapsUri": "https://maps.google.com/?cid=14423698135583688871&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "マシンピラティスRintosull 心斎橋店",
+   "rating": 4.4,
+   "count": 14,
+   "address": "日本、〒542-0085 大阪府大阪市中央区心斎橋筋１丁目４−１４ SHINSAIBASHI ENKYO ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=17247358256733695908&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/osaka/shinsaibashi/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "韓国式マシンピラティスFirst 上本町店（女性専用）",
+   "rating": 5,
+   "count": 14,
+   "address": "日本、〒542-0012 大阪府大阪市中央区谷町９丁目２−１４ 中田東海ビル",
+   "mapsUri": "https://maps.google.com/?cid=5940610924464484532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates.personal-first.com/meo-uehonmachi/"
+  },
+  {
+   "name": "マシンピラティスRintosull 梅田店",
+   "rating": 4.4,
+   "count": 13,
+   "address": "日本、〒530-0017 大阪府大阪市北区角田町２−１５ シログチビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=5558028422441572893&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/osaka/umeda/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "PILATES & PERSONAL GYM LAULE'A",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒545-0052 大阪府大阪市阿倍野区阿倍野筋３丁目５−１１ あべの恵寿ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=10803512343170095356&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://laulea-tennouji.com/"
+  },
+  {
+   "name": "Celestia 心斎橋店",
+   "rating": 4.8,
+   "count": 12,
+   "address": "日本、〒542-0081 大阪府大阪市中央区南船場４丁目１２ 4-12-10ACN心斎橋ビル2F",
+   "mapsUri": "https://maps.google.com/?cid=10160368902246080950&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.celes-pilates.jp/reserve/schedule/10/24?trial=true"
+  },
+  {
+   "name": "24/7ピラティス 梅田店《個室パーソナルピラティススタジオ》",
+   "rating": 4.9,
+   "count": 9,
+   "address": "日本、〒553-0003 大阪府大阪市福島区福島６丁目２４−６ リノ新梅田 1F",
+   "mapsUri": "https://maps.google.com/?cid=12798387185338632071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://247-sports.jp/pilates/studio/kinki/osaka/umeda.html?acckey=pilates1-googmybu-gbp0-2470-pila0000-00000000"
+  },
+  {
+   "name": "Pilates studio Lani.",
+   "rating": 5,
+   "count": 9,
+   "address": "日本、〒550-0013 大阪府大阪市西区新町１丁目２５−１８ レナジア新町ビル 303",
+   "mapsUri": "https://maps.google.com/?cid=2745623693133980758&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "パーソナルピラティス ルネア 天王寺・寺田町",
+   "rating": 5,
+   "count": 8,
+   "address": "日本、〒544-0024 大阪府大阪市生野区生野西２丁目７−２３ ポイカ寺田町ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=4687189959163491420&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-lunea.jp/"
+  },
+  {
+   "name": "STUDIO IVY 天王寺店【パーソナルマシンピラティス】",
+   "rating": 5,
+   "count": 7,
+   "address": "日本、〒543-0063 大阪府大阪市天王寺区茶臼山町１−１１ イデアール天王寺 601",
+   "mapsUri": "https://maps.google.com/?cid=18081405891774023927&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mypage.pilates-ivy.jp/reserve/schedule/14/14"
+  },
+  {
+   "name": "女性専用マシンピラティス専門パーソナルスタジオfis.pilates天王寺店",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒543-0054 大阪府大阪市天王寺区南河堀町９−３４ LaCASA天王寺 803",
+   "mapsUri": "https://maps.google.com/?cid=5229808941807587350&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://fis-pilates.studio/shop-list/tennoji/"
+  },
+  {
+   "name": "Pilates isM(イズム)大阪梅田店/パーソナルマシンピラティス",
+   "rating": 5,
+   "count": 4,
+   "address": "日本、〒530-0012 大阪府大阪市北区芝田２丁目２−２ 日生ビル東館 2階",
+   "mapsUri": "https://maps.google.com/?cid=7405555430186942974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-ism.com/osaka"
+  },
+  {
+   "name": "Studio Venus梅田店【パーソナルマシンピラティス】",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒531-0072 大阪府大阪市北区豊崎３丁目１０−２ アイアンドエフ梅田 908",
+   "mapsUri": "https://maps.google.com/?cid=7416321859459846629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://studio-venus.com/"
+  },
+  {
+   "name": "女性だけの5人制マシンピラティス5pilates江坂店",
+   "rating": 4.5,
+   "count": 2,
+   "address": "日本、〒564-0051 大阪府吹田市豊津町１５−１３ サニーハイツ 1階店舗",
+   "mapsUri": "https://maps.google.com/?cid=546511679404112752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://5pilates.studio/esaka/"
+  },
+  {
+   "name": "Pilates isM(イズム)心斎橋店/パーソナルマシンピラティス",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒542-0081 大阪府大阪市中央区南船場３丁目６−２４",
+   "mapsUri": "https://maps.google.com/?cid=9086047659788532100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-ism.com/shinsaibashi"
+  },
+  {
+   "name": "rental pilates studio CARAT",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒542-0086 大阪府大阪市中央区西心斎橋２丁目１７−１３ グロース西心斎橋ビル 7FA1",
+   "mapsUri": "https://maps.google.com/?cid=10905228075771613411&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "ON pilates オンピラティス天王寺店",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒545-0053 大阪府大阪市阿倍野区松崎町２丁目４−２１ ハイツ403 幸梅",
+   "mapsUri": "https://maps.google.com/?cid=13265123847655058111&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://activity.goopcondition.com/"
+  },
+  {
+   "name": "H/Y ピラティススタジオ 寺田町店",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒545-0001 大阪府大阪市阿倍野区天王寺町北２丁目４−２１ クリスタ天王寺 201号室",
+   "mapsUri": "https://maps.google.com/?cid=162837094245610727&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://hy-pilates-studio.my.canva.site/h-y"
+  }
+ ],
+ "surveyedAt": "2026-07-20"
+}
