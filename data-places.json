@@ -3169,5 +3169,991 @@
    "mapsUri": "https://maps.google.com/?cid=14656184937649418515&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
    "website": "https://line.me/R/ti/p/@390uxnye?ts=01231157&oat_content=url"
   }
+ ],
+ "sapporo": [
+  {
+   "name": "La pilates 札幌大通店《整体×マシンピラティス》ラピラティス",
+   "rating": 4.8,
+   "count": 351,
+   "address": "日本、〒060-0061 北海道札幌市中央区南１条西１丁目２ 松崎ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=14030038972756067394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=9d3f80c9-d83b-45f8-8e1d-d1d7139fd632&menuId=RSV0012"
+  },
+  {
+   "name": "マシンピラティスRintosull モユク札幌店",
+   "rating": 4.8,
+   "count": 185,
+   "address": "日本、〒060-0062 北海道札幌市中央区南２条西３丁目２０ moyuk SAPPORO7F",
+   "mapsUri": "https://maps.google.com/?cid=6646593906287908686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hokkaido/moyuk_sapporo/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティススタジオ『ルルト』札幌店",
+   "rating": 4.9,
+   "count": 100,
+   "address": "日本、〒060-0061 北海道札幌市中央区南１条西９丁目1−２ アルファ西9丁目ビル 5D号室",
+   "mapsUri": "https://maps.google.com/?cid=10807864925741176153&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://luluto.kabushikigaisya-rigakubody.co.jp/tenpo/pilates_sapporo/?utm_source=gbp&utm_medium=gbp_profile&utm_content=sapporo"
+  },
+  {
+   "name": "マシンピラティススタジオRepilates（リピラティス）札幌円山店",
+   "rating": 4.9,
+   "count": 85,
+   "address": "日本、〒064-0821 北海道札幌市中央区北１条西２０丁目３−３ 岸本ビル 1F",
+   "mapsUri": "https://maps.google.com/?cid=10028621148449546218&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://repilates.jp/"
+  },
+  {
+   "name": "ピラティスK 札幌駅前店",
+   "rating": 4.7,
+   "count": 74,
+   "address": "日本、〒060-0004 北海道札幌市中央区北４条西５丁目１ アスティ45ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=15856932734318261623&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/hokkaido/sapporo/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=sapporo"
+  },
+  {
+   "name": "Ushi☆ピラ",
+   "rating": 5,
+   "count": 69,
+   "address": "日本、〒063-0005 北海道札幌市西区山の手５条１丁目１−５ コットンハウス ３０２",
+   "mapsUri": "https://maps.google.com/?cid=12925949402613937785&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://shouwa-lady.com/UshiPila/UshiPila.html#?utm_source=GBP&utm_medium=GBP&utm_term=GBP&utm_content=GBP&utm_campaign=GBP"
+  },
+  {
+   "name": "she PILATES STUDIO",
+   "rating": 4.8,
+   "count": 66,
+   "address": "日本、〒060-0061 北海道札幌市中央区南１条西６丁目1−４ 第27桂和ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=4259550676627994682&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://she-pilates.com/"
+  },
+  {
+   "name": "Pilates Mirror 桑園",
+   "rating": 4.9,
+   "count": 53,
+   "address": "日本、〒060-0006 北海道札幌市中央区北６条西１５丁目3−１３ モレラス桑園 1F",
+   "mapsUri": "https://maps.google.com/?cid=393171876158931414&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.konami.com/sportsclub/pilatesmirror/soen/"
+  },
+  {
+   "name": "マシンピラティス&フィットネス ソエルスタジオ 琴似店",
+   "rating": 4.5,
+   "count": 51,
+   "address": "日本、〒063-0814 北海道札幌市西区琴似４条１丁目１−１ コルテナ Ⅰ1F",
+   "mapsUri": "https://maps.google.com/?cid=17393780678212559392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lp.soelu.com/studio_kotoni/index.html"
+  },
+  {
+   "name": "zen place ピラティス 札幌大通",
+   "rating": 5,
+   "count": 49,
+   "address": "日本、〒060-0061 北海道札幌市中央区南１条西９丁目1−１ プロヴィデンスビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=9401284333044438617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-sapporoodori?utm_source=gmb&utm_medium=zen_place238"
+  },
+  {
+   "name": "加圧＆マシンピラティスLATECO（ラティコ）大通店",
+   "rating": 4.8,
+   "count": 38,
+   "address": "日本、〒060-0061 北海道札幌市中央区南１条西５丁目1−７ N・Viento 7階",
+   "mapsUri": "https://maps.google.com/?cid=9657923908679822706&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lateco-studio.com/"
+  },
+  {
+   "name": "GEEK PILATES CLUB* SAPPORO｜ピラティススタジオ",
+   "rating": 5,
+   "count": 35,
+   "address": "日本、〒060-0062 北海道札幌市中央区南２条西１丁目7−１ 二番館ビル 3F hairsalon Niico内",
+   "mapsUri": "https://maps.google.com/?cid=10376750620668787478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://geekpilates.club/"
+  },
+  {
+   "name": "ピラティススタジオLILY 円山",
+   "rating": 5,
+   "count": 29,
+   "address": "日本、〒064-0823 北海道札幌市中央区北３条西２３丁目２−５ ＧＲＡＭＥＲＣＹ 102号",
+   "mapsUri": "https://maps.google.com/?cid=17506330278702174137&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-lily.jp/"
+  },
+  {
+   "name": "ピラティススタジオオト/乙",
+   "rating": 5,
+   "count": 27,
+   "address": "日本、〒063-0031 北海道札幌市中央区北１条東１丁目6番16 アルファ北1条ビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=12095234960191859541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-oto.com/"
+  },
+  {
+   "name": "Celestia 札幌店",
+   "rating": 5,
+   "count": 15,
+   "address": "日本、〒060-0031 北海道札幌市中央区北１条東１丁目4番地１ サン経成ビル 1階",
+   "mapsUri": "https://maps.google.com/?cid=1913322002226376088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://celes-pilates.jp/"
+  },
+  {
+   "name": "ワールドピラティス大通スタジオ",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒060-0042 北海道札幌市中央区大通西５丁目８ 昭和ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=10926358071604952235&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lin.ee/oh4lX9q"
+  },
+  {
+   "name": "PILATES STUDIO R-zone",
+   "rating": 5,
+   "count": 12,
+   "address": "日本、〒060-0001 北海道札幌市中央区北１条西１９丁目1−４ 日宝北１条ビル 203",
+   "mapsUri": "https://maps.google.com/?cid=7014517307893215955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://r-zone.jp/"
+  },
+  {
+   "name": "スターピラティス 札幌駅前スタジオ",
+   "rating": 4.8,
+   "count": 12,
+   "address": "日本、〒060-0001 北海道札幌市中央区北１条西４丁目2−１２ 札幌グランドホテル別館 5F",
+   "mapsUri": "https://maps.google.com/?cid=16973713804970717941&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://starpilates.jp/sapporoeki/?utm_source=gbp&utm_medium=local"
+  },
+  {
+   "name": "ASUKA Pilates（アスカ ピラティス）",
+   "rating": 5,
+   "count": 10,
+   "address": "日本、〒062-0055 北海道札幌市豊平区月寒東５条９丁目４−１３",
+   "mapsUri": "https://maps.google.com/?cid=6016840064455457520&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "cocoro Pilates 札幌北口店(マシンピラティススタジオ ココロピラティス)",
+   "rating": 4.5,
+   "count": 10,
+   "address": "日本、〒060-0806 北海道札幌市北区北６条西４丁目２ J1札幌北口ﾋﾞﾙ 4F 403区画",
+   "mapsUri": "https://maps.google.com/?cid=5572878468338178062&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://cocoro-pilates.com/lp/newopen-sapporonorth/"
+  },
+  {
+   "name": "ピラティスステーションライト札幌",
+   "rating": 4.9,
+   "count": 7,
+   "address": "日本、〒001-0038 北海道札幌市北区北３８条西５丁目１−１０",
+   "mapsUri": "https://maps.google.com/?cid=4540866920865814624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-light.com/"
+  },
+  {
+   "name": "taiON.【ピラティススタジオ】",
+   "rating": 5,
+   "count": 7,
+   "address": "日本、〒064-0825 北海道札幌市中央区北５条西２５丁目４−１８ フジヒロ北５条ビル ２階",
+   "mapsUri": "https://maps.google.com/?cid=15473549947941136985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://istudio-beauty.com/"
+  },
+  {
+   "name": "cocoro Pilates 美しが丘店(マシンピラティススタジオ ココロピラティス)",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒004-0814 北海道札幌市清田区美しが丘４条５丁目１−５",
+   "mapsUri": "https://maps.google.com/?cid=5509663811968304680&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://cocoro-pilates.com/lp/newopen-utsukushigaoka/"
+  },
+  {
+   "name": "pilates studio K",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒005-0033 北海道札幌市南区南３３条西９丁目２−２９",
+   "mapsUri": "https://maps.google.com/?cid=7022652475472873490&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.instagram.com/pilates_studio_k"
+  },
+  {
+   "name": "マシンピラティスRintosull 札幌南口店",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒060-0004 北海道札幌市中央区北４条西２丁目1−２５ 7F ホット ヨガスタジオLAVA札幌南口店内",
+   "mapsUri": "https://maps.google.com/?cid=16597524385837865911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hokkaido/sapporo_annex/?argument=zxgEiAwg&ai=a688177a935fc1"
+  }
+ ],
+ "sendai": [
+  {
+   "name": "マシンピラティスRintosull フレスポ仙台東照宮店",
+   "rating": 4.8,
+   "count": 199,
+   "address": "日本、〒981-0907 宮城県仙台市青葉区高松１丁目１８−２ フレスポ仙台東照宮 1F",
+   "mapsUri": "https://maps.google.com/?cid=8987492441913221304&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/miyagi/sendaitoshogu/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK 仙台PARCO2店",
+   "rating": 4.8,
+   "count": 157,
+   "address": "日本、〒980-8450 宮城県仙台市青葉区中央３丁目７−５ 仙台PARCO2 5F",
+   "mapsUri": "https://maps.google.com/?cid=5876174969433648989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/sendaiparco?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=sendaiparco"
+  },
+  {
+   "name": "マシンピラティススタジオ Repilates(リピラティス)イオンタウン仙台泉大沢",
+   "rating": 4.7,
+   "count": 146,
+   "address": "日本、〒981-3137 宮城県仙台市泉区大沢１丁目5−１ イオンタウン仙台泉大沢 2階",
+   "mapsUri": "https://maps.google.com/?cid=8081417710327913129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://repilates.jp/studio/sendaiizuminosawa/"
+  },
+  {
+   "name": "La pilates 仙台店《整体×マシンピラティス》ラピラティス",
+   "rating": 5,
+   "count": 125,
+   "address": "日本、〒980-0021 宮城県仙台市青葉区中央４丁目４−８ 3F",
+   "mapsUri": "https://maps.google.com/?cid=8153407727384664464&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/schedule?shopId=a080de2e-ab57-4689-9137-8417711f22ff&menuId=RSV0012&selectedMenuId=RSV0012"
+  },
+  {
+   "name": "ピラティススタジオDEP Calm 仙台一番町店｜宮城 マシンピラティス",
+   "rating": 4.9,
+   "count": 115,
+   "address": "日本、〒980-0811 宮城県仙台市青葉区一番町２丁目５−５ 東一中央ビル C棟402",
+   "mapsUri": "https://maps.google.com/?cid=12686479866721902750&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/tohoku/sendai-calm/"
+  },
+  {
+   "name": "CLUB PILATES 北四番丁",
+   "rating": 4.8,
+   "count": 78,
+   "address": "日本、〒981-0914 宮城県仙台市青葉区堤通雨宮町２−２０ 朝日プラザ堤通雨宮町 1F 堤通り雨宮町三誠ビル",
+   "mapsUri": "https://maps.google.com/?cid=3877327956208467885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/kitayobancho/#utm_source=GoogleMap&utm_medium=kyc_gmap"
+  },
+  {
+   "name": "CLUB PILATES 仙台長町",
+   "rating": 4.8,
+   "count": 38,
+   "address": "日本、〒982-0011 宮城県仙台市太白区長町６丁目５−３８",
+   "mapsUri": "https://maps.google.com/?cid=17005077231616542298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/sendainagamachi#utm_source=GoogleMap&utm_medium=snm_gmap"
+  },
+  {
+   "name": "zen place ピラティス 仙台",
+   "rating": 4.9,
+   "count": 37,
+   "address": "日本、〒980-0021 宮城県仙台市青葉区中央１丁目６−２７ 3階",
+   "mapsUri": "https://maps.google.com/?cid=5122209455320699271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-sendai?utm_source=gmb&utm_medium=zen_place250"
+  },
+  {
+   "name": "CoCo pilates flagship",
+   "rating": 4.9,
+   "count": 37,
+   "address": "日本、〒983-0852 宮城県仙台市宮城野区榴岡１丁目６−８ 1F",
+   "mapsUri": "https://maps.google.com/?cid=14679007355110044227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://cocopilates.jp/coco-pilates-flagship/"
+  },
+  {
+   "name": "TSUTAYA Conditioning PILATES 仙台荒井店",
+   "rating": 4.9,
+   "count": 35,
+   "address": "日本、〒984-0017 宮城県仙台市若林区なないろの里３丁目3ｰ28",
+   "mapsUri": "https://maps.google.com/?cid=1736958883762486268&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://tc.tsite.jp/pilates/0536/"
+  },
+  {
+   "name": "ピラティスK_スマート 仙台店",
+   "rating": 5,
+   "count": 31,
+   "address": "アルボーレ仙台 5f, ２丁目-４-5 中央 青葉区 仙台市 宮城県 980-0021 日本",
+   "mapsUri": "https://maps.google.com/?cid=600578672355964749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/lp/smart-sendai/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=smart-sendai"
+  },
+  {
+   "name": "ピラティス スタジオ CURIO",
+   "rating": 5,
+   "count": 17,
+   "address": "日本、〒982-0011 宮城県仙台市太白区長町５丁目２−６ 森民ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=9218579347018091293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.curiopilates.com/"
+  },
+  {
+   "name": "itoe PILATES",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒984-0052 宮城県仙台市若林区連坊２丁目１２−５６",
+   "mapsUri": "https://maps.google.com/?cid=9840945958429568415&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://coubic.com/emiphi"
+  },
+  {
+   "name": "ÉLAN PILATES（エランピラティス）仙台店",
+   "rating": 5,
+   "count": 12,
+   "address": "日本、〒980-0803 宮城県仙台市青葉区国分町３丁目３−１ 定禅寺ヒルズ 3階",
+   "mapsUri": "https://maps.google.com/?cid=16306749624062225635&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://elanpilates.jp/"
+  },
+  {
+   "name": "Liana pilates リアナピラティス",
+   "rating": 5,
+   "count": 11,
+   "address": "日本、〒981-8001 宮城県仙台市泉区南光台東１丁目２−２６ ２０３",
+   "mapsUri": "https://maps.google.com/?cid=10011407621943486209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://liana-pilates.com/"
+  },
+  {
+   "name": "仙台マシンピラティス Two Three 仙台一番町",
+   "rating": 4.9,
+   "count": 10,
+   "address": "日本、〒980-0811 宮城県仙台市青葉区一番町３丁目８−２４ 一番町シャルムビル 5階",
+   "mapsUri": "https://maps.google.com/?cid=14650203808673836969&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://jiyugaoka-pilates.com/sendai/"
+  },
+  {
+   "name": "Celestia 仙台店",
+   "rating": 4.8,
+   "count": 9,
+   "address": "レゼル百反ビル 3階, ３丁目-１-17 一番町 青葉区 仙台市 宮城県 980-0811 日本",
+   "mapsUri": "https://maps.google.com/?cid=9351403208834882395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://celes-pilates.jp/"
+  },
+  {
+   "name": "itoe PILATES Ⅰ【ピラティスマシンレンタルあり】",
+   "rating": 5,
+   "count": 9,
+   "address": "日本、〒980-0811 宮城県仙台市青葉区一番町１丁目８−１０ 502",
+   "mapsUri": "https://maps.google.com/?cid=9912969204414802801&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://coubic.com/itoe_1_180"
+  },
+  {
+   "name": "ピラティススタジオDEP Calm 仙台東口店｜宮城 マシンピラティス",
+   "rating": 5,
+   "count": 8,
+   "address": "日本、〒983-0852 宮城県仙台市宮城野区榴岡３丁目２−５ サンライズ仙台ビル 3階E室",
+   "mapsUri": "https://maps.google.com/?cid=668384117294228640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/"
+  },
+  {
+   "name": "pilates studio IDEAL byROOTS",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒980-0014 宮城県仙台市青葉区本町２丁目１７−１５ コマツビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=18373535939586947667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudio-ideal.com/"
+  },
+  {
+   "name": "ピラティス＆ウォーキング スタジオ Fairlady Style plus",
+   "rating": 5,
+   "count": 4,
+   "address": "日本、〒980-0822 宮城県仙台市青葉区立町２３−１１ 高速ビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=6025879515284031131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "CoCo pilates連坊",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒984-0047 宮城県仙台市若林区木ノ下４丁目９−１４ 202",
+   "mapsUri": "https://maps.google.com/?cid=3312697767957125069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://cocopilates.jp/"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)仙台店",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒980-0811 宮城県仙台市青葉区一番町２丁目８−４６ 青葉通りOSビル 6階",
+   "mapsUri": "https://maps.google.com/?cid=8495871998517886500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/sendai/"
+  },
+  {
+   "name": "韓国式マシンピラティス Pilates isM(イズム)仙台店",
+   "rating": null,
+   "count": 0,
+   "address": "日本、〒980-0811 宮城県仙台市青葉区一番町１丁目６−２２ シャンボール 506",
+   "mapsUri": "https://maps.google.com/?cid=2048756300787963895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-ism.com/sendai/"
+  }
+ ],
+ "kyoto": [
+  {
+   "name": "style pilates 京都烏丸本店（京都ピラティス）",
+   "rating": 4.9,
+   "count": 357,
+   "address": "日本、〒600-8082 京都府京都市下京区高材木町２２５−１ Metro Miru Building, 3F",
+   "mapsUri": "https://maps.google.com/?cid=9701328846038490368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://stylepilates.jp/lp02/"
+  },
+  {
+   "name": "マシンピラティスRintosull 京都桂店",
+   "rating": 4.9,
+   "count": 284,
+   "address": "日本、〒615-8191 京都府京都市西京区川島有栖川町５０−２ 3F",
+   "mapsUri": "https://maps.google.com/?cid=1760628710925343662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/kyoto/kyotokatsura/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "URBAN CLASSIC PILATES 四条河原町",
+   "rating": 4.7,
+   "count": 238,
+   "address": "日本、〒604-8041 京都府京都市中京区河原町通蛸薬師下る塩屋町３２１ ドンキホーテ四条河原町店 5F",
+   "mapsUri": "https://maps.google.com/?cid=18394117457463905067&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://urbanclassic.jp/shijokawaramachi/"
+  },
+  {
+   "name": "マシンピラティスRintosull 京都四条烏丸店",
+   "rating": 4.7,
+   "count": 217,
+   "address": "日本、〒600-8006 京都府京都市下京区四条通堺町西入立売中之町９４ 四条ＫＳビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=18391422804018512939&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/kyoto/kyotoshijo/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK 京都四条烏丸店",
+   "rating": 4.8,
+   "count": 207,
+   "address": "日本、〒600-8007 京都府京都市下京区四条通東洞院東入立売西町６６ 京都証券ビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=4963500565097360468&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/kyoto/kyoto-shijo-karasuma/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=kyoto"
+  },
+  {
+   "name": "CLUB PILATES 西院",
+   "rating": 5,
+   "count": 102,
+   "address": "日本、〒615-0002 京都府京都市右京区西院東今田町３１ ウエスト グラン アベニュー 六角 1階",
+   "mapsUri": "https://maps.google.com/?cid=18172605262334574412&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/saiin#utm_source=GoogleMap&utm_medium=sii_gmap"
+  },
+  {
+   "name": "Pilates Mirror 四条烏丸",
+   "rating": 4.9,
+   "count": 84,
+   "address": "日本、〒600-8091 京都府京都市下京区東洞院通四条下る元悪王子町４６−５",
+   "mapsUri": "https://maps.google.com/?cid=9083041419257111315&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.konami.com/sportsclub/pilatesmirror/shijokarasuma/"
+  },
+  {
+   "name": "マシンピラティスRintosull 京都駅前店",
+   "rating": 4.7,
+   "count": 82,
+   "address": "日本、〒600-8211 京都府京都市下京区七条通鳥丸東入真苧屋町１９５ 福井ビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=8607748587180615462&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/kyoto/kyotoekimae/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "zen place ピラティス 京都",
+   "rating": 4.6,
+   "count": 82,
+   "address": "日本、〒600-8005 京都府京都市下京区四条通富小路西入立売東町１４ イシズミ本社ビル 9階",
+   "mapsUri": "https://maps.google.com/?cid=16516195785724518959&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-kyoto?utm_source=gmb&utm_medium=zen_place76"
+  },
+  {
+   "name": "La pilates 西院店",
+   "rating": 4.9,
+   "count": 74,
+   "address": "日本、〒615-0002 京都府京都市右京区西院東今田町３３−１ サンフットビル 7階",
+   "mapsUri": "https://maps.google.com/?cid=2390375818677633802&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=a053e45e-59eb-447f-b05d-05ca67b5393d&menuId=RSV0012"
+  },
+  {
+   "name": "style pilates plus 京都駅前店",
+   "rating": 5,
+   "count": 65,
+   "address": "日本、〒600-8208 京都府京都市下京区小稲荷町８５ Grand-K 10F 1001,1002号室",
+   "mapsUri": "https://maps.google.com/?cid=8858853337815411670&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://stylepilates.jp/lp02/"
+  },
+  {
+   "name": "ピラティススタジオ DEP 京都桂店｜京都 マシンピラティス",
+   "rating": 4.9,
+   "count": 53,
+   "address": "日本、〒615-8085 京都府京都市西京区桂千代原町７１−５",
+   "mapsUri": "https://maps.google.com/?cid=16890556345992196292&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/kinki/kyotokatsura/"
+  },
+  {
+   "name": "CLUB PILATES 烏丸御池",
+   "rating": 4.9,
+   "count": 52,
+   "address": "日本、〒604-8172 京都府京都市中京区烏丸通姉小路下る場之町599番地 CUBE OIKE B1F",
+   "mapsUri": "https://maps.google.com/?cid=18158155952539761685&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/karasumaoike#utm_source=GoogleMap&utm_medium=kso_gmap"
+  },
+  {
+   "name": "ピラティススタジオDEP 京都西院店｜京都 マシンピラティス",
+   "rating": 5,
+   "count": 46,
+   "address": "日本、〒604-8847 京都府京都市中京区壬生西土居ノ内町11−２ STYLE Ⅳ 2階",
+   "mapsUri": "https://maps.google.com/?cid=16373466026239741329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/kinki/kyotosaiin/"
+  },
+  {
+   "name": "Mirr-private pilates and movement studio / ミル・ピラティス",
+   "rating": 5,
+   "count": 41,
+   "address": "日本、〒604-0862 京都府京都市中京区烏丸通夷川上る少将井町２４５−１ 藤和シティスクエア烏丸丸太町 ５０６",
+   "mapsUri": "https://maps.google.com/?cid=10734306168942829862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.mirr.jp/"
+  },
+  {
+   "name": "ピラティススタジオBLACK CAT 京都四条烏丸店（グループピラティス）",
+   "rating": 4.9,
+   "count": 38,
+   "address": "日本、〒600-8411 京都府京都市下京区水銀屋町６２０ COCONKARASUMA3F",
+   "mapsUri": "https://maps.google.com/?cid=6712116017633986120&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://solera-pilates.com/"
+  },
+  {
+   "name": "マシンピラティス＆フィットネス ソエルスタジオ 四条大宮店",
+   "rating": 4.6,
+   "count": 36,
+   "address": "日本、〒600-8389 京都府京都市下京区四条大宮町２６ 髙木ビル 3F",
+   "mapsUri": "https://maps.google.com/?cid=8633447993634172113&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lp.soelu.com/studio_new_shijoomiya/index.html?utm_source=realstudio&utm_medium=gbp&utm_campaign=shijoomiya_gbp"
+  },
+  {
+   "name": "Celestia 京都店",
+   "rating": 4.8,
+   "count": 32,
+   "address": "日本、〒604-8033 京都府京都市中京区奈良屋町２９９−１ ファーストコート河原町 5F",
+   "mapsUri": "https://maps.google.com/?cid=3136920571534034511&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://reserve.celes-pilates.jp/reserve/schedule/8/20?trial=true"
+  },
+  {
+   "name": "Pilates KASANE 四条烏丸店",
+   "rating": 4.8,
+   "count": 27,
+   "address": "日本、〒600-8007 京都府京都市下京区立売西町７１ GRAND CUBE四条 7階",
+   "mapsUri": "https://maps.google.com/?cid=5631365638600782301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-kasane.jp/studio/studio-shijokarasuma/?utm_source=google&utm_medium=meo&utm_campaign=studio-shijokarasuma"
+  },
+  {
+   "name": "Pilates MUSE 京都四条大宮",
+   "rating": 4.9,
+   "count": 18,
+   "address": "日本、〒600-8389 京都府京都市下京区四条大宮町２７−４ KODOビル 4F",
+   "mapsUri": "https://maps.google.com/?cid=14809308126586924890&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-muse-kyoto.com/"
+  },
+  {
+   "name": "WOMANS BALANCE PILATESマシンピラティスパーソナル",
+   "rating": 5,
+   "count": 11,
+   "address": "日本、〒600-8028 京都府京都市下京区植松町707番地2 101",
+   "mapsUri": "https://maps.google.com/?cid=14955459224561501412&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://womansbalance-pilates.com/"
+  },
+  {
+   "name": "STUDIO IVY 烏丸御池店【パーソナルマシンピラティス】",
+   "rating": 4.8,
+   "count": 8,
+   "address": "日本、〒604-8136 京都府京都市中京区三条通烏丸東入梅忠町20番1 烏丸アネックス Ⅱ 716号",
+   "mapsUri": "https://maps.google.com/?cid=7542057926760400209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-ivy.jp/"
+  },
+  {
+   "name": "Fem FLORA STUDIO 竜馬店【マシンピラティススタジオ】",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒612-8046 京都府京都市伏見区塩屋町２４４",
+   "mapsUri": "https://maps.google.com/?cid=7704285039391615255&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.instagram.com/femflorastudio_kyoto_ryoma?igsh=YWpuaDNqeHB4eXI2"
+  },
+  {
+   "name": "STUDIO IVY 京都駅前【パーソナルマシンピラティス】",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒600-8208 京都府京都市下京区小稲荷町８５ Grand-K京都駅前ビル801",
+   "mapsUri": "https://maps.google.com/?cid=13139502294583274523&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-ivy.jp/studio/kyotoekimae"
+  },
+  {
+   "name": "UNLACE pilates studio（京都マシンピラティス）",
+   "rating": 5,
+   "count": 3,
+   "address": "日本、〒604-0902 京都府京都市中京区鉾田町299番地3 小杉ビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=16306944551503225421&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://lin.ee/CgoYGhm"
+  },
+  {
+   "name": "pilates＆personal 叶",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒605-0088 京都府京都市東山区西之町２１６−２ 新橋大西ビル 繩手 ４F",
+   "mapsUri": "https://maps.google.com/?cid=14888178889165858522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatespersonal-kanae.studio.site/"
+  },
+  {
+   "name": "ピラティススタジオ PILATES STUDIO TOU 京都烏丸店",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒604-8152 京都府京都市中京区手洗水町６５０ 四条烏丸スタービル 4階",
+   "mapsUri": "https://maps.google.com/?cid=14133211765989412851&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudiotou.com/"
+  }
+ ],
+ "kobe": [
+  {
+   "name": "Rintosull 三宮店",
+   "rating": 4.8,
+   "count": 319,
+   "address": "日本、〒650-0012 兵庫県神戸市中央区北長狭通１丁目１０−９ 生田新道ビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=17448926731310624621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hyogo/sannomiya/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "La pilates神戸元町店《整体×マシンピラテティス》ラ ピラティス",
+   "rating": 4.9,
+   "count": 273,
+   "address": "日本、〒650-0021 兵庫県神戸市中央区三宮町３丁目９−１５ 東亜ビル 701",
+   "mapsUri": "https://maps.google.com/?cid=14357226895745185990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=9c80cc8e-97e5-4330-98ba-a7905b707dbb&menuId=RSV0012"
+  },
+  {
+   "name": "ピラティスK 神戸三宮店",
+   "rating": 4.8,
+   "count": 172,
+   "address": "日本、〒650-0021 兵庫県神戸市中央区三宮町１丁目４−３ クレフィ三宮 7F",
+   "mapsUri": "https://maps.google.com/?cid=9016311513391151552&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/kobe_sannomiya?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=kobe_sannomiya"
+  },
+  {
+   "name": "《パーソナルピラティススタジオ》Pilates iU 神戸三宮店【アイユー】",
+   "rating": 4.9,
+   "count": 157,
+   "address": "日本、〒651-0085 兵庫県神戸市中央区八幡通４丁目２−９ フラワーロード ６０５号",
+   "mapsUri": "https://maps.google.com/?cid=13964764045814519060&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://b.hpr.jp/kr/hp/H000691254"
+  },
+  {
+   "name": "ピラティススタジオ DEP Resho 元町店｜神戸 マシンピラティス",
+   "rating": 5,
+   "count": 91,
+   "address": "日本、〒650-0022 兵庫県神戸市中央区元町通４丁目４−８ タイムスビル 10F",
+   "mapsUri": "https://maps.google.com/?cid=16726297213361659411&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/kinki/kobe-resho/"
+  },
+  {
+   "name": "TOKI PILATES STUDIO ーEAST STUDIOー",
+   "rating": 4.9,
+   "count": 89,
+   "address": "日本、〒650-0012 兵庫県神戸市中央区北長狭通３丁目３−６ 元町商工ビル 7階",
+   "mapsUri": "https://maps.google.com/?cid=9225488861041892646&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://toki-pilates-studio.jp/"
+  },
+  {
+   "name": "ピラティススタジオPILATES STUDIO TO U 神戸三宮店",
+   "rating": 4.9,
+   "count": 83,
+   "address": "日本、〒650-0012 兵庫県神戸市中央区三宮町１丁目２−２ 日住神戸三宮ビルディング 4階",
+   "mapsUri": "https://maps.google.com/?cid=2280523338718715241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudiotou.com/"
+  },
+  {
+   "name": "N.Pilates（エヌピラティス）神戸三宮店",
+   "rating": 5,
+   "count": 74,
+   "address": "日本、〒651-0095 兵庫県神戸市中央区旭通３丁目２−７ 神戸三宮スカイビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=4875609616634221614&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://coubic.com/npilateskobe/3813547/book/course_type"
+  },
+  {
+   "name": "神戸三宮マシンピラティス TwoThree",
+   "rating": 4.9,
+   "count": 70,
+   "address": "日本、〒650-0021 兵庫県神戸市中央区三宮町１丁目２−４ 大和神戸ビル 201",
+   "mapsUri": "https://maps.google.com/?cid=11759292508729047683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://jiyugaoka-pilates.com/hyogo/"
+  },
+  {
+   "name": "マシンピラティスRintosull 神戸店",
+   "rating": 4.8,
+   "count": 66,
+   "address": "日本、〒650-0015 兵庫県神戸市中央区多聞通３丁目３−１ 神戸アークプラザ 5F",
+   "mapsUri": "https://maps.google.com/?cid=10798041841835156906&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hyogo/kobe/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "zen place ピラティス 三宮",
+   "rating": 4.7,
+   "count": 66,
+   "address": "日本、〒650-0021 兵庫県神戸市中央区三宮町１丁目３−１５ 京町筋安田ビル 4階",
+   "mapsUri": "https://maps.google.com/?cid=13043254359266116204&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-sannomiya?utm_source=gmb&utm_medium=zen_place78"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)三宮店",
+   "rating": 4.8,
+   "count": 46,
+   "address": "日本、〒650-0021 兵庫県神戸市中央区三宮町１丁目８−１ さんプラザ 2階237区画",
+   "mapsUri": "https://maps.google.com/?cid=15367933112398346645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/sannomiya/?utm_source=google&utm_medium=organic&utm_campaign=gbp_sannomiya"
+  },
+  {
+   "name": "TOKI PILATES STUDIOーWEST STUDIOー",
+   "rating": 4.9,
+   "count": 31,
+   "address": "日本、〒650-0012 兵庫県神戸市中央区北長狭通５丁目１−２ 太陽ビル 2階 202号室",
+   "mapsUri": "https://maps.google.com/?cid=18397749811860948752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://toki-pilates-studio.jp/"
+  },
+  {
+   "name": "ピラティス三宮｜完全個室マシンピラティス Repos",
+   "rating": 5,
+   "count": 13,
+   "address": "日本、〒651-0093 兵庫県神戸市中央区二宮町３丁目５",
+   "mapsUri": "https://maps.google.com/?cid=2637552082040142776&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://repospilates.studio.site/"
+  },
+  {
+   "name": "ピラティススタジオDEP Resho三宮店｜神戸マシンピラティス",
+   "rating": 5,
+   "count": 10,
+   "address": "日本、〒651-0085 兵庫県神戸市中央区八幡通４丁目２−９ フラワーロードビル 11階 1105号室",
+   "mapsUri": "https://maps.google.com/?cid=14564609083670948330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/kinki/sannomiya-resho/"
+  },
+  {
+   "name": "24/7ピラティス 三宮店《個室パーソナルピラティススタジオ》",
+   "rating": 4.7,
+   "count": 7,
+   "address": "日本、〒651-0085 兵庫県神戸市中央区八幡通４丁目２−１４ トロアー神戸ビル 6F",
+   "mapsUri": "https://maps.google.com/?cid=10093488574132623912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://247-sports.jp/workout/gym/toukai/aichi/ichinomiya.html?acckey=gym0-googmybu-0000-2470-glpforms-000000101&utm_source=google&utm_medium=gmb"
+  },
+  {
+   "name": "シエルピラティス三宮スタジオ",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒650-0012 兵庫県神戸市中央区北長狭通３丁目１−１５ トアロードスクエア 4F",
+   "mapsUri": "https://maps.google.com/?cid=9016323014457611988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://ciel-pilates.copin.co.jp/sannomiya"
+  },
+  {
+   "name": "神戸三宮マシンピラティス mAst Pilates supported by ANCHOR",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒650-0034 兵庫県神戸市中央区京町７６−１ 明海三宮ビル ４０５",
+   "mapsUri": "https://maps.google.com/?cid=15003898635224487855&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mast-pilates.com/"
+  },
+  {
+   "name": "STUDIO IVY 三宮南店【パーソ ナルマシンピラティス】",
+   "rating": 5,
+   "count": 4,
+   "address": "日本、〒651-0088 兵庫県神戸市中央区小野柄通３丁目１−１９ Y's HOUSE三宮2 501号室",
+   "mapsUri": "https://maps.google.com/?cid=48497183209662655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://mypage.pilates-ivy.jp/reserve/schedule/135/117"
+  },
+  {
+   "name": "《女性専門×パーソナルピラティス》Pilates iU 神戸三宮アネックス店【アイユー】",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒651-0085 兵庫県神戸市中央区八幡通４丁目２−９ フラワーロードビル １００１号",
+   "mapsUri": "https://maps.google.com/?cid=9629249271037243370&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://iu-pilates.com/lp/"
+  },
+  {
+   "name": "ピラティスレンタルスタジオELUCA神戸三宮",
+   "rating": 5,
+   "count": 1,
+   "address": "日本、〒650-0003 兵庫県神戸市中央区山本通１丁目７−３ 里見ビル 2F",
+   "mapsUri": "https://maps.google.com/?cid=18165569029153387230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://eluca-kobe.com/rental/"
+  }
+ ],
+ "hiroshima": [
+  {
+   "name": "CLUB PILATES 五日市",
+   "rating": 4.9,
+   "count": 489,
+   "address": "日本、〒731-5125 広島県広島市佐伯区五日市駅前１丁目１１−１ 201号室",
+   "mapsUri": "https://maps.google.com/?cid=11613753488682223477&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/Itsukaichi#utm_source=GoogleMap&utm_medium=iti_gmap"
+  },
+  {
+   "name": "CLUB PILATES 西原店 （クラブピラティス）",
+   "rating": 4.9,
+   "count": 346,
+   "address": "日本、〒731-0113 広島県広島市安佐南区西原８丁目９−２３ 恵美寿マンション 1F",
+   "mapsUri": "https://maps.google.com/?cid=8341062621248974371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/nishihara#utm_source=GoogleMap&utm_medium=nsh_gmap"
+  },
+  {
+   "name": "CLUB PILATES 広島店（クラブピラティス）",
+   "rating": 4.9,
+   "count": 299,
+   "address": "日本、〒732-0814 広島県広島市南区段原南２丁目３−２３ 2F",
+   "mapsUri": "https://maps.google.com/?cid=11535625225536361742&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/hiroshima#utm_source=GoogleMap&utm_medium=hsm_gmap"
+  },
+  {
+   "name": "マシンピラティスRintosull 広島八丁堀店",
+   "rating": 4.8,
+   "count": 257,
+   "address": "日本、〒730-0033 広島県広島市中区堀川町４−１１ 広島アサヒビール館 8F",
+   "mapsUri": "https://maps.google.com/?cid=11040930833980985854&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hiroshima/hiroshimahatchobori/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "CLUB PILATES 舟入店（クラブピラティス）",
+   "rating": 4.9,
+   "count": 200,
+   "address": "日本、〒730-0847 広島県広島市中区舟入南４丁目１４−１５ 中東ビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=9024998293243463408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/funairi#utm_source=GoogleMap&utm_medium=fni_gmap"
+  },
+  {
+   "name": "ピラティスK 広島店",
+   "rating": 4.9,
+   "count": 159,
+   "address": "日本、〒730-0034 広島県広島市中区新天地２−７ 広島ゼロゲート 2F",
+   "mapsUri": "https://maps.google.com/?cid=16198300554690303190&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/hiroshima?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=hiroshima"
+  },
+  {
+   "name": "CLASS THE PILATES",
+   "rating": 4.9,
+   "count": 156,
+   "address": "日本、〒730-0029 広島県広島市中区三川町５−４ わたりビル ２F",
+   "mapsUri": "https://maps.google.com/?cid=9408657317615489045&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://beauty.hotpepper.jp/kr/slnH000692252/"
+  },
+  {
+   "name": "Lapilates広島店《整体×マシンピラティススタジオ》ラピラティス",
+   "rating": 5,
+   "count": 154,
+   "address": "日本、〒730-0051 広島県広島市中区大手町１丁目１−２７ 河内ビル 2階",
+   "mapsUri": "https://maps.google.com/?cid=2940082086407300856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create/schedule?shopId=9c80cc8f-06a7-4896-8166-e1b0019f7318&menuId=RSV0063&_gl=1*g99trf*_ga*MzIyMDYyMjEuMTc3NjQ5NjAxMA..*_ga_1EB9QKJNBM*czE3NzY0OTYwMTAkbzEkZzAkdDE3NzY0OTYwMTAkajYwJGwwJGgw&selectedMenuId=RSV0063"
+  },
+  {
+   "name": "Lapilates安佐南店《整体×マシンピラティススタジオ》ラピラティス",
+   "rating": 4.9,
+   "count": 133,
+   "address": "日本、〒731-0121 広島県広島市安佐南区中須２丁目１１−１２ 広陽防災ビル 3階",
+   "mapsUri": "https://maps.google.com/?cid=5973949888662540567&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=9d77ac77-e5ce-4bee-8d0f-9cf104fe5320&menuId=RSV0012"
+  },
+  {
+   "name": "ピラティススタジオDEP 広島店｜広島 マシンピラティス",
+   "rating": 4.9,
+   "count": 117,
+   "address": "日本、〒730-0805 広島県広島市中区十日市町１丁目１−２１ ライフメント十日市 301",
+   "mapsUri": "https://maps.google.com/?cid=3805880208309028816&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://dep-pilates.com/shop/chugoku/hiroshima"
+  },
+  {
+   "name": "CLUB PILATES 白島店（クラブピラティス）",
+   "rating": 4.9,
+   "count": 112,
+   "address": "日本、〒730-0002 広島県広島市中区白島中町１７−１",
+   "mapsUri": "https://maps.google.com/?cid=9138596129793244988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://clubpilates.co.jp/studio/hakushima#utm_source=GoogleMap&utm_medium=hks_gmap"
+  },
+  {
+   "name": "マシンピラティスRintosull 広島パセーラ店",
+   "rating": 4.8,
+   "count": 105,
+   "address": "日本、〒730-0011 広島県広島市中区基町６−７８ パセーラ 5F",
+   "mapsUri": "https://maps.google.com/?cid=1282860681877654298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://rintosull.jp/shop/hiroshima/hiroshimapacela/?argument=zxgEiAwg&dmai=a673eaec4b0dc4"
+  },
+  {
+   "name": "ピラティスK アルパーク広島店",
+   "rating": 4.6,
+   "count": 69,
+   "address": "日本、〒733-8624 広島県広島市西区草津新町２丁目２６−１ ヒガシトウ 3F アルパーク",
+   "mapsUri": "https://maps.google.com/?cid=5989671917638340823&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/hiroshima-ken/hiroshima-kusatsushinmachi/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=hiroshima-kusatsushinmachi"
+  },
+  {
+   "name": "zen place ピラティス 広島",
+   "rating": 4.9,
+   "count": 67,
+   "address": "日本、〒730-0011 広島県広島市中区基町１２−３ ＣＯＩ広島紙屋町ビル 7階",
+   "mapsUri": "https://maps.google.com/?cid=8465059237692859484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.zenplace.co.jp/studios/pilates-hiroshima?utm_source=gmb&utm_medium=zen_place206"
+  },
+  {
+   "name": "REMAKE",
+   "rating": 5,
+   "count": 34,
+   "address": "日本、〒730-0042 広島県広島市中区国泰寺町１丁目１−６ 2F デミハウス",
+   "mapsUri": "https://maps.google.com/?cid=16895443706680716168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://remake-hiroshima.com/"
+  },
+  {
+   "name": "MYCORE pilates studio",
+   "rating": 4.9,
+   "count": 26,
+   "address": "日本、〒730-0013 広島県広島市中区八丁堀１２−３ Kitayama Bldg 501",
+   "mapsUri": "https://maps.google.com/?cid=7593843545676544794&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "http://www.mycore.jp/"
+  },
+  {
+   "name": "STUDIO IVY 広島三川町店",
+   "rating": 5,
+   "count": 12,
+   "address": "日本、〒730-0029 広島県広島市中区三川町１０−１２ La Dolce 平和大通り ７０２",
+   "mapsUri": "https://maps.google.com/?cid=14714262944923871506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.pilates-ivy.jp/"
+  },
+  {
+   "name": "Pilates studio 26",
+   "rating": 5,
+   "count": 7,
+   "address": "日本、〒730-0013 広島県広島市中区八丁堀５−２９ エム・ケイビル 203",
+   "mapsUri": "https://maps.google.com/?cid=16397328927657767616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilatesstudio-26.com/?utm_source=GBP&utm_medium=GBP&utm_term=GBP&utm_content=GBP&utm_campaign=GBP"
+  },
+  {
+   "name": "Hain pilates(ハインピラティス)広島店",
+   "rating": 5,
+   "count": 6,
+   "address": "日本、〒730-0031 広島県広島市中区紙屋町２丁目２−２ 紙屋町ビル駐車場 4階",
+   "mapsUri": "https://maps.google.com/?cid=9021851737926237699&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.shapes-international.co.jp/hain-pilates/store/hiroshima/"
+  },
+  {
+   "name": "LUIRE PILATES STUDIO 広島店",
+   "rating": 4.8,
+   "count": 6,
+   "address": "日本、〒730-0037 広島県広島市中区中町１−３０ イルクオーレ 3F",
+   "mapsUri": "https://maps.google.com/?cid=13347591489214471098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://sites.google.com/view/luire-pilatesstudio/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=2"
+  },
+  {
+   "name": "24/7ピラティス 広島店《個室パーソナルピラティススタジオ》",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒730-0035 広島県広島市中区本通１−５ 3階",
+   "mapsUri": "https://maps.google.com/?cid=11830576284944370840&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://247-sports.jp/pilates/studio/chugoku/hiroshima/hiroshima.html?acckey=pilates1-googmybu-gbp0-2470-pila0000-00000000"
+  },
+  {
+   "name": "pilates studio 369",
+   "rating": 5,
+   "count": 5,
+   "address": "日本、〒732-0828 広島県広島市南区京橋町５−１２ 202",
+   "mapsUri": "https://maps.google.com/?cid=14199862956404610053&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": ""
+  },
+  {
+   "name": "ピラティスK ラクア緑井店",
+   "rating": 5,
+   "count": 2,
+   "address": "日本、〒731-0103 広島県広島市安佐南区緑井５丁目２２−１ ラクア緑井 3階",
+   "mapsUri": "https://maps.google.com/?cid=15444898461352950133&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://pilates-k.jp/studio/hiroshima-ken/midorii/?utm_source=Google_mybusiness&utm_medium=link&utm_campaign=midorii"
+  },
+  {
+   "name": "La pilates 五日市店《整体×マシンピラティス》ラピラティス",
+   "rating": null,
+   "count": 0,
+   "address": "日本、〒731-5127 広島県広島市佐伯区五日市４丁目４−３１ ４階",
+   "mapsUri": "https://maps.google.com/?cid=733001726505415243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://line.la-pilates.jp/reservations/create?shopId=019f3a58-adb0-7056-8dcc-0a74ca6d9c3f&menuId=RSV0012"
+  },
+  {
+   "name": "マシンピラティス×パーソナルESNA",
+   "rating": null,
+   "count": 0,
+   "address": "日本、〒730-0037 広島県広島市中区中町４−１９ フェリーチェ中町 ５０１",
+   "mapsUri": "https://maps.google.com/?cid=17410578037994528617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://esnapilates.com/"
+  }
  ]
 }

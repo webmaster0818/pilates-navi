@@ -311,6 +311,11 @@ export default function HomePage() {
             <Link href="/area/yokohama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">横浜のピラティススタジオ</Link>
             <Link href="/area/nagoya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">名古屋のピラティススタジオ</Link>
             <Link href="/area/fukuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">福岡のピラティススタジオ</Link>
+            <Link href="/area/sapporo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">札幌のピラティススタジオ</Link>
+            <Link href="/area/sendai/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">仙台のピラティススタジオ</Link>
+            <Link href="/area/kyoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">京都のピラティススタジオ</Link>
+            <Link href="/area/kobe/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">神戸のピラティススタジオ</Link>
+            <Link href="/area/hiroshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">広島のピラティススタジオ</Link>
           </div>
         </div>
       </section>
