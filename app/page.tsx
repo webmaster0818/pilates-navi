@@ -316,6 +316,12 @@ export default function HomePage() {
             <Link href="/area/kyoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">京都のピラティススタジオ</Link>
             <Link href="/area/kobe/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">神戸のピラティススタジオ</Link>
             <Link href="/area/hiroshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">広島のピラティススタジオ</Link>
+            <Link href="/area/okayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">岡山のピラティススタジオ</Link>
+            <Link href="/area/kumamoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">熊本のピラティススタジオ</Link>
+            <Link href="/area/kanazawa/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">金沢のピラティススタジオ</Link>
+            <Link href="/area/shizuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">静岡のピラティススタジオ</Link>
+            <Link href="/area/kawasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">川崎のピラティススタジオ</Link>
+            <Link href="/area/chiba/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">千葉のピラティススタジオ</Link>
           </div>
         </div>
       </section>
