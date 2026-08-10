@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "ピラティスKの口コミ・評判は？料金・0円体験を解説【2026年】",
+  title: "ピラティスKの口コミ・評判は？料金と0円体験の条件【2026年8月】",
   description:
     "ピラティスK（PILATES K）の口コミ・評判、料金プラン、0円体験レッスンの流れ・予約方法をまとめて解説。ボディメイク特化の女性専用マシンピラティスを中立目線で紹介します（料金・特典は公式要確認）。",
 };
