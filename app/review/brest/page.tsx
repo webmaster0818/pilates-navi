@@ -295,6 +295,34 @@ export default function BrestReview() {
         </div>
       </section>
 
+      {/* 実査: 体験・退会規定(2026-08-16) */}
+      <section className="py-10 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">体験から退会までの実際(公式実査・2026年8月16日)</h2>
+          <p className="text-sm text-gray-600 mb-4">「入ってから知った」になりやすい項目を、公式サイト・会員規約の原文で確認しました。</p>
+          <div className="space-y-3 text-sm leading-relaxed">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">体験の流れ・持ち物</p>
+              <p className="mt-1 text-gray-600">WEBで体験予約→店頭で体験・手続きの2ステップ。持ち物は<strong>運動できるウェアと本人確認書類(運転免許証など)</strong>と公式FAQに明記されています。単発利用は1レッスン税込6,380円(公式FAQ)。</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">料金の考え方</p>
+              <p className="mt-1 text-gray-600">月会費は<strong>店舗・時期により異なる</strong>ため公式の料金表では金額が固定表示されていません。公式の訴求は「1レッスン1,726円〜(パーソナルフリー会員で月26日通った場合)」「永久に毎月2,200円割引」。姉妹ブランドURBAN CLASSIC PILATESが追加料金なしで通い放題になる点が総額面の強みです。正確な月額は通いたい店舗の体験時に確認してください。</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">退会規定(会員規約 第11条・原文確認)</p>
+              <ul className="mt-1 text-gray-600 list-disc pl-5 space-y-1">
+                <li>退会手続きは<strong>来店のみ</strong>(電話・メール・FAX不可)</li>
+                <li>退会希望月の<strong>5日まで</strong>の手続きで当月末退会。6日以降は最短で翌月末(場合により翌々月末)</li>
+                <li>2025年9月以降の入会者は「前月5日までの手続きで翌月末退会」</li>
+                <li>退会日まで、利用がなくても会費は発生</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-gray-400">出典: BREST公式サイト・会員規約(2026年8月16日確認)。規定は変更される場合があるため、入会前に最新の規約をご確認ください。</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

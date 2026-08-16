@@ -295,6 +295,38 @@ export default function MelmakeReview() {
         </div>
       </section>
 
+      {/* 実査: 体験・初月総額・退会規定(2026-08-16) */}
+      <section className="py-10 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">体験・初月総額・退会の実際(公式実査・2026年8月16日)</h2>
+          <p className="text-sm text-gray-600 mb-4">「入ってから知った」になりやすい項目を、公式サイト・利用規約の原文で確認しました。</p>
+          <div className="space-y-3 text-sm leading-relaxed">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">体験レッスン(50分)</p>
+              <p className="mt-1 text-gray-600">税込5,500円ですが、<strong>当日入会で5,500円→0円</strong>と公式明記。さらに<strong>カウンセリング時の入会で入会金・事務手数料33,000円が無料</strong>になります。指名制度あり(指名料550円/回)。</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">初月総額の目安(ピラティス50分・当日入会の場合)</p>
+              <ul className="mt-1 text-gray-600 list-disc pl-5 space-y-1">
+                <li>月4回コース: <strong>17,300円</strong>(1回あたり8,650円)+体験0円+入会金0円</li>
+                <li>月8回コース: 33,000円(1回あたり8,250円)</li>
+                <li>月12回コース: 47,100円(1回あたり7,850円)</li>
+              </ul>
+              <p className="mt-1 text-xs text-gray-500">※75分コースは月4回22,800円〜。当日入会しない場合は体験5,500円+入会金等33,000円が別途かかる計算になります。</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-4">
+              <p className="font-bold text-gray-900">退会・休会規定(利用規約 第14条・原文確認)</p>
+              <ul className="mt-1 text-gray-600 list-disc pl-5 space-y-1">
+                <li>退会・休会は<strong>前月10日まで</strong>(10日が定休日の場合は前営業日まで)に手続き</li>
+                <li>手続きは<strong>来店・書面</strong>。やむを得ない事情の場合は郵送可(手数料3,000円税抜)</li>
+                <li>退会月の末日で退会。退会月までの月会費は全額支払い</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-gray-400">出典: メルメイク公式サイト(コース・料金【ピラティス】/ご利用規約【ピラティス】・2026年8月16日確認)。金額・規定は変更される場合があるため、入会前に最新情報をご確認ください。</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
