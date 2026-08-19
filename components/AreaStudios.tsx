@@ -23,9 +23,9 @@ export default function AreaStudios({ area, areaName, addressFilter }: { area: s
   const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data-places.json"), "utf-8"));
   let all: Studio[] = raw[area] || [];
   if (addressFilter) all = all.filter((s) => s.address.includes(addressFilter));
-  const studios = all.filter((s) => s.count >= 10).slice(0, 30);
+  const studios = all.filter((s) => s.count >= 10).slice(0, 60);
   // 口コミ3〜9件のスタジオは簡易リストで掲載(実在+最低限の評価シグナルがあるもののみ・0〜2件は掲載見送り)
-  const minor = all.filter((s) => s.count >= 3 && s.count < 10).slice(0, 30);
+  const minor = all.filter((s) => s.count >= 3 && s.count < 10).slice(0, 60);
   const surveyedAt: string = raw.surveyedAt;
 
   const itemListLd = {
