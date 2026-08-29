@@ -322,6 +322,15 @@ export default function HomePage() {
             <Link href="/area/shizuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">静岡のピラティススタジオ</Link>
             <Link href="/area/kawasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">川崎のピラティススタジオ</Link>
             <Link href="/area/chiba/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">千葉のピラティススタジオ</Link>
+            <Link href="/area/saitama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">さいたまのピラティススタジオ</Link>
+            <Link href="/area/niigata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">新潟のピラティススタジオ</Link>
+            <Link href="/area/naha/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">那覇のピラティススタジオ</Link>
+            <Link href="/area/oita/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">大分のピラティススタジオ</Link>
+            <Link href="/area/utsunomiya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">宇都宮のピラティススタジオ</Link>
+            <Link href="/area/kagoshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">鹿児島のピラティススタジオ</Link>
+            <Link href="/area/nagasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">長崎のピラティススタジオ</Link>
+            <Link href="/area/matsuyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">松山のピラティススタジオ</Link>
+            <Link href="/area/takamatsu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">高松のピラティススタジオ</Link>
           </div>
         </div>
       </section>
