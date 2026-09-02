@@ -16,7 +16,7 @@ export default function AreaPage() {
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
         大分のピラティススタジオ一覧【Google口コミ実データ】
       </h1>
-      <AreaStudios area="oita" areaName="大分" surveyedAtOverride="2026-08-29" />
+      <AreaStudios area="oita" areaName="大分" />
     </div>
   );
 }

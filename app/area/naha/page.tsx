@@ -16,7 +16,7 @@ export default function AreaPage() {
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
         那覇のピラティススタジオ一覧【Google口コミ実データ】
       </h1>
-      <AreaStudios area="naha" areaName="那覇" surveyedAtOverride="2026-08-29" />
+      <AreaStudios area="naha" areaName="那覇" />
     </div>
   );
 }
