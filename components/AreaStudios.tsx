@@ -2,9 +2,14 @@
 // 口コミ・評点はGoogle Places APIで取得した実数のみ。料金は掲載せず公式サイトへ誘導。
 import Link from "next/link";
 import fs from "node:fs";
+import studioIdx from "@/data-studio-index.json";
 import path from "node:path";
 
 type Studio = { name: string; rating?: number; count: number; address: string; mapsUri?: string; website?: string };
+
+const studioSlugMap = new Map(
+  (studioIdx.entries as { slug: string; name: string; address: string }[]).map((e) => [e.name + e.address, e.slug])
+);
 
 // 既存レビューがあるブランドへの内部リンク対応表
 const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
@@ -52,7 +57,13 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
               <div className="flex items-start justify-between gap-3 flex-wrap">
                 <div className="min-w-0">
                   <p className="text-xs text-gray-400 font-bold">#{i + 1}</p>
-                  <h3 className="font-bold text-lg text-gray-800 leading-snug">{s.name}</h3>
+                  <h3 className="font-bold text-lg text-gray-800 leading-snug">
+                    {studioSlugMap.has(s.name + s.address) ? (
+                      <Link href={`/studio/${studioSlugMap.get(s.name + s.address)}/`} className="hover:text-[#7C3AED] hover:underline">{s.name}</Link>
+                    ) : (
+                      s.name
+                    )}
+                  </h3>
                 </div>
                 {typeof s.rating === "number" && (
                   <div className="shrink-0 text-right">
