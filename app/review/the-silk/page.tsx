@@ -288,6 +288,18 @@ export default function TheSilkReview() {
         </div>
       </section>
 
+      {/* 口コミの傾向(編集部要約) */}
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向——実際の口コミを読んだ編集部要約(2026年9月5日取得)</h2>
+          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 text-sm leading-relaxed text-gray-700">
+            <p><span className="font-semibold text-emerald-700">よく褒められている点</span>——複数店舗の直近口コミで最も多いのは「初心者でもインストラクターが丁寧で安心できた」という趣旨の声です。次いで「音楽に合わせるレッスンが楽しく続けやすい」「更衣室・メイクスペースが広く綺麗」という設備面の評価が目立ちます。「むくみ改善」「姿勢が前向きに」など効果実感の言及もあります。</p>
+            <p><span className="font-semibold text-rose-700">気になる声</span>——低評価は少ないものの、「トイレがスタジオの外にある」など設備動線の細かな指摘があります。また目立つ特徴として<span className="font-semibold">体験レッスン直後の投稿が多く</span>、長期継続者の声は相対的に少なめです。</p>
+            <p className="text-xs text-gray-400">※Googleマップの複数店舗(浦和・横浜・川崎)の直近口コミをPlaces APIで取得して編集部が読み、傾向を要約したものです(本文の転載はしていません)。個々の体験は店舗・時期により異なります。</p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-10 bg-[#F5F3FF]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
