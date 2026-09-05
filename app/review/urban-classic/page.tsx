@@ -342,6 +342,18 @@ export default function UrbanClassicReview() {
         </div>
       </section>
 
+      {/* 口コミの傾向(編集部要約) */}
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向——実際の口コミを読んだ編集部要約(2026年9月6日取得)</h2>
+          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 text-sm leading-relaxed text-gray-700">
+            <p><span className="font-semibold text-emerald-700">よく褒められている点</span>——「予約なしで好きな時間に行ける」「30分で終わる」「サーキット形式で自分のペースでできる」という通いやすさの仕組みへの評価が中心です。ヘルニアのリハビリ目的で毎日通う50代男性の声など、幅広い層の利用が見えます。スタッフが巡回して見てくれる安心感への言及もあります。</p>
+            <p><span className="font-semibold text-rose-700">気になる声</span>——一方で「スタッフの入れ替わりで指導の質が落ちた」という時期による質の変動や、退会・解約手続きのシステムへの強い不満も見られます。無人・低価格系の業態はスタッフ体制と解約条件の確認が重要です。入会前に解約方法を必ず確認しておきましょう。</p>
+            <p className="text-xs text-gray-400">※Googleマップ(大橋・福岡ほか)の直近口コミをPlaces APIで取得して編集部が読み、傾向を要約したものです(本文の転載はしていません)。個々の体験は店舗・時期により異なります。</p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-10 bg-[#F5F3FF]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

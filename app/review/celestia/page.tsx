@@ -314,6 +314,18 @@ export default function CelestiaReview() {
         </div>
       </section>
 
+      {/* 口コミの傾向(編集部要約) */}
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向——実際の口コミを読んだ編集部要約(2026年9月6日取得)</h2>
+          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 text-sm leading-relaxed text-gray-700">
+            <p><span className="font-semibold text-emerald-700">よく褒められている点</span>——「体の状態を丁寧に見て、痛気持ちいい強度で指導してくれる」というパーソナル型ならではの個別対応への評価が中心です。「肩の左右差が初回で改善した」「もも裏の硬さを指摘されて納得した」など、体の課題を特定してもらえた体験談が多いのが特徴です。</p>
+            <p><span className="font-semibold text-rose-700">気になる声</span>——口コミは体験・入会直後の声が中心で件数も大手より少ないため、評点の高さは母数の小ささとセットで見るのが安全です。長期の変化については体験時にビフォーアフター事例を確認するのがおすすめです。</p>
+            <p className="text-xs text-gray-400">※Googleマップ(東京(件数は少数))の直近口コミをPlaces APIで取得して編集部が読み、傾向を要約したものです(本文の転載はしていません)。個々の体験は店舗・時期により異なります。</p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-10 bg-[#F5F3FF]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
