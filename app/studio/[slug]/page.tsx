@@ -11,6 +11,13 @@ type Entry = {
 
 const entries = idx.entries as Entry[];
 
+const STUDIO_IMGS = ["studio-reformer.jpg", "studio-mat.jpg", "studio-private.jpg", "studio-tower.jpg", "studio-entrance.jpg", "studio-detail.jpg"];
+function hashCode(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
+}
+
 const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
   { match: /the SILK|ザシルク/i, href: "/review/the-silk/", label: "the SILKの詳細レビュー" },
   { match: /ピラティスK|pilates K/i, href: "/review/pilates-k/", label: "ピラティスKの詳細レビュー" },
@@ -51,6 +58,14 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
   const cityCounts = cityAll.map((x) => x.count).sort((a, b) => a - b);
   const cityMedianCount = cityCounts.length ? cityCounts[Math.floor(cityCounts.length / 2)] : null;
   const mapQuery = encodeURIComponent(`${e.name} ${e.address.replace("日本、", "")}`);
+  // 条件が近いスタジオ: 同都市で口コミ規模が近い順(自分と上位表出分を除く)+同ブランド他店舗
+  const similar = cityAll
+    .filter((x) => x.slug !== e.slug && !cityPeers.slice(0, 5).some((p) => p.slug === x.slug))
+    .sort((a, b) => Math.abs(a.count - e.count) - Math.abs(b.count - e.count))
+    .slice(0, 5);
+  const brandStores = brand
+    ? entries.filter((x) => x.slug !== e.slug && brand.match.test(x.name)).slice(0, 6)
+    : [];
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "エリア別スタジオ一覧", href: "/area/" }, { name: `${e.areaName}のスタジオ`, href: `/area/${e.area}/` }, { name: e.name }]} />
@@ -58,6 +73,11 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
       <p className="text-gray-600 text-sm leading-relaxed mb-6">
         {e.areaName}エリアで実在確認できたピラティススタジオです。以下の評点・口コミ件数は{idx.surveyedAt}時点のGoogleマップ表示値をそのまま転記した実数で、当サイトによる評価ではありません。
       </p>
+
+      <div className="mb-2 overflow-hidden rounded-xl">
+        <img src={`/studio-img/${STUDIO_IMGS[hashCode(e.slug) % STUDIO_IMGS.length]}`} alt="ピラティススタジオのイメージ" className="w-full h-52 sm:h-64 object-cover" />
+      </div>
+      <p className="mb-6 text-xs text-gray-400">※イメージ画像です(実際の店舗の写真ではありません)。実際の店内写真はGoogleマップ・公式サイトでご確認ください。</p>
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[480px] text-sm border border-gray-200">
@@ -126,6 +146,40 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
               </tbody>
             </table>
           </div>
+        </>
+      )}
+
+      {similar.length > 0 && (
+        <>
+          <h2 className="mt-10 text-lg font-bold text-gray-800">条件が近いスタジオ({e.areaName}・口コミ規模順)</h2>
+          <p className="mt-2 text-xs text-gray-400">口コミ件数の規模が当スタジオに近い順に、同エリアの収録スタジオを機械的に並べています。</p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full min-w-[480px] text-sm border border-gray-200">
+              <thead><tr className="bg-gray-50 text-left"><th className="px-3 py-2 font-medium">スタジオ</th><th className="px-3 py-2 font-medium whitespace-nowrap">評点</th><th className="px-3 py-2 font-medium whitespace-nowrap">口コミ件数</th></tr></thead>
+              <tbody>
+                {similar.map((s) => (
+                  <tr key={s.slug} className="border-t border-gray-200">
+                    <td className="px-3 py-2"><Link href={`/studio/${s.slug}/`} className="underline text-[#7C3AED]">{s.name}</Link></td>
+                    <td className="px-3 py-2">{s.rating ?? "—"}</td>
+                    <td className="px-3 py-2">{s.count.toLocaleString()}件</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      {brandStores.length > 0 && (
+        <>
+          <h2 className="mt-10 text-lg font-bold text-gray-800">同じブランドの他店舗</h2>
+          <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+            {brandStores.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/studio/${s.slug}/`} className="inline-block rounded-full border border-gray-200 px-4 py-1.5 hover:border-[#7C3AED] hover:text-[#7C3AED]">{s.name}<span className="ml-1 text-xs text-gray-400">({s.areaName})</span></Link>
+              </li>
+            ))}
+          </ul>
         </>
       )}
 
