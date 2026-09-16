@@ -24,6 +24,13 @@ const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
   { match: /urban ?classic|アーバンクラシック/i, href: "/review/urban-classic/", label: "URBAN CLASSIC PILATESの詳細レビュー" },
 ];
 
+const STUDIO_IMGS = ["studio-reformer.jpg", "studio-mat.jpg", "studio-private.jpg", "studio-tower.jpg", "studio-entrance.jpg", "studio-detail.jpg"];
+function hashCode(str: string): number {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  return h;
+}
+
 export default function AreaStudios({ area, areaName, addressFilter, surveyedAtOverride }: { area: string; areaName: string; addressFilter?: string; surveyedAtOverride?: string }) {
   const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data-places.json"), "utf-8"));
   let all: Studio[] = raw[area] || [];
@@ -32,6 +39,8 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
   // 口コミ3〜9件のスタジオは簡易リストで掲載(実在+最低限の評価シグナルがあるもののみ・0〜2件は掲載見送り)
   const minor = all.filter((s) => s.count >= 3 && s.count < 10).slice(0, 60);
   const surveyedAt: string = surveyedAtOverride ?? raw.surveyedAt;
+  const ratings = all.filter((x) => typeof x.rating === "number").map((x) => x.rating as number);
+  const avgRating = ratings.length ? ratings.reduce((a, b) => a + b, 0) / ratings.length : 0;
 
   const itemListLd = {
     "@context": "https://schema.org",
@@ -54,42 +63,56 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
           const brand = BRAND_REVIEWS.find((b) => b.match.test(s.name));
           return (
             <div key={s.name + i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-              <div className="flex items-start justify-between gap-3 flex-wrap">
-                <div className="min-w-0">
-                  <p className="text-xs text-gray-400 font-bold">#{i + 1}</p>
-                  <h3 className="font-bold text-lg text-gray-800 leading-snug">
-                    {studioSlugMap.has(s.name + s.address) ? (
-                      <Link href={`/studio/${studioSlugMap.get(s.name + s.address)}/`} className="hover:text-[#7C3AED] hover:underline">{s.name}</Link>
+              {(() => {
+                const slug = studioSlugMap.get(s.name + s.address);
+                const detailHref = slug ? `/studio/${slug}/` : undefined;
+                const img = `/studio-img/${STUDIO_IMGS[hashCode(s.name) % STUDIO_IMGS.length]}`;
+                const points: string[] = [];
+                points.push(`${areaName}の収録スタジオで口コミ件数${i + 1}位(${s.count}件)`);
+                if (typeof s.rating === "number") points.push(`評点${s.rating.toFixed(1)}(エリア平均${avgRating.toFixed(2)}と比べて${s.rating >= avgRating ? "同等以上" : "低め"})`);
+                if (brand) points.push("当サイトで詳しく調査済みの大手ブランド店舗");
+                return (
+                  <>
+                    <p className="text-xs text-gray-400 font-bold">#{i + 1}</p>
+                    <h3 className="font-bold text-lg text-gray-800 leading-snug mt-0.5">
+                      {detailHref ? (
+                        <Link href={detailHref} className="hover:text-[#7C3AED] hover:underline">{s.name}</Link>
+                      ) : (
+                        s.name
+                      )}
+                    </h3>
+                    {detailHref ? (
+                      <Link href={detailHref} className="block mt-3 overflow-hidden rounded-xl">
+                        <img src={img} alt="ピラティススタジオのイメージ" className="w-full h-36 object-cover hover:opacity-90 transition-opacity" loading="lazy" />
+                      </Link>
                     ) : (
-                      s.name
+                      <div className="mt-3 overflow-hidden rounded-xl"><img src={img} alt="ピラティススタジオのイメージ" className="w-full h-36 object-cover" loading="lazy" /></div>
                     )}
-                  </h3>
-                </div>
-                {typeof s.rating === "number" && (
-                  <div className="shrink-0 text-right">
-                    <p className="text-amber-500 font-extrabold text-lg">★ {s.rating.toFixed(1)}</p>
-                    <p className="text-xs text-gray-500">Google口コミ {s.count}件</p>
-                  </div>
-                )}
-              </div>
-              <p className="text-sm text-gray-600 mt-2">{s.address}</p>
-              <div className="flex flex-wrap gap-3 mt-3 text-sm font-bold">
-                {s.mapsUri && (
-                  <a href={s.mapsUri} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-700 underline underline-offset-2">
-                    Googleマップで口コミを見る
-                  </a>
-                )}
-                {s.website && (
-                  <a href={s.website} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-700 underline underline-offset-2">
-                    公式サイト
-                  </a>
-                )}
-                {brand && (
-                  <Link href={brand.href} className="text-rose-600 underline underline-offset-2">
-                    {brand.label}
-                  </Link>
-                )}
-              </div>
+                    <p className="text-[10px] text-gray-300 mt-1">※イメージ画像(実際の店舗写真ではありません)</p>
+                    <p className="text-sm text-gray-600 mt-2">{s.address.replace("日本、", "")}のピラティススタジオです。</p>
+                    {typeof s.rating === "number" && (
+                      <p className="mt-2 text-sm"><span className="text-amber-500 font-extrabold">★ {s.rating.toFixed(1)}</span><span className="text-gray-500 text-xs ml-1">Google口コミ {s.count}件({surveyedAt}時点の実数)</span></p>
+                    )}
+                    <ul className="mt-2 text-xs text-gray-600 space-y-1 list-disc pl-4">
+                      {points.map((pt) => (<li key={pt}>{pt}</li>))}
+                    </ul>
+                    <div className="flex flex-wrap gap-3 mt-3 text-sm font-bold">
+                      {detailHref && (
+                        <Link href={detailHref} className="text-[#7C3AED] underline underline-offset-2">実測データの詳細ページ</Link>
+                      )}
+                      {s.website && (
+                        <a href={s.website} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-700 underline underline-offset-2">公式サイト</a>
+                      )}
+                      {s.mapsUri && (
+                        <a href={s.mapsUri} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-700 underline underline-offset-2">Googleマップで口コミを見る</a>
+                      )}
+                      {brand && (
+                        <Link href={brand.href} className="text-rose-600 underline underline-offset-2">{brand.label}</Link>
+                      )}
+                    </div>
+                  </>
+                );
+              })()}
             </div>
           );
         })}

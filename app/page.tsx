@@ -128,7 +128,7 @@ export default function HomePage() {
             あなたに合った<br className="sm:hidden" />ピラティススタジオが見つかる
           </h1>
           <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto drop-shadow">
-            人気ピラティススタジオ15社を料金・口コミ・特徴で徹底比較。初心者から経験者まで、最適なスタジオ選びをサポートします。
+            主要9ブランドの料金・特徴比較と、全国35都市1,936スタジオのGoogleマップ実測データ(2026年9月2日時点)で、最適なスタジオ選びをサポートします。
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-lg">
@@ -146,10 +146,10 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { num: "15社", label: "厳選スタジオ" },
-              { num: "全国", label: "対応エリア" },
-              { num: "料金", label: "徹底比較" },
-              { num: "口コミ", label: "掲載中" },
+              { num: "9ブランド", label: "詳細レビュー" },
+              { num: "35都市", label: "エリア別一覧" },
+              { num: "1,936件", label: "実在スタジオDB" },
+              { num: "1,412件", label: "スタジオ詳細ページ" },
             ].map((stat) => (
               <div key={stat.label} className="bg-[#F5F3FF] rounded-xl p-6">
                 <div className="text-2xl font-bold text-[#7C3AED]">{stat.num}</div>
@@ -305,33 +305,47 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">エリアからスタジオを探す</h2>
           <p className="text-gray-600 mb-8">Googleマップの実データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/area/tokyo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">東京のピラティススタジオ</Link>
-            <Link href="/area/osaka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">大阪のピラティススタジオ</Link>
-            <Link href="/area/yokohama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">横浜のピラティススタジオ</Link>
-            <Link href="/area/nagoya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">名古屋のピラティススタジオ</Link>
-            <Link href="/area/fukuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">福岡のピラティススタジオ</Link>
-            <Link href="/area/sapporo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">札幌のピラティススタジオ</Link>
-            <Link href="/area/sendai/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">仙台のピラティススタジオ</Link>
-            <Link href="/area/kyoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">京都のピラティススタジオ</Link>
-            <Link href="/area/kobe/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">神戸のピラティススタジオ</Link>
-            <Link href="/area/hiroshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">広島のピラティススタジオ</Link>
-            <Link href="/area/okayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">岡山のピラティススタジオ</Link>
-            <Link href="/area/kumamoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">熊本のピラティススタジオ</Link>
-            <Link href="/area/kanazawa/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">金沢のピラティススタジオ</Link>
-            <Link href="/area/shizuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">静岡のピラティススタジオ</Link>
-            <Link href="/area/kawasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">川崎のピラティススタジオ</Link>
-            <Link href="/area/chiba/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">千葉のピラティススタジオ</Link>
-            <Link href="/area/saitama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">さいたまのピラティススタジオ</Link>
-            <Link href="/area/niigata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">新潟のピラティススタジオ</Link>
-            <Link href="/area/naha/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">那覇のピラティススタジオ</Link>
-            <Link href="/area/oita/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">大分のピラティススタジオ</Link>
-            <Link href="/area/utsunomiya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">宇都宮のピラティススタジオ</Link>
-            <Link href="/area/kagoshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">鹿児島のピラティススタジオ</Link>
-            <Link href="/area/nagasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">長崎のピラティススタジオ</Link>
-            <Link href="/area/matsuyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">松山のピラティススタジオ</Link>
-            <Link href="/area/takamatsu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">高松のピラティススタジオ</Link>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/area/tokyo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">東京</Link>
+            <Link href="/area/osaka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">大阪</Link>
+            <Link href="/area/yokohama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">横浜</Link>
+            <Link href="/area/kawasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">川崎</Link>
+            <Link href="/area/nagoya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">名古屋</Link>
+            <Link href="/area/fukuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">福岡</Link>
+            <Link href="/area/sapporo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">札幌</Link>
+            <Link href="/area/sendai/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">仙台</Link>
+            <Link href="/area/kyoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">京都</Link>
+            <Link href="/area/kobe/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">神戸</Link>
+            <Link href="/area/saitama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">さいたま</Link>
+            <Link href="/area/chiba/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">千葉</Link>
+            <Link href="/area/hiroshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">広島</Link>
+            <Link href="/area/okayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">岡山</Link>
+            <Link href="/area/kumamoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">熊本</Link>
+            <Link href="/area/kanazawa/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">金沢</Link>
+            <Link href="/area/shizuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">静岡</Link>
+            <Link href="/area/niigata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">新潟</Link>
+            <Link href="/area/naha/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">那覇</Link>
+            <Link href="/area/oita/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">大分</Link>
+            <Link href="/area/utsunomiya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">宇都宮</Link>
+            <Link href="/area/kagoshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">鹿児島</Link>
+            <Link href="/area/nagasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">長崎</Link>
+            <Link href="/area/matsuyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">松山</Link>
+            <Link href="/area/takamatsu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">高松</Link>
+            <Link href="/area/toyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">富山</Link>
+            <Link href="/area/nagano/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">長野</Link>
+            <Link href="/area/gifu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">岐阜</Link>
+            <Link href="/area/mito/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">水戸</Link>
+            <Link href="/area/maebashi/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">前橋</Link>
+            <Link href="/area/fukushima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">福島</Link>
+            <Link href="/area/yamagata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">山形</Link>
+            <Link href="/area/wakayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">和歌山</Link>
+            <Link href="/area/tokushima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">徳島</Link>
+            <Link href="/area/saga/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">佐賀</Link>
           </div>
+          <p className="mt-6 text-sm text-gray-500">
+            全35都市・1,936スタジオを収録(2026年9月2日時点のGoogleマップ実測)。
+            <Link href="/stats/" className="text-[#7C3AED] underline underline-offset-2 ml-1">全都市の統計データを見る</Link>
+          </p>
         </div>
       </section>
 
