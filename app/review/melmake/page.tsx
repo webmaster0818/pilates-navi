@@ -76,6 +76,16 @@ export default function MelmakeReview() {
         </div>
       </section>
 
+      {/* Screenshot */}
+      <section className="pt-8 pb-2">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+            <img src="/ss-melmake.jpg" alt="メルメイク 公式サイト" className="w-full h-auto" loading="lazy" />
+            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: <a href="https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-600">公式サイト</a>より</p>
+          </div>
+        </div>
+      </section>
+
       {/* 結論ボックス */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

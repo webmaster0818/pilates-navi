@@ -71,6 +71,16 @@ export default function CelestiaReview() {
         </div>
       </section>
 
+      {/* Screenshot */}
+      <section className="pb-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-8">
+            <img src="/ss-celestia.jpg" alt="Celestia 公式サイト" className="w-full h-auto" loading="lazy" />
+            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: <a href="https://celes-pilates.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
+          </div>
+        </div>
+      </section>
+
       {/* 結論ボックス（結論先出し） */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -85,16 +95,6 @@ export default function CelestiaReview() {
               <li className="flex items-start gap-2"><span className="text-gray-400 font-bold">△</span>とにかく月額を抑えたい人／大人数でワイワイ通いたい人</li>
             </ul>
             <p className="mt-4 text-xs text-gray-500">※料金・体験特典・店舗の最新情報は変動するため、申し込み前に<a href="https://celes-pilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>で必ずご確認ください。グループ型との比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もご覧ください。</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Screenshot */}
-      <section className="pb-4">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-8">
-            <img src="/ss-celestia.jpg" alt="Celestia 公式サイト" className="w-full h-auto" loading="lazy" />
-            <p className="text-[10px] text-gray-400 p-2 text-right">画像引用: <a href="https://celes-pilates.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
           </div>
         </div>
       </section>
