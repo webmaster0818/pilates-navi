@@ -253,6 +253,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { name: "Rintosull(リントスル)", slug: "rintosull", desc: "LAVA系列、当サイト収録58店舗の大型チェーン", href: "/review/rintosull/", url: "https://rintosull.jp/" },
+              { name: "ピラティスミラー", slug: "pilates-mirror", desc: "コナミスポーツ運営、天井の鏡×30分レッスン", href: "/review/pilates-mirror/", url: "https://www.konami.com/sportsclub/pilatesmirror/" },
               { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/" },
               { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/", url: "https://pilates-k.jp/" },
               { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/" },
