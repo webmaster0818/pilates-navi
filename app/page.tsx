@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+// 提携(アフィリエイト)リンクを持つスタジオだけ、公式サイトへのCTAを出す。
+// 判定はURLで行い、提携のないスタジオに「公式へ」ボタンを出さない
+// (計測できない外部送客を増やさないため)。
+const isAffiliate = (url: string) => url.includes("t.felmat.net");
+
 const studios = [
   {
     rank: 1,
@@ -176,7 +181,11 @@ export default function HomePage() {
                     <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#7C3AED] text-white text-sm font-bold">
                       {s.rank}
                     </span>
-                    <h3 className="text-lg font-bold text-gray-900">{s.name}</h3>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      <Link href={s.reviewPath} className="hover:text-[#7C3AED] transition-colors">
+                        {s.name}
+                      </Link>
+                    </h3>
                   </div>
                   <span className="text-[#7C3AED] font-bold text-lg">{s.monthlyFee}</span>
                 </div>
@@ -191,7 +200,7 @@ export default function HomePage() {
                   <Link href={s.reviewPath}>
                     <div className="rounded-lg overflow-hidden border border-gray-200 mb-4">
                       <img src={`/ss-${s.slug}.jpg`} alt={`${s.name} 公式サイト`} className="w-full h-auto" />
-                      <p className="text-[10px] text-gray-400 p-1 text-right">画像引用: <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
+                      <p className="text-[10px] text-gray-400 p-1 text-right">画像引用: <a href={s.url} target="_blank" rel="nofollow sponsored noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
                     </div>
                   </Link>
 
@@ -230,13 +239,24 @@ export default function HomePage() {
 
                   <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3 mb-4">{s.recommend}</p>
 
-                  <div className="text-right">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:justify-end">
                     <Link
                       href={s.reviewPath}
-                      className="inline-block bg-[#7C3AED] text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#6D28D9] transition-colors"
+                      className="inline-block text-center border border-[#7C3AED] text-[#7C3AED] text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#F5F3FF] transition-colors"
                     >
                       口コミ・詳細を見る
                     </Link>
+                    {isAffiliate(s.url) && (
+                      <a
+                        href={s.url}
+                        target="_blank"
+                        rel="nofollow sponsored noopener noreferrer"
+                        className="inline-block text-center bg-[#7C3AED] text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#6D28D9] transition-colors"
+                      >
+                        公式サイトで体験を予約
+                        <span className="ml-1.5 text-[10px] font-normal opacity-80">PR</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -264,17 +284,31 @@ export default function HomePage() {
               { name: "URBAN CLASSIC PILATES", slug: "urban-classic", desc: "クラシカルピラティス、スタイリッシュ", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
               { name: "メルメイク", slug: "melmake", desc: "プライベートジム、パーソナル指導", href: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" },
             ].map((studio) => (
-              <Link key={studio.name} href={studio.href} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <div className="aspect-video overflow-hidden">
+              <div key={studio.name} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <Link href={studio.href} className="block aspect-video overflow-hidden">
                   <img src={`/ss-${studio.slug}.jpg`} alt={`${studio.name} 公式サイト`} className="w-full h-full object-cover object-top" />
+                </Link>
+                <div className="p-4 flex-1 flex flex-col">
+                  <h3 className="font-bold text-gray-900 mb-1">
+                    <Link href={studio.href} className="hover:text-[#7C3AED] transition-colors">{studio.name}</Link>
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3">{studio.desc}</p>
+                  <div className="mt-auto flex flex-wrap items-center gap-3">
+                    <Link href={studio.href} className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</Link>
+                    {isAffiliate(studio.url) && (
+                      <a
+                        href={studio.url}
+                        target="_blank"
+                        rel="nofollow sponsored noopener noreferrer"
+                        className="ml-auto inline-block bg-[#7C3AED] text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-[#6D28D9] transition-colors"
+                      >
+                        体験を予約<span className="ml-1 text-[10px] font-normal opacity-80">PR</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-gray-900 mb-1">{studio.name}</h3>
-                  <p className="text-sm text-gray-500 mb-2">{studio.desc}</p>
-                  <span className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</span>
-                </div>
-                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: <a href={studio.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
-              </Link>
+                <p className="text-[10px] text-gray-400 px-4 pb-2">画像引用: <a href={studio.url} target="_blank" rel="nofollow noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
+              </div>
             ))}
           </div>
         </div>
