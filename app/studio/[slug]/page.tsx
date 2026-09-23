@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { STUDIO_SHOTS, STUDIO_SHOT_DATE } from "@/data-studio-shots";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import idx from "@/data-studio-index.json";
@@ -74,10 +75,28 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
         {e.areaName}エリアで実在確認できたピラティススタジオです。以下の評点・口コミ件数は{idx.surveyedAt}時点のGoogleマップ表示値をそのまま転記した実数で、当サイトによる評価ではありません。
       </p>
 
-      <div className="mb-2 overflow-hidden rounded-xl">
-        <img src={`/studio-img/${STUDIO_IMGS[hashCode(e.slug) % STUDIO_IMGS.length]}`} alt="ピラティススタジオのイメージ" className="w-full h-52 sm:h-64 object-cover" />
-      </div>
-      <p className="mb-6 text-xs text-gray-400">※イメージ画像です(実際の店舗の写真ではありません)。実際の店内写真はGoogleマップ・公式サイトでご確認ください。</p>
+      {STUDIO_SHOTS[e.slug] ? (
+        <>
+          <div className="mb-2 overflow-hidden rounded-xl border border-gray-200">
+            <img
+              src={`/studio-ss/${STUDIO_SHOTS[e.slug]}.jpg`}
+              alt={`${e.name} 公式サイト`}
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <p className="mb-6 text-xs text-gray-400">
+            画像引用: <a href={e.website} target="_blank" rel="nofollow noopener" className="underline hover:text-gray-600">{e.name} 公式サイト</a>（{STUDIO_SHOT_DATE}時点）。店内の写真・最新の内容は公式サイトとGoogleマップでご確認ください。
+          </p>
+        </>
+      ) : (
+        <>
+          <div className="mb-2 overflow-hidden rounded-xl">
+            <img src={`/studio-img/${STUDIO_IMGS[hashCode(e.slug) % STUDIO_IMGS.length]}`} alt="ピラティススタジオのイメージ" className="w-full h-52 sm:h-64 object-cover" />
+          </div>
+          <p className="mb-6 text-xs text-gray-400">※イメージ画像です(実際の店舗の写真ではありません)。実際の店内写真はGoogleマップ・公式サイトでご確認ください。</p>
+        </>
+      )}
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[480px] text-sm border border-gray-200">
