@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { BRAND_FACTS, FACTS_SURVEYED_AT } from "@/data-brand-facts";
+import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
   title: "ピラティススタジオ料金比較【2026年】月額・マシン専門9スタジオを一覧で比べる",
@@ -22,6 +24,12 @@ const studios: Studio[] = [
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: "公式サイトで要確認", type: "マシンピラティス", note: "料金は公式の最新情報をご確認ください" },
   { slug: "melmake", name: "メルメイク", price: "公式サイトで要確認", type: "ピラティス/ボディメイク", note: "料金は公式の最新情報をご確認ください" },
 ];
+
+const NAME: Record<string, string> = {
+  "pilates-k": "ピラティスK", "the-silk": "the SILK", "rintosull": "Rintosull（リントスル）",
+  "bdc": "BDC PILATES", "pilates-mirror": "ピラティスミラー", "celestia": "Celestia（セレスティア）",
+  "club-pilates": "CLUB PILATES",
+};
 
 const tips = [
   { t: "月額と1回あたりの単価で見る", d: "グループ系は月額1万円前後で通い放題に近いプラン、セミパーソナル（Celestia等）は1回約7,000円と単価は上がりますが指導が手厚いです。回数と単価の両方で比べましょう。" },
@@ -76,6 +84,59 @@ export default function PriceComparisonPage() {
               </tbody>
             </table>
           </div>
+        </section>
+
+
+        {/* 月額以外の費用。月額だけの比較では初期費用と毎月の固定費が抜け落ちるため、
+            公式サイトで金額を確認できたブランドだけを実査値で並べる(施主指示 2026-09-30)。
+            記載がなかった項目は「記載なし」と書き、推定額は入れない。 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">月額だけでは分からない費用（公式サイト実査）</h2>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            ピラティススタジオは、<strong>月額のほかに「入会金」と「毎月の固定費」</strong>がかかることがあります。
+            たとえば月額が近い2社でも、施設維持費が月825円あるかないかで<strong>年間で約1万円</strong>の差になります。
+            下の表は{FACTS_SURVEYED_AT}に各公式サイトを開いて確認した記載です。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-200 p-2 text-left whitespace-nowrap">スタジオ</th>
+                  <th className="border border-gray-200 p-2 text-left">月額</th>
+                  <th className="border border-gray-200 p-2 text-left whitespace-nowrap">入会金</th>
+                  <th className="border border-gray-200 p-2 text-left whitespace-nowrap">毎月の固定費</th>
+                  <th className="border border-gray-200 p-2 text-left whitespace-nowrap">体験レッスン</th>
+                  <th className="border border-gray-200 p-2 text-left whitespace-nowrap">通えるエリア</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(BRAND_FACTS).map(([slug, f]) => {
+                  const a = BRAND_AREA[slug];
+                  return (
+                    <tr key={slug}>
+                      <td className="border border-gray-200 p-2 font-bold whitespace-nowrap">
+                        <Link href={`/review/${slug}/`} className="text-purple-700 hover:underline">{NAME[slug] ?? slug}</Link>
+                        <span className="block text-[10px] font-normal text-gray-500">{f.format}／{f.gender}</span>
+                      </td>
+                      <td className="border border-gray-200 p-2 text-xs">{f.monthly}</td>
+                      <td className="border border-gray-200 p-2 text-xs">{f.joinFee}</td>
+                      <td className="border border-gray-200 p-2 text-xs">{f.monthlyExtra}</td>
+                      <td className="border border-gray-200 p-2 text-xs">{f.trial}</td>
+                      <td className="border border-gray-200 p-2 text-xs whitespace-nowrap">
+                        {a ? <>{a.studios}店舗／{a.cities}都市</> : "—"}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-gray-500 leading-relaxed">
+            ※ 料金は{FACTS_SURVEYED_AT}時点で各公式サイトに記載されていた内容です（出典は各社の料金ページ）。
+            「記載なし」は当サイトが公式で確認できなかった項目で、金額がかからないという意味ではありません。
+            エリアはGoogleマップ実測データ（{AREA_SURVEYED_AT}時点・当サイト収録分）で、全店舗を網羅したものではありません。
+            zen place pilatesは料金ページが読み込めなかったため、この表には含めていません。
+          </p>
         </section>
 
         <section className="mb-10">
