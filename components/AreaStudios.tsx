@@ -1,6 +1,7 @@
 // エリア別ピラティススタジオ一覧(Googleマップ実データ・捏造ゼロ)
 // 口コミ・評点はGoogle Places APIで取得した実数のみ。料金は掲載せず公式サイトへ誘導。
 import Link from "next/link";
+import Icon from "@/components/Icon";
 import fs from "node:fs";
 import studioIdx from "@/data-studio-index.json";
 import path from "node:path";
@@ -91,7 +92,7 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
                     <p className="text-[10px] text-gray-300 mt-1">※イメージ画像(実際の店舗写真ではありません)</p>
                     <p className="text-sm text-gray-600 mt-2">{s.address.replace("日本、", "")}のピラティススタジオです。</p>
                     {typeof s.rating === "number" && (
-                      <p className="mt-2 text-sm"><span className="text-amber-500 font-extrabold">★ {s.rating.toFixed(1)}</span><span className="text-gray-500 text-xs ml-1">Google口コミ {s.count}件({surveyedAt}時点の実数)</span></p>
+                      <p className="mt-2 text-sm"><span className="inline-flex items-center gap-1 font-extrabold text-amber-600"><Icon name="star" className="pl-ico w-4 h-4 stroke-amber-500" />{s.rating.toFixed(1)}</span><span className="text-gray-500 text-xs ml-1">Google口コミ {s.count}件({surveyedAt}時点の実数)</span></p>
                     )}
                     <ul className="mt-2 text-xs text-gray-600 space-y-1 list-disc pl-4">
                       {points.map((pt) => (<li key={pt}>{pt}</li>))}
@@ -130,7 +131,7 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
                   <p className="text-xs text-gray-500 mt-0.5">{s.address}</p>
                 </div>
                 <div className="shrink-0 flex items-center gap-3 text-xs font-bold">
-                  {typeof s.rating === "number" && <span className="text-amber-500">★ {s.rating.toFixed(1)}（{s.count}件）</span>}
+                  {typeof s.rating === "number" && <span className="inline-flex items-center gap-1 text-amber-600"><Icon name="star" className="pl-ico w-4 h-4 stroke-amber-500" />{s.rating.toFixed(1)}（{s.count}件）</span>}
                   {s.mapsUri && <a href={s.mapsUri} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-700 underline underline-offset-2">Googleマップ</a>}
                 </div>
               </li>

@@ -388,7 +388,7 @@ export default function ConciergePage() {
       /* --- Lesson Type ---------------------------------------------------- */
       case 'lessonType': {
         const options = ['マシンピラティス', 'マットピラティス', '両方OK'];
-        const icons = ['🏋️', '🧘', '✨'];
+        const icons = ['', '', ''];
         return (
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">

@@ -1,10 +1,36 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
+import Icon from "@/components/Icon";
+import studioIdx from "@/data-studio-index.json";
 
 // 提携(アフィリエイト)リンクを持つスタジオだけ、公式サイトへのCTAを出す。
 // 判定はURLで行い、提携のないスタジオに「公式へ」ボタンを出さない
 // (計測できない外部送客を増やさないため)。
 const isAffiliate = (url: string) => url.includes("t.felmat.net");
+
+/*
+ * エリア導線（2026-10-08 改修・施主指示「エリアで選択する導線をTOPに」）。
+ * 35都市をただ並べるとどこを押せばいいか分からないので、地方でまとめ、
+ * 実測DBから数えたスタジオ数を添える。ボタンは .pl-pick に統一した。
+ */
+const AREA_REGIONS: { name: string; slugs: string[] }[] = [
+  { name: "北海道・東北", slugs: ["sapporo", "sendai", "yamagata", "fukushima"] },
+  { name: "関東", slugs: ["tokyo", "yokohama", "kawasaki", "saitama", "chiba", "mito", "utsunomiya", "maebashi"] },
+  { name: "中部・北陸", slugs: ["nagoya", "gifu", "shizuoka", "niigata", "kanazawa", "toyama", "nagano"] },
+  { name: "近畿", slugs: ["osaka", "kyoto", "kobe", "wakayama"] },
+  { name: "中国・四国", slugs: ["hiroshima", "okayama", "matsuyama", "takamatsu", "tokushima"] },
+  { name: "九州・沖縄", slugs: ["fukuoka", "kumamoto", "kagoshima", "nagasaki", "oita", "saga", "naha"] },
+];
+
+/** 実測DB(2026年9月2日時点)から、エリアごとのスタジオ数と表示名を作る */
+const AREA_INFO: Record<string, { name: string; n: number }> = (() => {
+  const m: Record<string, { name: string; n: number }> = {};
+  for (const e of studioIdx.entries as { area: string; areaName: string }[]) {
+    if (!m[e.area]) m[e.area] = { name: e.areaName, n: 0 };
+    m[e.area].n += 1;
+  }
+  return m;
+})();
 
 const studios = [
   {
@@ -123,26 +149,32 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
+      {/* Hero — 2026-10-08 改修: 黒ベタのオーバーレイをやめ、写真の余白側に文字を置く。
+          画像は2,560px幅で差し替え(高解像度・施主指示) */}
+      <section className="pl-hero border-b border-[var(--line)]">
         <div className="absolute inset-0">
-          <img src="/hero-pilates.jpg" alt="ピラティススタジオ" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
+          <img
+            src="/hero-pilates.jpg"
+            alt="リフォーマーが並ぶピラティススタジオ"
+            className="w-full h-full object-cover object-[72%_center] md:object-right"
+            fetchPriority="high"
+          />
+          <div className="pl-hero-scrim absolute inset-0 bg-[linear-gradient(100deg,#ffffff_0%,rgba(255,255,255,.96)_34%,rgba(255,255,255,.72)_54%,rgba(255,255,255,.06)_100%)]" />
         </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-            あなたに合った<br className="sm:hidden" />ピラティススタジオが見つかる
+        <div className="pl-hero-inner max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <p className="pl-eyebrow">PILATES STUDIO GUIDE</p>
+          <h1 className="pl-h1 mt-4 text-[var(--ink)] max-w-xl">
+            あなたに合った<br className="hidden sm:block" />ピラティススタジオが見つかる
           </h1>
-          <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto drop-shadow">
-            主要9ブランドの料金・特徴比較と、全国35都市1,936スタジオのGoogleマップ実測データ(2026年9月2日時点)で、最適なスタジオ選びをサポートします。
+          <p className="mt-5 max-w-xl text-[15px] leading-[1.9] text-[var(--ink-2)]">
+            主要9ブランドの料金・特徴比較と、全国35都市1,936スタジオのGoogleマップ実測データ（2026年9月2日時点）で、最適なスタジオ選びをサポートします。
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-lg">
-              ランキングを見る
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#area" className="pl-btn pl-btn-primary">
+              <Icon name="map" className="pl-ico pl-ico-on-brand w-5 h-5" />
+              エリアから探す
             </a>
-            <Link href="/concierge/" className="inline-block bg-white text-[#7C3AED] font-semibold px-8 py-3 rounded-lg hover:bg-[#F5F3FF] transition-colors shadow-lg border border-white/80">
-              無料診断で選ぶ
-            </Link>
+            <Link href="/concierge/" className="pl-btn pl-btn-outline">無料診断で選ぶ</Link>
           </div>
         </div>
       </section>
@@ -154,18 +186,25 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
           <p className="text-center text-sm text-gray-500 mb-4">スタジオ選びで迷いやすい3点から探せます</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a href="#area" className="rounded-xl border border-gray-200 p-4 hover:border-[#7C3AED] transition-colors">
-              <p className="font-bold text-gray-900">エリアで選ぶ</p>
-              <p className="mt-1 text-xs text-gray-600 leading-relaxed">全35都市・1,936スタジオの実測データから、通える範囲のスタジオを一覧で見る</p>
-            </a>
-            <Link href="/price-comparison/" className="rounded-xl border border-gray-200 p-4 hover:border-[#7C3AED] transition-colors">
-              <p className="font-bold text-gray-900">料金で選ぶ</p>
-              <p className="mt-1 text-xs text-gray-600 leading-relaxed">月額だけでなく、入会金・毎月の固定費・体験料まで公式実査値で比べる</p>
-            </Link>
-            <a href="#ranking" className="rounded-xl border border-gray-200 p-4 hover:border-[#7C3AED] transition-colors">
-              <p className="font-bold text-gray-900">サービス内容で選ぶ</p>
-              <p className="mt-1 text-xs text-gray-600 leading-relaxed">マシン／マット、グループ／セミパーソナル、女性専用かどうかで絞り込む</p>
-            </a>
+            {[
+              { href: "#area", ico: "map", t: "エリアで選ぶ", d: "全35都市・1,936スタジオの実測データから、通える範囲のスタジオを一覧で見る", ext: false },
+              { href: "/price-comparison/", ico: "yen", t: "料金で選ぶ", d: "月額だけでなく、入会金・毎月の固定費・体験料まで公式実査値で比べる", ext: true },
+              { href: "#ranking", ico: "machine", t: "サービス内容で選ぶ", d: "マシン／マット、グループ／セミパーソナル、女性専用かどうかで絞り込む", ext: false },
+            ].map((x) =>
+              x.ext ? (
+                <Link key={x.t} href={x.href} className="pl-tile p-5">
+                  <Icon name={x.ico} className="pl-ico-lg pl-ico" />
+                  <p className="mt-3 font-bold text-[var(--ink)]">{x.t}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-[var(--ink-3)]">{x.d}</p>
+                </Link>
+              ) : (
+                <a key={x.t} href={x.href} className="pl-tile p-5">
+                  <Icon name={x.ico} className="pl-ico-lg pl-ico" />
+                  <p className="mt-3 font-bold text-[var(--ink)]">{x.t}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-[var(--ink-3)]">{x.d}</p>
+                </a>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -175,14 +214,15 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { num: "9ブランド", label: "詳細レビュー" },
-              { num: "35都市", label: "エリア別一覧" },
-              { num: "1,936件", label: "実在スタジオDB" },
-              { num: "1,412件", label: "スタジオ詳細ページ" },
+              { num: "9ブランド", label: "詳細レビュー", ico: "check" },
+              { num: "35都市", label: "エリア別一覧", ico: "map" },
+              { num: "1,936件", label: "実在スタジオDB", ico: "building" },
+              { num: "1,412件", label: "スタジオ詳細ページ", ico: "chat" },
             ].map((stat) => (
-              <div key={stat.label} className="bg-[#F5F3FF] rounded-xl p-6">
-                <div className="text-2xl font-bold text-[#7C3AED]">{stat.num}</div>
-                <div className="mt-1 text-sm text-gray-600">{stat.label}</div>
+              <div key={stat.label} className="pl-card p-6 bg-[var(--brand-wash)]">
+                <Icon name={stat.ico} className="pl-ico mx-auto" />
+                <div className="pl-stat mt-2">{stat.num}</div>
+                <div className="mt-1 text-sm text-[var(--ink-3)]">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -190,50 +230,45 @@ export default function HomePage() {
       </section>
 
       {/* AREA_MOVED: エリアはスタジオ選びの第一条件なので、ランキングより前に置く(施主指示 2026-09-30) */}
-      <section id="area" className="py-16 bg-[#F5F3FF]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">エリアからスタジオを探す</h2>
-          <p className="text-gray-600 mb-8">Googleマップの実データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/area/tokyo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">東京</Link>
-            <Link href="/area/osaka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">大阪</Link>
-            <Link href="/area/yokohama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">横浜</Link>
-            <Link href="/area/kawasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">川崎</Link>
-            <Link href="/area/nagoya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">名古屋</Link>
-            <Link href="/area/fukuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">福岡</Link>
-            <Link href="/area/sapporo/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">札幌</Link>
-            <Link href="/area/sendai/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">仙台</Link>
-            <Link href="/area/kyoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">京都</Link>
-            <Link href="/area/kobe/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">神戸</Link>
-            <Link href="/area/saitama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">さいたま</Link>
-            <Link href="/area/chiba/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">千葉</Link>
-            <Link href="/area/hiroshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">広島</Link>
-            <Link href="/area/okayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">岡山</Link>
-            <Link href="/area/kumamoto/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">熊本</Link>
-            <Link href="/area/kanazawa/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">金沢</Link>
-            <Link href="/area/shizuoka/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">静岡</Link>
-            <Link href="/area/niigata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">新潟</Link>
-            <Link href="/area/naha/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">那覇</Link>
-            <Link href="/area/oita/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">大分</Link>
-            <Link href="/area/utsunomiya/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">宇都宮</Link>
-            <Link href="/area/kagoshima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">鹿児島</Link>
-            <Link href="/area/nagasaki/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">長崎</Link>
-            <Link href="/area/matsuyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">松山</Link>
-            <Link href="/area/takamatsu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">高松</Link>
-            <Link href="/area/toyama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">富山</Link>
-            <Link href="/area/nagano/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">長野</Link>
-            <Link href="/area/gifu/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">岐阜</Link>
-            <Link href="/area/mito/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">水戸</Link>
-            <Link href="/area/maebashi/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">前橋</Link>
-            <Link href="/area/fukushima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">福島</Link>
-            <Link href="/area/yamagata/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">山形</Link>
-            <Link href="/area/wakayama/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">和歌山</Link>
-            <Link href="/area/tokushima/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">徳島</Link>
-            <Link href="/area/saga/" className="inline-block bg-white border border-[#7C3AED] text-[#7C3AED] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors text-sm">佐賀</Link>
+      {/* AREA — 2026-10-08 改修(施主指示「エリアで選択する導線をTOPに」)。
+          35都市のベタ並べをやめ、地方ごとにまとめ、実測DBのスタジオ数を添えた。
+          ボタンは .pl-pick に統一(色は変えていない)。 */}
+      <section id="area" className="pl-on-wash py-16 bg-[var(--brand-wash)] border-y border-[var(--brand-line)]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center">
+            <p className="pl-eyebrow">AREA</p>
+            <h2 className="pl-h2 mt-3 text-[var(--ink)]">エリアからスタジオを探す</h2>
+            <p className="pl-lead mt-3 max-w-2xl mx-auto">
+              Googleマップの実データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。
+              かっこ内は当サイトが収録しているスタジオ数です（2026年9月2日時点）。
+            </p>
           </div>
-          <p className="mt-6 text-sm text-gray-500">
-            全35都市・1,936スタジオを収録(2026年9月2日時点のGoogleマップ実測)。
-            <Link href="/stats/" className="text-[#7C3AED] underline underline-offset-2 ml-1">全都市の統計データを見る</Link>
+
+          <div className="mt-8 space-y-7">
+            {AREA_REGIONS.map((r) => (
+              <div key={r.name}>
+                <h3 className="flex items-center gap-2 text-[15px] font-bold text-[var(--ink)]">
+                  <Icon name="map" className="pl-ico w-5 h-5" />
+                  {r.name}
+                </h3>
+                <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                  {r.slugs.map((slug) => {
+                    const info = AREA_INFO[slug];
+                    if (!info) return null;
+                    return (
+                      <Link key={slug} href={`/area/${slug}/`} className="pl-pick">
+                        <span>{info.name}</span>
+                        <span className="n">{info.n}件</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center">
+            <Link href="/area/" className="pl-btn pl-btn-outline pl-btn-sm">エリア一覧をまとめて見る</Link>
           </p>
         </div>
       </section>
@@ -270,12 +305,15 @@ export default function HomePage() {
                   )}
 
                   {/* Screenshot */}
-                  <Link href={s.reviewPath}>
-                    <div className="rounded-lg overflow-hidden border border-gray-200 mb-4">
-                      <img src={`/ss-${s.slug}.jpg`} alt={`${s.name} 公式サイト`} className="w-full h-auto" />
-                      <p className="text-[10px] text-gray-400 p-1 text-right">画像引用: <a href={s.url} target="_blank" rel="nofollow sponsored noopener noreferrer" className="underline hover:text-gray-600">公式サイト</a>より</p>
-                    </div>
-                  </Link>
+                  {/* ブランド画像は全社まったく同じ枠・同じ比率で出す(施主指示) */}
+                  <div className="mb-4">
+                    <Link href={s.reviewPath}>
+                      <img src={`/ss-${s.slug}.jpg`} alt={`${s.name} 公式サイト`} className="pl-shot" />
+                    </Link>
+                    <p className="mt-1 text-[10px] text-[var(--ink-3)] text-right">
+                      画像引用: <a href={s.url} target="_blank" rel="nofollow sponsored noopener noreferrer" className="underline">公式サイト</a>より（2026年10月8日取得）
+                    </p>
+                  </div>
 
                   {/* エリア・サービス内容・料金(実査値) */}
                   <BrandKeyFacts slug={s.slug} />
@@ -316,10 +354,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3 mb-4">{s.recommend}</p>
 
                   <div className="flex flex-col sm:flex-row gap-3 sm:justify-end">
-                    <Link
-                      href={s.reviewPath}
-                      className="inline-block text-center border border-[#7C3AED] text-[#7C3AED] text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#F5F3FF] transition-colors"
-                    >
+                    <Link href={s.reviewPath} className="pl-btn pl-btn-outline pl-btn-sm">
                       口コミ・詳細を見る
                     </Link>
                     {isAffiliate(s.url) && (
@@ -327,10 +362,10 @@ export default function HomePage() {
                         href={s.url}
                         target="_blank"
                         rel="nofollow sponsored noopener noreferrer"
-                        className="inline-block text-center bg-[#7C3AED] text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#6D28D9] transition-colors"
+                        className="pl-btn pl-btn-primary pl-btn-sm"
                       >
                         公式サイトで体験を予約
-                        <span className="ml-1.5 text-[10px] font-normal opacity-80">PR</span>
+                        <span className="text-[10px] font-normal opacity-80">PR</span>
                       </a>
                     )}
                   </div>
@@ -342,9 +377,9 @@ export default function HomePage() {
       </section>
 
       {/* Studio List */}
-      <section className="py-16 bg-[#F5F3FF]">
+      <section className="pl-on-wash py-16 bg-[var(--brand-wash)] border-y border-[var(--brand-line)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">スタジオ一覧</h2>
+          <h2 className="pl-h2 text-[var(--ink)] text-center mb-4">スタジオ一覧</h2>
           <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -360,9 +395,9 @@ export default function HomePage() {
               { name: "URBAN CLASSIC PILATES", slug: "urban-classic", desc: "クラシカルピラティス、スタイリッシュ", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
               { name: "メルメイク", slug: "melmake", desc: "プライベートジム、パーソナル指導", href: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" },
             ].map((studio) => (
-              <div key={studio.name} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <Link href={studio.href} className="block aspect-video overflow-hidden">
-                  <img src={`/ss-${studio.slug}.jpg`} alt={`${studio.name} 公式サイト`} className="w-full h-full object-cover object-top" />
+              <div key={studio.name} className="pl-card flex flex-col overflow-hidden">
+                <Link href={studio.href} className="block">
+                  <img src={`/ss-${studio.slug}.jpg`} alt={`${studio.name} 公式サイト`} className="pl-shot !rounded-none !border-0 !border-b !border-[var(--line)]" loading="lazy" />
                 </Link>
                 <div className="p-4 flex-1 flex flex-col">
                   <h3 className="font-bold text-gray-900 mb-1">
@@ -376,9 +411,9 @@ export default function HomePage() {
                         href={studio.url}
                         target="_blank"
                         rel="nofollow sponsored noopener noreferrer"
-                        className="ml-auto inline-block bg-[#7C3AED] text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-[#6D28D9] transition-colors"
+                        className="pl-btn pl-btn-primary pl-btn-sm ml-auto !min-h-[40px] !px-4 !text-[13px]"
                       >
-                        体験を予約<span className="ml-1 text-[10px] font-normal opacity-80">PR</span>
+                        体験を予約<span className="text-[10px] font-normal opacity-80">PR</span>
                       </a>
                     )}
                   </div>
@@ -414,16 +449,27 @@ export default function HomePage() {
 
 
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            まずは体験レッスンから始めよう
-          </h2>
-          <p className="text-gray-600 mb-8">
-            気になるスタジオが見つかったら、まずは体験レッスンに申し込んでみましょう。実際の雰囲気やインストラクターとの相性を確認できます。
-          </p>
-          <a href="#ranking" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors">
-            ランキングに戻る
-          </a>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="pl-card overflow-hidden grid md:grid-cols-2 items-stretch">
+            <img
+              src="/gen/trial-lesson.jpg"
+              alt="体験レッスンでインストラクターの指導を受ける様子"
+              className="w-full h-full object-cover aspect-[16/10] md:aspect-auto"
+              loading="lazy"
+            />
+            <div className="p-7 sm:p-9 flex flex-col justify-center">
+              <p className="pl-eyebrow">FIRST STEP</p>
+              <h2 className="pl-h2 mt-3 text-[var(--ink)]">まずは体験レッスンから始めよう</h2>
+              <p className="pl-lead mt-3">
+                気になるスタジオが見つかったら、まずは体験レッスンに申し込んでみましょう。
+                実際の雰囲気やインストラクターとの相性を確認できます。
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="#ranking" className="pl-btn pl-btn-primary">ランキングを見る</a>
+                <a href="#area" className="pl-btn pl-btn-outline">エリアから探す</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

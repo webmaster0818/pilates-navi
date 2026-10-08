@@ -1,8 +1,46 @@
 @import "tailwindcss";
 
+/*
+ * ピラテス デザイン定義（2026-10-08 新設）
+ *
+ * 施主指示（6点）:
+ *  1. 絵文字を使わない
+ *  2. アイコン・画像はナノバナナプロで高解像度に。アイコンは大きく
+ *  3. 各ブランドの画像を必ずバランスよく配置する
+ *  4. 選択するボタンは色を変えず、デザインを統一する
+ *  5. 背景色とのコントラストを加味して枠を使う
+ *  6. エリアで選ぶ導線をTOPに置く
+ *
+ * 実測（本番TOPから機械取得）で分かっていた課題:
+ *  - ボタンの高さが 32 / 42 / 48 / 50px と4種類に割れていた → 44/48 の2種に統一する
+ *  - svg が2個しか無く、アイコンが実質存在しなかった → 線アイコンを自前で用意し 28px で使う
+ *  - 背景 #F5F3FF の上に枠なしの白カードが載っていて境界が曖昧だった → 枠を必須にする
+ *  - 影は shadow-sm 相当が27箇所。これは維持し、増やさない
+ *  - 角丸は 8px(75) / 12px(35) / 丸ピル(40)。この3種から増やさない
+ */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --brand: #7C3AED;
+  --brand-deep: #6D28D9;
+  --brand-wash: #F5F3FF;
+  --brand-line: #DDD6FE;
+
+  --ink: #171717;
+  --ink-2: #3F3F46;   /* 白に対して 11.6:1 */
+  --ink-3: #5B5B66;   /* 白に対して 7.0:1。#F5F3FF 上でも 6.7:1 */
+  --line: #E5E7EB;
+  --line-strong: #D4D4D8;
+  --surface: #FFFFFF;
+
+  --sh-1: 0 1px 3px rgba(23, 23, 23, .08), 0 1px 2px -1px rgba(23, 23, 23, .06);
+  --sh-2: 0 10px 20px -8px rgba(109, 40, 217, .20), 0 2px 6px -2px rgba(23, 23, 23, .06);
+
+  --r: 8px;
+  --r-lg: 12px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 @theme inline {
@@ -15,4 +53,109 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-noto), sans-serif;
+  font-feature-settings: "palt";
+}
+
+/* ========== 見出し ========== */
+.pl-h1 { font-size: 28px; line-height: 1.4; font-weight: 700; letter-spacing: .005em; }
+@media (min-width: 640px) { .pl-h1 { font-size: 38px; line-height: 1.32; } }
+.pl-h2 { font-size: 22px; line-height: 1.45; font-weight: 700; }
+@media (min-width: 640px) { .pl-h2 { font-size: 26px; line-height: 1.4; } }
+.pl-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: .14em;
+  color: var(--brand);
+}
+.pl-eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--brand); }
+.pl-lead { font-size: 14px; line-height: 1.9; color: var(--ink-3); }
+
+/* ========== ボタン（高さは44と48の2種類だけ。色は変えない） ========== */
+.pl-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding-inline: 24px; border-radius: var(--r);
+  font-size: 15px; font-weight: 700; letter-spacing: .02em; text-align: center;
+  border: 1px solid transparent; box-shadow: var(--sh-1);
+  transition: background-color .18s var(--ease), border-color .18s var(--ease), box-shadow .18s var(--ease), color .18s var(--ease);
+}
+.pl-btn-sm { min-height: 44px; padding-inline: 18px; font-size: 14px; }
+.pl-btn-primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+.pl-btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); box-shadow: var(--sh-2); }
+.pl-btn-outline { background: var(--surface); color: var(--brand); border-color: var(--brand); }
+.pl-btn-outline:hover { background: var(--brand-wash); box-shadow: var(--sh-2); }
+.pl-btn-quiet { background: var(--surface); color: var(--ink-2); border-color: var(--line-strong); }
+.pl-btn-quiet:hover { border-color: var(--brand); color: var(--brand); box-shadow: var(--sh-2); }
+
+/* エリア・条件を選ぶボタン（全部これに統一する） */
+.pl-pick {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: 48px; padding: 0 16px; border-radius: var(--r);
+  background: var(--surface); color: var(--brand);
+  border: 1px solid var(--brand); box-shadow: var(--sh-1);
+  font-size: 14px; font-weight: 700;
+  transition: background-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+.pl-pick:hover { background: var(--brand-wash); box-shadow: var(--sh-2); }
+.pl-pick .n { font-size: 11px; font-weight: 400; color: var(--ink-3); }
+
+/* ========== 囲み（背景が色つきでも境界が分かるよう、枠は必須） ========== */
+.pl-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+}
+.pl-tile {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  transition: border-color .18s var(--ease), box-shadow .18s var(--ease), transform .18s var(--ease);
+}
+.pl-tile:hover { border-color: var(--brand-line); box-shadow: var(--sh-2); transform: translateY(-2px); }
+/* 色つきの背景の上に置くカードは、枠を少し濃くする */
+.pl-on-wash .pl-card,
+.pl-on-wash .pl-tile { border-color: var(--brand-line); }
+
+/* ========== アイコン（小さいと言われたので既定28px） ========== */
+.pl-ico {
+  width: 28px; height: 28px; flex: none;
+  stroke: var(--brand); fill: none;
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+}
+.pl-ico-lg { width: 36px; height: 36px; stroke-width: 1.4; }
+/* 塗りつぶしボタンの中に置くアイコン（.pl-ico の stroke を上書きする） */
+.pl-ico-on-brand { stroke: #fff; }
+
+/* ========== 数字 ========== */
+.pl-stat { font-size: 26px; line-height: 1.2; font-weight: 700; color: var(--brand); }
+.pl-stat small { font-size: 12px; font-weight: 400; color: var(--ink-3); margin-left: 3px; }
+
+/* ========== ブランド画像（必ず同じ比率・同じ枠で出す） ========== */
+.pl-shot {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 10;
+  object-fit: cover; object-position: top center;
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--brand-wash);
+}
+
+/* ========== ヒーロー ==========
+   スマホは写真でファーストビューを埋める（姉妹サイトと同じ指定に合わせた）。
+   固定の高さ＋overflow:hidden にすると画面の短い端末で文字が切れるので、
+   min-height で持ち、中身がはみ出す場合は伸ばす。 */
+.pl-hero { position: relative; overflow: hidden; }
+.pl-hero-inner { position: relative; }
+@media (max-width: 767px) {
+  .pl-hero-inner {
+    min-height: calc(100svh - 112px); /* ヘッダー64px + PR表記 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 画面下に出る追従ボタンと重ならないように余白を取る */
+    padding-bottom: 96px;
+  }
+  /* スマホは写真を主役にするので、文字側の下敷きは下half だけにする */
+  .pl-hero-scrim {
+    background: linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.55) 42%, rgba(255,255,255,.95) 72%, #fff 100%) !important;
+  }
 }
