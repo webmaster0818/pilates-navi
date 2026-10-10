@@ -151,14 +151,15 @@ export default function HomePage() {
 
       {/* Hero — 2026-10-08 改修: 黒ベタのオーバーレイをやめ、写真の余白側に文字を置く。
           画像は2,560px幅で差し替え(高解像度・施主指示) */}
-      <section className="pl-hero border-b border-[var(--line)]">
+      <section className="pl-hero border-b border-[var(--line)]" data-hero>
         <div className="absolute inset-0">
           <img
             src="/hero-pilates.jpg"
             alt="リフォーマーが並ぶピラティススタジオ"
-            className="w-full h-full object-cover object-[72%_center] md:object-right"
+            className="pl-hero-img w-full h-full object-cover object-[72%_center] md:object-right"
             fetchPriority="high"
           />
+          <div className="pl-hero-topveil" />
           <div className="pl-hero-scrim absolute inset-0 bg-[linear-gradient(100deg,#ffffff_0%,rgba(255,255,255,.96)_34%,rgba(255,255,255,.72)_54%,rgba(255,255,255,.06)_100%)]" />
         </div>
         <div className="pl-hero-inner max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">

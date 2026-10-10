@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import MobileMenu from "@/components/MobileMenu";
+import SiteHeader from "@/components/SiteHeader";
+import MotionRoot from "@/components/MotionRoot";
 import FloatingCTA from "@/components/FloatingCTA";
 
 const notoSansJP = Noto_Sans_JP({
@@ -53,33 +54,8 @@ export default function RootLayout({
         <meta httpEquiv="Expires" content="0" />
       </head>
       <body className="min-h-full flex flex-col font-[var(--font-noto-sans-jp)]">
-        {/* Header */}
-        <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-[#7C3AED]">ピラテス</span>
-            </Link>
-            <nav className="hidden md:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-gray-700 hover:text-[#7C3AED] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-            <MobileMenu navLinks={navLinks} />
-          </div>
-        </header>
-
-        {/* PR表記 */}
-        <div className="bg-gray-50 border-b border-gray-100">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-1 text-right">
-            <span className="text-xs text-gray-400">PRを含みます</span>
-          </div>
-        </div>
+        <SiteHeader navLinks={navLinks} />
+        <MotionRoot />
 
         {/* Main */}
         <main className="flex-1 pb-16">{children}</main>

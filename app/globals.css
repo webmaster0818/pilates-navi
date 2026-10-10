@@ -147,7 +147,9 @@ body {
 .pl-hero-inner { position: relative; }
 @media (max-width: 767px) {
   .pl-hero-inner {
-    min-height: calc(100svh - 112px); /* ヘッダー64px + PR表記 */
+    /* 2026-10-10: ヘッダーを写真の上に重ねる形にしたので、
+       ヘッダーぶんを引かずファーストビューいっぱいを使う */
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -158,4 +160,40 @@ body {
   .pl-hero-scrim {
     background: linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.55) 42%, rgba(255,255,255,.95) 72%, #fff 100%) !important;
   }
+}
+
+
+/* ========== Motion（2026-10-10 施主指示「アニメーションを入れてほしい」） ==========
+   初期の非表示はJSが付けるので、JSが動かない環境では最初から全部見えている。 */
+[data-reveal="out"] { opacity: 0; transform: translateY(22px); }
+[data-reveal="in"] {
+  opacity: 1; transform: none;
+  transition: opacity .66s var(--ease), transform .66s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.pl-hero-img { transform: scale(1.05); transition: transform 9s var(--ease); }
+[data-hero="in"] .pl-hero-img { transform: scale(1); }
+
+/* トップのヘッダーは写真に重ねるので、文字が白飛びしないよう上側だけ薄く明るくする */
+.pl-hero-topveil {
+  position: absolute; inset: 0 0 auto 0; height: 128px; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.55) 55%, rgba(255,255,255,0) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal="out"], [data-reveal="in"] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .pl-hero-img { transform: none !important; transition: none !important; }
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ========== 見出しの折り返し（2026-10-10） ==========
+   「ピラティスス／タジオ」のように単語の途中で改行されるのを防ぐ。
+   - word-break:auto-phrase … 日本語を文節単位で折る(Chrome系)
+   - text-wrap:balance      … 行の長さを揃えて1行だけ極端に短くなるのを防ぐ
+   Safariはauto-phrase未対応だが、balanceは効くので段階的に良くなる。 */
+h1, h2, h3, h4,
+.pl-h1, .pl-h2 {
+  word-break: auto-phrase;
+  text-wrap: balance;
+  overflow-wrap: normal;
 }
