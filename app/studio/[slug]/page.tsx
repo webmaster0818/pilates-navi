@@ -35,13 +35,32 @@ export function generateStaticParams() {
   return entries.map((e) => ({ slug: e.slug }));
 }
 
+function escapedLength(s: string): number {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").length;
+}
+
+// description は160字以内。店名が長い店だけ、同じ内容のまま言い回しを詰める
+function studioDescription(e: (typeof entries)[number]): string {
+  const head = `${e.areaName}のピラティススタジオ「${e.name}」のGoogleマップ実測データ(評点${e.rating ?? "—"}・口コミ${e.count.toLocaleString()}件・${idx.surveyedAt}取得)と所在地。`;
+  const tails = [
+    "評点・件数は取得時点の実数のみで創作はありません。料金は変動が大きいため公式サイトへ誘導しています。",
+    "評点・件数は取得時点の実数で創作なし。料金は変動が大きいため公式サイトへ誘導。",
+    "評点・件数は取得時点の実数。料金は公式サイトへ誘導。",
+  ];
+  for (const t of tails) {
+    // HTML 上では & などが実体参照になって長くなるので、その分も数える
+    if (escapedLength(head + t) <= 160) return head + t;
+  }
+  return head + tails[tails.length - 1];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const e = entries.find((x) => x.slug === decodeURIComponent(slug));
   if (!e) return {};
   return {
     title: `${e.name}(${e.areaName})の口コミ評点【Googleマップ実測${e.count.toLocaleString()}件】`,
-    description: `${e.areaName}のピラティススタジオ「${e.name}」のGoogleマップ実測データ(評点${e.rating ?? "—"}・口コミ${e.count.toLocaleString()}件・${idx.surveyedAt}取得)と所在地。評点・件数は取得時点の実数のみで創作はありません。料金は変動が大きいため公式サイトへ誘導しています。`,
+    description: studioDescription(e),
   };
 }
 
@@ -64,6 +83,10 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
     .filter((x) => x.slug !== e.slug && !cityPeers.slice(0, 5).some((p) => p.slug === x.slug))
     .sort((a, b) => Math.abs(a.count - e.count) - Math.abs(b.count - e.count))
     .slice(0, 5);
+  // 口コミ件数順で前後のスタジオ(同都市)
+  const nearStudios = cityAll
+    .map((x, i) => ({ x, r: i + 1 }))
+    .filter(({ r }) => r !== rank && Math.abs(r - rank) <= 2);
   const brandStores = brand
     ? entries.filter((x) => x.slug !== e.slug && brand.match.test(x.name)).slice(0, 6)
     : [];
@@ -197,6 +220,17 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
               <li key={s.slug}>
                 <Link href={`/studio/${s.slug}/`} className="inline-block rounded-full border border-gray-200 px-4 py-1.5 hover:border-[#7C3AED] hover:text-[#7C3AED]">{s.name}<span className="ml-1 text-xs text-gray-400">({s.areaName})</span></Link>
               </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {nearStudios.length > 0 && (
+        <>
+          <h2 className="mt-10 text-lg font-bold text-gray-800">{e.areaName}で口コミ件数が前後のスタジオ</h2>
+          <ul className="mt-3 space-y-1 text-sm">
+            {nearStudios.map(({ x, r }) => (
+              <li key={x.slug}>{r}位: <Link href={`/studio/${x.slug}/`} className="underline text-[#7C3AED]">{x.name}</Link>(口コミ{x.count.toLocaleString()}件)</li>
             ))}
           </ul>
         </>

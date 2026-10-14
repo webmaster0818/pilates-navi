@@ -73,6 +73,27 @@ export default function AreaHubPage() {
         </section>
       ))}
 
+      <section className="mb-8">
+        <h2 className="text-lg font-bold text-gray-800 border-l-4 border-[#7C3AED] pl-3 mb-3">東京の主要エリア</h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {[
+            { href: "/area/tokyo/shinjuku/", label: "新宿" },
+            { href: "/area/tokyo/ginza/", label: "銀座" },
+            { href: "/area/tokyo/shibuya/", label: "渋谷" },
+            { href: "/area/tokyo/ikebukuro/", label: "池袋" },
+            { href: "/area/tokyo/kichijoji/", label: "吉祥寺" },
+          ].map((a) => (
+            <Link key={a.href} href={a.href} className="block bg-white border border-gray-200 rounded-lg p-3 text-center text-sm font-medium text-gray-700 hover:border-[#7C3AED] hover:text-[#7C3AED] transition-colors">
+              {a.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <p className="text-sm text-gray-600">
+        全都市の評点・口コミ件数の分布は<Link href="/stats/" className="underline text-[#7C3AED]">ピラティススタジオの口コミ・評点 全国統計</Link>にまとめています。
+      </p>
+
       <p className="mt-10 text-sm">
         <Link href="/" className="underline text-[#7C3AED]">→ おすすめピラティススタジオの比較へ</Link>
       </p>

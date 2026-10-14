@@ -139,7 +139,7 @@ export default function StatsPage() {
         <li>評点は4.8以上が当たり前の世界。<strong>0.1差で選ばない</strong></li>
         <li>口コミ件数を中央値({med}件)と比べて、実績の量を見る</li>
         <li>口コミ本文に「レッスン内容・予約の取りやすさ・スタッフ対応」の具体的な記述があるかを確認する</li>
-        <li>最後は体験レッスンで相性を確かめる(<Link href="/compare/" className="underline text-blue-700">主要スタジオの比較</Link>)</li>
+        <li>最後は体験レッスンで相性を確かめる(<Link href="/#ranking" className="underline text-blue-700">主要スタジオの比較</Link>)</li>
       </ol>
 
       <h2 className="mt-10 text-lg font-bold">よくある質問</h2>

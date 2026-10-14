@@ -12,7 +12,8 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         '@type': 'ListItem',
         position: i + 2,
         name: item.name,
-        ...(item.href ? { item: `https://pilatest.com${item.href}` } : {}),
+        // JSON-LD の item はページURL。ページ内アンカー(#…)は落とす
+        ...(item.href ? { item: `https://pilatest.com${item.href.split('#')[0]}` } : {}),
       })),
     ],
   };

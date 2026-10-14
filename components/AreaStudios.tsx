@@ -145,7 +145,8 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
         <p className="text-sm text-gray-600 leading-relaxed">
           大手ブランドは当サイトで料金・プログラムを詳しく解説しています。
           <Link href="/price-comparison/" className="text-rose-600 underline mx-1">主要スタジオの料金比較</Link>や
-          <Link href="/faq/" className="text-rose-600 underline mx-1">ピラティスのよくある質問</Link>もあわせてご覧ください。
+          <Link href="/faq/" className="text-rose-600 underline mx-1">ピラティスのよくある質問</Link>、
+          <Link href="/stats/" className="text-rose-600 underline mx-1">口コミ・評点の全国統計</Link>もあわせてご覧ください。
         </p>
       </div>
     </div>

@@ -341,6 +341,7 @@ export default function ZenPlaceReview() {
               ))}
             </div>
           </div>
+          <p className="mt-6 text-sm text-gray-600">BDC PILATESとzen place pilatesの違いは<Link href="/compare/bdc-vs-zenplace/" className="underline text-[#7C3AED]">BDC vs zen place 比較</Link>で解説しています。</p>
           <p className="mt-6 text-xs text-gray-400">最終更新: 2026年6月</p>
         </div>
       </section>
