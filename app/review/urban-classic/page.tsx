@@ -5,21 +5,23 @@ import Breadcrumb from "@/components/Breadcrumb";
 const AFFILIATE = "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727";
 
 export const metadata: Metadata = {
-  title: "URBAN CLASSIC PILATESの口コミ・料金・特徴を解説｜評判は？【2026年】",
+  title: "アーバンクラシックピラティスの口コミ・評判｜料金・店舗・退会方法【2026年10月】",
   description:
-    "URBAN CLASSIC PILATES（アーバンクラシックピラティス）の口コミ・評判、料金プラン、レッスンの特徴・予約方法、店舗・エリア情報を中立目線でまとめて解説。マシンピラティス×ファンクショナルのサーキット形式スタジオを詳しく紹介します（料金・特典は公式要確認）。",
+    "URBAN CLASSIC PILATES（アーバンクラシックピラティス）の口コミ・評判をGoogleマップ・公式の出典つきで整理。予約不要・1回30分のサーキット形式、全国101店舗、入会時2,200円・3か月目から月480円の固定費、退会は来店のみ5日締め（2026年10月14日公式確認）。",
+  alternates: { canonical: "/review/urban-classic/" },
 };
 
 const faqs = [
-  { q: "URBAN CLASSIC PILATESの料金プランは？", a: "公式情報では、マンスリー4（月4回）が月額8,580円（税込）、マンスリー8が10,780円（税込）、レギュラー（通い放題）が12,980円（税込）が目安です。このほかオプション（水素水プラス等）があります。最新価格・キャンペーン適用後の金額は店舗や時期で変わるため、申し込み前に公式サイトで必ずご確認ください。" },
+  { q: "URBAN CLASSIC PILATESの料金プランは？", a: "会員種別はマンスリー4（月4回）・マンスリー8（月8回）・レギュラー（通い放題）の3種で、いずれも1日1回まで。月会費は「店舗や時期により変動」として公式の料金表に金額が固定表示されていません（2026年10月14日確認）。金額が明記されているのは、入会時の施設利用料税込2,200円と、3か月目の月会費から毎月かかる運営管理費税込480円です（川崎店ページ）。都度払いはなく月会費制です。" },
   { q: "URBAN CLASSIC PILATESはどんなスタジオですか？", a: "マシンピラティスとファンクショナルトレーニングを組み合わせた、サーキット形式のボディメイクスタジオです。グループ一斉ではなく、一人ひとりが違う動きを行うセミパーソナルに近いスタイルが特徴とされています。" },
-  { q: "URBAN CLASSIC PILATESの口コミ・評判は良い？", a: "「料金がリーズナブルで通いやすい」「サーキット形式で飽きずに運動できる」「一人ひとりに合わせた指導がある」といった声が見られる一方、「人気の時間帯は予約が取りにくい」「店舗によって雰囲気が異なる」という指摘もあります。評価は受講者の目的や通う店舗によって分かれます。" },
-  { q: "体験レッスンはありますか？", a: "体験レッスン・見学の取り扱いは店舗や時期で異なる場合があり、公式サイトに明記がないこともあります。最新の体験・見学の可否や料金は公式サイトで必ずご確認ください（要確認）。" },
-  { q: "予約方法は？", a: "公式サイトの予約フォームから希望の店舗・日時を選んで申し込むのが基本です。空き状況や予約システムは店舗により異なる場合があるため公式でご確認ください。" },
+  { q: "URBAN CLASSIC PILATESの口コミ・評判は良い？", a: "Googleマップでは当サイト収録の13店舗が平均4.79・口コミ計3,054件（2026年9月2日時点）。「予約なしで好きな時間に行ける」「30分で終わる」「スタッフが巡回して見てくれる」が多く褒められる一方、「スタッフの入れ替わりで指導の質が変わった」「退会手続きが面倒」という声もあります。" },
+  { q: "体験レッスンはありますか？", a: "はい。各店舗ページに「無料体験予約」があり、WEBで予約→店頭で体験・手続きの2ステップです。入会手続きには本人確認書類と、月会費引落し用のクレジットカードが必要です（公式FAQ）。" },
+  { q: "予約は必要ですか？", a: "体験はWEB予約が必要ですが、入会後の通常利用は予約不要です。公式は「予約不要・全店舗相互利用可能」としており、どの店舗にも空いた時間に行けます。" },
+  { q: "アーバンクラシックピラティスの店舗はいくつありますか？", a: "公式の店舗一覧（2026年10月14日確認）には101店舗が掲載されています（開業予定の表示がある店舗を含む）。東京39・神奈川15・大阪15・埼玉7・兵庫5・福岡5・千葉4・愛知4・北海道3（いずれも11月開業予定）・京都3・茨城1です。" },
   { q: "初心者でも通えますか？", a: "はい、初心者の方でも始められます。インストラクターが一人ひとりに合わせてサポートするスタイルとされており、運動経験を問わず参加できます。" },
   { q: "男性も利用できますか？", a: "公式情報では「男性も入会いただける」とされています。なお妊娠中の方は利用できないとされています。詳細は公式サイトまたは各店舗でご確認ください。" },
-  { q: "1回のレッスン時間はどのくらいですか？", a: "1回あたりの所要時間は公式サイトに明記がない場合があります。サーキット形式で短時間集中型とされることが多いですが、正確な時間は公式または各店舗でご確認ください（要確認）。" },
-  { q: "キャンセル・解約の規約は？", a: "予約のキャンセル可否・期限や、解約・違約金の有無はプランや店舗の規約によります。トラブルを避けるため、入会・予約前に公式の利用規約で確認することをおすすめします（要確認）。" },
+  { q: "1回のレッスン時間はどのくらいですか？", a: "30分です。店舗ページに「30分で本格ボディメイク」と明記されており、マシンピラティスとTRXなどのファンクショナルトレーニングをサーキット形式で回ります。" },
+  { q: "退会・解約の方法は？", a: "会員規約第11条では、退会は来店のみ（電話・メール・FAX不可）。希望月の5日までの手続きで当月末退会、6日以降は翌月末以降になります。2025年9月以降の入会者は「前月5日までの手続きで翌月末退会」です。退会日までは利用がなくても会費が発生します。" },
   { q: "どんな効果が期待できますか？", a: "体幹強化、姿勢改善、ボディメイク、基礎代謝の向上などが期待できるとされています。効果には個人差があります。" },
 ];
 
@@ -34,32 +36,40 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "月額8,580円〜（税込・目安）と比較的リーズナブルで続けやすいとの声",
-  "マシンピラティス×ファンクショナルのサーキット形式で飽きにくい",
-  "一人ひとりが違う動きを行う、個別サポート寄りのスタイル",
-  "全国に店舗を展開しており、通える地域が比較的広い",
+  "予約なしで好きな時間に行ける（Googleマップ口コミ・公式掲載の声に共通）",
+  "1回30分で終わり、仕事帰りや買い物の合間に続けやすい",
+  "サーキット形式で自分のペースででき、スタッフが巡回して声をかけてくれる",
+  "全店舗相互利用でき、店舗数が多い（公式一覧に101店舗）",
 ];
 
 const concernPoints = [
-  "人気の店舗・時間帯は予約が埋まりやすいことがある",
-  "店舗によって設備・雰囲気・スタッフに差が出る場合がある",
-  "1回の所要時間や体験・見学の可否など公式で要確認の項目がある",
+  "スタッフの入れ替わりで指導の質が変わったという声がある（店舗・時期差）",
+  "退会は来店のみ・5日締めで、手続きへの不満の声がある",
+  "月会費は店舗・時期で変動し、公式サイトだけでは金額を比べにくい",
   "じっくり学ぶ静的なマット中心ピラティスを求める人には方向性が異なる",
 ];
 
 const prices = [
-  { plan: "マンスリー4（月4回）", price: "月額 8,580円（税込・目安）", note: "月4回までの会員プラン。公式で確認できる代表的な月額プラン。" },
-  { plan: "マンスリー8（月8回）", price: "月額 10,780円（税込・目安）", note: "月8回までの会員プラン。" },
-  { plan: "レギュラー（通い放題）", price: "月額 12,980円（税込・目安）", note: "回数制限なしで通えるプラン。" },
-  { plan: "オプション（水素水プラス等）", price: "月額 1,080円（税込・目安）", note: "会員プランに追加できるオプション。" },
-  { plan: "体験・見学", price: "要確認", note: "取り扱い・料金は店舗・時期で異なるため公式参照。" },
+  { plan: "マンスリー4（月4回）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。各店舗の「永久割引価格」として案内。" },
+  { plan: "マンスリー8（月8回）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。" },
+  { plan: "レギュラー（通い放題）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。" },
+  { plan: "施設利用料（入会時のみ）", price: "税込2,200円", note: "川崎店ページに明記（2026年10月14日確認）。" },
+  { plan: "運営管理費（毎月）", price: "税込480円（3か月目の月会費から）", note: "川崎店ページに明記。月額に上乗せされる固定費。" },
+  { plan: "体験", price: "無料（店舗ページに「無料体験予約」）", note: "WEB予約→店頭で体験・手続き。" },
 ];
 
 const stores = [
-  { area: "月島 / 水天宮 / 飯田橋", note: "東京エリア" },
-  { area: "浅草 / 錦糸町 / 東陽町", note: "東京エリア" },
-  { area: "門前仲町 / 大島 ほか", note: "東京エリア" },
-  { area: "六本松（福岡）ほか", note: "東京以外も展開" },
+  { area: "東京都 39店舗", note: "両国は10月開業予定" },
+  { area: "神奈川県 15店舗", note: "川崎・関内・綱島・東戸塚ほか" },
+  { area: "大阪府 15店舗", note: "なんば千日前・天満橋・野田阪神ほか" },
+  { area: "埼玉県 7店舗", note: "南浦和・三郷ほか" },
+  { area: "兵庫県 5店舗", note: "" },
+  { area: "福岡県 5店舗", note: "六本松・大橋・福岡天神ほか" },
+  { area: "千葉県 4店舗", note: "本八幡・稲毛ほか" },
+  { area: "愛知県 4店舗", note: "今池・伏見・藤が丘・瑞穂" },
+  { area: "北海道 3店舗", note: "白石・美しが丘・厚別（11月開業予定）" },
+  { area: "京都府 3店舗", note: "四条河原町・西院ほか" },
+  { area: "茨城県 1店舗", note: "取手（開業予定）" },
 ];
 
 export default function UrbanClassicReview() {
@@ -79,8 +89,9 @@ export default function UrbanClassicReview() {
 
       <section className="bg-[#F5F3FF] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">URBAN CLASSIC PILATESの口コミ・料金・特徴を解説</h1>
-          <p className="mt-3 text-gray-600">マシンピラティス×ファンクショナルのサーキット形式。全国展開のボディメイク系スタジオの評判をまとめました。</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">アーバンクラシックピラティス（URBAN CLASSIC PILATES）の口コミ・評判｜料金・店舗・退会方法</h1>
+          <p className="mt-3 text-gray-600">予約不要・1回30分のマシンピラティス×ファンクショナルのサーキット形式。Googleマップ・公式サイト・会員規約の出典つきで評判をまとめました。</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月14日（公式サイト・店舗一覧・川崎店ページ・会員規約）</p>
         </div>
       </section>
 
@@ -100,7 +111,7 @@ export default function UrbanClassicReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">結論：URBAN CLASSIC PILATESはこんな人に向いている</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              URBAN CLASSIC PILATES（アーバンクラシックピラティス）は、<strong>マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式</strong>のボディメイク系スタジオです。一斉のグループレッスンではなく<strong>一人ひとりが違う動きを行う個別サポート寄りのスタイル</strong>が特徴とされ、料金は<strong>月額8,580円〜（税込・目安）</strong>と比較的リーズナブル。動きながら効率よく身体を変えたい人や、続けやすい価格で通いたい人に向いています。一方、静的なマット中心のピラティスでじっくり学びたい人には方向性が異なります。
+              URBAN CLASSIC PILATES（アーバンクラシックピラティス）は、<strong>マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式</strong>のボディメイク系スタジオです。一斉のグループレッスンではなく<strong>一人ひとりが違う動きを行う個別サポート寄りのスタイル</strong>が特徴です。<strong>予約不要・1回30分・全店舗相互利用</strong>なので、決まった時間に通えない人でも続けやすい設計。月会費は店舗・時期で変わり公式に金額表示がないため、入会時2,200円と3か月目からの月480円の固定費も含めて体験時に確認しましょう。一方、静的なマット中心のピラティスでじっくり学びたい人には方向性が異なります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>運動しながら効率よくボディメイクしたい人／続けやすい価格を重視する人</li>
@@ -121,12 +132,14 @@ export default function UrbanClassicReview() {
               <tbody>
                 {[
                   ["スタジオ名", "URBAN CLASSIC PILATES（アーバンクラシックピラティス）"],
-                  ["月額料金", "月額8,580円〜（税込・マンスリー4/目安・公式要確認）"],
-                  ["レッスン形式", "マシンピラティス×ファンクショナルのサーキット形式（一人ずつ違う動き）"],
-                  ["店舗", "全国に複数展開（東京：月島・水天宮・飯田橋・浅草・錦糸町ほか／東京以外も） ※最新は公式参照"],
+                  ["運営会社", "株式会社VB NEXT（東京都港区・BRESTも運営）"],
+                  ["月額料金", "マンスリー4／マンスリー8／レギュラー（通い放題）。金額は店舗・時期で変動（公式に表示なし）"],
+                  ["月額以外の費用", "入会時 施設利用料 税込2,200円／3か月目から運営管理費 税込480円・月"],
+                  ["レッスン形式", "マシンピラティス×ファンクショナル（TRX等）のサーキット形式・1回30分・予約不要"],
+                  ["店舗", "公式一覧に101店舗（11都道府県・開業予定含む）。全店舗相互利用可"],
                   ["対象", "男女兼用（男性も入会可・妊娠中は不可）"],
-                  ["特徴", "セミパーソナル寄りの個別サポート、ボディメイク特化、比較的リーズナブル"],
-                  ["体験／見学", "取り扱い・料金は要確認（公式参照）"],
+                  ["体験", "無料体験あり（店舗ページからWEB予約）"],
+                  ["Googleマップ", "当サイト収録13店舗の平均4.79・口コミ計3,054件（2026年9月2日時点）"],
                 ].map(([label, value]) => (
                   <tr key={label} className="border-b border-gray-100 last:border-0">
                     <th className="bg-[#F5F3FF] text-left px-4 py-3 font-medium text-gray-700 w-1/3">{label}</th>
@@ -154,14 +167,14 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            URBAN CLASSIC PILATESの料金は、月額制（回数制／通い放題）が中心です。公式で確認できる代表的なプランは<strong>マンスリー4・月額8,580円（税込）〜</strong>で、通う頻度に応じてマンスリー8や通い放題のレギュラーを選べます。下表はあくまで<strong>目安</strong>で、店舗・時期・キャンペーンで変動します。最新の正確な金額は必ず公式でご確認ください。
+            URBAN CLASSIC PILATESは月会費制（都度払いなし）で、会員種別はマンスリー4・マンスリー8・レギュラー（通い放題）の3種です。公式の料金表は「永久割引価格」という枠組みだけで<strong>月会費の金額が表示されていません</strong>（店舗・時期で変動）。一方で、<strong>入会時の施設利用料2,200円と3か月目からの運営管理費480円/月</strong>は金額が明記されています。月額だけで比べると見落としやすいので、合計で比べてください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#7C3AED] text-white">
                   <th className="text-left px-4 py-3 font-medium">プラン</th>
-                  <th className="text-left px-4 py-3 font-medium">料金（目安）</th>
+                  <th className="text-left px-4 py-3 font-medium">料金</th>
                   <th className="text-left px-4 py-3 font-medium hidden sm:table-cell">補足</th>
                 </tr>
               </thead>
@@ -190,7 +203,7 @@ export default function UrbanClassicReview() {
             {[
               { title: "サーキット形式", desc: "マシンピラティスとファンクショナルトレーニングを組み合わせ、動きながら効率よくボディメイク" },
               { title: "個別サポート寄り", desc: "一斉ではなく一人ひとりが違う動きを行い、目的に合わせたサポートを受けられる" },
-              { title: "続けやすい価格", desc: "月額8,580円（税込）〜と比較的リーズナブルで、こまめに通いたい人にも続けやすい" },
+              { title: "予約不要・30分", desc: "予約なしで空いた時間に行け、1回30分で終わる。全店舗相互利用でき、職場近く・自宅近くの両方を使える" },
             ].map((s) => (
               <div key={s.title} className="bg-[#F5F3FF] rounded-xl p-5">
                 <h3 className="font-bold text-[#7C3AED] mb-2">{s.title}</h3>
@@ -245,10 +258,10 @@ export default function UrbanClassicReview() {
               URBAN CLASSIC PILATESは、マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式で、動きながら効率よくボディメイクを目指せる点に特徴があるスタジオです。グループ一斉ではなく一人ひとりが違う動きを行うスタイルは、自分の目的や体力に合わせて取り組みやすく、運動が得意でない方でも始めやすい設計といえます。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              zen place pilatesやCLUB PILATESのような専門メソッド重視のスタジオと比べると、URBAN CLASSICは「ボディメイク・運動習慣づくり」に寄ったコンセプトで、料金も月額8,580円（税込）〜と続けやすい水準です。静的にフォームをじっくり学ぶマット中心のスタイルとは方向性が異なるため、何を目的にするかで向き不向きが分かれます。
+              zen place pilatesやCLUB PILATESのような専門メソッド重視・予約制のスタジオと比べると、URBAN CLASSICは「予約不要・30分」で運動習慣づくりに寄ったコンセプトです。店舗数も公式一覧で101店舗と多く、全店舗相互利用できます。静的にフォームをじっくり学ぶマット中心のスタイルとは方向性が異なるため、何を目的にするかで向き不向きが分かれます。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              編集部としての率直な評価は、URBAN CLASSIC PILATESは「動きながら身体を引き締めたい人」や「続けやすい価格で通いたい人」に向いたスタジオ、というものです。体験・見学の取り扱いや1回の所要時間など公式で要確認の項目もあるため、気になる店舗の最新情報を確認したうえで、まずは雰囲気を確かめてみるのがおすすめです。
+              編集部としての評価は、URBAN CLASSIC PILATESは「決まった時間に通えない人」「短時間で運動習慣をつけたい人」に向いたスタジオ、というものです。注意点は、月会費が公式に表示されていないことと、退会が来店のみ・5日締めであること。無料体験の場で月額と退会条件を確認してから入会してください。
             </p>
           </div>
         </div>
@@ -264,14 +277,14 @@ export default function UrbanClassicReview() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>サーキット形式で飽きずに運動できる</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>一人ひとりに合わせた個別サポート寄り</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>月額8,580円（税込）〜と続けやすい価格</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>全国に店舗を展開し通いやすい</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>予約不要・1回30分</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>公式一覧に101店舗・全店舗相互利用</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">
               <h3 className="font-bold text-red-800 mb-3">デメリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>人気枠は予約が取りづらいことも</li>
+                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>退会は来店のみ・5日締め</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>店舗により設備・雰囲気に差が出る場合あり</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>静的なマット中心の学習には不向き</li>
               </ul>
@@ -288,16 +301,16 @@ export default function UrbanClassicReview() {
             URBAN CLASSIC PILATESは、<strong>マシンピラティス×ファンクショナルトレーニング</strong>を組み合わせた<strong>サーキット形式</strong>でレッスンを行います。一斉に同じ動きをするのではなく、一人ひとりが違う動きを行う個別サポート寄りのスタイルが特徴です。マシンの使い方はインストラクターが案内するため、マシンピラティス未経験でも参加できます。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
-            <li><strong>予約する</strong>：公式サイトの予約フォームから希望の店舗と日時を選んで申し込みます。</li>
-            <li><strong>来店</strong>：当日は動きやすい服装で来店します（持ち物・レンタルは店舗により異なります）。</li>
+            <li><strong>無料体験を予約する</strong>：各店舗ページの予約フォームから希望の日時を入力します（入会後の通常利用は予約不要）。</li>
+            <li><strong>来店</strong>：本人確認書類と、月会費引落し用のクレジットカードを持参します（公式FAQ）。</li>
             <li><strong>レッスン</strong>：サーキット形式で、自分の目的に合わせた動きをインストラクターのサポートのもと行います。</li>
             <li><strong>説明・入会案内</strong>：料金プランの説明を受けます。検討のうえ入会を決められます。</li>
           </ol>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">予約・申し込み前に確認したいこと（要確認）</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験・見学の取り扱いと料金（店舗・時期で変動）</li>
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>1回のレッスン所要時間・予約システム</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>その店舗の月会費（公式に金額表示なし）と入会キャンペーン</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>混みやすい時間帯（予約不要のため）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／レンタルの要否</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>解約・違約金・キャンセルの規約</li>
             </ul>
@@ -310,7 +323,7 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの店舗・エリア</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            URBAN CLASSIC PILATESは<strong>全国</strong>に店舗を展開しています。<strong>東京エリア</strong>（月島・水天宮・飯田橋・浅草・錦糸町ほか）を中心に、東京以外にも店舗があります。下表は公開情報をもとにした主な展開エリアの一例です。各店舗の正確な所在地・営業時間・取り扱いプランは公式の店舗一覧でご確認ください。
+            公式の店舗一覧（2026年10月14日確認）には<strong>101店舗・11都道府県</strong>が掲載されています（開業予定の表示がある店舗を含む）。全店舗相互利用できるため、自宅と職場の両方の近くに店舗があると使い勝手が上がります。姉妹ブランドの<Link href="/review/brest/" className="text-violet-600 underline">BREST（パーソナル）</Link>の会員は、URBAN CLASSICを全店追加料金なしで利用できます。
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {stores.map((s) => (
@@ -320,7 +333,7 @@ export default function UrbanClassicReview() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs text-gray-500">※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href={AFFILIATE} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください（要確認）。</p>
+          <p className="mt-4 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式 店舗一覧（2026年10月14日確認）。※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href={AFFILIATE} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください（要確認）。</p>
         </div>
       </section>
 
@@ -336,7 +349,7 @@ export default function UrbanClassicReview() {
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-gray-900">料金の考え方</p>
-              <p className="mt-1 text-gray-600">月会費は<strong>店舗・時期により異なる</strong>ため、公式の料金表では金額が固定表示されていません(「永久割引価格」の枠組みのみ提示)。正確な月額は通いたい店舗の体験時に確認するのが確実です。通常レッスンは予約不要で通える運用が特徴です。</p>
+              <p className="mt-1 text-gray-600">月会費は<strong>店舗・時期により異なる</strong>ため、公式の料金表では金額が固定表示されていません(「永久割引価格」の枠組みのみ提示)。正確な月額は通いたい店舗の体験時に確認するのが確実です。通常レッスンは予約不要で通える運用が特徴です。<br />追記(2026年10月14日): 店舗ページには入会時の施設利用料税込2,200円、3か月目から運営管理費税込480円/月が明記されています。</p>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-gray-900">退会規定(会員規約 第11条・原文確認)</p>
@@ -355,7 +368,8 @@ export default function UrbanClassicReview() {
       {/* 口コミの傾向(編集部要約) */}
       <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向——実際の口コミを読んだ編集部要約(2026年9月6日取得)</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">アーバンクラシックピラティスの口コミ・評判——Googleマップの口コミを読んだ編集部要約(2026年9月6日取得)</h2>
+          <p className="text-sm text-gray-700 mb-4">Googleマップの評価は当サイト収録13店舗の平均<strong>4.79</strong>・口コミ計<strong>3,054件</strong>（2026年9月2日時点）。公式「お客様の声」も20代〜40代の男女7件が掲載され、「予約なし・30分・安・近・短」が続けられる理由として共通しています。</p>
           <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 text-sm leading-relaxed text-gray-700">
             <p><span className="font-semibold text-emerald-700">よく褒められている点</span>——「予約なしで好きな時間に行ける」「30分で終わる」「サーキット形式で自分のペースでできる」という通いやすさの仕組みへの評価が中心です。ヘルニアのリハビリ目的で毎日通う50代男性の声など、幅広い層の利用が見えます。スタッフが巡回して見てくれる安心感への言及もあります。</p>
             <p><span className="font-semibold text-rose-700">気になる声</span>——一方で「スタッフの入れ替わりで指導の質が落ちた」という時期による質の変動や、退会・解約手続きのシステムへの強い不満も見られます。無人・低価格系の業態はスタッフ体制と解約条件の確認が重要です。入会前に解約方法を必ず確認しておきましょう。</p>
@@ -406,7 +420,7 @@ export default function UrbanClassicReview() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年7月</p>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月14日</p>
         </div>
       </section>
     </>

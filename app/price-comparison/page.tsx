@@ -20,9 +20,9 @@ const studios: Studio[] = [
   { slug: "club-pilates", name: "CLUB PILATES", price: "月額14,190円〜", type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系" },
   { slug: "bdc", name: "BDC PILATES", price: "月額14,850円〜", type: "マシンピラティス", note: "都心中心。本格志向向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: "月4回 28,000円（1回約7,000円）", type: "セミパーソナル（約2名）", note: "ほぼマンツーマン。グループでは物足りない人向け" },
-  { slug: "brest", name: "BREST PILATES & BODYMAKE", price: "公式サイトで要確認", type: "マシンピラティス/ボディメイク", note: "料金は公式の最新情報をご確認ください" },
-  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: "公式サイトで要確認", type: "マシンピラティス", note: "料金は公式の最新情報をご確認ください" },
-  { slug: "melmake", name: "メルメイク", price: "公式サイトで要確認", type: "ピラティス/ボディメイク", note: "料金は公式の最新情報をご確認ください" },
+  { slug: "brest", name: "BREST PILATES & BODYMAKE", price: "月会費は店舗・時期で変動（公式に金額表示なし）／都度払い6,380円", type: "マシンピラティス×ウェイトのパーソナル（30分）", note: "URBAN CLASSIC PILATESも全店追加料金なしで利用可（2026年10月14日公式確認）" },
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: "月会費は店舗・時期で変動（公式に金額表示なし）＋入会時2,200円・3か月目から月480円", type: "マシンピラティス×サーキット（予約不要・30分）", note: "公式一覧に101店舗・全店舗相互利用（2026年10月14日公式確認）" },
+  { slug: "melmake", name: "メルメイク", price: "50分×月2回 17,300円〜（月4回33,000円）", type: "完全個室のパーソナルピラティス", note: "名古屋2店・福岡西新のみ。体験5,500円は当日入会で0円（2026年10月14日公式確認）" },
 ];
 
 const NAME: Record<string, string> = {
