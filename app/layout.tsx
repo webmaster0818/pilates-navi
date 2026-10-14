@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   description:
     "主要ピラティスブランド9社の徹底比較と、全国35都市1,936スタジオのGoogleマップ実測データ。zen place pilates、ピラティスK、CLUB PILATESなど人気スタジオの料金・口コミ・特徴からぴったりのスタジオが見つかります。",
   metadataBase: new URL("https://pilatest.com"),
+  alternates: { canonical: "./" },
   openGraph: {
     type: "website",
     locale: "ja_JP",
