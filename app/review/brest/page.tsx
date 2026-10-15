@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -437,6 +438,7 @@ export default function BrestReview() {
             </div>
           </div>
           <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月14日</p>
+          <BrandAreaLinks slug="brest" />
         </div>
       </section>
     </>

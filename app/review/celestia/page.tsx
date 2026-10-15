@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -370,6 +371,7 @@ export default function CelestiaReview() {
             </div>
           </div>
           <p className="mt-6 text-xs text-gray-400">最終更新: 2026年6月</p>
+          <BrandAreaLinks slug="celestia" />
         </div>
       </section>
     </>

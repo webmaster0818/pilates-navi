@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -247,6 +248,7 @@ export default function RintosullReview() {
             <Link href="/price-comparison/" className="rounded-lg border border-gray-200 px-4 py-2 hover:border-[#7C3AED]">ピラティス料金比較を見る</Link>
             <Link href="/area/" className="rounded-lg border border-gray-200 px-4 py-2 hover:border-[#7C3AED]">エリアから探す</Link>
           </div>
+          <BrandAreaLinks slug="rintosull" />
         </div>
       </section>
     </>

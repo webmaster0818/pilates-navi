@@ -2,28 +2,26 @@
 // 口コミ・評点はGoogle Places APIで取得した実数のみ。料金は掲載せず公式サイトへ誘導。
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import fs from "node:fs";
 import studioIdx from "@/data-studio-index.json";
-import path from "node:path";
-
-type Studio = { name: string; rating?: number; count: number; address: string; mapsUri?: string; website?: string };
+import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
 
 const studioSlugMap = new Map(
   (studioIdx.entries as { slug: string; name: string; address: string }[]).map((e) => [e.name + e.address, e.slug])
 );
 
-// 既存レビューがあるブランドへの内部リンク対応表
-const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
-  { match: /the SILK|ザシルク/i, href: "/review/the-silk/", label: "the SILKの詳細レビュー" },
-  { match: /ピラティスK|pilates K/i, href: "/review/pilates-k/", label: "ピラティスKの詳細レビュー" },
-  { match: /zen ?place|ゼンプレイス/i, href: "/review/zenplace/", label: "zen placeの詳細レビュー" },
-  { match: /CLUB PILATES|クラブピラティス/i, href: "/review/club-pilates/", label: "CLUB PILATESの詳細レビュー" },
-  { match: /celestia|セレスティア/i, href: "/review/celestia/", label: "Celestiaの詳細レビュー" },
-  { match: /BDC/i, href: "/review/bdc/", label: "BDC PILATESの詳細レビュー" },
-  { match: /brest|ブレスト/i, href: "/review/brest/", label: "Brestの詳細レビュー" },
-  { match: /メルメイク|melmake/i, href: "/review/melmake/", label: "メルメイクの詳細レビュー" },
-  { match: /urban ?classic|アーバンクラシック/i, href: "/review/urban-classic/", label: "URBAN CLASSIC PILATESの詳細レビュー" },
-];
+// 隣接エリアへの相互リンク(地理的に近い都市ページ同士)
+const AREA_NAME: Record<string, string> = {
+  kanazawa: "金沢", toyama: "富山", sendai: "仙台", yamagata: "山形", fukushima: "福島",
+  kawasaki: "川崎", yokohama: "横浜", tokyo: "東京", nagoya: "名古屋", gifu: "岐阜", shizuoka: "静岡",
+  kobe: "神戸", osaka: "大阪", kyoto: "京都",
+};
+const NEARBY: Record<string, string[]> = {
+  kanazawa: ["toyama"], toyama: ["kanazawa"],
+  sendai: ["yamagata", "fukushima"], yamagata: ["sendai"], fukushima: ["sendai"],
+  kawasaki: ["yokohama", "tokyo"], yokohama: ["kawasaki", "tokyo"], tokyo: ["kawasaki", "yokohama"],
+  nagoya: ["gifu", "shizuoka"], gifu: ["nagoya"], shizuoka: ["nagoya"],
+  kobe: ["osaka", "kyoto"], osaka: ["kobe", "kyoto"], kyoto: ["osaka", "kobe"],
+};
 
 const STUDIO_IMGS = ["studio-reformer.jpg", "studio-mat.jpg", "studio-private.jpg", "studio-tower.jpg", "studio-entrance.jpg", "studio-detail.jpg"];
 function hashCode(str: string): number {
@@ -33,13 +31,8 @@ function hashCode(str: string): number {
 }
 
 export default function AreaStudios({ area, areaName, addressFilter, surveyedAtOverride }: { area: string; areaName: string; addressFilter?: string; surveyedAtOverride?: string }) {
-  const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data-places.json"), "utf-8"));
-  let all: Studio[] = raw[area] || [];
-  if (addressFilter) all = all.filter((s) => s.address.includes(addressFilter));
-  const studios = all.filter((s) => s.count >= 10).slice(0, 60);
-  // 口コミ3〜9件のスタジオは簡易リストで掲載(実在+最低限の評価シグナルがあるもののみ・0〜2件は掲載見送り)
-  const minor = all.filter((s) => s.count >= 3 && s.count < 10).slice(0, 60);
-  const surveyedAt: string = surveyedAtOverride ?? raw.surveyedAt;
+  const { all, studios, minor, surveyedAt: rawSurveyedAt } = loadArea(area, addressFilter);
+  const surveyedAt: string = surveyedAtOverride ?? rawSurveyedAt;
   const ratings = all.filter((x) => typeof x.rating === "number").map((x) => x.rating as number);
   const avgRating = ratings.length ? ratings.reduce((a, b) => a + b, 0) / ratings.length : 0;
 
@@ -132,11 +125,25 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
                 </div>
                 <div className="shrink-0 flex items-center gap-3 text-xs font-bold">
                   {typeof s.rating === "number" && <span className="inline-flex items-center gap-1 text-amber-600"><Icon name="star" className="pl-ico w-4 h-4 stroke-amber-500" />{s.rating.toFixed(1)}（{s.count}件）</span>}
+                  {s.website && <a href={s.website} target="_blank" rel="noopener noreferrer nofollow" className="text-gray-700 underline underline-offset-2">公式サイト</a>}
                   {s.mapsUri && <a href={s.mapsUri} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-700 underline underline-offset-2">Googleマップ</a>}
                 </div>
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {NEARBY[area] && !addressFilter && (
+        <div className="mt-10">
+          <h2 className="font-bold text-xl text-gray-800 mb-3">{areaName}の近くのエリアから探す</h2>
+          <div className="flex flex-wrap gap-2">
+            {NEARBY[area].map((n) => (
+              <Link key={n} href={`/area/${n}/`} className="px-4 py-2 rounded-full border border-[#7C3AED] text-[#7C3AED] text-sm font-semibold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                {AREA_NAME[n]}のピラティススタジオ
+              </Link>
+            ))}
+          </div>
         </div>
       )}
 
