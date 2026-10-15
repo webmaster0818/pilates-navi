@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import idx from "@/data-studio-index.json";
 import Breadcrumb from "@/components/Breadcrumb";
 import { brandReview } from "@/components/brand-match";
+import { UC_STORES, UC_STORES_CHECKED } from "@/data-uc-stores";
 
 type Entry = {
   slug: string; name: string; rating?: number | null; count: number;
@@ -23,6 +24,11 @@ function hashCode(s: string): number {
 // ブランド判定は area / stats と共通(components/brand-match.ts)。
 // 店舗ページでレビューへ案内するブランドは従来どおりの9社に限る(Rintosull・Pilates Mirror は未追加)。
 const BRAND_REVIEWS = ["the-silk", "pilates-k", "zenplace", "club-pilates", "celestia", "bdc", "brest", "melmake", "urban-classic"].map(brandReview);
+
+// URBAN CLASSIC PILATES の店舗は公式の最寄駅（data-uc-stores.ts・公式店舗ページのアクセス欄）を title と表に出す
+function ucStore(slug: string) {
+  return UC_STORES.find((s) => s.studio === slug);
+}
 
 export function generateStaticParams() {
   return entries.map((e) => ({ slug: e.slug }));
@@ -51,8 +57,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const e = entries.find((x) => x.slug === decodeURIComponent(slug));
   if (!e) return {};
+  const uc = ucStore(e.slug);
   return {
-    title: `${e.name}(${e.areaName})の口コミ評点【Googleマップ実測${e.count.toLocaleString()}件】`,
+    title: uc?.station
+      ? `${e.name}(${uc.station}・${e.areaName})の口コミ評点【Googleマップ実測${e.count.toLocaleString()}件】`
+      : `${e.name}(${e.areaName})の口コミ評点【Googleマップ実測${e.count.toLocaleString()}件】`,
     description: studioDescription(e),
   };
 }
@@ -62,6 +71,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
   const e = entries.find((x) => x.slug === decodeURIComponent(slug));
   if (!e) notFound();
   const brand = BRAND_REVIEWS.find((b) => b.match.test(e.name));
+  const uc = ucStore(e.slug);
   const cityAll = entries.filter((x) => x.area === e.area);
   const cityPeers = cityAll.filter((x) => x.slug !== e.slug).slice(0, 5);
   const rank = cityAll.findIndex((x) => x.slug === e.slug) + 1;
@@ -120,6 +130,9 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
             <tr className="border-t border-gray-200"><th className="w-44 bg-gray-50 px-3 py-2 text-left font-medium">Gマップ評点</th><td className="px-3 py-2">{e.rating ?? "—"}(5点満点・{idx.surveyedAt}取得)</td></tr>
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">口コミ件数</th><td className="px-3 py-2">{e.count.toLocaleString()}件({e.areaName}の収録スタジオ中 {rank}位)</td></tr>
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">所在地</th><td className="px-3 py-2">{e.address.replace("日本、", "")}</td></tr>
+            {uc && (
+              <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">最寄駅・アクセス</th><td className="px-3 py-2">{uc.access}(公式店舗ページの表記・{UC_STORES_CHECKED}確認)<br /><Link href="/review/urban-classic/#stores" className="underline text-[#7C3AED]">URBAN CLASSIC PILATES 全{UC_STORES.length}店舗の最寄駅一覧(都道府県別)</Link></td></tr>
+            )}
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">口コミを読む</th><td className="px-3 py-2">{e.mapsUri ? <a href={e.mapsUri} target="_blank" rel="nofollow noopener" className="underline text-[#7C3AED]">Googleマップで口コミ本文を確認する</a> : "—"}</td></tr>
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">料金・体験</th><td className="px-3 py-2">{e.website ? <a href={e.website} target="_blank" rel="nofollow noopener" className="underline text-[#7C3AED]">公式サイトで最新の料金・体験情報を確認する</a> : "公式サイトの掲載が確認できないため、Googleマップからご確認ください"}</td></tr>
           </tbody>

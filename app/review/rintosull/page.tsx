@@ -166,11 +166,11 @@ export default function RintosullReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">データで見るRintosull(当サイト実測・{DB_DATE}取得)</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            当サイトはGoogleマップの公開情報を機械取得して全国のピラティススタジオを収録しています。その実測データからRintosullだけを抜き出すと次のとおりです。
+            当サイトはGoogleマップの公開情報を機械取得して全国のピラティススタジオを収録しています。その実測データ全体(1,936店)からRintosullだけを抜き出すと次のとおりです。なお<Link href="/stats/" className="underline text-[#7C3AED]">全国統計</Link>は店舗詳細ページのある1,412店で数えているため、Rintosullは55店(平均4.73・口コミ8,810件)になります。
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             {[
-              { label: "当サイト収録店舗数", value: "58店舗", sub: "全国35都市の収録範囲内" },
+              { label: "当サイト収録店舗数", value: "58店舗", sub: "Googleマップ実測データ全体(1,936店)での数。店舗詳細ページ・全国統計の数え方(1,412店ベース)では55店" },
               { label: "Google評点", value: "平均 4.74", sub: "中央値4.80／最小3.8〜最大5.0" },
               { label: "口コミ件数", value: "合計 8,811件", sub: "1店舗あたり中央値142件・最大335件" },
             ].map((s) => (

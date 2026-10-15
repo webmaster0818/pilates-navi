@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { UC_STORES, UC_STORES_CHECKED } from "@/data-uc-stores";
 
 const AFFILIATE = "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727";
 
 export const metadata: Metadata = {
-  title: "アーバンクラシックピラティスの口コミ・評判｜料金・店舗・退会方法【2026年10月】",
+  title: "アーバンクラシックピラティスの口コミ・評判｜料金・店舗一覧と最寄駅・退会方法【2026年10月】",
   description:
-    "URBAN CLASSIC PILATES（アーバンクラシックピラティス）の口コミ・評判をGoogleマップ・公式の出典つきで整理。予約不要・1回30分のサーキット形式、全国101店舗、入会時2,200円・3か月目から月480円の固定費、退会は来店のみ5日締め（2026年10月14日公式確認）。",
+    "URBAN CLASSIC PILATES（アーバンクラシックピラティス）の口コミ・評判をGoogleマップ・公式の出典つきで整理。予約不要・1回30分、全国101店舗の都道府県別・最寄駅一覧、入会時2,200円・3か月目から月480円の固定費、退会は来店のみ5日締め（10月公式確認）。",
   alternates: { canonical: "/review/urban-classic/" },
 };
 
@@ -18,7 +19,7 @@ const faqs = [
   { q: "URBAN CLASSIC PILATESの口コミ・評判は良い？", a: "Googleマップでは当サイト収録の13店舗が平均4.79・口コミ計3,054件（2026年9月2日時点）。「予約なしで好きな時間に行ける」「30分で終わる」「スタッフが巡回して見てくれる」が多く褒められる一方、「スタッフの入れ替わりで指導の質が変わった」「退会手続きが面倒」という声もあります。" },
   { q: "体験レッスンはありますか？", a: "はい。各店舗ページに「無料体験予約」があり、WEBで予約→店頭で体験・手続きの2ステップです。入会手続きには本人確認書類と、月会費引落し用のクレジットカードが必要です（公式FAQ）。" },
   { q: "予約は必要ですか？", a: "体験はWEB予約が必要ですが、入会後の通常利用は予約不要です。公式は「予約不要・全店舗相互利用可能」としており、どの店舗にも空いた時間に行けます。" },
-  { q: "アーバンクラシックピラティスの店舗はいくつありますか？", a: "公式の店舗一覧（2026年10月14日確認）には101店舗が掲載されています（開業予定の表示がある店舗を含む）。東京39・神奈川15・大阪15・埼玉7・兵庫5・福岡5・千葉4・愛知4・北海道3（いずれも11月開業予定）・京都3・茨城1です。" },
+  { q: "アーバンクラシックピラティスの店舗はいくつありますか？", a: "公式の店舗一覧（2026年10月15日確認）には101店舗が掲載されています（開業予定の表示がある店舗を含む）。東京39・神奈川15・大阪15・埼玉7・兵庫5・福岡5・千葉4・愛知4・北海道3（いずれも11月OPENの表示）・京都3・茨城1（取手・1月OPENの表示）です。各店舗の最寄駅はこのページの店舗一覧（都道府県別）にまとめています。" },
   { q: "初心者でも通えますか？", a: "はい、初心者の方でも始められます。インストラクターが一人ひとりに合わせてサポートするスタイルとされており、運動経験を問わず参加できます。" },
   { q: "男性も利用できますか？", a: "公式情報では「男性も入会いただける」とされています。なお妊娠中の方は利用できないとされています。詳細は公式サイトまたは各店舗でご確認ください。" },
   { q: "1回のレッスン時間はどのくらいですか？", a: "30分です。店舗ページに「30分で本格ボディメイク」と明記されており、マシンピラティスとTRXなどのファンクショナルトレーニングをサーキット形式で回ります。" },
@@ -59,19 +60,10 @@ const prices = [
   { plan: "体験", price: "無料（店舗ページに「無料体験予約」）", note: "WEB予約→店頭で体験・手続き。" },
 ];
 
-const stores = [
-  { area: "東京都 39店舗", note: "両国は10月開業予定" },
-  { area: "神奈川県 15店舗", note: "川崎・関内・綱島・東戸塚ほか" },
-  { area: "大阪府 15店舗", note: "なんば千日前・天満橋・野田阪神ほか" },
-  { area: "埼玉県 7店舗", note: "南浦和・三郷ほか" },
-  { area: "兵庫県 5店舗", note: "" },
-  { area: "福岡県 5店舗", note: "六本松・大橋・福岡天神ほか" },
-  { area: "千葉県 4店舗", note: "本八幡・稲毛ほか" },
-  { area: "愛知県 4店舗", note: "今池・伏見・藤が丘・瑞穂" },
-  { area: "北海道 3店舗", note: "白石・美しが丘・厚別（11月開業予定）" },
-  { area: "京都府 3店舗", note: "四条河原町・西院ほか" },
-  { area: "茨城県 1店舗", note: "取手（開業予定）" },
-];
+// 都道府県別の店舗表（公式店舗一覧・各店舗ページのアクセス欄 2026-10-15確認を data-uc-stores.ts に転記）
+const PREF_ORDER = ["東京都", "神奈川県", "大阪府", "埼玉県", "兵庫県", "福岡県", "千葉県", "愛知県", "北海道", "京都府", "茨城県"];
+const storesByPref = PREF_ORDER.map((pref) => ({ pref, rows: UC_STORES.filter((s) => s.pref === pref) })).filter((g) => g.rows.length > 0);
+const ucStudioCount = UC_STORES.filter((s) => s.studio).length;
 
 export default function UrbanClassicReview() {
   return (
@@ -92,7 +84,7 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">アーバンクラシックピラティス（URBAN CLASSIC PILATES）の口コミ・評判｜料金・店舗・退会方法</h1>
           <p className="mt-3 text-gray-600">予約不要・1回30分のマシンピラティス×ファンクショナルのサーキット形式。Googleマップ・公式サイト・会員規約の出典つきで評判をまとめました。</p>
-          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月14日（公式サイト・店舗一覧・川崎店ページ・会員規約）</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月14日（公式サイト・川崎店ページ・会員規約）／店舗一覧・各店舗のアクセスは2026年10月15日</p>
         </div>
       </section>
 
@@ -322,19 +314,52 @@ export default function UrbanClassicReview() {
       {/* 店舗・エリア */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの店舗・エリア</h2>
+          <h2 id="stores" className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの店舗一覧（都道府県別・最寄駅）</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            公式の店舗一覧（2026年10月14日確認）には<strong>101店舗・11都道府県</strong>が掲載されています（開業予定の表示がある店舗を含む）。全店舗相互利用できるため、自宅と職場の両方の近くに店舗があると使い勝手が上がります。姉妹ブランドの<Link href="/review/brest/" className="text-violet-600 underline">BREST（パーソナル）</Link>の会員は、URBAN CLASSICを全店追加料金なしで利用できます。
+            公式の店舗一覧（{UC_STORES_CHECKED}確認）には<strong>{UC_STORES.length}店舗・{storesByPref.length}都道府県</strong>が掲載されています（開業予定の表示がある店舗を含む）。全店舗相互利用できるため、自宅と職場の両方の近くに店舗があると使い勝手が上がります。姉妹ブランドの<Link href="/review/brest/" className="text-violet-600 underline">BREST（パーソナル）</Link>の会員は、URBAN CLASSICを全店追加料金なしで利用できます。
           </p>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {stores.map((s) => (
-              <div key={s.area} className="bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-800">{s.area}</span>
-                <span className="text-[11px] text-gray-400">{s.note}</span>
-              </div>
+          <div className="grid sm:grid-cols-3 gap-2 mb-6">
+            {storesByPref.map((g) => (
+              <a key={g.pref} href={`#uc-${g.pref}`} className="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-800 hover:border-violet-400">
+                {g.pref} <strong>{g.rows.length}</strong>店舗
+              </a>
             ))}
           </div>
-          <p className="mt-4 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式 店舗一覧（2026年10月14日確認）。※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href={AFFILIATE} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください（要確認）。</p>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            以下は公式の店舗一覧と各店舗ページの「アクセス」欄を、都道府県→店舗名・最寄駅の順に転記したものです（{UC_STORES_CHECKED}確認・アクセスは公式表記のまま）。
+            当サイトが Googleマップの実測データを持つ{ucStudioCount}店舗は、店名から店舗ページ（評点・口コミ件数・地図）に移動できます。
+          </p>
+          {storesByPref.map((g) => (
+            <div key={g.pref} id={`uc-${g.pref}`} className="mb-6">
+              <h3 className="text-base font-bold text-gray-900 mb-2">{g.pref}のURBAN CLASSIC PILATES（{g.rows.length}店舗）</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[520px] text-sm border border-gray-200 bg-white">
+                  <thead>
+                    <tr className="bg-gray-50 text-left">
+                      <th className="px-3 py-2 font-medium whitespace-nowrap">店舗名</th>
+                      <th className="px-3 py-2 font-medium">最寄駅・アクセス（公式表記）</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {g.rows.map((s) => (
+                      <tr key={s.store} className="border-t border-gray-200 align-top">
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          {s.studio ? (
+                            <Link href={`/studio/${s.studio}/`} className="text-violet-600 underline">{s.store}店</Link>
+                          ) : (
+                            <span>{s.store}店</span>
+                          )}
+                          {s.open && <span className="ml-1 text-[11px] text-orange-600">（公式表示: {s.open}）</span>}
+                        </td>
+                        <td className="px-3 py-2 text-gray-700">{s.access}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+          <p className="mt-4 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式 店舗一覧・各店舗ページ（{UC_STORES_CHECKED}確認）。※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href={AFFILIATE} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください（要確認）。</p>
         </div>
       </section>
 
@@ -421,7 +446,7 @@ export default function UrbanClassicReview() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月14日</p>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月15日</p>
           <BrandAreaLinks slug="urban-classic" />
         </div>
       </section>

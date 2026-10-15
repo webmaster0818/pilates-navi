@@ -24,12 +24,13 @@ const pct = (n: number) => Math.round((n / ratings.length) * 1000) / 10;
 const areas = new Set(entries.map((e) => e.area)).size;
 
 const brandDefs: { label: string; match: RegExp }[] = [
-  // ピラティスKは共通判定を使う(「Pilates KASANE」は別ブランドなので含めない)
+  // ブランド判定はレビュー・店舗ページと共通(components/brand-match.ts)。
+  // 「Pilates KASANE」は含めない／全角「ピラティスＫ」・スペース無し「CLUBPILATES」は含める／「zen place ヨガ mix」は除外
   { label: "ピラティスK", match: brandReview("pilates-k").match },
-  { label: "Rintosull(リントスル)", match: /rintosull|リントスル/i },
-  { label: "CLUB PILATES", match: /club pilates|クラブピラティス/i },
-  { label: "zen place pilates", match: /zen ?place/i },
-  { label: "the SILK", match: /the ?SILK/i },
+  { label: "Rintosull(リントスル)", match: brandReview("rintosull").match },
+  { label: "CLUB PILATES", match: brandReview("club-pilates").match },
+  { label: "zen place pilates", match: brandReview("zenplace").match },
+  { label: "the SILK", match: brandReview("the-silk").match },
 ];
 const brandRows = brandDefs.map((b) => {
   const hits = entries.filter((e) => b.match.test(e.name));
@@ -133,7 +134,7 @@ export default function StatsPage() {
         </table>
       </div>
       <p className="mt-2 text-xs text-gray-400">
-        ※当サイトDB収録分({areas}都市)のみの集計で、実際の全店舗数とは異なります。店名へのブランド名表記を基に機械集計しています。ブランドの詳細は<Link href="/review/zenplace/" className="underline">各レビューページ</Link>をご覧ください。
+        ※当サイトDB収録分({areas}都市)のうち、店舗詳細ページのある{entries.length.toLocaleString()}店を数えた集計で、実際の全店舗数とは異なります。店名へのブランド名表記を基に機械集計しています(「zen place ヨガ mix」などヨガ業態の店舗は除外)。ブランド別レビューページの「収録店舗数」は、店舗詳細ページの無い店舗も含むGoogleマップ実測データ全体での数え方のため、この表と数字が異なる場合があります(例: Rintosull はレビュー58店・この表55店)。ブランドの詳細は<Link href="/review/zenplace/" className="underline">各レビューページ</Link>をご覧ください。
       </p>
 
       <h2 className="mt-10 text-lg font-bold">この統計の使い方</h2>
