@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import idx from "@/data-studio-index.json";
+import { brandReview } from "@/components/brand-match";
 
 export const metadata: Metadata = {
   title: "ピラティススタジオの口コミ・評点 全国統計【35都市1,412店を実測】評点4.8以上が83%という現実",
@@ -23,7 +24,8 @@ const pct = (n: number) => Math.round((n / ratings.length) * 1000) / 10;
 const areas = new Set(entries.map((e) => e.area)).size;
 
 const brandDefs: { label: string; match: RegExp }[] = [
-  { label: "ピラティスK", match: /ピラティスK|pilates K/i },
+  // ピラティスKは共通判定を使う(「Pilates KASANE」は別ブランドなので含めない)
+  { label: "ピラティスK", match: brandReview("pilates-k").match },
   { label: "Rintosull(リントスル)", match: /rintosull|リントスル/i },
   { label: "CLUB PILATES", match: /club pilates|クラブピラティス/i },
   { label: "zen place pilates", match: /zen ?place/i },

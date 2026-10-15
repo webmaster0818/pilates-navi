@@ -5,20 +5,8 @@ import path from "node:path";
 
 export type Studio = { name: string; rating?: number; count: number; address: string; mapsUri?: string; website?: string };
 
-// 既存レビューがあるブランドへの内部リンク対応表(店舗名の表記一致で判定)
-export const BRAND_REVIEWS: { slug: string; name: string; match: RegExp; href: string; label: string }[] = [
-  { slug: "the-silk", name: "the SILK", match: /the SILK|ザシルク/i, href: "/review/the-silk/", label: "the SILKの詳細レビュー" },
-  { slug: "pilates-k", name: "ピラティスK", match: /ピラティスK(?![a-z])|pilates K(?![a-z])/i, href: "/review/pilates-k/", label: "ピラティスKの詳細レビュー" },
-  { slug: "zenplace", name: "zen place", match: /zen ?place|ゼンプレイス/i, href: "/review/zenplace/", label: "zen placeの詳細レビュー" },
-  { slug: "club-pilates", name: "CLUB PILATES", match: /CLUB PILATES|クラブピラティス/i, href: "/review/club-pilates/", label: "CLUB PILATESの詳細レビュー" },
-  { slug: "celestia", name: "Celestia", match: /celestia|セレスティア/i, href: "/review/celestia/", label: "Celestiaの詳細レビュー" },
-  { slug: "bdc", name: "BDC PILATES", match: /BDC/i, href: "/review/bdc/", label: "BDC PILATESの詳細レビュー" },
-  { slug: "brest", name: "Brest", match: /brest|ブレスト/i, href: "/review/brest/", label: "Brestの詳細レビュー" },
-  { slug: "melmake", name: "メルメイク", match: /メルメイク|melmake|mermake/i, href: "/review/melmake/", label: "メルメイクの詳細レビュー" },
-  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", match: /urban ?classic|アーバンクラシック/i, href: "/review/urban-classic/", label: "URBAN CLASSIC PILATESの詳細レビュー" },
-  { slug: "rintosull", name: "Rintosull", match: /rintosull|リントスル/i, href: "/review/rintosull/", label: "Rintosullの詳細レビュー" },
-  { slug: "pilates-mirror", name: "Pilates Mirror", match: /pilates ?mirror|ピラティスミラー/i, href: "/review/pilates-mirror/", label: "Pilates Mirrorの詳細レビュー" },
-];
+// 既存レビューがあるブランドへの内部リンク対応表は brand-match.ts に共通化(studio / stats も同じ判定を使う)
+export { BRAND_REVIEWS } from "@/components/brand-match";
 
 let cache: Record<string, unknown> | null = null;
 function raw(): Record<string, unknown> {

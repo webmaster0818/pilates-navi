@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-
-export const metadata: Metadata = {
-  title: "エリア別ピラティススタジオ一覧【全国25都市・Google口コミ実データ】",
-  description:
-    "全国25都市のピラティススタジオを、Googleマップの実データ(評点・口コミ件数)で都市別に一覧比較できるエリアハブページ。マシンピラティス・スタジオを口コミ件数順に掲載し、各都市とも取得日を明記。評点・件数は実数のみで創作はありません。",
-};
+import idx from "@/data-studio-index.json";
 
 const CITIES: { slug: string; name: string; region: string }[] = [
   { slug: "sapporo", name: "札幌", region: "北海道・東北" },
@@ -46,6 +41,15 @@ const CITIES: { slug: string; name: string; region: string }[] = [
   { slug: "naha", name: "那覇", region: "九州・沖縄" },
 ];
 
+// 都市数は手書きせず、実測データ(data-studio-index.json)に店舗がある都市のうち一覧に載せている数を数える
+const AREAS_WITH_DATA = new Set((idx.entries as { area: string }[]).map((e) => e.area));
+const CITY_COUNT = CITIES.filter((c) => AREAS_WITH_DATA.has(c.slug)).length;
+
+export const metadata: Metadata = {
+  title: `エリア別ピラティススタジオ一覧【全国${CITY_COUNT}都市・Google口コミ実データ】`,
+  description: `全国${CITY_COUNT}都市のピラティススタジオを、Googleマップの実データ(評点・口コミ件数)で都市別に一覧比較できるエリアハブページ。マシンピラティス・スタジオを口コミ件数順に掲載し、各都市とも取得日を明記。評点・件数は実数のみで創作はありません。`,
+};
+
 const REGIONS = ["北海道・東北", "首都圏", "北関東・甲信越", "北陸", "東海", "関西", "中国・四国", "九州・沖縄"];
 
 export default function AreaHubPage() {
@@ -53,10 +57,10 @@ export default function AreaHubPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "エリア別スタジオ一覧" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        エリア別ピラティススタジオ一覧【全国25都市】
+        エリア別ピラティススタジオ一覧【全国{CITY_COUNT}都市】
       </h1>
       <p className="text-gray-600 text-sm leading-relaxed mb-8">
-        全国25都市の実在ピラティススタジオを、Googleマップの実データ(評点・口コミ件数)をもとに口コミ件数順で掲載しています。
+        全国{CITY_COUNT}都市の実在ピラティススタジオを、Googleマップの実データ(評点・口コミ件数)をもとに口コミ件数順で掲載しています。
         各都市ページに取得日を明記し、評点・件数は当サイトの創作ではなくGoogleマップ上の実数です。
       </p>
 

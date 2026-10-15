@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import idx from "@/data-studio-index.json";
 import Breadcrumb from "@/components/Breadcrumb";
+import { brandReview } from "@/components/brand-match";
 
 type Entry = {
   slug: string; name: string; rating?: number | null; count: number;
@@ -19,17 +20,9 @@ function hashCode(s: string): number {
   return h;
 }
 
-const BRAND_REVIEWS: { match: RegExp; href: string; label: string }[] = [
-  { match: /the SILK|ザシルク/i, href: "/review/the-silk/", label: "the SILKの詳細レビュー" },
-  { match: /ピラティスK|pilates K/i, href: "/review/pilates-k/", label: "ピラティスKの詳細レビュー" },
-  { match: /zen ?place|ゼンプレイス/i, href: "/review/zenplace/", label: "zen placeの詳細レビュー" },
-  { match: /CLUB PILATES|クラブピラティス/i, href: "/review/club-pilates/", label: "CLUB PILATESの詳細レビュー" },
-  { match: /celestia|セレスティア/i, href: "/review/celestia/", label: "Celestiaの詳細レビュー" },
-  { match: /BDC/i, href: "/review/bdc/", label: "BDC PILATESの詳細レビュー" },
-  { match: /brest|ブレスト/i, href: "/review/brest/", label: "Brestの詳細レビュー" },
-  { match: /メルメイク|melmake/i, href: "/review/melmake/", label: "メルメイクの詳細レビュー" },
-  { match: /urban ?classic|アーバンクラシック/i, href: "/review/urban-classic/", label: "URBAN CLASSIC PILATESの詳細レビュー" },
-];
+// ブランド判定は area / stats と共通(components/brand-match.ts)。
+// 店舗ページでレビューへ案内するブランドは従来どおりの9社に限る(Rintosull・Pilates Mirror は未追加)。
+const BRAND_REVIEWS = ["the-silk", "pilates-k", "zenplace", "club-pilates", "celestia", "bdc", "brest", "melmake", "urban-classic"].map(brandReview);
 
 export function generateStaticParams() {
   return entries.map((e) => ({ slug: e.slug }));
