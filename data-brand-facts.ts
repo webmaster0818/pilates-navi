@@ -61,10 +61,10 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "pilates-mirror": {
     style: "マシンピラティス（天井の鏡・30分レッスン）", format: "グループ＋パーソナル", gender: "男女可",
-    monthly: "11,000円（月6回、7回目以降は1回1,100円）",
+    monthly: "11,000円（月6回、7回目以降は1回1,100円）。2026年11月度から12,100円に改定（公式告知・2026年10月17日確認）",
     joinFee: "11,000円",
     monthlyExtra: "公式に記載なし",
-    trial: "無料体験を実施（2026年9月時点のキャンペーン）",
+    trial: "通常2,200円。秋キャンペーンの実施スタジオは無料（2026年10月17日確認）",
     source: "https://www.konami.com/sportsclub/pilatesmirror/",
   },
   "celestia": {
