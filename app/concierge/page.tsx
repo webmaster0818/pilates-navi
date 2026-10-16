@@ -24,10 +24,10 @@ const studios: Studio[] = [
     name: 'zen place pilates',
     slug: 'zenplace',
     lessonType: ['マシン', 'マット'],
-    tags: ['少人数制', '体験レッスンあり', '駅チカ', 'プライベートレッスン'],
+    tags: ['少人数制', '体験レッスンあり', '駅近', 'プライベートレッスン'],
     price: '月額10,890円〜',
     priceCategory: '10k-20k',
-    description: '全国100店舗以上を展開する実力派。マットもマシンも両対応で、初心者からプロまで幅広く対応。少人数制レッスンで丁寧な指導が魅力。',
+    description: '全国100店舗以上を展開しています。マットとマシンの両方に対応し、初心者から経験者まで幅広く受け入れています。少人数制レッスンによる丁寧な指導が特徴です。',
     reviewPath: '/review/zenplace/',
     url: 'https://www.zenplace.co.jp/pilates/',
   },
@@ -35,10 +35,10 @@ const studios: Studio[] = [
     name: 'ピラティスK',
     slug: 'pilates-k',
     lessonType: ['マシン'],
-    tags: ['女性専用', '体験レッスンあり', '駅チカ', 'おしゃれな空間'],
+    tags: ['女性専用', '体験レッスンあり', '駅近', 'おしゃれな空間'],
     price: '月額11,220円〜',
     priceCategory: '10k-20k',
-    description: '女性専用のマシンピラティス専門スタジオ。0円体験レッスンが人気で、SNS映えするおしゃれな空間でボディメイクに集中できます。',
+    description: '女性専用のマシンピラティス専門スタジオです。0円の体験レッスンを実施しており、内装にこだわった空間でボディメイクに取り組めます。',
     reviewPath: '/review/pilates-k/',
     url: 'https://pilates-k.jp/',
   },
@@ -46,10 +46,10 @@ const studios: Studio[] = [
     name: 'CLUB PILATES',
     slug: 'club-pilates',
     lessonType: ['マシン', 'マット'],
-    tags: ['体験レッスンあり', '駅チカ', '少人数制'],
+    tags: ['体験レッスンあり', '駅近', '少人数制'],
     price: '月額14,190円〜',
     priceCategory: '10k-20k',
-    description: '世界最大級のピラティスブランド。4段階のレベル分けと8種類のクラス形式で、段階的なレベルアップが可能。全インストラクターが有資格者。',
+    description: '世界最大級のピラティスブランドです。4段階のレベル分けと8種類のクラス形式により、段階的にレベルアップできます。インストラクターは全員が有資格者です。',
     reviewPath: '/review/club-pilates/',
     url: 'https://www.clubpilates.co.jp/',
   },
@@ -57,10 +57,10 @@ const studios: Studio[] = [
     name: 'the SILK',
     slug: 'the-silk',
     lessonType: ['マシン'],
-    tags: ['女性専用', '駅チカ', 'おしゃれな空間', '体験レッスンあり'],
+    tags: ['女性専用', '駅近', 'おしゃれな空間', '体験レッスンあり'],
     price: '月額12,980円〜',
     priceCategory: '10k-20k',
-    description: '音楽と照明が彩る非日常空間で行う女性専用マシンピラティス。全店駅チカ立地で通いやすく、モチベーションが上がる空間演出が特徴。',
+    description: '音楽と照明を演出に取り入れた空間で行う、女性専用のマシンピラティスです。全店が駅近の立地で通いやすく、意欲を保ちやすい空間演出が特徴です。',
     reviewPath: '/review/the-silk/',
     url: 'https://the-silk.co.jp/',
   },
@@ -71,7 +71,7 @@ const studios: Studio[] = [
     tags: ['少人数制', '体験レッスンあり'],
     price: '月額11,000円〜',
     priceCategory: '10k-20k',
-    description: 'プロダンサー考案の独自メソッドで、しなやかで美しい身体づくりを目指すスタジオ。少人数制（最大8名）で体幹強化に特化。',
+    description: 'プロダンサーが考案した独自メソッドで、しなやかで美しい身体づくりを目指すスタジオです。少人数制（最大8名）で、体幹強化に重点を置いています。',
     reviewPath: '/review/bdc/',
     url: 'https://bdcpilates.com/',
   },
@@ -82,7 +82,7 @@ const studios: Studio[] = [
     tags: ['少人数制', 'プライベートレッスン', '体験レッスンあり', 'おしゃれな空間'],
     price: '月額15,000円〜',
     priceCategory: '10k-20k',
-    description: 'セミパーソナル形式のマシンピラティス専門スタジオ。少人数制で一人ひとりに合わせた丁寧な指導が受けられます。手ぶらOKで通いやすい。',
+    description: 'セミパーソナル形式のマシンピラティス専門スタジオです。少人数制で、一人ひとりに合わせた丁寧な指導を受けられます。手ぶらで通える点も特徴です。',
     reviewPath: '/review/celestia/',
     url: 'https://celes-pilates.jp/',
   },
@@ -93,7 +93,7 @@ const studios: Studio[] = [
     tags: ['体験レッスンあり'],
     price: '要問い合わせ',
     priceCategory: '10k-20k',
-    description: 'マシンピラティス×ウェイトトレーニングを1回30分のパーソナルで行うスタジオ。都度払い6,380円。会員はURBAN CLASSIC PILATESも全店追加料金なしで利用可。',
+    description: 'マシンピラティスとウェイトトレーニングを、1回30分のパーソナルレッスンで行うスタジオです。都度払いは6,380円です。会員はURBAN CLASSIC PILATESも全店追加料金なしで利用できます。',
     reviewPath: '/review/brest/',
     url: 'https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727',
   },
@@ -104,7 +104,7 @@ const studios: Studio[] = [
     tags: ['体験レッスンあり', 'おしゃれな空間'],
     price: '要問い合わせ',
     priceCategory: '10k-20k',
-    description: 'マシンピラティス×ファンクショナルのサーキット形式。予約不要・1回30分で、全国101店舗を相互利用できる。無料体験あり。',
+    description: 'マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式です。予約不要・1回30分で、全国101店舗を相互利用できます。無料体験を実施しています。',
     reviewPath: '/review/urban-classic/',
     url: 'https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727',
   },
@@ -115,7 +115,7 @@ const studios: Studio[] = [
     tags: ['プライベートレッスン'],
     price: '月2回17,300円〜',
     priceCategory: '20k-30k',
-    description: '完全個室のパーソナルマシンピラティス（名古屋・伏見／女性専用名古屋駅、福岡西新はマット）。月謝制で50分×月2回17,300円〜。',
+    description: '完全個室で受けられるパーソナルのマシンピラティスです（名古屋・伏見／女性専用名古屋駅、福岡西新はマット）。月謝制で、50分×月2回17,300円〜です。',
     reviewPath: '/review/melmake/',
     url: 'https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727',
   },
@@ -166,7 +166,7 @@ function scoreStudio(studio: Studio, answers: Answers): number {
 
   // Lesson type matching (25 points)
   if (answers.lessonType) {
-    if (answers.lessonType === '両方OK') {
+    if (answers.lessonType === 'どちらも可') {
       if (studio.lessonType.length === 2) score += 25;
       else score += 15;
     } else if (answers.lessonType === 'マシンピラティス') {
@@ -210,7 +210,7 @@ function getRecommendReason(studio: Studio, answers: Answers): string {
     reasons.push('マシンピラティスに対応');
   } else if (answers.lessonType === 'マットピラティス' && studio.lessonType.includes('マット')) {
     reasons.push('マットピラティスに対応');
-  } else if (answers.lessonType === '両方OK' && studio.lessonType.length === 2) {
+  } else if (answers.lessonType === 'どちらも可' && studio.lessonType.length === 2) {
     reasons.push('マシン・マット両方に対応');
   }
 
@@ -325,10 +325,10 @@ export default function ConciergePage() {
               ピラティスコンシェルジュ
             </h1>
             <p className="text-gray-600 mb-2 text-lg">
-              あなたにぴったりのピラティススタジオを診断
+              ご希望に合ったピラティススタジオを診断します
             </p>
             <p className="text-gray-400 text-sm mb-10">
-              4つの質問に答えるだけ（約1分）
+              4つの質問にお答えいただくと、おすすめのスタジオを表示します（約1分）
             </p>
             <button
               onClick={() => goTo('purpose')}
@@ -345,9 +345,9 @@ export default function ConciergePage() {
         return (
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
-              Q1. ピラティスを始める目的は？
+              Q1. ピラティスを始める目的は何ですか？
             </h2>
-            <p className="text-gray-500 text-sm text-center mb-6">複数選択OK</p>
+            <p className="text-gray-500 text-sm text-center mb-6">複数選択できます</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
               {options.map((opt) => {
                 const selected = answers.purpose.includes(opt);
@@ -387,12 +387,12 @@ export default function ConciergePage() {
 
       /* --- Lesson Type ---------------------------------------------------- */
       case 'lessonType': {
-        const options = ['マシンピラティス', 'マットピラティス', '両方OK'];
+        const options = ['マシンピラティス', 'マットピラティス', 'どちらも可'];
         const icons = ['', '', ''];
         return (
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
-              Q2. 希望のレッスンタイプは？
+              Q2. ご希望のレッスンタイプをお選びください
             </h2>
             <p className="text-gray-500 text-sm text-center mb-6">1つ選択してください</p>
             <div className="space-y-3 mb-8">
@@ -439,7 +439,7 @@ export default function ConciergePage() {
         return (
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
-              Q3. 月額予算はどのくらい？
+              Q3. 月額のご予算はどのくらいですか？
             </h2>
             <p className="text-gray-500 text-sm text-center mb-6">1つ選択してください</p>
             <div className="space-y-3 mb-8">
@@ -481,13 +481,13 @@ export default function ConciergePage() {
 
       /* --- Priorities ------------------------------------------------------ */
       case 'priorities': {
-        const options = ['少人数制', '女性専用', '体験レッスンあり', '駅チカ', 'おしゃれな空間', 'プライベートレッスン'];
+        const options = ['少人数制', '女性専用', '体験レッスンあり', '駅近', 'おしゃれな空間', 'プライベートレッスン'];
         return (
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">
-              Q4. 重視するポイントは？
+              Q4. 重視するポイントは何ですか？
             </h2>
-            <p className="text-gray-500 text-sm text-center mb-6">複数選択OK</p>
+            <p className="text-gray-500 text-sm text-center mb-6">複数選択できます</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
               {options.map((opt) => {
                 const selected = answers.priorities.includes(opt);
@@ -531,9 +531,9 @@ export default function ConciergePage() {
           <div>
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                あなたにおすすめのスタジオ
+                おすすめのスタジオ
               </h2>
-              <p className="text-gray-500 text-sm">回答内容からマッチ度を算出しました</p>
+              <p className="text-gray-500 text-sm">回答内容をもとに、マッチ度を算出しました</p>
             </div>
 
             <div className="space-y-6 mb-10">

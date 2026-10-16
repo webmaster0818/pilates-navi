@@ -76,12 +76,12 @@ export default function BrandKeyFacts({ slug, compact = false }: { slug: string;
       )}
 
       <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
-        {a && <>エリアはGoogleマップ実測データ（{AREA_SURVEYED_AT}時点・当サイト収録分）。</>}
+        {a && <>エリアは、Googleマップの実測データ（{AREA_SURVEYED_AT}時点・当サイト収録分）にもとづきます。</>}
         {f && (
           <>
             {" "}料金は{FACTS_SURVEYED_AT}に
             <a href={f.source} target="_blank" rel="nofollow noopener noreferrer" className="underline">公式サイト</a>
-            で確認した記載です。改定・キャンペーンがあるため、申込前に公式でご確認ください。
+            で確認した記載です。改定やキャンペーンにより変わる場合があるため、お申し込み前に公式サイトにて最新情報をご確認ください。
           </>
         )}
       </p>

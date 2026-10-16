@@ -6,20 +6,20 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "CLUB PILATESの口コミ・評判は？料金・体験レッスンを解説【2026年】",
   description:
-    "CLUB PILATES（クラブピラティス）の口コミ・評判、料金プラン、体験レッスンの流れ・予約方法をまとめて解説。世界最大級・4段階レベル分けが特徴のマシンピラティスを中立目線で紹介します（料金・店舗は公式要確認）。",
+    "CLUB PILATES（クラブピラティス）の口コミ・評判、料金プラン、体験レッスンの流れ・予約方法を解説します。世界最大級のブランドで、4段階のレベル分けを特徴とするマシンピラティススタジオを中立的な立場で紹介しています（料金・店舗は公式サイトでご確認ください）。",
 };
 
 const faqs = [
-  { q: "CLUB PILATESの料金プランは？", a: "公式情報では月4回プランが月額14,190円〜、月8回プランが月額22,990円〜が目安とされています。プラン構成・最新価格・キャンペーン適用後の金額はスタジオや時期で変わるため、申し込み前に公式サイトで必ずご確認ください（要確認）。" },
-  { q: "CLUB PILATESの口コミ・評判は良い？", a: "「レベル分けが明確で段階的にステップアップできる」「インストラクターの指導品質が安定している」「クラスの種類が多く飽きにくい」といった声が見られる一方、「料金はやや高め」「都市部中心で通えるエリアが限られる」という指摘もあります。評価は受講者の目的や住むエリアによって分かれます。" },
-  { q: "4段階のレベル分けとは？", a: "初心者向けから上級者向けまで複数段階にレベルが分かれており、入会時のレベルチェックをもとに自分に合ったクラスを案内してもらえる仕組みとされています。具体的なレベル区分や判定方法は変更される場合があるため、詳細は公式でご確認ください。" },
-  { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。体験料金や当日入会の特典はキャンペーン・スタジオで異なるため、公式サイトでご確認ください（要確認）。" },
-  { q: "男性も利用できますか？", a: "CLUB PILATESは男女ともに利用できるスタジオとされています。店舗ごとの運用が異なる場合があるため、念のため希望店舗でご確認ください。" },
-  { q: "海外店舗でも利用できますか？", a: "CLUB PILATESは米国発の世界規模で展開するブランドです。海外店舗の利用可否や条件はプラン・国・店舗により異なるため、利用を希望する場合は事前に公式でご確認ください（要確認）。" },
-  { q: "どんなクラスがありますか？", a: "リフォーマーを中心に、目的別の複数のクラス形式が用意されているとされています。提供クラスは店舗・時期で変わるため、最新のラインナップは公式でご確認ください。" },
-  { q: "初心者でも大丈夫ですか？", a: "はい、初心者でも参加できます。マシン（リフォーマー等）の使い方はインストラクターが案内し、レベル分けがあるため、マシンピラティスが初めての方でも始めやすい環境とされています。" },
-  { q: "予約方法は？", a: "公式サイトやアプリから希望のスタジオ・日時を選んで申し込むのが基本です。空き状況や予約システムはスタジオにより異なる場合があるため公式でご確認ください。" },
-  { q: "キャンセルはできますか？", a: "予約のキャンセル可否・期限・ペナルティの有無はプランやスタジオの規約によります。トラブルを避けるため、入会・予約前に公式の利用規約で確認することをおすすめします（要確認）。" },
+  { q: "CLUB PILATESの料金プランを教えてください。", a: "公式サイトでは月4回プランが月額14,190円〜、月8回プランが月額22,990円〜が目安とされています。プラン構成・最新価格・キャンペーン適用後の金額はスタジオや時期で変わるため、申し込み前に公式サイトでご確認ください。" },
+  { q: "CLUB PILATESの口コミ・評判はどうですか？", a: "「レベル分けが明確で段階的にステップアップできる」「インストラクターの指導品質が安定している」「クラスの種類が多く飽きにくい」といった声が見られる一方、「料金はやや高め」「都市部中心で通えるエリアが限られる」という指摘もあります。評価は受講者の目的やお住まいのエリアによって分かれます。" },
+  { q: "4段階のレベル分けとは何ですか？", a: "初心者向けから上級者向けまで複数段階にレベルが分かれており、入会時のレベルチェックをもとに自分に合ったクラスを案内される仕組みとされています。具体的なレベル区分や判定方法は変更される場合があるため、詳細は公式サイトでご確認ください。" },
+  { q: "体験レッスンはありますか？料金はいくらですか？", a: "はい、入会前に体験レッスンを受けられます。体験料金や当日入会の特典はキャンペーン・スタジオで異なるため、公式サイトでご確認ください。" },
+  { q: "男性も利用できますか？", a: "CLUB PILATESは男女ともに利用できるスタジオとされています。店舗ごとの運用が異なる場合があるため、希望する店舗でご確認ください。" },
+  { q: "海外店舗でも利用できますか？", a: "CLUB PILATESは米国発の世界規模で展開するブランドです。海外店舗の利用可否や条件はプラン・国・店舗により異なるため、利用を希望する場合は事前に公式サイトでご確認ください。" },
+  { q: "どのようなクラスがありますか？", a: "リフォーマーを中心に、目的別の複数のクラス形式が用意されているとされています。提供クラスは店舗・時期で変わるため、最新のラインナップは公式サイトでご確認ください。" },
+  { q: "初心者でも参加できますか？", a: "はい、初心者でも参加できます。マシン（リフォーマー等）の使い方はインストラクターが案内し、レベル分けがあるため、マシンピラティスが初めての方でも始めやすい環境とされています。" },
+  { q: "予約方法を教えてください。", a: "公式サイトやアプリから希望のスタジオ・日時を選んで申し込むのが基本です。空き状況や予約システムはスタジオにより異なる場合があるため、公式サイトでご確認ください。" },
+  { q: "キャンセルはできますか？", a: "予約のキャンセル可否・期限・ペナルティの有無はプランやスタジオの規約によります。入会・予約の前に、公式サイトの利用規約をご確認いただくことをおすすめします。" },
 ];
 
 const faqJsonLd = {
@@ -33,24 +33,24 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "レベル分けが明確で、段階的にステップアップしやすい",
-  "インストラクターの研修制度があり指導品質が安定しているとの声",
-  "クラスの種類が多く、飽きずに続けやすい",
-  "世界規模のブランドで、グローバル基準の安心感がある",
+  "レベル分けが明確で、段階的にステップアップしやすいとの声",
+  "インストラクターの研修制度があり、指導品質が安定しているとの声",
+  "クラスの種類が多く、飽きずに続けやすいとの声",
+  "世界規模のブランドであることへの安心感",
 ];
 
 const concernPoints = [
-  "料金はやや高めとの声がある",
-  "都市部中心の展開で、通えるエリアが限られる場合がある",
-  "人気店舗・時間帯は予約が埋まりやすいことがある",
-  "本格的に通うほどコストがかかるため、頻度との見合いが必要",
+  "料金がやや高めとの声",
+  "都市部中心の展開のため、通えるエリアが限られる場合がある点",
+  "人気店舗・時間帯は予約が埋まりやすい点",
+  "通う回数が増えるほど費用がかかるため、頻度とのバランスを考える必要がある点",
 ];
 
 const prices = [
-  { plan: "月4回プラン", price: "月額 14,190円〜（目安）", note: "公式で確認できる代表的な月額プラン。店舗・時期で変動の可能性。" },
-  { plan: "月8回プラン", price: "月額 22,990円〜（目安）", note: "通う頻度が高い人向け。最新価格は公式参照。" },
-  { plan: "プライベート／追加プラン", price: "要確認", note: "マンツーマンや追加レッスンの有無・価格は公式参照。" },
-  { plan: "体験レッスン", price: "要確認（キャンペーン有）", note: "料金・特典は時期で変動。申込時に公式で確認を。" },
+  { plan: "月4回プラン", price: "月額 14,190円〜（目安）", note: "公式サイトで確認できる代表的な月額プランです。店舗・時期により変動する場合があります。" },
+  { plan: "月8回プラン", price: "月額 22,990円〜（目安）", note: "通う頻度が高い方向けのプランです。最新価格は公式サイトをご確認ください。" },
+  { plan: "プライベート／追加プラン", price: "要確認", note: "マンツーマンや追加レッスンの有無・価格は公式サイトをご確認ください。" },
+  { plan: "体験レッスン", price: "要確認（キャンペーンあり）", note: "料金・特典は時期により変動します。申し込み時に公式サイトでご確認ください。" },
 ];
 
 export default function ClubPilatesReview() {
@@ -62,7 +62,7 @@ export default function ClubPilatesReview() {
       <section className="bg-[#F5F3FF] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">CLUB PILATES（クラブピラティス）の口コミ・料金・体験レッスンを解説</h1>
-          <p className="mt-3 text-gray-600">世界最大級のピラティスブランド。4段階レベル分けで段階的に上達できるマシンピラティスの評判をまとめました。</p>
+          <p className="mt-3 text-gray-600">世界最大級のピラティスブランドで、4段階のレベル分けにより段階的に上達できるマシンピラティススタジオです。当ページではその評判をまとめています。</p>
         </div>
       </section>
 
@@ -80,16 +80,16 @@ export default function ClubPilatesReview() {
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">結論：CLUB PILATESはこんな人に向いている</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">CLUB PILATESの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>の安心感と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は<strong>月4回14,190円〜・月8回22,990円〜（目安）</strong>。「体系的なカリキュラムでしっかり上達したい」「指導品質の安定したスタジオを選びたい」人に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲にあるなら、まず体験でレッスンの質と雰囲気を確かめる価値があります。
+              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>の安心感と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は<strong>月4回14,190円〜・月8回22,990円〜（目安）</strong>です。体系的なカリキュラムで着実に上達したい方や、指導品質の安定したスタジオを選びたい方に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲に店舗がある場合は、まず体験レッスンでレッスンの質と雰囲気をご確認いただくことをおすすめします。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>体系的に段階を踏んで上達したい人／指導品質を重視する人</li>
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>男女問わず通えるスタジオを探している人</li>
-              <li className="flex items-start gap-2"><span className="text-gray-400 font-bold">△</span>料金を最優先したい人／対象エリア外に住む人</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>段階を踏んで体系的に上達したい方／指導品質を重視する方</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>男女問わず通えるスタジオを探している方</li>
+              <li className="flex items-start gap-2"><span className="text-gray-400 font-bold">△</span>料金を最優先したい方／店舗のないエリアにお住まいの方</li>
             </ul>
-            <p className="mt-4 text-xs text-gray-500">※料金・体験特典・店舗の最新情報は変動するため、申し込み前に<a href="https://www.clubpilates.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>で必ずご確認ください。</p>
+            <p className="mt-4 text-xs text-gray-500">※料金・体験特典・店舗の最新情報は変動するため、申し込み前に<a href="https://www.clubpilates.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください。</p>
           </div>
         </div>
       </section>
@@ -103,8 +103,8 @@ export default function ClubPilatesReview() {
               <tbody>
                 {[
                   ["スタジオ名", "CLUB PILATES（クラブピラティス）"],
-                  ["月額料金", "月額14,190円〜（月4回プラン・目安／公式要確認）"],
-                  ["店舗", "米国発・世界規模で展開する大手ブランド。国内も主要都市を中心に展開（最新の店舗数・所在地は公式参照）"],
+                  ["月額料金", "月額14,190円〜（月4回プラン・目安／公式サイトで要確認）"],
+                  ["店舗", "米国発で世界規模に展開する大手ブランド。国内は主要都市を中心に展開（最新の店舗数・所在地は公式サイトで要確認）"],
                   ["レッスン形式", "マシングループレッスン（複数のクラス形式）"],
                   ["対象", "男女利用可"],
                   ["特徴", "段階的なレベル分け、研修を受けたインストラクターによる指導"],
@@ -136,7 +136,7 @@ export default function ClubPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">CLUB PILATESの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            CLUB PILATESの料金は月額制（回数制）が中心です。公式で確認できる代表的なプランは<strong>月4回・月額14,190円〜</strong>、<strong>月8回・月額22,990円〜</strong>が目安です。下表はあくまで<strong>目安</strong>で、店舗・時期・キャンペーンで変動します。最新の正確な金額は必ず公式でご確認ください。
+            CLUB PILATESの料金は月額制（回数制）が中心です。公式サイトで確認できる代表的なプランは<strong>月4回・月額14,190円〜</strong>、<strong>月8回・月額22,990円〜</strong>が目安です。下表はあくまで<strong>目安</strong>で、店舗・時期・キャンペーンで変動します。最新の正確な金額は公式サイトでご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
@@ -159,7 +159,7 @@ export default function ClubPilatesReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-            ※「要確認」の項目は、公式で価格が明示されていない／変動が大きいため記載を控えています。捏造を避けるため断定はしていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
+            ※「要確認」の項目は、公式サイトで価格が明示されていないか変動が大きいため、記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
       </section>
@@ -170,9 +170,9 @@ export default function ClubPilatesReview() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">CLUB PILATESの強み</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { title: "グローバルブランド", desc: "世界規模で展開する大手ブランドならではの安心感と運営ノウハウ" },
-              { title: "段階的レベルシステム", desc: "初心者から上級者まで、レベルに応じたクラスで段階的に上達できる" },
-              { title: "安定した指導品質", desc: "研修を受けたインストラクターが指導し、品質のばらつきが少ないとの声" },
+              { title: "グローバルブランド", desc: "世界規模で展開する大手ブランドとしての安心感と運営ノウハウがあります。" },
+              { title: "段階的レベルシステム", desc: "初心者から上級者まで、レベルに応じたクラスで段階的に上達できます。" },
+              { title: "安定した指導品質", desc: "研修を受けたインストラクターが指導しており、品質のばらつきが少ないとの声があります。" },
             ].map((s) => (
               <div key={s.title} className="bg-[#F5F3FF] rounded-xl p-5">
                 <h3 className="font-bold text-[#7C3AED] mb-2">{s.title}</h3>
@@ -188,7 +188,7 @@ export default function ClubPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">CLUB PILATESの口コミ・評判の傾向</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-6">
-            CLUB PILATESの口コミ・評判には、良い面と気になる面の両方が見られます。ここでは個別の口コミを引用するのではなく、傾向を中立的に整理しました（評価には個人差があります）。
+            CLUB PILATESの口コミ・評判には、良い面と気になる面の両方が見られます。ここでは個別の口コミを引用せず、傾向を中立的に整理しています（評価には個人差があります）。
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-6 border border-green-100">
@@ -208,7 +208,7 @@ export default function ClubPilatesReview() {
               </ul>
             </div>
           </div>
-          <p className="mt-5 text-xs text-gray-500">※上記は公開情報や一般的な傾向をもとにした編集部による整理です。実際の感じ方には個人差があるため、体験レッスンで自分に合うか確かめるのが確実です。</p>
+          <p className="mt-5 text-xs text-gray-500">※上記は公開情報や一般的な傾向をもとに編集部が整理したものです。実際の感じ方には個人差があるため、体験レッスンでご自身に合うかをご確認いただくことをおすすめします。</p>
         </div>
       </section>
 
@@ -227,10 +227,10 @@ export default function ClubPilatesReview() {
               CLUB PILATESは、世界規模で展開するグローバルブランドとしての実績と、体系化されたレベルシステムが最大の魅力です。段階的にステップアップできる仕組みは、「ピラティスを腰を据えて続けたい」「上達を実感しながら通いたい」方にとって大きな価値があります。研修制度を背景にした指導品質の安定感も、初めての方が安心して始めやすいポイントです。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              同じマシンピラティスのピラティスKやthe SILKが女性専用・空間演出やボディメイクで個性を出すのに対し、CLUB PILATESは男女利用可で、体系的なカリキュラムとブランドの安定感で差別化しています。zen place pilatesの手頃さと比べると料金はやや高めですが、レベル分けやクラスの幅を重視する人には選びやすい構成です。
+              同じマシンピラティスのピラティスKやthe SILKが女性専用・空間演出やボディメイクで個性を出すのに対し、CLUB PILATESは男女利用可で、体系的なカリキュラムとブランドの安定感で差別化しています。zen place pilatesの手頃さと比べると料金はやや高めですが、レベル分けやクラスの幅を重視する方には選びやすい構成です。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              編集部としての率直な評価は、CLUB PILATESは「品質と継続的な上達を重視する方」に向くスタジオ、というものです。一方で料金はやや高めで、都市部中心の展開のため、対象エリア在住かどうかとコストの見合いが選択の分かれ目になります。まずは体験レッスンでレッスンの質と雰囲気を確かめることをおすすめします。
+              編集部の評価としては、CLUB PILATESは品質と継続的な上達を重視する方に向いたスタジオです。一方で料金はやや高めで、都市部中心の展開のため、通える範囲に店舗があるかどうかと、費用とのバランスが判断の分かれ目になります。まずは体験レッスンでレッスンの質と雰囲気を確かめることをおすすめします。
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function ClubPilatesReview() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>レベルに合ったレッスンを受けられる</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>指導品質が安定しているとの声</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>多様なクラス形式で飽きにくい</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>多様なクラス形式があり飽きにくい</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">
@@ -254,7 +254,7 @@ export default function ClubPilatesReview() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>料金がやや高め</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>都市部中心の店舗展開</li>
-                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>人気枠は予約が取りづらいことも</li>
+                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>人気時間帯の予約の取りづらさ</li>
               </ul>
             </div>
           </div>
@@ -266,16 +266,16 @@ export default function ClubPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">CLUB PILATESの体験レッスンの流れ・予約方法</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            CLUB PILATESは世界規模で展開するマシンピラティスのブランドで、国内も主要都市を中心に展開しています。入会前に<strong>体験レッスン</strong>を受けられるので、レベル分けされたレッスンの質や雰囲気を確かめてから検討できます。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティス未経験でも安心です。
+            CLUB PILATESは世界規模で展開するマシンピラティスのブランドで、国内も主要都市を中心に展開しています。入会前に<strong>体験レッスン</strong>を受けられるため、レベル分けされたレッスンの質や雰囲気を確かめてから検討できます。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティスの経験がない方でも参加できます。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
             <li><strong>予約する</strong>：公式サイトやアプリから希望のスタジオと日時を選んで申し込みます。</li>
-            <li><strong>来店・カウンセリング</strong>：当日は動きやすい服装で来店。目的や体の悩みをヒアリングしてもらえます。</li>
+            <li><strong>来店・カウンセリング</strong>：当日は動きやすい服装で来店します。目的や体の悩みについてヒアリングを受けます。</li>
             <li><strong>体験レッスン</strong>：インストラクターの指導でリフォーマー等のマシンを体験します。</li>
-            <li><strong>説明・入会案内</strong>：料金プランの説明を受けます。その場で入会しなくても問題ありません。</li>
+            <li><strong>説明・入会案内</strong>：料金プランの説明を受けます。その場で入会する必要はありません。</li>
           </ol>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <h3 className="text-sm font-bold text-gray-800 mb-2">予約・体験前に確認したいこと（要確認）</h3>
+            <h3 className="text-sm font-bold text-gray-800 mb-2">予約・体験前の確認事項</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金・当日入会の特典（キャンペーンで変動）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／靴下のレンタルや購入の要否</li>
@@ -290,11 +290,11 @@ export default function ClubPilatesReview() {
       {/* 口コミの傾向(編集部要約) */}
       <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向——実際の口コミを読んだ編集部要約(2026年9月5日取得)</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">口コミの傾向（実際の口コミをもとにした編集部の要約・2026年9月5日取得）</h2>
           <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 text-sm leading-relaxed text-gray-700">
-            <p><span className="font-semibold text-emerald-700">よく褒められている点</span>——他ブランドと比べて特徴的なのは「通い始めて1年」「2年お世話になっている」といった<span className="font-semibold">長期継続者の声が多い</span>ことです。「自分に合ったレベルのクラスを選べるので初心者でも続けられる」というレベル別クラス制への評価、朝7時台からのレッスン枠を歓迎する声もあります。</p>
-            <p><span className="font-semibold text-rose-700">気になる声</span>——「インストラクターによってレッスンのテンポが合わない」という相性面の低評価があります。またスタッフから口コミ投稿を依頼されたという言及もあるため、件数・評点は参考程度に見て、体験レッスンでの相性確認を重視するのがおすすめです。</p>
-            <p className="text-xs text-gray-400">※Googleマップの複数店舗(五日市・南森町ほか)の直近口コミをPlaces APIで取得して編集部が読み、傾向を要約したものです(本文の転載はしていません)。個々の体験は店舗・時期により異なります。</p>
+            <p><span className="font-semibold text-emerald-700">評価されている点</span>：他ブランドと比べて特徴的なのは「通い始めて1年」「2年お世話になっている」といった<span className="font-semibold">長期継続者の声が多い</span>ことです。「自分に合ったレベルのクラスを選べるので初心者でも続けられる」というレベル別クラス制への評価、朝7時台からのレッスン枠を歓迎する声もあります。</p>
+            <p><span className="font-semibold text-rose-700">気になる声</span>：「インストラクターによってレッスンのテンポが合わない」という相性面の低評価があります。また、スタッフから口コミ投稿を依頼されたという言及もあるため、口コミ件数・評点は参考程度にとどめ、体験レッスンで相性を確認することをおすすめします。</p>
+            <p className="text-xs text-gray-400">※Googleマップの複数店舗(五日市・南森町ほか)の直近の口コミをPlaces APIで取得し、編集部が内容を確認して傾向を要約したものです（本文の転載は行っていません）。個々の体験は店舗・時期により異なります。</p>
           </div>
         </div>
       </section>
@@ -318,12 +318,12 @@ export default function ClubPilatesReview() {
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-4">CLUB PILATESの体験レッスンに申し込む</h2>
-          <p className="text-gray-600 text-sm mb-6">世界基準のピラティスを体験してみましょう。まずは体験でレッスンの質を確かめてみましょう。</p>
+          <p className="text-gray-600 text-sm mb-6">まずは体験レッスンで、レッスンの質をご確認いただくことをおすすめします。</p>
           <a href="https://www.clubpilates.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors">
-            公式サイトはこちら
+            公式サイトを見る
           </a>
           <div className="mt-10">
-            <h3 className="text-sm font-semibold text-gray-700 mb-3">他のスタジオも比較する</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">他のスタジオと比較する</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
                 { name: "zen place pilates", href: "/review/zenplace/" },

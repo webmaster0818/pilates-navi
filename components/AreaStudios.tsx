@@ -48,9 +48,9 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <p className="text-gray-600 leading-relaxed mb-2">
-        {areaName}の実在ピラティススタジオを、<strong>Googleマップの実データ（評点・口コミ件数）</strong>をもとに口コミ件数順で掲載しています（{surveyedAt}取得・全{all.length}スタジオを調査し、口コミ10件以上の{studios.length}スタジオを中心に掲載）。評点・件数は当サイトの創作ではなくGoogleマップ上の実数です。料金・キャンペーンは変動が大きいため、各スタジオの公式サイトでご確認ください。
+        {areaName}の実在ピラティススタジオを、<strong>Googleマップの実測データ（評点・口コミ件数）</strong>をもとに、口コミ件数順に掲載しています（{surveyedAt}取得。全{all.length}スタジオを調査し、口コミ10件以上の{studios.length}スタジオを中心に掲載しています）。評点・口コミ件数は、Googleマップに表示された数値を転記したものです。料金・キャンペーンは変更されることが多いため、ご利用前に各スタジオの公式サイトにて最新情報をご確認ください。
       </p>
-      <p className="text-xs text-gray-400 mb-8">出典: Google マップ（Google Places API・{surveyedAt}時点）。掲載順=口コミ件数順。評点・件数はその後変動している場合があります。</p>
+      <p className="text-xs text-gray-400 mb-8">出典：Googleマップ（Google Places API・{surveyedAt}時点）。掲載順は口コミ件数順です。評点・口コミ件数は、取得後に変動している場合があります。</p>
 
       <div className="space-y-4">
         {studios.map((s, i) => {
@@ -64,7 +64,7 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
                 const points: string[] = [];
                 points.push(`${areaName}の収録スタジオで口コミ件数${i + 1}位(${s.count}件)`);
                 if (typeof s.rating === "number") points.push(`評点${s.rating.toFixed(1)}(エリア平均${avgRating.toFixed(2)}と比べて${s.rating >= avgRating ? "同等以上" : "低め"})`);
-                if (brand) points.push("当サイトで詳しく調査済みの大手ブランド店舗");
+                if (brand) points.push("当サイトで詳細レビューを掲載している大手ブランドの店舗");
                 return (
                   <>
                     <p className="text-xs text-gray-400 font-bold">#{i + 1}</p>
@@ -115,7 +115,7 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
       {minor.length > 0 && (
         <div className="mt-10">
           <h2 className="font-bold text-xl text-gray-800 mb-2">そのほかの{areaName}のピラティススタジオ</h2>
-          <p className="text-xs text-gray-400 mb-4">Google口コミ3〜9件のスタジオ（{surveyedAt}時点・実在確認済み）。評価がまだ少ないため、詳細はGoogleマップと公式サイトでご確認ください。</p>
+          <p className="text-xs text-gray-400 mb-4">Googleの口コミが3〜9件のスタジオです（{surveyedAt}時点・実在確認済み）。口コミ件数が少ないため、詳細はGoogleマップと公式サイトでご確認ください。</p>
           <ul className="divide-y divide-gray-100 bg-white rounded-2xl border border-gray-200">
             {minor.map((s, i) => (
               <li key={s.name + i} className="p-4 flex items-start justify-between gap-3 flex-wrap">
@@ -148,7 +148,7 @@ export default function AreaStudios({ area, areaName, addressFilter, surveyedAtO
       )}
 
       <div className="mt-10 bg-rose-50 rounded-2xl p-6 border border-rose-100">
-        <p className="font-bold text-gray-800 mb-2">スタジオ選びに迷ったら</p>
+        <p className="font-bold text-gray-800 mb-2">スタジオ選びの参考情報</p>
         <p className="text-sm text-gray-600 leading-relaxed">
           大手ブランドは当サイトで料金・プログラムを詳しく解説しています。
           <Link href="/price-comparison/" className="text-rose-600 underline mx-1">主要スタジオの料金比較</Link>や

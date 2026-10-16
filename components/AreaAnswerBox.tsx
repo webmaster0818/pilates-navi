@@ -45,15 +45,14 @@ export default function AreaAnswerBox({
 
   return (
     <section className="mb-10 rounded-2xl border border-[#7C3AED]/30 bg-violet-50/60 p-5 sm:p-6" aria-label={`${areaName}のピラティス 要点`}>
-      <p className="text-sm font-bold text-[#7C3AED]">結論：{areaName}のピラティススタジオ選び</p>
+      <p className="text-sm font-bold text-[#7C3AED]">{areaName}のピラティススタジオの概要</p>
       <ul className="mt-3 space-y-2 text-sm text-gray-700 leading-relaxed list-disc pl-5">
         <li>
-          {areaName}で当サイトが掲載しているピラティススタジオは<strong>{listed.length}店</strong>
-          （Googleマップ実データ・口コミ3件以上の店舗・{jpDate(surveyedAt)}時点）。
+          {areaName}で当サイトが掲載しているピラティススタジオは<strong>{listed.length}店</strong>です（Googleマップの実測データにもとづく口コミ3件以上の店舗・{jpDate(surveyedAt)}時点）。
         </li>
         {top.length > 0 && (
           <li>
-            口コミ件数が多いのは
+            口コミ件数が多いスタジオは、
             {top.map((s, i) => (
               <span key={s.name}>
                 {i > 0 && "、"}
@@ -61,7 +60,7 @@ export default function AreaAnswerBox({
                 {typeof s.rating === "number" ? `（★${s.rating.toFixed(1)}・${s.count}件）` : `（${s.count}件）`}
               </span>
             ))}
-            。
+            です。
           </li>
         )}
         {distTop.length > 1 && (
@@ -71,12 +70,12 @@ export default function AreaAnswerBox({
         )}
         {placeCounts.length > 0 && (
           <li>
-            店名・住所に{placeCounts.map(({ p, n }) => `「${p}」を含む店舗${n}店`).join("、")}。
+            店名・住所に{placeCounts.map(({ p, n }) => `「${p}」を含む店舗は${n}店`).join("、")}です。
           </li>
         )}
         {(machine > 0 || personal > 0) && (
           <li>
-            店名に「マシン」を掲げるスタジオ{machine}店、「パーソナル・プライベート・個室」を掲げるスタジオ{personal}店（店名の表記で集計。実際のレッスン形態は各公式サイトでご確認ください）。
+            店名に「マシン」を含むスタジオは{machine}店、「パーソナル・プライベート・個室」を含むスタジオは{personal}店です（店名の表記で集計しています。実際のレッスン形態は各公式サイトでご確認ください）。
           </li>
         )}
       </ul>
@@ -109,8 +108,8 @@ export default function AreaAnswerBox({
             </table>
           </div>
           <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
-            料金・体験は{FACTS_SURVEYED_AT}に各ブランドの公式サイトで確認した記載です（店舗・キャンペーンで変わる場合があります）。
-            入会金や毎月の固定費は<Link href="/price-comparison/" className="underline">料金比較</Link>で並べています。
+            料金・体験は{FACTS_SURVEYED_AT}に各ブランドの公式サイトで確認した内容です（店舗やキャンペーンにより異なる場合があります）。
+            入会金や毎月の固定費は、<Link href="/price-comparison/" className="underline">料金比較</Link>のページに掲載しています。
           </p>
         </div>
       )}

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s｜ピラテス",
   },
   description:
-    "主要ピラティスブランド9社の徹底比較と、全国35都市1,936スタジオのGoogleマップ実測データ。zen place pilates、ピラティスK、CLUB PILATESなど人気スタジオの料金・口コミ・特徴からぴったりのスタジオが見つかります。",
+    "主要ピラティスブランド9社の料金・特徴の比較と、全国35都市1,936スタジオのGoogleマップ実測データを掲載しています。zen place pilates、ピラティスK、CLUB PILATESなど主要スタジオの料金・口コミ・特徴をもとに、目的に合ったスタジオ選びを支援します。",
   metadataBase: new URL("https://pilatest.com"),
   alternates: { canonical: "./" },
   openGraph: {
@@ -39,7 +39,7 @@ const navLinks = [
   { href: "/", label: "ランキング" },
   { href: "/#area", label: "エリア別" },
   { href: "/#type", label: "タイプ別" },
-  { href: "/faq/", label: "お役立ち" },
+  { href: "/faq/", label: "よくある質問" },
 ];
 
 export default function RootLayout({
@@ -71,7 +71,7 @@ export default function RootLayout({
               <div>
                 <span className="text-lg font-bold text-white">ピラテス</span>
                 <p className="mt-2 text-sm text-gray-400">
-                  あなたに合ったピラティススタジオが見つかる比較サイト
+                  目的に合ったピラティススタジオ選びを支援する比較サイトです。
                 </p>
               </div>
               <div>

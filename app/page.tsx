@@ -36,89 +36,89 @@ const studios = [
   {
     rank: 1,
     name: "zen place pilates",
-    tagline: "マットもマシンも。全国100店舗以上の実力派",
+    tagline: "マット・マシンの両方に対応し、全国100店舗以上を展開しています。",
     monthlyFee: "月額9,625円〜",
     features: ["全国100店舗以上", "マット・マシン両対応", "少人数制レッスン", "オンラインレッスンあり"],
     pros: ["業界最安級の料金設定", "全店舗相互利用が可能", "初心者からプロまで対応"],
-    cons: ["店舗によって設備差がある", "人気の時間帯は予約が取りにくい"],
-    recommend: "コスパ重視で長く通いたい方におすすめ",
+    cons: ["店舗による設備の差", "人気の時間帯は予約が取りにくい傾向"],
+    recommend: "費用を抑えて長く通いたい方におすすめです。",
     slug: "zenplace", reviewPath: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/",
   },
   {
     rank: 2,
     name: "ピラティスK",
-    tagline: "女性専用マシンピラティスで理想のボディへ",
+    tagline: "女性専用のマシンピラティススタジオで、ボディメイクに取り組めます。",
     monthlyFee: "月額11,220円〜",
     features: ["女性専用マシンピラティス", "0円体験レッスン", "おしゃれな内装", "全身ボディメイク特化"],
-    pros: ["体験レッスンが無料", "女性専用で安心", "SNS映えする空間"],
-    cons: ["男性は利用不可", "店舗数がまだ限られる"],
-    recommend: "おしゃれな空間で楽しくボディメイクしたい女性におすすめ",
+    pros: ["体験レッスンが無料", "女性専用で安心して通える環境", "内装にこだわった空間"],
+    cons: ["男性は利用不可", "店舗数が限られる点"],
+    recommend: "内装にこだわった空間でボディメイクに取り組みたい女性におすすめです。",
     slug: "pilates-k", reviewPath: "/review/pilates-k/", url: "https://pilates-k.jp/",
   },
   {
     rank: 3,
     name: "CLUB PILATES",
-    tagline: "世界最大級。4段階レベル分けで確実に上達",
+    tagline: "世界最大級のピラティスブランドで、4段階のレベル別に段階的に学べます。",
     monthlyFee: "月額14,190円〜",
     features: ["世界最大級のピラティスブランド", "4段階のレベル分け", "全インストラクター有資格者", "8種類のクラス形式"],
-    pros: ["レベルに合ったレッスンを受けられる", "グローバル基準の高品質", "多様なレッスン形式"],
+    pros: ["レベルに合ったレッスンを受けられる点", "グローバル基準のレッスン体系", "多様なレッスン形式"],
     cons: ["料金がやや高め", "都市部中心の店舗展開"],
-    recommend: "段階的にレベルアップしたい方におすすめ",
+    recommend: "段階的にレベルアップしたい方におすすめです。",
     slug: "club-pilates", reviewPath: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/",
   },
   {
     rank: 4,
     name: "the SILK",
-    tagline: "音楽と照明が彩る非日常のピラティス体験",
+    tagline: "音楽と照明を演出に取り入れた、女性専用のマシンピラティススタジオです。",
     monthlyFee: "月額12,280円〜",
-    features: ["女性専用スタジオ", "全店駅チカ立地", "音楽×照明の非日常空間", "マシンピラティス専門"],
-    pros: ["駅から近くて通いやすい", "モチベーションが上がる空間演出", "女性専用で集中できる"],
-    cons: ["店舗数が少ない", "男性は利用不可"],
-    recommend: "日常を忘れて没頭できる空間を求める方におすすめ",
+    features: ["女性専用スタジオ", "全店が駅近の立地", "音楽と照明による空間演出", "マシンピラティス専門"],
+    pros: ["駅から近く通いやすい立地", "意欲を保ちやすい空間演出", "女性専用で集中しやすい環境"],
+    cons: ["店舗数が少ない点", "男性は利用不可"],
+    recommend: "レッスンに集中できる空間を求める方におすすめです。",
     slug: "the-silk", reviewPath: "/review/the-silk/", url: "https://the-silk.co.jp/",
   },
   {
     rank: 5,
     name: "BDC PILATES",
-    tagline: "プロダンサー考案。少人数制マシン専門スタジオ",
+    tagline: "プロダンサーが考案したメソッドを採用する、少人数制のマシンピラティス専門スタジオです。",
     monthlyFee: "月額14,850円〜",
     features: ["マシンピラティス専門", "プロダンサー考案メソッド", "少人数制（最大8名）", "体幹強化に特化"],
-    pros: ["プロ考案の独自メソッド", "少人数で丁寧な指導", "しなやかな身体づくりに最適"],
+    pros: ["プロ考案の独自メソッド", "少人数で丁寧な指導", "しなやかな身体づくりに適したプログラム"],
     cons: ["店舗が東京に集中", "料金が高め"],
-    recommend: "しなやかで美しい身体を目指す方におすすめ",
+    recommend: "しなやかで美しい身体を目指す方におすすめです。",
     slug: "bdc", reviewPath: "/review/bdc/", url: "https://bdcpilates.com/",
   },
   {
     rank: 6,
     name: "BREST PILATES & BODYMAKE",
-    tagline: "マシンピラティス×ウェイトの30分パーソナル（30才からのボディメイク）",
+    tagline: "マシンピラティスとウェイトトレーニングを組み合わせた、1回30分のパーソナルレッスンです（30才からのボディメイク）。",
     monthlyFee: "要問い合わせ",
     features: ["マシンピラティス×ウェイト", "1回30分のパーソナル", "都度払い6,380円", "URBAN CLASSIC通い放題"],
-    pros: ["短時間でピラティスと筋トレを両立", "URBAN CLASSIC PILATESが全店追加料金なし", "都度払いも選べる"],
-    cons: ["営業中は11店舗（2026年10月）", "月会費は店舗・時期で変動し公式に金額表示なし"],
-    recommend: "短時間のパーソナルでボディメイクしたい方におすすめ",
+    pros: ["短時間でピラティスと筋トレを両立", "URBAN CLASSIC PILATESを全店追加料金なしで利用可能", "都度払いも選択可能"],
+    cons: ["営業中は11店舗（2026年10月）", "月会費は店舗・時期により異なり、公式サイトに金額の記載なし"],
+    recommend: "短時間のパーソナルレッスンでボディメイクに取り組みたい方におすすめです。",
     slug: "brest", reviewPath: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727",
   },
   {
     rank: 7,
     name: "URBAN CLASSIC PILATES",
-    tagline: "予約不要・30分のマシンピラティス×サーキット",
+    tagline: "予約不要で、1回30分のマシンピラティスをサーキット形式で行います。",
     monthlyFee: "要問い合わせ",
     features: ["予約不要", "1回30分", "サーキット形式", "全国101店舗相互利用"],
-    pros: ["予約なしで空いた時間に通える", "30分で終わり続けやすい", "店舗数が多く全店舗相互利用"],
-    cons: ["月会費は店舗・時期で変動し公式に金額表示なし", "退会は来店のみ・5日締め"],
-    recommend: "決まった時間に通えない方・運動習慣をつけたい方におすすめ",
+    pros: ["予約なしで空いた時間に通える点", "1回30分で継続しやすい点", "店舗数が多く、全店舗を相互利用できる点"],
+    cons: ["月会費は店舗・時期により異なり、公式サイトに金額の記載なし", "退会は来店のみ・5日締め"],
+    recommend: "決まった時間に通うことが難しい方、運動習慣をつけたい方におすすめです。",
     slug: "urban-classic", reviewPath: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727",
   },
   {
     rank: 8,
     name: "メルメイク",
-    tagline: "完全個室のパーソナルマシンピラティス（名古屋・福岡）",
+    tagline: "完全個室で受けられる、パーソナル形式のマシンピラティスです（名古屋・福岡）。",
     monthlyFee: "50分×月2回 17,300円〜",
     features: ["完全個室", "マンツーマン", "月謝制", "24時間営業のジム併設"],
-    pros: ["完全個室で周りの目を気にしない", "オーダーメイドプラン", "マンツーマン指導"],
-    cons: ["グループ型より1回あたりが高い", "ピラティス対応は名古屋2店・福岡西新のみ"],
-    recommend: "人目を気にせずマンツーマンで指導を受けたい方におすすめ",
+    pros: ["完全個室で周囲の目を気にせず受けられる点", "オーダーメイドプラン", "マンツーマン指導"],
+    cons: ["グループ型より1回あたりの料金が高い点", "ピラティス対応は名古屋2店・福岡西新のみ"],
+    recommend: "周囲の目を気にせず、マンツーマンで指導を受けたい方におすすめです。",
     slug: "melmake", reviewPath: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727",
   },
 ];
@@ -126,11 +126,11 @@ const studios = [
 const faqs = [
   { q: "ピラティスとヨガの違いは何ですか？", a: "ピラティスは体幹（インナーマッスル）の強化を重視したエクササイズで、リハビリから発展しました。ヨガは呼吸法や瞑想を含むホリスティックなアプローチです。ピラティスはより筋力トレーニングに近く、姿勢改善やボディメイクに効果的です。" },
   { q: "ピラティスの効果はどのくらいで実感できますか？", a: "個人差はありますが、週1〜2回のレッスンで1〜2ヶ月程度で姿勢の変化を実感する方が多いです。3ヶ月以上継続すると、体型の変化や柔軟性の向上を感じやすくなります。" },
-  { q: "マットピラティスとマシンピラティスの違いは？", a: "マットピラティスは自体重を使ってマットの上で行います。マシンピラティスはリフォーマーなどの専用器具を使い、バネの負荷で効率的にインナーマッスルを鍛えられます。初心者にはマシンピラティスがおすすめです。" },
+  { q: "マットピラティスとマシンピラティスの違いは何ですか？", a: "マットピラティスは自体重を使ってマットの上で行います。マシンピラティスはリフォーマーなどの専用器具を使い、バネの負荷で効率的にインナーマッスルを鍛えられます。初心者にはマシンピラティスがおすすめです。" },
   { q: "ピラティスは初心者でも大丈夫ですか？", a: "はい、ピラティスは年齢や運動経験を問わず始められます。もともとリハビリとして開発されたメソッドなので、運動が苦手な方でも無理なく取り組めます。多くのスタジオで初心者向けクラスが用意されています。" },
-  { q: "ピラティススタジオの月額料金の相場は？", a: "グループレッスンの場合、月4回で9,000円〜15,000円程度が相場です。通い放題プランは15,000円〜20,000円程度。プライベートレッスンは1回8,000円〜15,000円が目安です。" },
-  { q: "体験レッスンは受けた方がいいですか？", a: "はい、必ず体験レッスンを受けることをおすすめします。スタジオの雰囲気、インストラクターとの相性、設備の充実度などは実際に行ってみないとわかりません。多くのスタジオで無料〜1,000円程度で体験できます。" },
-  { q: "ピラティスに通う頻度はどのくらいがベスト？", a: "初心者は週1〜2回から始めるのがおすすめです。慣れてきたら週2〜3回に増やすとより効果を実感しやすくなります。ジョセフ・ピラティスは「週3回で身体が変わる」と述べています。" },
+  { q: "ピラティススタジオの月額料金の相場はいくらですか？", a: "グループレッスンの場合、月4回で9,000円〜15,000円程度が相場です。通い放題プランは15,000円〜20,000円程度。プライベートレッスンは1回8,000円〜15,000円が目安です。" },
+  { q: "体験レッスンは受けたほうがよいですか？", a: "入会前に体験レッスンを受けることをおすすめします。スタジオの雰囲気、インストラクターとの相性、設備の充実度などは、実際に体験しなければ判断が難しいためです。多くのスタジオで無料〜1,000円程度で体験できます。" },
+  { q: "ピラティスに通う頻度はどのくらいが適切ですか？", a: "初心者は週1〜2回から始めるのがおすすめです。慣れてきたら週2〜3回に増やすとより効果を実感しやすくなります。ジョセフ・ピラティスは「週3回で身体が変わる」と述べています。" },
   { q: "ピラティスで痩せることはできますか？", a: "ピラティスは直接的な有酸素運動ではありませんが、インナーマッスルを鍛えることで基礎代謝が上がり、痩せやすい身体づくりに効果的です。姿勢改善により見た目の変化も期待できます。食事管理と組み合わせるとより効果的です。" },
 ];
 
@@ -165,10 +165,10 @@ export default function HomePage() {
         <div className="pl-hero-inner max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <p className="pl-eyebrow">PILATES STUDIO GUIDE</p>
           <h1 className="pl-h1 mt-4 text-[var(--ink)] max-w-xl">
-            あなたに合った<br className="hidden sm:block" />ピラティススタジオが見つかる
+            目的に合った<br className="hidden sm:block" />ピラティススタジオ選びを支援します
           </h1>
           <p className="mt-5 max-w-xl text-[15px] leading-[1.9] text-[var(--ink-2)]">
-            主要9ブランドの料金・特徴比較と、全国35都市1,936スタジオのGoogleマップ実測データ（2026年9月2日時点）で、最適なスタジオ選びをサポートします。
+            当サイトでは、主要9ブランドの料金・特徴の比較と、全国35都市1,936スタジオのGoogleマップ実測データ（2026年9月2日時点）をもとに、スタジオ選びに役立つ情報を掲載しています。
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#area" className="pl-btn pl-btn-primary">
@@ -185,12 +185,12 @@ export default function HomePage() {
           この3本をヒーロー直後に固定で置く(施主指示 2026-09-30) */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
-          <p className="text-center text-sm text-gray-500 mb-4">スタジオ選びで迷いやすい3点から探せます</p>
+          <p className="text-center text-sm text-gray-500 mb-4">スタジオ選びで重視されることの多い3つの観点から探せます</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { href: "#area", ico: "map", t: "エリアで選ぶ", d: "全35都市・1,936スタジオの実測データから、通える範囲のスタジオを一覧で見る", ext: false },
-              { href: "/price-comparison/", ico: "yen", t: "料金で選ぶ", d: "月額だけでなく、入会金・毎月の固定費・体験料まで公式実査値で比べる", ext: true },
-              { href: "#ranking", ico: "machine", t: "サービス内容で選ぶ", d: "マシン／マット、グループ／セミパーソナル、女性専用かどうかで絞り込む", ext: false },
+              { href: "#area", ico: "map", t: "エリアで選ぶ", d: "全35都市・1,936スタジオの実測データから、通える範囲のスタジオを一覧で確認できます", ext: false },
+              { href: "/price-comparison/", ico: "yen", t: "料金で選ぶ", d: "月額に加え、入会金・毎月の固定費・体験料まで、公式サイトで確認した金額で比較できます", ext: true },
+              { href: "#ranking", ico: "machine", t: "サービス内容で選ぶ", d: "マシン・マット、グループ・セミパーソナル、女性専用かどうかで比較できます", ext: false },
             ].map((x) =>
               x.ext ? (
                 <Link key={x.t} href={x.href} className="pl-tile p-5">
@@ -215,9 +215,9 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { num: "9ブランド", label: "詳細レビュー", ico: "check" },
+              { num: "11ブランド", label: "詳細レビュー", ico: "check" },
               { num: "35都市", label: "エリア別一覧", ico: "map" },
-              { num: "1,936件", label: "実在スタジオDB", ico: "building" },
+              { num: "1,936件", label: "収録スタジオ", ico: "building" },
               { num: "1,412件", label: "スタジオ詳細ページ", ico: "chat" },
             ].map((stat) => (
               <div key={stat.label} className="pl-card p-6 bg-[var(--brand-wash)]">
@@ -240,7 +240,7 @@ export default function HomePage() {
             <p className="pl-eyebrow">AREA</p>
             <h2 className="pl-h2 mt-3 text-[var(--ink)]">エリアからスタジオを探す</h2>
             <p className="pl-lead mt-3 max-w-2xl mx-auto">
-              Googleマップの実データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。
+              Googleマップの実測データ（評点・口コミ件数）をもとに、エリア別の実在スタジオを一覧で比較できます。
               かっこ内は当サイトが収録しているスタジオ数です（2026年9月2日時点）。
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function HomePage() {
           </div>
 
           <p className="mt-8 text-center">
-            <Link href="/area/" className="pl-btn pl-btn-outline pl-btn-sm">エリア一覧をまとめて見る</Link>
+            <Link href="/area/" className="pl-btn pl-btn-outline pl-btn-sm">エリア一覧を見る</Link>
           </p>
         </div>
       </section>
@@ -381,7 +381,7 @@ export default function HomePage() {
       <section className="pl-on-wash py-16 bg-[var(--brand-wash)] border-y border-[var(--brand-line)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <h2 className="pl-h2 text-[var(--ink)] text-center mb-4">スタジオ一覧</h2>
-          <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます</p>
+          <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます。</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { name: "Rintosull(リントスル)", slug: "rintosull", desc: "LAVA系列、当サイト収録58店舗の大型チェーン", href: "/review/rintosull/", url: "https://rintosull.jp/" },
@@ -389,9 +389,9 @@ export default function HomePage() {
               { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/" },
               { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/", url: "https://pilates-k.jp/" },
               { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/" },
-              { name: "the SILK", slug: "the-silk", desc: "女性専用、全店駅チカ、非日常空間", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
+              { name: "the SILK", slug: "the-silk", desc: "女性専用・全店駅近・音楽と照明による空間演出", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
               { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/", url: "https://bdcpilates.com/" },
-              { name: "Celestia", slug: "celestia", desc: "セミパーソナル、マシン専門、手ぶらOK", href: "/review/celestia/", url: "https://celes-pilates.jp/" },
+              { name: "Celestia", slug: "celestia", desc: "セミパーソナル・マシン専門・手ぶらで通える", href: "/review/celestia/", url: "https://celes-pilates.jp/" },
               { name: "BREST PILATES & BODYMAKE", slug: "brest", desc: "30分のピラティス×ウェイトのパーソナル", href: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727" },
               { name: "URBAN CLASSIC PILATES", slug: "urban-classic", desc: "予約不要・30分のサーキット", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
               { name: "メルメイク", slug: "melmake", desc: "完全個室のパーソナルピラティス", href: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" },
@@ -460,10 +460,10 @@ export default function HomePage() {
             />
             <div className="p-7 sm:p-9 flex flex-col justify-center">
               <p className="pl-eyebrow">FIRST STEP</p>
-              <h2 className="pl-h2 mt-3 text-[var(--ink)]">まずは体験レッスンから始めよう</h2>
+              <h2 className="pl-h2 mt-3 text-[var(--ink)]">体験レッスンのおすすめ</h2>
               <p className="pl-lead mt-3">
-                気になるスタジオが見つかったら、まずは体験レッスンに申し込んでみましょう。
-                実際の雰囲気やインストラクターとの相性を確認できます。
+                気になるスタジオが見つかりましたら、まずは体験レッスンへのお申し込みをおすすめします。
+                スタジオの雰囲気やインストラクターとの相性を、入会前に確認できます。
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <a href="#ranking" className="pl-btn pl-btn-primary">ランキングを見る</a>

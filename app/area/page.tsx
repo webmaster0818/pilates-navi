@@ -46,8 +46,8 @@ const AREAS_WITH_DATA = new Set((idx.entries as { area: string }[]).map((e) => e
 const CITY_COUNT = CITIES.filter((c) => AREAS_WITH_DATA.has(c.slug)).length;
 
 export const metadata: Metadata = {
-  title: `エリア別ピラティススタジオ一覧【全国${CITY_COUNT}都市・Google口コミ実データ】`,
-  description: `全国${CITY_COUNT}都市のピラティススタジオを、Googleマップの実データ(評点・口コミ件数)で都市別に一覧比較できるエリアハブページ。マシンピラティス・スタジオを口コミ件数順に掲載し、各都市とも取得日を明記。評点・件数は実数のみで創作はありません。`,
+  title: `エリア別ピラティススタジオ一覧【全国${CITY_COUNT}都市・Google口コミ実測データ】`,
+  description: `全国${CITY_COUNT}都市のピラティススタジオを、Googleマップの実測データ(評点・口コミ件数)にもとづき、都市別に一覧で比較できるページです。各都市のスタジオを口コミ件数順に掲載し、データの取得日を明記しています。`,
 };
 
 const REGIONS = ["北海道・東北", "首都圏", "北関東・甲信越", "北陸", "東海", "関西", "中国・四国", "九州・沖縄"];
@@ -60,8 +60,8 @@ export default function AreaHubPage() {
         エリア別ピラティススタジオ一覧【全国{CITY_COUNT}都市】
       </h1>
       <p className="text-gray-600 text-sm leading-relaxed mb-8">
-        全国{CITY_COUNT}都市の実在ピラティススタジオを、Googleマップの実データ(評点・口コミ件数)をもとに口コミ件数順で掲載しています。
-        各都市ページに取得日を明記し、評点・件数は当サイトの創作ではなくGoogleマップ上の実数です。
+        当サイトでは、全国{CITY_COUNT}都市の実在ピラティススタジオを、Googleマップの実測データ(評点・口コミ件数)をもとに、口コミ件数順に掲載しています。
+        各都市ページにはデータの取得日を明記しています。評点・口コミ件数は、Googleマップに表示された数値を転記したものです。
       </p>
 
       {REGIONS.map((region) => (

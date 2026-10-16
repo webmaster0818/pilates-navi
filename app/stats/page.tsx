@@ -4,9 +4,9 @@ import idx from "@/data-studio-index.json";
 import { brandReview } from "@/components/brand-match";
 
 export const metadata: Metadata = {
-  title: "ピラティススタジオの口コミ・評点 全国統計【35都市1,412店を実測】評点4.8以上が83%という現実",
+  title: "ピラティススタジオの口コミ・評点 全国統計【35都市1,412店を実測】評点4.8以上が83%",
   description:
-    "全国35都市のピラティススタジオ1,412店をGoogleマップで実測(2026年9月2日取得)した独自統計。評点4.8以上が83%・満点5.0が35%を占め「評点では選べない」実態、口コミ件数の中央値42件、主要ブランドの収録店舗数まで実数データで公開します。",
+    "全国35都市のピラティススタジオ1,412店をGoogleマップで実測(2026年9月2日取得)した独自統計です。評点4.8以上が83%、満点5.0が35%を占め、評点だけでは比較が難しい状況や、口コミ件数の中央値42件、主要ブランドの収録店舗数を実数データで掲載しています。",
 };
 
 type Entry = { slug: string; name: string; rating?: number; count?: number; area?: string };
@@ -46,15 +46,15 @@ const brandRows = brandDefs.map((b) => {
 const faqs = [
   {
     q: "ピラティススタジオは評点で選べますか？",
-    a: `実測データ上は難しいのが実情です。当サイトが実測した35都市1,412店のうち、評点4.8以上が${r48}店(${pct(r48)}%)、満点5.0が${r50}店(${pct(r50)}%)を占めます(${SURVEYED}取得)。評点が団子状に高いため、0.1の差より「口コミ件数(実績の量)」と「本文の具体性」で比較するのが実用的です。`,
+    a: `実測データ上、評点だけで選ぶことは困難です。当サイトが実測した35都市1,412店のうち、評点4.8以上が${r48}店(${pct(r48)}%)、満点5.0が${r50}店(${pct(r50)}%)を占めます(${SURVEYED}取得)。多くの店舗の評点が高い水準に集中しているため、0.1の差よりも、口コミ件数(実績の量)と口コミ本文の具体性で比較することをおすすめします。`,
   },
   {
     q: "口コミ件数はどれくらいが目安ですか？",
-    a: `1,412店の口コミ件数の中央値は${med}件でした(${SURVEYED}時点)。中央値を大きく超える店舗は、開業からの実績や利用者数が相対的に多いと考えられます。ただし新店は件数が少なくて当然のため、開業時期とあわせて見るのがおすすめです。`,
+    a: `1,412店の口コミ件数の中央値は${med}件でした(${SURVEYED}時点)。中央値を大きく超える店舗は、開業からの実績や利用者数が相対的に多いと考えられます。ただし、新しい店舗は口コミ件数が少なくなりやすいため、開業時期とあわせてご確認いただくことをおすすめします。`,
   },
   {
     q: "この統計はどうやって作っていますか？",
-    a: `当サイトが各都市で「ピラティス+都市名」をGoogleマップ(Places API)で検索し、営業中と確認できた店舗の評点・口コミ件数を機械取得したものです(${SURVEYED}一斉時点の実数)。当サイトによる評価や推定は含まれておらず、口コミの創作もありません。`,
+    a: `当サイトが各都市で「ピラティス+都市名」をGoogleマップ(Places API)で検索し、営業中と確認できた店舗の評点・口コミ件数を自動で取得したものです(${SURVEYED}時点の実数)。当サイトによる評価や推定は含まれていません。`,
   },
 ];
 
@@ -71,15 +71,15 @@ export default function StatsPage() {
       <h1 className="text-2xl font-bold sm:text-3xl">ピラティススタジオの口コミ・評点 全国統計【{areas}都市1,412店を実測】</h1>
       <p className="mt-3 text-sm leading-relaxed text-gray-600">
         当サイトの<Link href="/area/tokyo/" className="underline text-blue-700">都市別データベース</Link>(Googleマップ実測・{SURVEYED}一斉取得)に収録した全{entries.length}店を集計した独自統計です。
-        評点・件数は取得時点のGoogleマップ表示値で、当サイトによる評価や創作は含まれません。
+        評点・口コミ件数は取得時点のGoogleマップの表示値です。当サイトによる評価は含まれていません。
       </p>
 
       <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-relaxed">
-        <p className="font-bold">先に結論</p>
+        <p className="font-bold">統計の要点</p>
         <ul className="mt-1 space-y-1">
-          <li>・評点4.8以上が<strong>{pct(r48)}%</strong>({r48}店)、満点5.0だけで<strong>{pct(r50)}%</strong>({r50}店)=評点では差がつかない</li>
-          <li>・口コミ件数の中央値は<strong>{med}件</strong>。「件数」と「本文の具体性」が実用的な比較軸</li>
-          <li>・4.5未満は{rlo}店({pct(rlo)}%)と少数派</li>
+          <li>・評点4.8以上が<strong>{pct(r48)}%</strong>({r48}店)、満点5.0が<strong>{pct(r50)}%</strong>({r50}店)を占め、評点では差がつきにくい状況です。</li>
+          <li>・口コミ件数の中央値は<strong>{med}件</strong>です。口コミ件数と本文の具体性が、比較の目安になります。</li>
+          <li>・評点4.5未満の店舗は{rlo}店({pct(rlo)}%)にとどまります。</li>
         </ul>
       </div>
 
@@ -134,15 +134,15 @@ export default function StatsPage() {
         </table>
       </div>
       <p className="mt-2 text-xs text-gray-400">
-        ※当サイトDB収録分({areas}都市)のうち、店舗詳細ページのある{entries.length.toLocaleString()}店を数えた集計で、実際の全店舗数とは異なります。店名へのブランド名表記を基に機械集計しています(「zen place ヨガ mix」などヨガ業態の店舗は除外)。ブランド別レビューページの「収録店舗数」は、店舗詳細ページの無い店舗も含むGoogleマップ実測データ全体での数え方のため、この表と数字が異なる場合があります(例: Rintosull はレビュー58店・この表55店)。ブランドの詳細は<Link href="/review/zenplace/" className="underline">各レビューページ</Link>をご覧ください。
+        ※当サイトの収録データ({areas}都市)のうち、店舗詳細ページのある{entries.length.toLocaleString()}店を対象とした集計のため、実際の全店舗数とは異なります。店名に含まれるブランド名をもとに自動で集計しています(「zen place ヨガ mix」などヨガ業態の店舗は除外しています)。ブランド別レビューページの「収録店舗数」は、店舗詳細ページのない店舗も含むGoogleマップ実測データ全体で数えているため、この表と数値が異なる場合があります(例: Rintosull はレビューページ58店、この表55店)。ブランドの詳細は<Link href="/review/zenplace/" className="underline">各レビューページ</Link>をご覧ください。
       </p>
 
       <h2 className="mt-10 text-lg font-bold">この統計の使い方</h2>
       <ol className="mt-3 list-decimal pl-5 text-sm leading-relaxed space-y-1 text-gray-700">
-        <li>評点は4.8以上が当たり前の世界。<strong>0.1差で選ばない</strong></li>
-        <li>口コミ件数を中央値({med}件)と比べて、実績の量を見る</li>
-        <li>口コミ本文に「レッスン内容・予約の取りやすさ・スタッフ対応」の具体的な記述があるかを確認する</li>
-        <li>最後は体験レッスンで相性を確かめる(<Link href="/#ranking" className="underline text-blue-700">主要スタジオの比較</Link>)</li>
+        <li>評点は4.8以上の店舗が大半を占めるため、<strong>0.1の差を判断基準にしないこと</strong>をおすすめします。</li>
+        <li>口コミ件数を中央値({med}件)と比べ、実績の量をご確認ください。</li>
+        <li>口コミ本文に、レッスン内容・予約の取りやすさ・スタッフ対応についての具体的な記述があるかをご確認ください。</li>
+        <li>最終的には、体験レッスンで相性をご確認いただくことをおすすめします(<Link href="/#ranking" className="underline text-blue-700">主要スタジオの比較</Link>)。</li>
       </ol>
 
       <h2 className="mt-10 text-lg font-bold">よくある質問</h2>

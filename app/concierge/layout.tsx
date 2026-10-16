@@ -8,7 +8,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'ピラティスコンシェルジュ',
-  description: 'あなたにぴったりのピラティススタジオを診断。4つの質問に答えるだけ（約1分）',
+  description: 'ご希望に合ったピラティススタジオを、4つの質問で診断します（約1分）。',
   url: 'https://pilatest.com/concierge/',
 };
 

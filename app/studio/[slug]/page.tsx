@@ -35,16 +35,16 @@ export function generateStaticParams() {
 }
 
 function escapedLength(s: string): number {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").length;
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").length;
 }
 
-// description は160字以内。店名が長い店だけ、同じ内容のまま言い回しを詰める
+// description は160字以内。店名が長い店だけ、後半の注記を短い文に切り替える
 function studioDescription(e: (typeof entries)[number]): string {
-  const head = `${e.areaName}のピラティススタジオ「${e.name}」のGoogleマップ実測データ(評点${e.rating ?? "—"}・口コミ${e.count.toLocaleString()}件・${idx.surveyedAt}取得)と所在地。`;
+  const head = `${e.areaName}のピラティススタジオ「${e.name}」のGoogleマップ実測データ(評点${e.rating ?? "—"}・口コミ${e.count.toLocaleString()}件・${idx.surveyedAt}取得)と所在地を掲載しています。`;
   const tails = [
-    "評点・件数は取得時点の実数のみで創作はありません。料金は変動が大きいため公式サイトへ誘導しています。",
-    "評点・件数は取得時点の実数で創作なし。料金は変動が大きいため公式サイトへ誘導。",
-    "評点・件数は取得時点の実数。料金は公式サイトへ誘導。",
+    "評点・口コミ件数は取得時点の実数です。料金は変更されることが多いため、公式サイトでご確認ください。",
+    "評点・口コミ件数は取得時点の実数です。料金は公式サイトでご確認ください。",
+    "料金は公式サイトでご確認ください。",
   ];
   for (const t of tails) {
     // HTML 上では & などが実体参照になって長くなるので、その分も数える
@@ -127,7 +127,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
       <div className="overflow-x-auto">
         <table className="w-full min-w-[480px] text-sm border border-gray-200">
           <tbody className="align-top">
-            <tr className="border-t border-gray-200"><th className="w-44 bg-gray-50 px-3 py-2 text-left font-medium">Gマップ評点</th><td className="px-3 py-2">{e.rating ?? "—"}(5点満点・{idx.surveyedAt}取得)</td></tr>
+            <tr className="border-t border-gray-200"><th className="w-44 bg-gray-50 px-3 py-2 text-left font-medium">Googleマップ評点</th><td className="px-3 py-2">{e.rating ?? "—"}(5点満点・{idx.surveyedAt}取得)</td></tr>
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">口コミ件数</th><td className="px-3 py-2">{e.count.toLocaleString()}件({e.areaName}の収録スタジオ中 {rank}位)</td></tr>
             <tr className="border-t border-gray-200"><th className="bg-gray-50 px-3 py-2 text-left font-medium">所在地</th><td className="px-3 py-2">{e.address.replace("日本、", "")}</td></tr>
             {uc && (
@@ -138,7 +138,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
           </tbody>
         </table>
       </div>
-      <p className="mt-2 text-xs text-gray-400">※料金・キャンペーンは変動が大きいため当サイトでは掲載せず、公式サイトへの確認を推奨しています。当ページは実測データの転記であり、提携関係を意味しません。</p>
+      <p className="mt-2 text-xs text-gray-400">※料金・キャンペーンは変更されることが多いため、当サイトでは掲載を控えています。ご利用前に、公式サイトにて最新情報をご確認ください。本ページは実測データを転記したもので、提携関係を示すものではありません。</p>
 
       <h2 className="mt-10 text-lg font-bold text-gray-800">地図・場所</h2>
       <div className="mt-3 rounded-xl overflow-hidden border border-gray-200">
@@ -153,28 +153,28 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
       </div>
       <p className="mt-2 text-xs text-gray-400">地図はGoogleマップのライブ表示です。最新の口コミ本文・写真・営業時間は地図内または<a href={e.mapsUri || `https://www.google.com/maps/search/${mapQuery}`} target="_blank" rel="nofollow noopener" className="underline">Googleマップ本体</a>でご確認ください。</p>
 
-      <h2 className="mt-10 text-lg font-bold text-gray-800">データで見る{e.name}</h2>
+      <h2 className="mt-10 text-lg font-bold text-gray-800">{e.name}のデータ</h2>
       <ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600 list-disc pl-6">
-        <li>口コミ件数{e.count.toLocaleString()}件は、{e.areaName}の収録{cityAll.length}スタジオ中<strong>{rank}位</strong>・全国の収録1,147スタジオ中<strong>{nationalRank}位</strong>です({idx.surveyedAt}実測)。</li>
+        <li>口コミ件数{e.count.toLocaleString()}件は、{e.areaName}の収録{cityAll.length}スタジオ中<strong>{rank}位</strong>・全国の収録{entries.length.toLocaleString()}スタジオ中<strong>{nationalRank}位</strong>です({idx.surveyedAt}実測)。</li>
         {typeof e.rating === "number" && cityAvgRating !== null && (
-          <li>評点{e.rating}は{e.areaName}の収録スタジオ平均({cityAvgRating.toFixed(2)})と比べて{e.rating >= cityAvgRating ? "同等以上" : "低め"}です。ピラティススタジオの評点は高評価に偏りやすいため、差は件数と口コミ本文で見るのがおすすめです。</li>
+          <li>評点{e.rating}は{e.areaName}の収録スタジオ平均({cityAvgRating.toFixed(2)})と比べて{e.rating >= cityAvgRating ? "同等以上" : "低め"}です。ピラティススタジオの評点は高評価に偏りやすいため、口コミ件数と口コミ本文もあわせてご確認いただくことをおすすめします。</li>
         )}
         {cityMedianCount !== null && (
-          <li>{e.areaName}の収録スタジオの口コミ件数の中央値は{cityMedianCount.toLocaleString()}件で、当スタジオは{e.count >= cityMedianCount ? "それを上回る実績量" : "中央値未満の件数"}です。</li>
+          <li>{e.areaName}の収録スタジオの口コミ件数の中央値は{cityMedianCount.toLocaleString()}件で、当スタジオの口コミ件数は中央値{e.count >= cityMedianCount ? "以上" : "未満"}です。</li>
         )}
       </ul>
 
       {brand && (
         <div className="mt-6 rounded-lg border border-[#7C3AED]/30 bg-[#7C3AED]/5 p-4 text-sm">
-          このスタジオは当サイトが詳しく調査したブランドの店舗です: <Link href={brand.href} className="underline font-medium text-[#7C3AED]">{brand.label}</Link>
+          このスタジオは、当サイトで詳細レビューを掲載しているブランドの店舗です：<Link href={brand.href} className="underline font-medium text-[#7C3AED]">{brand.label}</Link>
         </div>
       )}
 
       <h2 className="mt-10 text-lg font-bold text-gray-800">スタジオ選びの3つのチェックポイント</h2>
       <ol className="mt-3 list-decimal space-y-2 pl-6 text-sm leading-relaxed text-gray-600">
-        <li><strong>口コミ件数と内容</strong>——ピラティススタジオの評点は高評価に偏りやすいため、件数(通っている人の多さ)と本文の具体性が判断材料になります。</li>
-        <li><strong>マシンかマットか・グループかパーソナルか</strong>——同じ「ピラティス」でも中身が大きく異なります。目的(姿勢改善・ダイエット・リハビリ)に合う形式かを体験で確認しましょう。</li>
-        <li><strong>通いやすさ</strong>——週1〜2回の継続が前提のため、自宅・職場からの距離と予約の取りやすさが継続率を決めます。</li>
+        <li><strong>口コミ件数と内容</strong>：ピラティススタジオの評点は高評価に偏りやすいため、口コミ件数（利用者の多さの目安）と本文の具体性が判断材料になります。</li>
+        <li><strong>マシンかマットか・グループかパーソナルか</strong>：同じピラティスでも、レッスンの内容は形式によって大きく異なります。目的（姿勢改善・ダイエット・リハビリ）に合う形式かどうか、体験レッスンでご確認いただくことをおすすめします。</li>
+        <li><strong>通いやすさ</strong>：週1〜2回の継続を前提とするため、自宅・職場からの距離と予約の取りやすさが、継続のしやすさを左右します。</li>
       </ol>
 
       {cityPeers.length > 0 && (
@@ -200,7 +200,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
       {similar.length > 0 && (
         <>
           <h2 className="mt-10 text-lg font-bold text-gray-800">条件が近いスタジオ({e.areaName}・口コミ規模順)</h2>
-          <p className="mt-2 text-xs text-gray-400">口コミ件数の規模が当スタジオに近い順に、同エリアの収録スタジオを機械的に並べています。</p>
+          <p className="mt-2 text-xs text-gray-400">同エリアの収録スタジオを、口コミ件数が当スタジオに近い順に自動で抽出して掲載しています。</p>
           <div className="mt-3 overflow-x-auto">
             <table className="w-full min-w-[480px] text-sm border border-gray-200">
               <thead><tr className="bg-gray-50 text-left"><th className="px-3 py-2 font-medium">スタジオ</th><th className="px-3 py-2 font-medium whitespace-nowrap">評点</th><th className="px-3 py-2 font-medium whitespace-nowrap">口コミ件数</th></tr></thead>
