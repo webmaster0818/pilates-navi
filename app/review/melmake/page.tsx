@@ -34,17 +34,17 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "完全個室で周りの目を気にせずにトレーニングできた（公式サイト掲載の32歳女性の体験談）",
-  "トレーニングだけでなく食事・栄養の相談もできた（公式サイトの体験談・紹介サイト掲載の口コミ）",
-  "駅から近く、仕事帰りに通いやすい（紹介サイト掲載の口コミ・公式サイト「駅徒歩5分以内」）",
-  "ウェア・タオルの無料レンタルがあり、手ぶらで通える（公式サイト記載）",
+  "完全個室で周りの目を気にせずにトレーニングできたという声（公式サイト掲載の32歳女性の体験談）",
+  "トレーニングだけでなく食事・栄養の相談もできたという声（公式サイトの体験談・紹介サイト掲載の口コミ）",
+  "駅から近く、仕事帰りに通いやすいという声（紹介サイト掲載の口コミ・公式サイト「駅徒歩5分以内」）",
+  "ウェア・タオルの無料レンタルがあり、手ぶらで通える点（公式サイト記載）",
 ];
 
 const concernPoints = [
-  "ピラティスは月2回17,300円〜で、グループ型スタジオより1回あたりの料金が高い",
+  "ピラティスは月2回17,300円〜で、グループ型スタジオより1回あたりの料金が高い点",
   "ピラティス対応は伏見・女性専用名古屋駅・西新（マット）の3店舗のみ",
   "新横浜・横浜日吉・豊田の3店舗は「人員不足にて停止」と表示（2026年10月時点）",
-  "掲載されている口コミは公式サイト・紹介サイト経由が中心で、第三者の口コミが少ない",
+  "掲載されている口コミは公式サイト・紹介サイト経由が中心で、第三者の口コミが少ない点",
 ];
 
 const prices = [
@@ -280,9 +280,9 @@ export default function MelmakeReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>完全個室で周りの目を気にせずトレーニングできる</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>完全個室で周りの目を気にせずトレーニングできる点</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>一人ひとりに合わせたオーダーメイドプラン</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マンツーマン指導で正しいフォームを身につけやすい</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マンツーマン指導で正しいフォームを身につけやすい点</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">

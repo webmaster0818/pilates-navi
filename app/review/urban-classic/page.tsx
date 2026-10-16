@@ -38,17 +38,17 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "予約なしで好きな時間に行ける（Googleマップの口コミ・公式サイト掲載の声に共通）",
-  "1回30分で終わり、仕事帰りや買い物の合間に続けやすい",
-  "サーキット形式で自分のペースででき、スタッフが巡回して声をかけてくれる",
-  "全店舗を相互利用でき、店舗数が多い（公式サイトの一覧に101店舗）",
+  "予約なしで好きな時間に行けるという声（Googleマップの口コミ・公式サイト掲載の声に共通）",
+  "1回30分で終わり、仕事帰りや買い物の合間に続けやすい点",
+  "サーキット形式で自分のペースででき、スタッフが巡回して声をかけてくれる点",
+  "全店舗を相互利用でき、店舗数が多い点（公式サイトの一覧に101店舗）",
 ];
 
 const concernPoints = [
-  "スタッフの入れ替わりで指導の質が変わったという声がある（店舗・時期差）",
-  "退会手続きは来店のみ・5日締めで、手続きへの不満の声がある",
-  "月会費は店舗・時期により異なり、公式サイトだけでは金額を比較しにくい",
-  "静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なる",
+  "スタッフの入れ替わりで指導の質が変わったという声（店舗・時期による差）",
+  "退会手続きは来店のみ・5日締めで、手続きへの不満の声",
+  "月会費は店舗・時期により異なり、公式サイトだけでは金額を比較しにくい点",
+  "静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なる点",
 ];
 
 const prices = [
@@ -268,7 +268,7 @@ export default function UrbanClassicReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>サーキット形式で飽きずに運動できる</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>サーキット形式で飽きずに運動できる点</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>一人ひとりに合わせた個別サポート</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>予約不要・1回30分</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>公式一覧に101店舗・全店舗相互利用</li>

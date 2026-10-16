@@ -35,17 +35,17 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "初心者でも動き方や意識する筋肉を教えてもらえる（公式サイト掲載の40代女性の声）",
-  "マシンピラティスとウェイトを組み合わせ、目標に合わせてメニューを組んでもらえる（公式サイト掲載の30代女性の声）",
-  "1回30分のため、仕事帰りでも続けやすい（公式サイト掲載の声・公式サイトの訴求）",
-  "姉妹ブランドのURBAN CLASSIC PILATESが全店通い放題のため、運動頻度を上げやすい",
+  "初心者でも動き方や意識する筋肉を教えてもらえるという声（公式サイト掲載の40代女性）",
+  "マシンピラティスとウェイトを組み合わせ、目標に合わせてメニューを組んでもらえるという声（公式サイト掲載の30代女性）",
+  "1回30分のため、仕事帰りでも続けやすいという声（公式サイト掲載の声・公式サイトの訴求）",
+  "姉妹ブランドのURBAN CLASSIC PILATESが全店通い放題のため、運動頻度を上げやすい点",
 ];
 
 const concernPoints = [
-  "月会費が店舗・時期で変動し、公式サイトだけでは金額を比べにくい",
-  "退会・休会の手続きは来店のみで、締め日（5日）を過ぎると退会が1〜2か月先になる",
-  "営業中の店舗は11店舗（2026年10月時点）で、通える範囲が限られる",
-  "パーソナル形式のため、グループレッスンを希望する方には向かない",
+  "月会費が店舗・時期で変動し、公式サイトだけでは金額を比べにくい点",
+  "退会・休会の手続きは来店のみで、締め日（5日）を過ぎると退会が1〜2か月先になる点",
+  "営業中の店舗は11店舗（2026年10月時点）で、通える範囲が限られる点",
+  "パーソナル形式のため、グループレッスンを希望する方には向かない点",
 ];
 
 const prices = [
@@ -281,9 +281,9 @@ export default function BrestReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マシンピラティスとウェイトを1回30分のパーソナルで受けられる</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マシンピラティスとウェイトを1回30分のパーソナルで受けられる点</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>URBAN CLASSIC PILATESが全店追加料金なしで通い放題</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>都度払い（税込6,380円）も選べる</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>都度払い（税込6,380円）も選べる点</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">

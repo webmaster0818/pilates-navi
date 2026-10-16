@@ -82,7 +82,7 @@ export default function ClubPilatesReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">CLUB PILATESの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>の安心感と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は<strong>月4回14,190円〜・月8回22,990円〜（目安）</strong>です。体系的なカリキュラムで着実に上達したい方や、指導品質の安定したスタジオを選びたい方に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲に店舗がある場合は、まず体験レッスンでレッスンの質と雰囲気をご確認いただくことをおすすめします。
+              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>としての実績と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は<strong>月4回14,190円〜・月8回22,990円〜（目安）</strong>です。体系的なカリキュラムで着実に上達したい方や、指導品質の安定したスタジオを選びたい方に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲に店舗がある場合は、まず体験レッスンでレッスンの質と雰囲気をご確認いただくことをおすすめします。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>段階を踏んで体系的に上達したい方／指導品質を重視する方</li>
@@ -170,7 +170,7 @@ export default function ClubPilatesReview() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">CLUB PILATESの強み</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { title: "グローバルブランド", desc: "世界規模で展開する大手ブランドとしての安心感と運営ノウハウがあります。" },
+              { title: "グローバルブランド", desc: "世界規模で展開する大手ブランドとしての運営実績があります。" },
               { title: "段階的レベルシステム", desc: "初心者から上級者まで、レベルに応じたクラスで段階的に上達できます。" },
               { title: "安定した指導品質", desc: "研修を受けたインストラクターが指導しており、品質のばらつきが少ないとの声があります。" },
             ].map((s) => (
@@ -224,7 +224,7 @@ export default function ClubPilatesReview() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              CLUB PILATESは、世界規模で展開するグローバルブランドとしての実績と、体系化されたレベルシステムが最大の魅力です。段階的にステップアップできる仕組みは、「ピラティスを腰を据えて続けたい」「上達を実感しながら通いたい」方にとって大きな価値があります。研修制度を背景にした指導品質の安定感も、初めての方が安心して始めやすいポイントです。
+              CLUB PILATESは、世界規模で展開するグローバルブランドとしての実績と、体系化されたレベルシステムを特徴としています。段階的にステップアップできる仕組みは、「ピラティスを腰を据えて続けたい」「上達を実感しながら通いたい」方に適しています。研修制度にもとづく指導品質の安定も、初めての方が始めやすい理由の一つです。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               同じマシンピラティスのピラティスKやthe SILKが女性専用・空間演出やボディメイクで個性を出すのに対し、CLUB PILATESは男女利用可で、体系的なカリキュラムとブランドの安定感で差別化しています。zen place pilatesの手頃さと比べると料金はやや高めですが、レベル分けやクラスの幅を重視する方には選びやすい構成です。
@@ -244,9 +244,9 @@ export default function ClubPilatesReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>レベルに合ったレッスンを受けられる</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>レベルに合ったレッスンを受けられる点</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>指導品質が安定しているとの声</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>多様なクラス形式があり飽きにくい</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>多様なクラス形式があり飽きにくい点</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">

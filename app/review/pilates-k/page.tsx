@@ -40,7 +40,7 @@ const goodPoints = [
 ];
 
 const concernPoints = [
-  "男性は利用できない（女性専用）",
+  "男性は利用できない点（女性専用）",
   "人気店舗・時間帯は予約が埋まりやすい点",
   "マットピラティスやオンラインレッスンを中心に選びたい方には向かない場合がある点",
   "通えるエリアが店舗の有無に左右される点",
@@ -172,7 +172,7 @@ export default function PilatesKReview() {
             {[
               { title: "0円体験レッスン", desc: "公式サイトで0円体験が案内されており、初期費用の負担が少なく始めやすくなっています。" },
               { title: "女性専用の安心感", desc: "女性だけの空間で、人目を気にせずレッスンに集中できます。" },
-              { title: "おしゃれな空間", desc: "スタイリッシュな内装で、通うこと自体を楽しみやすい環境です。" },
+              { title: "おしゃれな空間", desc: "内装にこだわっており、通うこと自体を楽しみやすい環境です。" },
             ].map((s) => (
               <div key={s.title} className="bg-[#F5F3FF] rounded-xl p-5">
                 <h3 className="font-bold text-[#7C3AED] mb-2">{s.title}</h3>
@@ -224,7 +224,7 @@ export default function PilatesKReview() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              ピラティスKは、女性をメインターゲットに据えたマシンピラティス特化型の女性専用スタジオです。最大の魅力は0円体験による始めやすさで、初期費用の負担が少ない点にあります。おしゃれな空間デザインは、ピラティスを「楽しいライフスタイルの一部」として取り入れたい層に支持されやすく、継続のしやすさにもつながっています。
+              ピラティスKは、女性をメインターゲットに据えたマシンピラティス特化型の女性専用スタジオです。主な特徴は0円体験による始めやすさで、初期費用の負担を抑えて始められます。内装にこだわった空間は、ピラティスを日常の習慣として楽しみながら取り入れたい方に向いており、継続のしやすさにもつながると考えられます。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               同じ女性専用スタジオであるthe SILKと比べると、ピラティスKはボディメイク特化のプログラム構成が特徴で、部位別（お腹・ヒップなど）のレッスンに強みがあります。the SILKは音楽と照明を使った空間演出に個性があるため、空間演出を重視する場合はthe SILK、見た目の変化を重視する場合はピラティスK、という選び方ができます。zen place pilatesと比べると、マシンに特化している分、マットやオンラインレッスンを中心に選びたい方には向いていません。
@@ -244,9 +244,9 @@ export default function PilatesKReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>0円体験で気軽に始められる</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>女性専用で集中できる</li>
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>おしゃれな空間でモチベーションを保ちやすい</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>0円体験で気軽に始められる点</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>女性専用で集中できる環境</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>おしゃれな内装でモチベーションを保ちやすい環境</li>
               </ul>
             </div>
             <div className="bg-red-50 rounded-xl p-6">

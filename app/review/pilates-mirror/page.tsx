@@ -179,7 +179,7 @@ export default function PilatesMirrorReview() {
             <p className="mt-2">
               平均4.78は当サイト収録1,936店の平均4.85をわずかに下回ります。一方で、注目すべき点は<strong>ばらつきの小ささ</strong>で、
               13店舗の評点は<strong>最低4.6〜最高4.9</strong>に収まっています(参考: <Link href="/review/rintosull/" className="underline">Rintosull</Link>は58店舗で最低3.8〜最高5.0)。
-              チェーン運営の均質性という点では、<strong>どの店舗を選んでも評価の差が小さい</strong>ことが強みです。
+              チェーン運営の均質性という点では、<strong>どの店舗を選んでも評価の差が小さい</strong>点が特徴です。
               4.8以上が13店中10店という分布も、その傾向を裏づけています。
             </p>
             <p className="mt-2 text-xs text-gray-500">※評点・口コミ件数は{DB_DATE}時点のGoogleマップの表示値です。口コミ本文の転載は行っていません。店舗別の実測値は<Link href="/area/" className="underline">エリア別ページ</Link>で確認できます。</p>

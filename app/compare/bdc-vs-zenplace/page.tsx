@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'BDC PILATES と zen place pilates を比較【2026年】料金・店舗数・マシンの違いとどちらがおすすめか',
   description:
     'BDC PILATESとzen place pilatesを、料金・店舗数・レッスン形式・対象の観点で比較しています。BDCは月14,850円〜のマシン専門・都内中心の少人数制、zen placeは月9,625円〜・全国約150店舗でマット/マシン両対応です。それぞれに向いている方を解説します。',
-  keywords: ['bdc pilates', 'zen place', 'ピラティス 比較', 'どっち', '料金'],
+  keywords: ['bdc pilates', 'zen place', 'ピラティス 比較', 'どちら', '料金'],
 };
 
 const rows = [
