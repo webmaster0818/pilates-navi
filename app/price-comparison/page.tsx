@@ -18,7 +18,7 @@ const studios: Studio[] = [
   { slug: "pilates-k", name: "ピラティスK", price: "月額11,220円〜（入会金5,500円・初期費用13,530円）", type: "女性専用マシンピラティス", note: "女性専用・マシン専門。駅近の店舗が中心" },
   { slug: "the-silk", name: "the SILK", price: "月額12,280円〜（月3回・エリアB）", type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
   { slug: "club-pilates", name: "CLUB PILATES", price: "月額14,190円〜", type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系" },
-  { slug: "bdc", name: "BDC PILATES", price: "月額14,850円〜", type: "マシンピラティス", note: "都心中心。本格的に取り組みたい方向け" },
+  { slug: "bdc", name: "BDC PILATES", price: "月4回 16,280円（税込）", type: "マシンピラティス", note: "都心中心。本格的に取り組みたい方向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: "月4回 28,000円（1回約7,000円）", type: "セミパーソナル（約2名）", note: "ほぼマンツーマン。手厚い指導を求める方向け" },
   { slug: "brest", name: "BREST PILATES & BODYMAKE", price: "月会費は店舗・時期で変動（公式に金額表示なし）／都度払い6,380円", type: "マシンピラティス×ウェイトのパーソナル（30分）", note: "URBAN CLASSIC PILATESも全店追加料金なしで利用可能（2026年10月14日公式サイトで確認）" },
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: "月会費は店舗・時期で変動（公式に金額表示なし）＋入会時2,200円・3か月目から月480円", type: "マシンピラティス×サーキット（予約不要・30分）", note: "公式サイトの一覧に101店舗・全店舗相互利用可能（2026年10月14日公式サイトで確認）" },
