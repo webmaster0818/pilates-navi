@@ -5,12 +5,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'BDC PILATES と zen place pilates を比較【2026年】料金・店舗数・マシンの違いとどちらがおすすめか',
   description:
-    'BDC PILATESとzen place pilatesを、料金・店舗数・レッスン形式・対象の観点で比較しています。BDCは月4回16,280円（税込）のマシン専門・都内中心の少人数制、zen placeは月9,625円〜・全国約150店舗でマット/マシン両対応です。それぞれに向いている方を解説します。',
+    'BDC PILATESとzen place pilatesを、料金・店舗数・レッスン形式で比較しています。マシンのグループ月4回はBDCが16,280円、zen placeが15,400円、zen placeのマット月4回は9,625円〜です（いずれも税込・2026年10月17日公式確認）。向いている方も解説します。',
   keywords: ['bdc pilates', 'zen place', 'ピラティス 比較', 'どちら', '料金'],
 };
 
 const rows = [
-  { item: '月額料金（目安）', bdc: '16,280円（税込・月4回／2026年10月17日確認）', zen: '9,625円〜（月4回）／通い放題14,960円〜' },
+  { item: 'マシングループ 月4回（税込）', bdc: '16,280円', zen: '15,400円（リフォーマーグループ・開催スタジオのみ）' },
+  { item: 'マットグループ（税込）', bdc: '公式料金表に記載なし', zen: '月4回 9,625円／10,450円、通い放題 14,960円／16,940円（スタジオのグレード02／01）' },
   { item: '店舗数', bdc: '都内中心に8店舗ほか', zen: '全国約150店舗（相互利用可）' },
   { item: 'レッスン形式', bdc: 'マシン専門（少人数制）', zen: 'マット／マシン／プライベート' },
   { item: '対象', bdc: '女性中心', zen: '男女兼用' },
@@ -18,7 +19,7 @@ const rows = [
 ];
 
 const faqs = [
-  { q: 'BDC PILATESとzen placeでは、どちらの料金が安いですか？', a: '月額料金はzen place pilatesが9,625円〜と安く、BDC PILATESは月4回16,280円（税込）です。費用を抑えたい方にはzen place、少人数制でじっくり指導を受けたい方にはBDCが向いています（料金は2026年時点の目安です。店舗により異なります）。' },
+  { q: 'BDC PILATESとzen placeでは、どちらの料金が安いですか？', a: '各社の公式料金表（2026年10月17日確認・税込）では、マシンのグループレッスン月4回はzen place pilatesが15,400円、BDC PILATESが16,280円です。zen placeはマットグループ月4回であれば9,625円（グレード02のスタジオ。グレード01は10,450円）から受講できます。費用を抑えたい方にはzen place、少人数制でじっくり指導を受けたい方にはBDCが向いています。料金は変更されることがあるため、申し込み前に公式サイトでご確認ください。' },
   { q: '初心者にはどちらがおすすめですか？', a: 'どちらも初心者向けクラスがあります。少人数制でフォームを丁寧に見てほしい方にはBDC、手頃な料金で始めて続けやすさを重視したい方にはzen placeが向いています。マットから始めたい方には、マットに対応するzen placeが選択肢になります。' },
   { q: '通いやすさ（店舗数）はどちらが優れていますか？', a: '店舗数はzen place pilatesが全国約150店舗と多く、全店舗の相互利用も可能です。BDCは都内中心の展開のため、地方にお住まいの方や、引っ越し・出張が多い方にはzen placeが通いやすいと考えられます。' },
   { q: 'マシンピラティスに取り組みたい場合はどちらが向いていますか？', a: 'どちらもマシン（リフォーマー等）に対応しています。BDCはマシン専門スタジオ、zen placeはマットとマシンの両方から選べます。マシンに専念したい方にはBDC、日によって使い分けたい方にはzen placeが向いています。' },
@@ -51,7 +52,7 @@ export default function BdcVsZenplacePage() {
           </div>
           <div className="rounded-xl border border-[#7C3AED]/20 bg-[#F5F3FF] p-5 mb-8">
             <h2 className="font-bold text-gray-900 mb-2">比較の要点：費用と店舗数を重視する方はzen place、少人数制の指導を重視する方はBDC</h2>
-            <p className="text-sm text-gray-700">月額が手頃（9,625円〜）で、全国約150店舗・マット/マシン両対応の<strong>zen place</strong>は、通いやすさと費用を重視する方に向いています。マシン専門・少人数制でフォームを丁寧に指導する<strong>BDC</strong>は、じっくり指導を受けたい方に向いています。</p>
+            <p className="text-sm text-gray-700">月額が手頃（マットグループ月4回9,625円〜・税込）で、全国約150店舗・マット/マシン両対応の<strong>zen place</strong>は、通いやすさと費用を重視する方に向いています。マシン専門・少人数制でフォームを丁寧に指導する<strong>BDC</strong>は、じっくり指導を受けたい方に向いています。</p>
           </div>
 
           <div className="overflow-x-auto mb-8">
@@ -74,7 +75,7 @@ export default function BdcVsZenplacePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mb-8">※料金・店舗数は2026年時点の各社公式の目安です。店舗・プラン・キャンペーンで異なるため、最新は公式サイトでご確認ください。</p>
+          <p className="text-xs text-gray-500 mb-8">※料金は2026年10月17日に各社の公式料金表（<a href="https://bdcpilates.com/#pilates_plan" target="_blank" rel="noopener noreferrer" className="underline">BDC PILATES</a>・<a href="https://www.zenplace.co.jp/price" target="_blank" rel="noopener noreferrer" className="underline">zen place</a>）で確認した税込金額です。入会金・設備費は別途かかります。店舗数は2026年時点の目安です。最新の情報は公式サイトでご確認ください。</p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             <Link href="/review/bdc/" className="block rounded-xl border border-gray-200 p-5 hover:shadow-md transition">
