@@ -48,7 +48,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "8,800円〜16,800円（コース・店舗により変動）",
     joinFee: "施設使用料 2,500円（入会時のみ）",
     monthlyExtra: "運営管理費 680円／月",
-    trial: "5,000円（キャンペーン時0円）",
+    trial: "無料体験会 0円（LAVAコラボ店舗は店舗ごとに異なる・2026年10月17日確認）",
     source: "https://rintosull.jp/price/",
   },
   "bdc": {
@@ -69,7 +69,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "celestia": {
     style: "マシンピラティス", format: "セミパーソナル（約2名）", gender: "男女可",
-    monthly: "1回あたり6,000円〜",
+    monthly: "公式の料金ページに金額の記載なし（2026年10月17日確認）",
     joinFee: "公式の料金ページに記載なし",
     monthlyExtra: "公式に記載なし",
     trial: "30分 3,000円",
