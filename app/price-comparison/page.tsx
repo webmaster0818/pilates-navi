@@ -5,9 +5,9 @@ import { BRAND_FACTS, FACTS_SURVEYED_AT } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
-  title: "ピラティススタジオ料金比較【2026年】月額・マシン専門9スタジオを一覧で比べる",
+  title: "ピラティススタジオ料金比較【2026年】月額・9スタジオ（マシン/マット・グループ/パーソナル）を一覧で比べる",
   description:
-    "主要ピラティススタジオ9社の月額料金を一覧で比較しています。zen place・ピラティスK・CLUB PILATES・BDC・Celestiaなど、マシンピラティス専門スタジオの料金・特徴・女性専用かどうかを表で比較できます。",
+    "主要ピラティススタジオ9社の月額料金を一覧で比較しています。zen place・ピラティスK・CLUB PILATES・BDC・Celestiaなど、マシン・マットのグループレッスンからセミパーソナル・パーソナルまで、料金・特徴・女性専用かどうかを表で比較できます。",
   alternates: { canonical: "/price-comparison/" },
 };
 
@@ -51,7 +51,7 @@ export default function PriceComparisonPage() {
       <main className="max-w-4xl mx-auto px-4 py-10">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">ピラティススタジオ料金比較【2026年】</h1>
         <p className="text-gray-600 leading-relaxed mb-4">
-          主要ピラティススタジオ9社の月額料金・タイプ・特徴を一覧で比較しています。マシンピラティス専門スタジオを中心に、月額の安さ、セミパーソナルかグループか、女性専用かどうかの観点で比較できます。
+          主要ピラティススタジオ9社の月額料金・タイプ・特徴を一覧で比較しています。マシンピラティスのスタジオを中心に、マットのグループレッスン（zen place pilates）やパーソナルも含めて、月額の安さ、セミパーソナルかグループか、女性専用かどうかの観点で比較できます。
         </p>
         <p className="text-xs text-gray-500 mb-4">料金は当サイト各レビューの調査値（2026年時点）です。入会金・キャンペーン・最新料金は各公式サイトでご確認ください。</p>
 

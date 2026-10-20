@@ -33,7 +33,7 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "マットグループ月4回9,625円〜（税込・目安）と業界最安水準で、続けやすいという声",
+  "マットグループ月4回9,625円〜（税込・目安）で、続けやすいという声",
   "全国に多数の店舗があり、全店相互利用（公式では一部差額あり）により出張時や引っ越し後も通いやすいという声",
   "マット・マシン・プライベートから目的に応じて選べるという声",
   "男女兼用で初心者向けクラスもあり、始めやすいという声",
@@ -83,7 +83,7 @@ export default function ZenPlaceReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">zen place pilatesの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              zen place pilatesは、<strong>全国最大級の店舗数</strong>と<strong>全店相互利用（一部差額あり）</strong>、<strong>マット／マシン両対応</strong>を特徴とするピラティススタジオです。料金は<strong>マシンのグループ月4回15,400円（開催スタジオのみ）、マットのグループ月4回9,625円〜・通い放題14,960円〜（税込）</strong>で、マットは業界最安水準です。<strong>男女兼用</strong>です。費用を抑えて長く続けたい方、出張や引っ越しがあっても通い続けたい方、マットとマシンを使い分けたい方に向いています。一方で、店舗数が多い分、設備や雰囲気に差があり、手厚い少人数指導を求める方には物足りない場合があります。
+              zen place pilatesは、<strong>全国最大級の店舗数</strong>と<strong>全店相互利用（一部差額あり）</strong>、<strong>マット／マシン両対応</strong>を特徴とするピラティススタジオです。料金は<strong>マシンのグループ月4回15,400円（開催スタジオのみ）、マットのグループ月4回9,625円〜・通い放題14,960円〜（税込）</strong>です。マットのグループ料金は、当サイトの料金比較に掲載している9スタジオのうち、月額料金を表示している7スタジオの中で最も低い金額です。<strong>男女兼用</strong>です。費用を抑えて長く続けたい方、出張や引っ越しがあっても通い続けたい方、マットとマシンを使い分けたい方に向いています。一方で、店舗数が多い分、設備や雰囲気に差があり、手厚い少人数指導を求める方には物足りない場合があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>費用を抑えて長く続けたい方／転勤・出張が多い方</li>
@@ -173,7 +173,7 @@ export default function ZenPlaceReview() {
             {[
               { title: "全国最大級の店舗数", desc: "多数の店舗を相互利用できる（一部差額あり）ため、引っ越しや転勤があっても継続しやすい点が特徴です。" },
               { title: "選べるレッスン形式", desc: "マット・マシン・プライベートから、目的に応じてレッスン形式を選べます。" },
-              { title: "費用の手頃さ", desc: "マットグループ月4回9,625円〜（税込・目安）と業界最安水準で、長期的な継続に向いています。" },
+              { title: "費用の手頃さ", desc: "マットグループ月4回9,625円〜（税込・目安）は、当サイトの料金比較に掲載している9スタジオのうち、月額料金を表示している7スタジオの中で最も低い金額で、長期的な継続に向いています。" },
             ].map((s) => (
               <div key={s.title} className="bg-[#F5F3FF] rounded-xl p-5">
                 <h3 className="font-bold text-[#7C3AED] mb-2">{s.title}</h3>
@@ -225,7 +225,7 @@ export default function ZenPlaceReview() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              zen place pilatesは、コストパフォーマンスと通いやすさのバランスが最も優れたピラティススタジオの一つです。マットグループ月4回9,625円〜（税込・目安）という業界最安水準でありながら、マットとマシンの両方に対応し、全国の店舗を相互利用できる（一部差額あり）点が主な特徴です。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方に向いています。
+              zen place pilatesは、コストパフォーマンスと通いやすさのバランスが最も優れたピラティススタジオの一つです。マットグループ月4回9,625円〜（税込・目安）と、当サイトの料金比較に掲載している9スタジオのうち、月額料金を表示している7スタジオの中で最も低い金額でありながら、マットとマシンの両方に対応し、全国の店舗を相互利用できる（一部差額あり）点が主な特徴です。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方に向いています。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               ピラティスKやthe SILKは女性専用でマシンに特化しているため、男性の方やマットピラティスも受講したい方にはzen placeが選択肢になります。CLUB PILATESは国際ブランドとしての品質管理を特徴としていますが、料金面ではzen placeのほうが手頃です。BDC PILATESのような少人数制の手厚い指導を求める方には物足りない場合もありますが、レベル別のクラス編成でこの点を補っています。
@@ -245,7 +245,7 @@ export default function ZenPlaceReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>業界最安級の料金設定</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マットグループレッスン月4回9,625円〜（税込）</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>全店舗相互利用が可能（一部差額あり）</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>マット・マシン両対応／男女兼用</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>初心者からレベル別に対応</li>
