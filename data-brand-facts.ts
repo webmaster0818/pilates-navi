@@ -40,7 +40,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "月3回／月4回／フルデイ／フル（2026年4月1日改定・エリアA/Bの2区分）",
     joinFee: "公式の料金ページに記載なし（店舗で確認）",
     monthlyExtra: "施設利用料 700円／月（エリアB会員がエリアA店舗を使う場合は1回550円）",
-    trial: "無料体験あり",
+    trial: "グループレッスンの体験は0円（公式サイトの予約ボタンに「¥0体験」「無料体験予約」と表記）。パーソナル体験の料金は公式に記載なし（2026年10月21日確認）",
     source: "https://the-silk.co.jp/price/",
   },
   "rintosull": {
@@ -56,7 +56,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年10月17日確認）",
     joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年10月17日確認）",
     monthlyExtra: "施設維持費 770円／月（税込・2026年10月17日確認）",
-    trial: "体験レッスンあり（料金は予約ページで確認）",
+    trial: "体験レッスンあり（体験料金は公式サイト・体験予約ページに記載なし。店舗でご確認ください・2026年10月21日確認）",
     source: "https://bdcpilates.com/#pilates_plan",
   },
   "pilates-mirror": {
