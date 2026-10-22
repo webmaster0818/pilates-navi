@@ -7,9 +7,9 @@ import { UC_STORES, UC_STORES_CHECKED } from "@/data-uc-stores";
 const AFFILIATE = "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727";
 
 export const metadata: Metadata = {
-  title: "アーバンクラシックピラティスの口コミ・評判｜料金・店舗一覧と最寄駅・退会方法【2026年10月】",
+  title: "アーバンクラシックピラティスの口コミ・評判｜料金・持ち物・営業時間・店舗一覧と退会方法【2026年10月】",
   description:
-    "URBAN CLASSIC PILATES（アーバンクラシックピラティス）の口コミ・評判を出典を明記して整理しています。予約不要・1回30分のレッスン、全国101店舗の都道府県別・最寄駅一覧、入会時2,200円・3か月目から月480円の固定費、来店のみ・5日締めの退会手続きを解説します（10月公式サイト確認）。",
+    "アーバンクラシックピラティスの口コミ・評判を出典付きで整理しています。持ち物（本人確認書類とクレジットカード）、営業時間とフロント受付時間、入会時税込2,200円・3か月目から月税込480円の固定費、全国101店舗の最寄駅、来店のみ・5日締めの退会方法を解説します（10月22日公式確認）。",
   alternates: { canonical: "/review/urban-classic/" },
 };
 
@@ -19,6 +19,8 @@ const faqs = [
   { q: "URBAN CLASSIC PILATESの口コミ・評判を教えてください。", a: "Googleマップでは、当サイト収録の13店舗の平均評点が4.79、口コミ件数は計3,054件です（2026年9月2日時点）。「予約なしで好きな時間に行ける」「30分で終わる」「スタッフが巡回して見てくれる」といった評価が多い一方、「スタッフの入れ替わりで指導の質が変わった」「退会手続きが面倒」という声もあります。" },
   { q: "体験レッスンはありますか？", a: "はい。各店舗ページに「無料体験予約」があり、WEBで予約した後、店頭で体験・手続きを行う2ステップです。入会手続きには本人確認書類と、月会費引落し用のクレジットカードが必要です（公式FAQ）。" },
   { q: "予約は必要ですか？", a: "体験レッスンはWEB予約が必要ですが、入会後の通常利用は予約不要です。公式サイトでは「予約不要・全店舗相互利用可能」とされており、空いた時間にどの店舗でも利用できます。" },
+  { q: "体験・入会時の持ち物を教えてください。", a: "公式サイトに明記されている持参物は、運転免許証などの本人確認書類と、月会費の引落しに使うクレジットカードの2点です（公式サイトの「ご利用までの流れ」・よくあるご質問、2026年10月22日確認）。ウェア・シューズ・タオルなどの持ち物やレンタルの有無は、公式サイト・体験予約フォーム・会員規約のいずれにも記載を確認できませんでした。体験予約フォームの備考欄で事前に問い合わせるか、予約した店舗へご確認ください。" },
+  { q: "営業時間と、退会などの手続きができる時間を教えてください。", a: "営業時間は店舗により異なります（例: 川崎店・国分寺店・なんば千日前店・今池店は平日9:30〜21:30／土祝9:30〜19:30、調布店は平日10:00〜20:30／土祝10:00〜20:00）。2026年10月22日に確認した5店舗では、いずれも日曜定休で、平日13:00〜14:00はマシンメンテナンスと消毒のため利用できません。退会などの各種手続きはフロント受付時間（平日11:00〜20:00／土祝11:00〜17:00）内に限られます。退会は来店のみのため、受付時間に来店できる日を5日の締め日より前に確保しておくと安心です。" },
   { q: "アーバンクラシックピラティスの店舗はいくつありますか？", a: "公式サイトの店舗一覧（2026年10月15日確認）には101店舗が掲載されています（開業予定の表示がある店舗を含む）。東京39・神奈川15・大阪15・埼玉7・兵庫5・福岡5・千葉4・愛知4・北海道3（いずれも11月OPENの表示）・京都3・茨城1（取手・1月OPENの表示）です。各店舗の最寄駅はこのページの店舗一覧（都道府県別）にまとめています。" },
   { q: "初心者でも通えますか？", a: "はい、初心者の方でも始められます。インストラクターが一人ひとりに合わせてサポートするスタイルとされており、運動経験を問わず参加できます。" },
   { q: "男性も利用できますか？", a: "公式サイトでは「男性も入会いただける」とされています。なお妊娠中の方は利用できないとされています。詳細は公式サイトまたは各店舗でご確認ください。" },
@@ -84,7 +86,7 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">アーバンクラシックピラティス（URBAN CLASSIC PILATES）の口コミ・評判｜料金・店舗・退会方法</h1>
           <p className="mt-3 text-gray-600">予約不要・1回30分で、マシンピラティスとファンクショナルトレーニングをサーキット形式で行うスタジオです。Googleマップ・公式サイト・会員規約の情報をもとに、出典を明記して評判を整理しています。</p>
-          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月14日（公式サイト・川崎店ページ・会員規約）／店舗一覧・各店舗のアクセスは2026年10月15日</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月22日（公式サイト・川崎店ほか4店舗の店舗ページ・体験予約フォーム）／会員規約は2026年8月16日／店舗一覧・各店舗のアクセスは2026年10月15日</p>
         </div>
       </section>
 
@@ -106,6 +108,13 @@ export default function UrbanClassicReview() {
             <p className="text-sm text-gray-700 leading-relaxed">
               URBAN CLASSIC PILATES（アーバンクラシックピラティス）は、<strong>マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式</strong>のボディメイク系スタジオです。一斉のグループレッスンではなく<strong>一人ひとりが違う動きを行う個別サポート寄りのスタイル</strong>が特徴です。<strong>予約不要・1回30分・全店舗相互利用</strong>のため、決まった時間に通えない方でも続けやすい仕組みです。月会費は店舗・時期により異なり、公式サイトに金額の表示がないため、入会時2,200円と3か月目からの月480円の固定費も含めて、体験時にご確認ください。一方、静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なります。
             </p>
+            <dl className="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-700">
+              <div><dt className="font-bold text-gray-900">月額以外の費用</dt><dd>入会時 施設利用料 税込2,200円／3か月目から運営管理費 税込480円・月</dd></div>
+              <div><dt className="font-bold text-gray-900">体験・入会時の持ち物</dt><dd>本人確認書類とクレジットカード（ウェア等は公式に記載なし）</dd></div>
+              <div><dt className="font-bold text-gray-900">営業時間</dt><dd>店舗により異なります。確認した5店舗は日曜定休・平日13〜14時は利用不可</dd></div>
+              <div><dt className="font-bold text-gray-900">退会</dt><dd>来店のみ・毎月5日締め。手続きはフロント受付時間（平日11〜20時／土祝11〜17時）内</dd></div>
+            </dl>
+            <p className="mt-2 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式サイト・店舗ページ（2026年10月22日確認）。詳細は<a href="#visit-info" className="underline hover:text-gray-700">持ち物と営業時間</a>の項目をご覧ください。</p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>運動しながら効率よくボディメイクしたい方／続けやすい価格を重視する方</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>近くに店舗があり、こまめに通いたい方</li>
@@ -304,10 +313,43 @@ export default function UrbanClassicReview() {
             <ul className="space-y-1.5 text-xs text-gray-600">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗の月会費（公式サイトに金額表示なし）と入会キャンペーン</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>混みやすい時間帯（予約不要のため）</li>
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／レンタルの要否</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>ウェア・シューズ・タオルの要否とレンタルの有無（公式サイトに記載なし）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>解約・違約金・キャンセルの規約</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* 持ち物・営業時間（公式 2026-10-22確認） */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 id="visit-info" className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの持ち物と営業時間（2026年10月22日公式確認）</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-5">
+            体験・入会時に公式サイトが持参を案内しているのは、<strong>本人確認書類とクレジットカードの2点</strong>です。ウェアやシューズなどの持ち物は公式サイトに記載がないため、当サイトでは推測による記載を控えています。営業時間は店舗ごとに異なりますが、確認した5店舗では定休日・メンテナンス時間・フロント受付時間が共通していました。
+          </p>
+          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-4">
+            <table className="w-full text-sm">
+              <tbody>
+                {[
+                  ["体験・入会時の持ち物", "運転免許証などの本人確認書類／月会費の引落しに使うクレジットカード（公式「ご利用までの流れ」・よくあるご質問）"],
+                  ["ウェア・シューズ・タオル", "公式サイト・体験予約フォーム・会員規約に記載なし。体験予約フォームの備考欄、または予約店舗へのご確認をおすすめします"],
+                  ["営業時間（例）", "川崎・国分寺・なんば千日前・今池: 平日9:30〜21:30／土祝9:30〜19:30。調布: 平日10:00〜20:30／土祝10:00〜20:00"],
+                  ["利用できない時間帯", "平日13:00〜14:00（マシンメンテナンス・消毒のため。13:00までに退館）"],
+                  ["フロント受付時間", "平日11:00〜20:00／土祝11:00〜17:00（会員種別変更・休会・退会などの各種手続きはこの時間内）"],
+                  ["定休日", "日曜日"],
+                ].map(([label, value]) => (
+                  <tr key={label} className="border-b border-gray-100 last:border-0 align-top">
+                    <th className="bg-[#F5F3FF] text-left px-4 py-3 font-medium text-gray-700 w-1/3">{label}</th>
+                    <td className="px-4 py-3 text-gray-600">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            退会は来店のみで、毎月5日が締め日です（2025年9月以降の入会者は前月5日までの手続きで翌月末退会）。フロント受付時間外や日曜日は手続きができないため、締め日の直前ではなく余裕をもって来店日を決めておくと安心です。
+          </p>
+          <p className="mt-3 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式サイト TOP・川崎店／調布店／国分寺店／なんば千日前店／今池店の店舗ページ・川崎店の体験予約フォーム（いずれも2026年10月22日確認）。上記5店舗以外の営業時間は各店舗ページでご確認ください。</p>
         </div>
       </section>
 
@@ -446,7 +488,7 @@ export default function UrbanClassicReview() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月15日</p>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月22日</p>
           <BrandAreaLinks slug="urban-classic" />
         </div>
       </section>
