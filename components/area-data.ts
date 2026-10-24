@@ -31,5 +31,6 @@ export function districtOf(address: string, ward: boolean): string | null {
     return m ? m[1] : null;
   }
   const m = address.match(/[都道府県]([^\s\d０-９、]+?市)(市)?/) || address.match(/\s(\S+市)\s\S+[都道府県]/);
-  return m ? m[1] + (m[2] || "") : null;
+  // 「四日市市」のような市名の重複表記だけを残し、「市川市市川」(市名＋町名)は市名だけにする
+  return m ? m[1] + (m[2] && !m[1].startsWith("市") ? m[2] : "") : null;
 }
