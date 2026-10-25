@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "URBAN CLASSIC PILATESの料金プランを教えてください。", a: "会員種別はマンスリー4（月4回）・マンスリー8（月8回）・レギュラー（通い放題）の3種で、いずれも1日1回までの利用です。月会費は「店舗や時期により変動」として公式サイトの料金表に金額が固定表示されていません（2026年10月14日確認）。金額が明記されているのは、入会時の施設利用料税込2,200円と、3か月目の月会費から毎月かかる運営管理費税込480円です（川崎店ページ）。都度払いはなく月会費制です。" },
+  { q: "URBAN CLASSIC PILATESの料金プランを教えてください。", a: "会員種別はマンスリー4（月4回）・マンスリー8（月8回）・レギュラー（通い放題）の3種で、いずれも1日1回までの利用です。公式サイトの各店舗ページの料金表（2026年10月25日に全102店舗ページで確認、全店共通）では、月会費はマンスリー4が税込8,580円（税抜7,800円）、マンスリー8が税込10,780円（税抜9,800円）、レギュラーが税込12,980円（税抜11,800円）です。いずれも「永久割引価格」として表示されています。このほか入会時の施設利用料税込2,200円と、3か月目の月会費から毎月かかる運営管理費税込480円がかかります。都度払いはなく月会費制です。" },
   { q: "URBAN CLASSIC PILATESはどんなスタジオですか？", a: "マシンピラティスとファンクショナルトレーニングを組み合わせた、サーキット形式のボディメイクスタジオです。グループ一斉ではなく、一人ひとりが違う動きを行うセミパーソナルに近いスタイルが特徴とされています。" },
   { q: "URBAN CLASSIC PILATESの口コミ・評判を教えてください。", a: "Googleマップでは、当サイト収録の13店舗の平均評点が4.79、口コミ件数は計3,054件です（2026年9月2日時点）。「予約なしで好きな時間に行ける」「30分で終わる」「スタッフが巡回して見てくれる」といった評価が多い一方、「スタッフの入れ替わりで指導の質が変わった」「退会手続きが面倒」という声もあります。" },
   { q: "体験レッスンはありますか？", a: "はい。各店舗ページに「無料体験予約」があり、WEBで予約した後、店頭で体験・手続きを行う2ステップです。入会手続きには本人確認書類と、月会費引落し用のクレジットカードが必要です（公式FAQ）。" },
@@ -49,16 +49,17 @@ const goodPoints = [
 const concernPoints = [
   "スタッフの入れ替わりで指導の質が変わったという声（店舗・時期による差）",
   "退会手続きは来店のみ・5日締めで、手続きへの不満の声",
-  "月会費は店舗・時期により異なり、公式サイトだけでは金額を比較しにくい点",
+  "月会費のほかに、入会時の施設利用料（税込2,200円）と3か月目からの運営管理費（月税込480円）がかかる点",
   "静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なる点",
 ];
 
 const prices = [
-  { plan: "マンスリー4（月4回）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。各店舗の「永久割引価格」として案内されています。" },
-  { plan: "マンスリー8（月8回）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。" },
-  { plan: "レギュラー（通い放題）", price: "店舗・時期で変動（公式に金額表示なし）", note: "1日1回まで。" },
-  { plan: "施設利用料（入会時のみ）", price: "税込2,200円", note: "川崎店ページに記載（2026年10月14日確認）。" },
-  { plan: "運営管理費（毎月）", price: "税込480円（3か月目の月会費から）", note: "川崎店ページに記載。月額に上乗せされる固定費です。" },
+  { plan: "マンスリー4（月4回）", price: "税込8,580円／月（税抜7,800円）", note: "1日1回まで。「永久割引価格」として表示（通常価格は税込9,680円と併記）。" },
+  { plan: "マンスリー8（月8回）", price: "税込10,780円／月（税抜9,800円）", note: "1日1回まで。「永久割引価格」として表示（通常価格は税込11,880円と併記）。" },
+  { plan: "レギュラー（通い放題）", price: "税込12,980円／月（税抜11,800円）", note: "1日1回まで。「永久割引価格」として表示（通常価格は税込14,080円と併記）。" },
+  { plan: "施設利用料（入会時のみ）", price: "税込2,200円（税抜2,000円）", note: "全店舗ページに同じ記載（2026年10月25日確認）。" },
+  { plan: "運営管理費（毎月）", price: "税込480円（3か月目の月会費から）", note: "全店舗ページに同じ記載。月会費に上乗せされる固定費です。" },
+  { plan: "水素水プラス（オプション）", price: "税込1,080円／月（税抜1,000円）", note: "浅草・飯田橋・月島・旗の台・町屋・練馬・藤沢・鶴見の8店舗のみ料金表に記載。" },
   { plan: "体験", price: "無料（店舗ページに「無料体験予約」）", note: "WEB予約の後、店頭で体験・手続き。" },
 ];
 
@@ -86,7 +87,7 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">アーバンクラシックピラティス（URBAN CLASSIC PILATES）の口コミ・評判｜料金・店舗・退会方法</h1>
           <p className="mt-3 text-gray-600">予約不要・1回30分で、マシンピラティスとファンクショナルトレーニングをサーキット形式で行うスタジオです。Googleマップ・公式サイト・会員規約の情報をもとに、出典を明記して評判を整理しています。</p>
-          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月22日（公式サイト・川崎店ほか4店舗の店舗ページ・体験予約フォーム）／会員規約は2026年8月16日／店舗一覧・各店舗のアクセスは2026年10月15日</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 料金は2026年10月25日（全102店舗ページの料金表）／その他は2026年10月22日（公式サイト・川崎店ほか4店舗の店舗ページ・体験予約フォーム）／会員規約は2026年8月16日／店舗一覧・各店舗のアクセスは2026年10月15日</p>
         </div>
       </section>
 
@@ -106,15 +107,16 @@ export default function UrbanClassicReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              URBAN CLASSIC PILATES（アーバンクラシックピラティス）は、<strong>マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式</strong>のボディメイク系スタジオです。一斉のグループレッスンではなく<strong>一人ひとりが違う動きを行う個別サポート寄りのスタイル</strong>が特徴です。<strong>予約不要・1回30分・全店舗相互利用</strong>のため、決まった時間に通えない方でも続けやすい仕組みです。月会費は店舗・時期により異なり、公式サイトに金額の表示がないため、入会時2,200円と3か月目からの月480円の固定費も含めて、体験時にご確認ください。一方、静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なります。
+              URBAN CLASSIC PILATES（アーバンクラシックピラティス）は、<strong>マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式</strong>のボディメイク系スタジオです。一斉のグループレッスンではなく<strong>一人ひとりが違う動きを行う個別サポート寄りのスタイル</strong>が特徴です。<strong>予約不要・1回30分・全店舗相互利用</strong>のため、決まった時間に通えない方でも続けやすい仕組みです。月会費は公式の店舗ページの料金表で税込8,580円（月4回）〜12,980円（通い放題）と全店共通です。入会時2,200円と3か月目からの月480円の固定費も含めてご検討ください。一方、静的なマット中心のピラティスをじっくり学びたい方とは方向性が異なります。
             </p>
             <dl className="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-700">
+              <div><dt className="font-bold text-gray-900">月会費（全店共通・税込）</dt><dd>月4回 8,580円／月8回 10,780円／通い放題 12,980円</dd></div>
               <div><dt className="font-bold text-gray-900">月額以外の費用</dt><dd>入会時 施設利用料 税込2,200円／3か月目から運営管理費 税込480円・月</dd></div>
               <div><dt className="font-bold text-gray-900">体験・入会時の持ち物</dt><dd>本人確認書類とクレジットカード（ウェア等は公式に記載なし）</dd></div>
               <div><dt className="font-bold text-gray-900">営業時間</dt><dd>店舗により異なります。確認した5店舗は日曜定休・平日13〜14時は利用不可</dd></div>
               <div><dt className="font-bold text-gray-900">退会</dt><dd>来店のみ・毎月5日締め。手続きはフロント受付時間（平日11〜20時／土祝11〜17時）内</dd></div>
             </dl>
-            <p className="mt-2 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式サイト・店舗ページ（2026年10月22日確認）。詳細は<a href="#visit-info" className="underline hover:text-gray-700">持ち物と営業時間</a>の項目をご覧ください。</p>
+            <p className="mt-2 text-xs text-gray-500">出典: URBAN CLASSIC PILATES公式サイト・店舗ページ（月会費・入会時費用は2026年10月25日に全102店舗ページで確認、その他は10月22日確認）。詳細は<a href="#visit-info" className="underline hover:text-gray-700">持ち物と営業時間</a>の項目をご覧ください。</p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>運動しながら効率よくボディメイクしたい方／続けやすい価格を重視する方</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>近くに店舗があり、こまめに通いたい方</li>
@@ -135,7 +137,7 @@ export default function UrbanClassicReview() {
                 {[
                   ["スタジオ名", "URBAN CLASSIC PILATES（アーバンクラシックピラティス）"],
                   ["運営会社", "株式会社VB NEXT（東京都港区・BRESTも運営）"],
-                  ["月額料金", "マンスリー4／マンスリー8／レギュラー（通い放題）。金額は店舗・時期により異なる（公式サイトに表示なし）"],
+                  ["月額料金", "マンスリー4 税込8,580円／マンスリー8 税込10,780円／レギュラー（通い放題）税込12,980円（全店共通・2026年10月25日確認）"],
                   ["月額以外の費用", "入会時 施設利用料 税込2,200円／3か月目から運営管理費 税込480円・月"],
                   ["レッスン形式", "マシンピラティス×ファンクショナル（TRX等）のサーキット形式・1回30分・予約不要"],
                   ["店舗", "公式サイトの一覧に101店舗（11都道府県・開業予定を含む）。全店舗相互利用可"],
@@ -169,7 +171,7 @@ export default function UrbanClassicReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">URBAN CLASSIC PILATESの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            URBAN CLASSIC PILATESは月会費制（都度払いなし）で、会員種別はマンスリー4・マンスリー8・レギュラー（通い放題）の3種です。公式サイトの料金表は「永久割引価格」という枠組みのみで、<strong>月会費の金額は表示されていません</strong>（店舗・時期により異なります）。一方で、<strong>入会時の施設利用料2,200円と3か月目からの運営管理費480円/月</strong>は金額が明記されています。月額だけの比較では見落としやすいため、合計額での比較をおすすめします。
+            URBAN CLASSIC PILATESは月会費制（都度払いなし）で、会員種別はマンスリー4・マンスリー8・レギュラー（通い放題）の3種です。2026年10月25日に公式サイトの全102店舗ページの料金表を確認したところ、<strong>月会費は全店共通で、月4回 税込8,580円・月8回 税込10,780円・通い放題 税込12,980円</strong>でした（いずれも「永久割引価格」として、取り消し線付きの通常価格と併記）。このほか、<strong>入会時の施設利用料2,200円と3か月目からの運営管理費480円/月</strong>がかかります。月額だけの比較では見落としやすいため、合計額での比較をおすすめします。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
@@ -311,7 +313,7 @@ export default function UrbanClassicReview() {
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">予約・お申し込み前にご確認いただきたい項目</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗の月会費（公式サイトに金額表示なし）と入会キャンペーン</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>入会キャンペーンの有無と適用条件（月会費は全店共通の表示）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>混みやすい時間帯（予約不要のため）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>ウェア・シューズ・タオルの要否とレンタルの有無（公式サイトに記載なし）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>解約・違約金・キャンセルの規約</li>
@@ -417,7 +419,7 @@ export default function UrbanClassicReview() {
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-gray-900">料金の考え方</p>
-              <p className="mt-1 text-gray-600">月会費は<strong>店舗・時期により異なる</strong>ため、公式サイトの料金表では金額が固定表示されていません(「永久割引価格」の枠組みのみ提示)。正確な月額は、通いたい店舗での体験時にご確認ください。通常レッスンは予約不要で利用できます。<br />追記(2026年10月14日): 店舗ページには入会時の施設利用料税込2,200円、3か月目から運営管理費税込480円/月が明記されています。</p>
+              <p className="mt-1 text-gray-600">月会費は各店舗ページの料金表に<strong>「永久割引価格」として、マンスリー4 税込8,580円・マンスリー8 税込10,780円・レギュラー 税込12,980円</strong>と表示されています(2026年10月25日に全102店舗ページで確認、全店共通)。このほか入会時の施設利用料税込2,200円、3か月目から運営管理費税込480円/月がかかります。通常レッスンは予約不要で利用できます。</p>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-gray-900">退会規定(会員規約 第11条・原文確認)</p>
