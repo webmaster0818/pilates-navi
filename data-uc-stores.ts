@@ -1,7 +1,7 @@
-// URBAN CLASSIC PILATES 公式店舗一覧（https://urbanclassic.jp/pilates-studio/）と各店舗ページの「アクセス」欄を転記（2026-10-15確認）。
+// URBAN CLASSIC PILATES 公式店舗一覧（https://urbanclassic.jp/pilates-studio/）と各店舗ページの「アクセス」欄を転記（2026-10-15確認・2026-10-25に全102店舗を再確認し洛西を追加）。
 // station は「」内の駅名（バス停のみの店舗は null）。studio は当サイトの店舗詳細ページ（/studio/<slug>/）があるものだけ。
 export type UcStore = { pref: string; store: string; access: string; station: string | null; open: string; studio: string | null };
-export const UC_STORES_CHECKED = "2026年10月15日";
+export const UC_STORES_CHECKED = "2026年10月25日";
 export const UC_STORES: UcStore[] = [
   {"pref": "北海道", "store": "白石", "access": "札幌市営地下鉄東西線「白石」徒歩1分", "station": "白石駅", "open": "11月OPEN", "studio": null},
   {"pref": "北海道", "store": "美しが丘", "access": "北海道中央バス「美しが丘3条7丁目」より徒歩2分", "station": null, "open": "11月OPEN", "studio": null},
@@ -94,6 +94,7 @@ export const UC_STORES: UcStore[] = [
   {"pref": "京都府", "store": "四条河原町", "access": "阪急京都線「京都河原町」より徒歩3分", "station": "京都河原町駅", "open": "", "studio": "URBAN-CLASSIC-PILATES-四条河原町-ce09"},
   {"pref": "京都府", "store": "西院", "access": "阪急京都線「西院」より徒歩1分", "station": "西院駅", "open": "", "studio": "URBAN-CLASSIC-PILATES-西院-b7f8"},
   {"pref": "京都府", "store": "伏見桃山", "access": "京阪本線「伏見桃山」徒歩1分", "station": "伏見桃山駅", "open": "", "studio": null},
+  {"pref": "京都府", "store": "洛西", "access": "京都市バス「洛西バスターミナル」徒歩2分", "station": null, "open": "12月OPEN", "studio": null},
   {"pref": "兵庫県", "store": "武庫之荘", "access": "阪急電鉄神戸本線「武庫之荘」より徒歩2分", "station": "武庫之荘駅", "open": "", "studio": null},
   {"pref": "兵庫県", "store": "尼崎", "access": "JR東海道本線・東海道線・福知山線・東西線「尼崎」より徒歩2分", "station": "尼崎駅", "open": "", "studio": null},
   {"pref": "兵庫県", "store": "川西", "access": "阪急電鉄宝塚本線「川西能勢口」より徒歩2分", "station": "川西能勢口駅", "open": "", "studio": null},
