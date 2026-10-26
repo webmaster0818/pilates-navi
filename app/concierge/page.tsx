@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import Link from 'next/link';
+import { BRAND_FACTS } from '@/data-brand-facts';
 
 /* ==========================================================================
    Studio type & data
@@ -47,7 +48,7 @@ const studios: Studio[] = [
     slug: 'club-pilates',
     lessonType: ['マシン', 'マット'],
     tags: ['体験レッスンあり', '駅近', '少人数制'],
-    price: '月額14,190円〜',
+    price: BRAND_FACTS['club-pilates'].monthlyShort ?? '',
     priceCategory: '10k-20k',
     description: '世界最大級のピラティスブランドです。4段階のレベル分けと8種類のクラス形式により、段階的にレベルアップできます。インストラクターは全員が有資格者です。',
     reviewPath: '/review/club-pilates/',

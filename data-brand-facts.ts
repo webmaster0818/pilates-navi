@@ -24,6 +24,8 @@ export type BrandFacts = {
   trial: string;
   /** 出典URL */
   source: string;
+  /** カード・一覧用の短い月額表記(任意) */
+  monthlyShort?: string;
 };
 
 export const BRAND_FACTS: Record<string, BrandFacts> = {
@@ -82,5 +84,6 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "店舗ページに記載なし（2026年10月26日確認）",
     trial: "30分の無料体験クラス",
     source: "https://clubpilates.co.jp/studio/",
+    monthlyShort: "月4回 10,890円〜（税込・店舗により異なる）",
   },
 };

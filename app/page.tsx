@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
+import { BRAND_FACTS } from "@/data-brand-facts";
 import Icon from "@/components/Icon";
 import studioIdx from "@/data-studio-index.json";
 
@@ -59,7 +60,7 @@ const studios = [
     rank: 3,
     name: "CLUB PILATES",
     tagline: "世界最大級のピラティスブランドで、4段階のレベル別に段階的に学べます。",
-    monthlyFee: "月額14,190円〜",
+    monthlyFee: BRAND_FACTS["club-pilates"].monthlyShort ?? "",
     features: ["世界最大級のピラティスブランド", "4段階のレベル分け", "全インストラクター有資格者", "8種類のクラス形式"],
     pros: ["レベルに合ったレッスンを受けられる点", "グローバル基準のレッスン体系", "多様なレッスン形式"],
     cons: ["料金がやや高め", "都市部中心の店舗展開"],
