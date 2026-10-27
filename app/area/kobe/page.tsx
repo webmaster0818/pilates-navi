@@ -46,6 +46,16 @@ const SANNOMIYA_BRANDS = [
     monthly: "グレード02：マットグループ 月4回 9,625円、マシングループ 月4回 15,400円（税込・公式料金表 2026年10月19日確認）",
     source: "https://www.zenplace.co.jp/studios/pilates-sannomiya",
   },
+  {
+    // 2026-10-27 追加: Celestia 公式の店舗一覧に神戸三宮店(/stores/kobe-sannnomiya/)が掲載された
+    name: "Celestia 神戸三宮店",
+    review: "/review/celestia/",
+    access: "市営地下鉄「三宮・花時計前」駅 徒歩2分、JR「三ノ宮」駅・市営地下鉄「三宮」駅・阪急/阪神「神戸三宮」駅 徒歩5分",
+    target: "マシンピラティス・セミパーソナル（約2名）",
+    trial: "公式料金ページでは30分 3,000円。店舗ページの予約案内は「無料体験」（期間の記載なし）",
+    monthly: "月2回 20,000円〜通い放題 66,000円（税込み・公式料金ページ 2026年10月26日確認）",
+    source: "https://celes-pilates.jp/stores/kobe-sannnomiya/",
+  },
 ];
 
 function jpDate(iso: string) {
@@ -72,8 +82,8 @@ export default function AreaPage() {
         <h2 className="text-lg sm:text-xl font-bold text-gray-800">三宮のピラティススタジオ（{SANNOMIYA.length}店）</h2>
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           当サイトの神戸の掲載店舗{LISTED}店のうち、店名または住所に「三宮」を含む店舗は{SANNOMIYA.length}店です。
-          大手ブランドでは、Rintosull・ピラティスK・zen place の3店舗が三宮にあります。
-          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}に確認した内容です。
+          大手ブランドでは、Rintosull・ピラティスK・zen place・Celestia の4店舗が三宮にあります（Celestia 神戸三宮店は当サイトのGoogleマップ取得後に公式の店舗一覧に掲載されたため、下の掲載店舗一覧には含まれていません）。
+          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}（Celestiaは2026年10月27日）に確認した内容です。
         </p>
 
         <div className="mt-4 overflow-x-auto">
@@ -110,7 +120,7 @@ export default function AreaPage() {
               <a href={b.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">{b.name} 公式</a>
             </span>
           ))}
-          （{SANNOMIYA_CHECKED_AT}確認）。キャンペーン料金は期間限定の場合があります。
+          （{SANNOMIYA_CHECKED_AT}確認。Celestiaは2026年10月27日確認）。キャンペーン料金は期間限定の場合があります。
         </p>
 
         <h3 className="mt-6 text-base font-bold text-gray-800">三宮の掲載店舗（口コミ件数の多い順）</h3>
