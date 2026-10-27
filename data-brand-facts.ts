@@ -7,6 +7,13 @@
 
 export const FACTS_SURVEYED_AT = "2026年9月30日";
 
+/** Celestia 体験料金の出典(料金ページと店舗別の体験案内ページで表記が異なるため両方を示す) */
+export const CELESTIA_TRIAL_SOURCES = {
+  checkedAt: "2026年10月27日",
+  price: "https://celes-pilates.jp/price/",
+  lp: "https://celes-pilates.jp/lp/trial01/",
+};
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -74,7 +81,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "月2回 20,000円／月4回 33,000円／月6回 47,000円／月8回 53,000円／通い放題 66,000円（税込み・公式料金ページの料金画像に記載・2026年10月26日確認）",
     joinFee: "入会金あり（利用規約第14条）。金額は公式サイトに記載なし（2026年10月26日確認）",
     monthlyExtra: "公式に記載なし",
-    trial: "30分 3,000円",
+    trial: "公式サイトの料金ページでは30分 3,000円。店舗別の体験案内ページでは「OPEN特別キャンペーン（期間限定）」として初回体験レッスン無料と表記。キャンペーンの期間は公式に記載なし（いずれも2026年10月27日確認）",
     source: "https://celes-pilates.jp/price/",
   },
   "club-pilates": {

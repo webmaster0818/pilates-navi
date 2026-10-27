@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES } from "@/data-brand-facts";
+
+const TRIAL = BRAND_FACTS["celestia"].trial;
 
 export const metadata: Metadata = {
   title: "Celestiaの口コミ・料金・体験レッスン｜セミパーソナルの特徴と評判【2026年】",
@@ -13,7 +16,7 @@ const faqs = [
   { q: "Celestia（セレスティア）の料金はいくらですか？", a: "公式サイトの料金ページでは、月2回20,000円、月4回33,000円、月6回47,000円、月8回53,000円、通い放題66,000円（いずれも税込み）と記載されています（2026年10月26日確認）。1回あたりに換算すると、月4回で8,250円、月8回で6,625円です。通常プランは翌月以降へのチケットの繰り越しが可能です。入会金は利用規約に定めがありますが、金額は公式サイトに記載がないため、申し込み前に店舗でご確認ください。" },
   { q: "Celestiaの口コミ・評判は良い？", a: "「約2名の少人数でしっかり見てもらえる」「スタジオが清潔」「手ぶらで通えて便利」といった声が見られる一方、「1回あたりの単価がやや高め」「店舗がまだ少ない」という指摘もあります。評価は目的や通うエリアによって異なります。" },
   { q: "セミパーソナルとは何ですか？", a: "1レッスンあたり約2名の少人数制です。インストラクターの目が行き届くため、マンツーマンに近い指導を受けられます。グループレッスンより手厚く、完全プライベートより費用を抑えられる中間的な形式です。" },
-  { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。公式サイトでは体験レッスンを30分3,000円と記載しています（2026年10月26日確認）。当日入会の特典の有無は、申し込み前に公式サイトでご確認ください。" },
+  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分3,000円と記載されています。一方、店舗別の体験案内ページでは「OPEN特別キャンペーン（期間限定）」として初回体験レッスンを無料と表記しています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。当日入会の特典の有無は、申し込み前に公式サイトでご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望の店舗・日時を選んで申し込むのが基本です。空き状況や予約システムは店舗により異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルや繰り越しはできますか？", a: "未消化分の繰り越しが可能とされています。キャンセルの可否・期限・ペナルティの有無はプランや店舗の規約によるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "手ぶらで通えますか？", a: "はい、ウェアやタオルなどのレンタルがあり、手ぶらで通えるとされています。仕事帰りにも立ち寄りやすい環境です（レンタルの範囲・料金は店舗にてご確認ください）。" },
@@ -54,7 +57,7 @@ const prices = [
   { plan: "通い放題プラン", price: "66,000円（税込み）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
   { plan: "入会金", price: "あり（金額は公式サイトに記載なし）", note: "利用規約第14条に入会金の定めがあります。金額は店舗でご確認ください。" },
   { plan: "繰り越し", price: "あり（通常プラン）", note: "公式料金ページに、翌月以降へのチケットの繰り越しが可能と記載されています。" },
-  { plan: "体験レッスン", price: "30分 3,000円", note: "公式サイトの記載です（2026年10月26日確認）。" },
+  { plan: "体験レッスン", price: TRIAL, note: "料金ページと店舗別の体験案内ページで表記が異なります。予約時に適用される料金をご確認ください。" },
 ];
 
 const stores = [
@@ -133,7 +136,7 @@ export default function CelestiaReview() {
                   ["レッスン形式", "セミパーソナル（約2名の少人数制）"],
                   ["対象", "運動経験不問 ※男性可否は店舗で要確認"],
                   ["特徴", "マンツーマンに近い指導 / 手ぶらで利用可 / 清潔なスタジオ"],
-                  ["体験レッスン", "30分 3,000円（公式サイトの記載）"],
+                  ["体験レッスン", TRIAL],
                 ].map(([label, value]) => (
                   <tr key={label} className="border-b border-gray-100 last:border-0">
                     <th className="bg-[#F5F3FF] text-left px-4 py-3 font-medium text-gray-700 w-1/3">{label}</th>
@@ -184,7 +187,7 @@ export default function CelestiaReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-            ※出典：<a href="https://celes-pilates.jp/price/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 料金ページ</a>・利用規約（2026年10月26日確認）。入会金の金額は公式サイトに記載がないため掲載していません。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
+            ※出典：<a href="https://celes-pilates.jp/price/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 料金ページ</a>・利用規約（2026年10月26日確認）。体験レッスンの料金は<a href={CELESTIA_TRIAL_SOURCES.price} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">料金ページ</a>と<a href={CELESTIA_TRIAL_SOURCES.lp} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">体験案内ページ</a>（{CELESTIA_TRIAL_SOURCES.checkedAt}確認）。入会金の金額は公式サイトに記載がないため掲載していません。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
       </section>
