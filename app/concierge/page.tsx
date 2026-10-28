@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { BRAND_FACTS } from '@/data-brand-facts';
+import { MONTHLY_SHORT_EXTRA, monthlyShortOf } from '@/data-brand-facts';
 
 /* ==========================================================================
    Studio type & data
@@ -26,7 +26,7 @@ const studios: Studio[] = [
     slug: 'zenplace',
     lessonType: ['マシン', 'マット'],
     tags: ['少人数制', '体験レッスンあり', '駅近', 'プライベートレッスン'],
-    price: '月額10,890円〜',
+    price: monthlyShortOf('zenplace'),
     priceCategory: '10k-20k',
     description: '全国100店舗以上を展開しています。マットとマシンの両方に対応し、初心者から経験者まで幅広く受け入れています。少人数制レッスンによる丁寧な指導が特徴です。',
     reviewPath: '/review/zenplace/',
@@ -37,7 +37,7 @@ const studios: Studio[] = [
     slug: 'pilates-k',
     lessonType: ['マシン'],
     tags: ['女性専用', '体験レッスンあり', '駅近', 'おしゃれな空間'],
-    price: '月額11,220円〜',
+    price: monthlyShortOf('pilates-k'),
     priceCategory: '10k-20k',
     description: '女性専用のマシンピラティス専門スタジオです。0円の体験レッスンを実施しており、内装にこだわった空間でボディメイクに取り組めます。',
     reviewPath: '/review/pilates-k/',
@@ -48,7 +48,7 @@ const studios: Studio[] = [
     slug: 'club-pilates',
     lessonType: ['マシン', 'マット'],
     tags: ['体験レッスンあり', '駅近', '少人数制'],
-    price: BRAND_FACTS['club-pilates'].monthlyShort ?? '',
+    price: monthlyShortOf('club-pilates'),
     priceCategory: '10k-20k',
     description: '世界最大級のピラティスブランドです。4段階のレベル分けと8種類のクラス形式により、段階的にレベルアップできます。インストラクターは全員が有資格者です。',
     reviewPath: '/review/club-pilates/',
@@ -59,7 +59,7 @@ const studios: Studio[] = [
     slug: 'the-silk',
     lessonType: ['マシン'],
     tags: ['女性専用', '駅近', 'おしゃれな空間', '体験レッスンあり'],
-    price: '月額12,980円〜',
+    price: monthlyShortOf('the-silk'),
     priceCategory: '10k-20k',
     description: '音楽と照明を演出に取り入れた空間で行う、女性専用のマシンピラティスです。全店が駅近の立地で通いやすく、意欲を保ちやすい空間演出が特徴です。',
     reviewPath: '/review/the-silk/',
@@ -70,7 +70,7 @@ const studios: Studio[] = [
     slug: 'bdc',
     lessonType: ['マット'],
     tags: ['少人数制', '体験レッスンあり'],
-    price: '月額11,000円〜',
+    price: monthlyShortOf('bdc'),
     priceCategory: '10k-20k',
     description: 'プロダンサーが考案した独自メソッドで、しなやかで美しい身体づくりを目指すスタジオです。少人数制（最大8名）で、体幹強化に重点を置いています。',
     reviewPath: '/review/bdc/',
@@ -81,8 +81,9 @@ const studios: Studio[] = [
     slug: 'celestia',
     lessonType: ['マシン'],
     tags: ['少人数制', 'プライベートレッスン', '体験レッスンあり', 'おしゃれな空間'],
-    price: BRAND_FACTS['celestia'].monthlyShort ?? '',
-    priceCategory: '10k-20k',
+    price: monthlyShortOf('celestia'),
+    // 最低額は月2回 20,000円（税込）。区分は下限で判定し、20,000円は 20k-30k に入れる
+    priceCategory: '20k-30k',
     description: 'セミパーソナル形式のマシンピラティス専門スタジオです。少人数制で、一人ひとりに合わせた丁寧な指導を受けられます。手ぶらで通える点も特徴です。',
     reviewPath: '/review/celestia/',
     url: 'https://celes-pilates.jp/',
@@ -92,9 +93,9 @@ const studios: Studio[] = [
     slug: 'brest',
     lessonType: ['マシン'],
     tags: ['体験レッスンあり'],
-    price: '要問い合わせ',
+    price: monthlyShortOf('brest'),
     priceCategory: '10k-20k',
-    description: 'マシンピラティスとウェイトトレーニングを、1回30分のパーソナルレッスンで行うスタジオです。都度払いは6,380円です。会員はURBAN CLASSIC PILATESも全店追加料金なしで利用できます。',
+    description: `マシンピラティスとウェイトトレーニングを、1回30分のパーソナルレッスンで行うスタジオです。都度払いは${MONTHLY_SHORT_EXTRA['brest'].perVisit}です。会員はURBAN CLASSIC PILATESも全店追加料金なしで利用できます。`,
     reviewPath: '/review/brest/',
     url: 'https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727',
   },
@@ -103,7 +104,7 @@ const studios: Studio[] = [
     slug: 'urban-classic',
     lessonType: ['マシン', 'マット'],
     tags: ['体験レッスンあり', 'おしゃれな空間'],
-    price: '要問い合わせ',
+    price: monthlyShortOf('urban-classic'),
     priceCategory: '10k-20k',
     description: 'マシンピラティスとファンクショナルトレーニングを組み合わせたサーキット形式です。予約不要・1回30分で、全国102店舗（開業予定を含む）を相互利用できます。無料体験を実施しています。',
     reviewPath: '/review/urban-classic/',
@@ -114,7 +115,7 @@ const studios: Studio[] = [
     slug: 'melmake',
     lessonType: ['マシン', 'マット'],
     tags: ['プライベートレッスン'],
-    price: '月2回17,300円〜',
+    price: monthlyShortOf('melmake'),
     priceCategory: '20k-30k',
     description: '完全個室で受けられるパーソナルのマシンピラティスです（名古屋・伏見／女性専用名古屋駅、福岡西新はマット）。月謝制で、50分×月2回17,300円〜です。',
     reviewPath: '/review/melmake/',

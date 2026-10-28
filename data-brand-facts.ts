@@ -43,6 +43,8 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "施設維持費 825円／月",
     trial: "0円から体験可能",
     source: "https://pilates-k.jp/price",
+    // 公式料金ページ「マンスリー4メンバー ¥11,220〜¥13,420（税込）」2026年10月28日確認
+    monthlyShort: "月4回 11,220円〜（税込・店舗により異なる）",
   },
   "the-silk": {
     style: "マシンピラティス", format: "グループ＋プライベート", gender: "女性専用",
@@ -51,6 +53,8 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "施設利用料 700円／月（エリアB会員がエリアA店舗を使う場合は1回550円）",
     trial: "グループレッスンの体験は0円（公式サイトの予約ボタンに「¥0体験」「無料体験予約」と表記）。パーソナル体験の料金は公式に記載なし（2026年10月21日確認）",
     source: "https://the-silk.co.jp/price/",
+    // 公式料金ページ「Light 3 月3回 エリアB ¥12,280（税込）」2026年10月28日確認（別途施設利用料700円/月）
+    monthlyShort: "月3回 12,280円〜（税込・エリアにより異なる）",
   },
   "rintosull": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
@@ -67,6 +71,8 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "施設維持費 770円／月（税込・2026年10月17日確認）",
     trial: "体験レッスンあり（体験料金は公式サイト・体験予約ページに記載なし。店舗でご確認ください・2026年10月21日確認）",
     source: "https://bdcpilates.com/#pilates_plan",
+    // 公式料金プラン欄 2026年10月28日確認
+    monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
   },
   "pilates-mirror": {
     style: "マシンピラティス（天井の鏡・30分レッスン）", format: "グループ＋パーソナル", gender: "男女可",
@@ -96,3 +102,39 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyShort: "月4回 10,890円〜（税込・店舗により異なる）",
   },
 };
+
+/**
+ * 一覧用の短い月額表記のうち、BRAND_FACTS に項目がないブランドの分。
+ * BRAND_FACTS に足すと料金比較表・エリアページ・レビューの「主要事実」欄にも行が増えるため、分けて持つ。
+ */
+export const MONTHLY_SHORT_EXTRA: Record<string, { monthlyShort: string; perVisit?: string; checkedAt: string; source: string }> = {
+  "zenplace": {
+    monthlyShort: "マット月4回 9,625円〜・マシン月4回 15,400円（税込）",
+    checkedAt: "2026年10月28日",
+    source: "https://www.zenplace.co.jp/price",
+  },
+  "melmake": {
+    monthlyShort: "月2回 17,300円〜（税込・50分プライベート）",
+    checkedAt: "2026年10月28日",
+    source: "https://mermake.co.jp/menu-pilates/",
+  },
+  "brest": {
+    // 店舗ページの料金表画像の alt（代官山：デイタイムM4 税込20,680円／呉服町：パーソナルM4 税込22,880円）
+    monthlyShort: "月4回 20,680円〜（税込・東京のデイタイム。東京以外は22,880円〜）",
+    // 店舗ページの FAQ「1レッスンあたり税込6,380円」
+    perVisit: "1回 税込6,380円",
+    checkedAt: "2026年10月28日",
+    source: "https://brest-gym.jp/studio/daikanyama/",
+  },
+  "urban-classic": {
+    // 店舗ページの料金表画像の alt「マンスリー4 7,800円（税込8,580円）」（川崎店）
+    monthlyShort: "月4回 8,580円〜（税込）",
+    checkedAt: "2026年10月28日",
+    source: "https://urbanclassic.jp/pilates-studio/kawasaki/",
+  },
+};
+
+/** 一覧用の短い月額表記。公式で確認できていないブランドは金額を出さない。 */
+export function monthlyShortOf(slug: string): string {
+  return BRAND_FACTS[slug]?.monthlyShort ?? MONTHLY_SHORT_EXTRA[slug]?.monthlyShort ?? "公式で要確認";
+}
