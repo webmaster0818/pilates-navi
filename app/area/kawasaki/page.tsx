@@ -145,7 +145,7 @@ export default function AreaPage() {
         <h2 className="text-lg sm:text-xl font-bold text-gray-800">川崎駅・武蔵小杉・溝の口の大手ピラティススタジオの料金とアクセス</h2>
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           川崎市内の大手・チェーン7ブランド{CHAINS.length}店舗について、駅からの距離・体験・月額を各公式店舗ページで{CHAIN_CHECKED_AT}に確認しました（
-          {AREAS.map((x, i) => `${i > 0 ? "・" : ""}${x.a}${x.n}店`).join("")}）。
+          {AREAS.map((x, i) => `${i > 0 ? "、" : ""}${x.a} ${x.n}店`).join("")}）。
           月4回の月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です（各店舗の月4回プランの最低額で集計。zen place はマットグループの額。入会金・管理費などは含みません）。
           体験は、CLUB PILATES・ピラティスK・Rintosull が無料、the SILK が期間限定で0円です。
         </p>
