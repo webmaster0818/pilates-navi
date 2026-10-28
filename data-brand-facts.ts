@@ -83,6 +83,8 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "公式に記載なし",
     trial: "公式サイトの料金ページでは30分 3,000円。店舗別の体験案内ページでは「OPEN特別キャンペーン（期間限定）」として初回体験レッスン無料と表記。キャンペーンの期間は公式に記載なし（いずれも2026年10月27日確認）",
     source: "https://celes-pilates.jp/price/",
+    // 公式料金ページの料金画像で最低額（月2回）を2026年10月28日に再確認
+    monthlyShort: "月2回 20,000円〜（税込）",
   },
   "club-pilates": {
     style: "マシンピラティス（マット＋リフォーマー）", format: "グループ（最大12名）・4段階レベル別", gender: "男女可",

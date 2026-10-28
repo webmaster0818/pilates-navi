@@ -81,7 +81,7 @@ const studios: Studio[] = [
     slug: 'celestia',
     lessonType: ['マシン'],
     tags: ['少人数制', 'プライベートレッスン', '体験レッスンあり', 'おしゃれな空間'],
-    price: '月額15,000円〜',
+    price: BRAND_FACTS['celestia'].monthlyShort ?? '',
     priceCategory: '10k-20k',
     description: 'セミパーソナル形式のマシンピラティス専門スタジオです。少人数制で、一人ひとりに合わせた丁寧な指導を受けられます。手ぶらで通える点も特徴です。',
     reviewPath: '/review/celestia/',
