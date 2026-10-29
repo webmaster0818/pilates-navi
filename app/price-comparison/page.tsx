@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, FACTS_SURVEYED_AT } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
@@ -38,9 +38,36 @@ const tips = [
   { t: "通いやすさ（立地・予約の取りやすさ）", d: "継続できるかどうかは、立地と予約の取りやすさに左右されます。職場・自宅からの動線上にあるか、人気の時間帯に予約が取れるかを、体験レッスンの際にご確認ください。" },
 ];
 
+/**
+ * 「いちばん安い」の答えは MONTHLY4_LOWEST（月4回の月会費・税込）から算出する（直書きしない）。
+ * 比べるのはグループ形式の月会費のみ。毎月の管理費と入会時費用は順位に含めず、上位3件に併記する。
+ */
+function cheapestAnswer(): string {
+  const yen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
+  const group = MONTHLY4_LOWEST.filter((m) => m.kind === "group").sort((a, b) => a.yen - b.yen);
+  const top = group.slice(0, 3);
+  const [first, ...rest] = top;
+  const withExtra = [...group].sort((a, b) => (a.yen + (a.monthlyExtraYen ?? 0)) - (b.yen + (b.monthlyExtraYen ?? 0)));
+  const sameOrder = top.every((m, i) => withExtra[i] === m);
+  const extras = top
+    .map((m) => `${m.name}は${[m.monthlyExtraNote, m.joinNote].filter(Boolean).join("・")}`)
+    .join("、");
+  const personalMin = Math.min(...MONTHLY4_LOWEST.filter((m) => m.kind === "personal").map((m) => m.yen));
+  const amount = (m: (typeof top)[number]) => `${yen(m.yen)}${m.note ? `（${m.note}）` : ""}`;
+  return (
+    `月4回のグループレッスンの月会費（税込・各公式サイトに記載の最低額）で比べると、本ページの掲載スタジオで最も安いのは、${first.name}の「${first.plan}」（${first.style}）で、月${amount(first)}です。` +
+    `次いで、${rest.map((m) => `${m.name}の「${m.plan}」（${m.style}）が${amount(m)}`).join("、")}です。` +
+    `この比較は月会費のみで、毎月の管理費と入会時の費用は含めていません。月会費のほかに、${extras}がかかります（いずれも税込）。` +
+    (sameOrder ? "毎月の管理費を足した額で比べても、上位3件の順位は変わりません。" : "毎月の管理費を足した額で比べると、上位3件の順位が入れ替わります。") +
+    "月4回のプランがないピラティスミラー（月6回のコース）は、この比較に含めていません。" +
+    `パーソナル・セミパーソナル形式は、月4回で${yen(personalMin)}以上です。` +
+    `料金は${top[0].checkedAt}時点で各公式サイトで確認したもので、店舗やキャンペーンにより異なる場合があります。`
+  );
+}
+
 const faqs = [
   { q: "ピラティススタジオの料金相場はいくらですか？", a: "グループ系のマシンピラティスは月額1万〜1万6千円程度が中心です（zen place マシン月4回15,400円（税込）、ピラティスK 11,220円〜、CLUB PILATES 月4回10,890円〜17,050円（税込・店舗により異なります）など）。セミパーソナルのCelestiaは月4回33,000円（税込み・1回8,250円）と単価は高めです。いずれも2026年時点の当サイト調査値です。最新の料金は各公式サイトでご確認ください。" },
-  { q: "いちばん安いピラティススタジオはどこですか？", a: "本ページの掲載スタジオでは、zen place pilates のマットグループ（月4回9,625円〜・税込）が最も手頃です。同社のマシンのグループは月4回15,400円（税込）です。次いでピラティスK（11,220円〜・入会金5,500円）です。ただし、通い放題かどうか、1回あたりの単価、立地によって実質的な費用は変わるため、回数と通いやすさも含めて比較することをおすすめします。" },
+  { q: "いちばん安いピラティススタジオはどこですか？", a: cheapestAnswer() },
   { q: "グループとセミパーソナルは、どちらがよいですか？", a: "費用を抑えて気軽に続けたい方にはグループ系（zen place・ピラティスK等）、丁寧な指導を受けたい方にはセミパーソナル（Celestia等）が向いています。料金の目安は、グループ系が月1万円前後、セミパーソナル（Celestia）が1回6,625円〜10,000円（税込み）です。" },
 ];
 

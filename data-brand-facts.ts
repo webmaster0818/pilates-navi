@@ -138,3 +138,64 @@ export const MONTHLY_SHORT_EXTRA: Record<string, { monthlyShort: string; perVisi
 export function monthlyShortOf(slug: string): string {
   return BRAND_FACTS[slug]?.monthlyShort ?? MONTHLY_SHORT_EXTRA[slug]?.monthlyShort ?? "公式で要確認";
 }
+
+/**
+ * 月4回プランの月会費（税込・公式表記の最低額）。料金比較ページの「いちばん安い」はここから算出する（直書きしない）。
+ * 月会費のみで比べ、毎月の管理費（monthlyExtraYen）と入会時費用（joinNote）は別に示す。
+ * 月4回のプランがないブランド（ピラティスミラーは月6回のコース）は入れない。
+ */
+export type Monthly4 = {
+  slug: string;
+  name: string;
+  /** 月4回の月会費（税込） */
+  yen: number;
+  plan: string;
+  /** レッスン形式（マシン/マット・グループ等） */
+  style: string;
+  /** 金額の条件（店舗差など） */
+  note?: string;
+  kind: "group" | "personal";
+  /** 月会費のほかに毎月かかる費用（税込）。公式に記載がないものは undefined */
+  monthlyExtraYen?: number;
+  monthlyExtraNote?: string;
+  joinNote?: string;
+  checkedAt: string;
+  source: string;
+};
+
+export const MONTHLY4_LOWEST: Monthly4[] = [
+  // 川崎店ページの料金表画像の alt「7,800円（税込8,580円）」・本文「3ヶ月目の月会費より、運営管理費として毎月480円（税込）」「入会時のみ、施設利用料として…税込2,200円」
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", yen: 8580, plan: "マンスリー4", style: "マシンのサーキット形式・予約不要", note: "全店共通", kind: "group",
+    monthlyExtraYen: 480, monthlyExtraNote: "運営管理費 月480円（3か月目から）", joinNote: "入会時の施設利用料 2,200円",
+    checkedAt: "2026年10月29日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
+  // 料金ページ「マンスリー4・フルタイム 月会費 8,800円(税込)~10,800円(税込) 店舗によって料金が異なります」「運営管理費として毎月680円」「施設使用料2,500円」
+  { slug: "rintosull", name: "Rintosull", yen: 8800, plan: "マンスリー4・フルタイム", style: "マシンのグループ", note: "店舗により10,800円まで", kind: "group",
+    monthlyExtraYen: 680, monthlyExtraNote: "運営管理費 月680円", joinNote: "入会時の施設使用料 2,500円",
+    checkedAt: "2026年10月29日", source: "https://rintosull.jp/price/" },
+  // 料金ページ「マットグループ月4回 グレード02 9,625円」「RG4 リフォーマーグループ 月4回 15,400円」「設備運営管理費 550円」「入会金 グレード02 22,000円」
+  { slug: "zenplace", name: "zen place pilates", yen: 9625, plan: "マットグループ 月4", style: "マットのグループ", note: "グレード02のスタジオ。グレード01のスタジオは10,450円", kind: "group",
+    monthlyExtraYen: 550, monthlyExtraNote: "設備運営管理費 月550円", joinNote: "入会金 22,000円（グレード02）",
+    checkedAt: "2026年10月29日", source: "https://www.zenplace.co.jp/price" },
+  { slug: "zenplace", name: "zen place pilates", yen: 15400, plan: "リフォーマーグループ 月4回", style: "マシンのグループ", note: "開催スタジオのみ", kind: "group",
+    monthlyExtraYen: 550, monthlyExtraNote: "設備運営管理費 月550円",
+    checkedAt: "2026年10月29日", source: "https://www.zenplace.co.jp/price" },
+  // 以下は BRAND_FACTS / MONTHLY_SHORT_EXTRA の確認値
+  { slug: "club-pilates", name: "CLUB PILATES", yen: 10890, plan: "月4回", style: "マシンのグループ", note: "店舗ごとに設定", kind: "group",
+    joinNote: "入会金 5,500円＋事務手数料 2,200円", checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
+  { slug: "pilates-k", name: "ピラティスK", yen: 11220, plan: "マンスリー4メンバー", style: "マシンのグループ", note: "店舗により13,420円まで", kind: "group",
+    monthlyExtraYen: 825, monthlyExtraNote: "施設維持費 月825円", joinNote: "入会金 5,500円",
+    checkedAt: "2026年10月28日", source: "https://pilates-k.jp/price" },
+  // 料金ページ「Standard 4 月4回 エリアA ¥15,280／エリアB ¥14,370（税込）」「施設利用料として毎月700円（税込）」
+  { slug: "the-silk", name: "the SILK", yen: 14370, plan: "Standard 4", style: "マシンのグループ", note: "エリアBの店舗。エリアAは15,280円", kind: "group",
+    monthlyExtraYen: 700, monthlyExtraNote: "施設利用料 月700円",
+    checkedAt: "2026年10月29日", source: "https://the-silk.co.jp/price/" },
+  { slug: "bdc", name: "BDC PILATES", yen: 16280, plan: "グループ 月4回", style: "マシンのグループ", kind: "group",
+    monthlyExtraYen: 770, monthlyExtraNote: "施設維持費 月770円", joinNote: "入会金 11,000円＋事務手数料 2,200円",
+    checkedAt: "2026年10月28日", source: "https://bdcpilates.com/#pilates_plan" },
+  { slug: "brest", name: "BREST PILATES & BODYMAKE", yen: 20680, plan: "デイタイムM4", style: "パーソナル", note: "東京の店舗・平日12:30〜17:00", kind: "personal",
+    checkedAt: "2026年10月29日", source: "https://brest-gym.jp/studio/daikanyama/" },
+  { slug: "celestia", name: "Celestia", yen: 33000, plan: "月4回", style: "セミパーソナル", kind: "personal",
+    checkedAt: "2026年10月26日", source: "https://celes-pilates.jp/price/" },
+  { slug: "melmake", name: "メルメイク", yen: 33000, plan: "プライベート4", style: "50分のプライベート", kind: "personal",
+    checkedAt: "2026年10月26日", source: "https://mermake.co.jp/menu-pilates/" },
+];
