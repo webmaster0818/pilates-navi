@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
-import { BRAND_FACTS } from "@/data-brand-facts";
+import { BRAND_FACTS, monthlyShortOf } from "@/data-brand-facts";
 import Icon from "@/components/Icon";
 import studioIdx from "@/data-studio-index.json";
 
@@ -93,10 +93,11 @@ const studios = [
     rank: 6,
     name: "BREST PILATES & BODYMAKE",
     tagline: "マシンピラティスとウェイトトレーニングを組み合わせた、1回30分のパーソナルレッスンです（30才からのボディメイク）。",
-    monthlyFee: "要問い合わせ",
+    // 店舗ページの料金表画像の alt（代官山：デイタイムM4 税込20,680円）2026年10月29日確認
+    monthlyFee: monthlyShortOf("brest"),
     features: ["マシンピラティス×ウェイト", "1回30分のパーソナル", "都度払い6,380円", "URBAN CLASSIC通い放題"],
     pros: ["短時間でピラティスと筋トレを両立", "URBAN CLASSIC PILATESを全店追加料金なしで利用可能", "都度払いも選択可能"],
-    cons: ["営業中は11店舗（2026年10月）", "月会費は店舗・時期により異なり、公式サイトに金額の記載なし"],
+    cons: ["営業中は11店舗（2026年10月）", "月会費は店舗の所在地（東京かそれ以外か）により異なる点"],
     recommend: "短時間のパーソナルレッスンでボディメイクに取り組みたい方におすすめです。",
     slug: "brest", reviewPath: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727",
   },
@@ -104,10 +105,11 @@ const studios = [
     rank: 7,
     name: "URBAN CLASSIC PILATES",
     tagline: "予約不要で、1回30分のマシンピラティスをサーキット形式で行います。",
-    monthlyFee: "要問い合わせ",
+    // 店舗ページの料金表画像の alt（川崎：マンスリー4 税込8,580円）2026年10月29日確認
+    monthlyFee: monthlyShortOf("urban-classic"),
     features: ["予約不要", "1回30分", "サーキット形式", "全国102店舗相互利用"],
     pros: ["予約なしで空いた時間に通える点", "1回30分で継続しやすい点", "店舗数が多く、全店舗を相互利用できる点"],
-    cons: ["月会費は店舗・時期により異なり、公式サイトに金額の記載なし", "退会は来店のみ・5日締め"],
+    cons: ["3か月目から運営管理費 月480円（税込）がかかる点", "退会は来店のみ・5日締め"],
     recommend: "決まった時間に通うことが難しい方、運動習慣をつけたい方におすすめです。",
     slug: "urban-classic", reviewPath: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727",
   },
