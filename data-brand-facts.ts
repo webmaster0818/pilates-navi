@@ -79,7 +79,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "11,000円（月6回、7回目以降は1回1,100円）。2026年11月度から12,100円に改定（公式告知・2026年10月17日確認）",
     joinFee: "11,000円",
     monthlyExtra: "公式に記載なし",
-    trial: "通常2,200円。秋キャンペーンの実施スタジオは無料（2026年10月17日確認）",
+    trial: "1回2,200円（税込・お一人様1回まで。2026年10月30日確認）",
     source: "https://www.konami.com/sportsclub/pilatesmirror/",
   },
   "celestia": {

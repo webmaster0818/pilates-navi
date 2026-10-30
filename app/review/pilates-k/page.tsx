@@ -48,9 +48,9 @@ const concernPoints = [
 ];
 
 const prices = [
-  { plan: "月4回プラン（マンスリー4メンバー）", price: `月額 ${PK.monthly4}（税込）`, note: "受講料は利用するスタジオにより異なります。" },
-  { plan: "月8回プラン（マンスリー8メンバー）", price: `月額 ${PK.monthly8}（税込）`, note: "通う頻度がやや高い方向けのプランです。受講料は利用するスタジオにより異なります。" },
-  { plan: "マンスリープレミアムメンバー", price: `月額 ${PK.premium}（税込）`, note: "毎日2レッスンまで受講できるプランです。通う頻度が高い方に向いています。" },
+  { plan: "マンスリー4メンバー（月4回）", price: `月額 ${PK.monthly4}（税込）`, note: "受講料は利用するスタジオにより異なります。" },
+  { plan: "マンスリー8メンバー（月8回）", price: `月額 ${PK.monthly8}（税込）`, note: "通う頻度がやや高い方向けのプランです。受講料は利用するスタジオにより異なります。" },
+  { plan: "マンスリープレミアムメンバー（毎日2レッスンまで）", price: `月額 ${PK.premium}（税込）`, note: "通う頻度が高い方に向いています。受講料は利用するスタジオにより異なります。" },
   { plan: "体験レッスン", price: "0円（無料）※特典は要確認", note: "0円体験が案内されています。当日入会の特典・条件は時期により変動するため、公式サイトをご確認ください。" },
 ];
 
@@ -137,7 +137,7 @@ export default function PilatesKReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">ピラティスKの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            ピラティスKの料金は月額制（回数制・通い放題）が中心です。公式サイトの料金ページに記載されている月額は、<strong>月4回 {PK.monthly4}</strong>、<strong>月8回 {PK.monthly8}</strong>、<strong>毎日2レッスンまでのプレミアム {PK.premium}</strong>（いずれも税込）です。金額に幅があるのは、利用するスタジオにより受講料が異なるためです。月額のほかに施設維持費 月{PK.maintenance}（税込）がかかります。キャンペーンの適用により金額が変わる場合があるため、申し込み前に公式サイトでご確認ください。
+            ピラティスKの料金は、月ごとに受講できる回数が決まったマンスリープランが中心です。公式サイトの料金ページに記載されている月額は、<strong>マンスリー4メンバー（月4回）{PK.monthly4}</strong>、<strong>マンスリー8メンバー（月8回）{PK.monthly8}</strong>、<strong>マンスリープレミアムメンバー（毎日2レッスンまで）{PK.premium}</strong>（いずれも税込）です。金額に幅があるのは、利用するスタジオにより受講料が異なるためです。月額のほかに施設維持費 月{PK.maintenance}（税込）がかかります。キャンペーンの適用により金額が変わる場合があるため、申し込み前に公式サイトでご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">

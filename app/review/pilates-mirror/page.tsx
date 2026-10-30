@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "体験レッスンは無料ですか？",
-    a: "通常は有料です。体験レッスンは1回2,200円(税込・お一人様1回まで)と公式に明記されています(2026年9月22日確認)。2026年10月17日時点では、公式サイトのお知らせに「秋キャンペーン無料体験予約受付中」と掲載されており、実施スタジオでは無料で体験できます。実施スタジオは公式サイトでご確認ください。",
+    a: "有料です。体験レッスンは1回2,200円(税込・お一人様1回まで)と公式サイトに記載されています(2026年10月30日確認)。無料体験のキャンペーンが実施される時期もあるため、最新の実施状況は公式サイトのお知らせでご確認ください。",
   },
   {
     q: "男性も通えますか？支払い方法は？",
@@ -73,7 +73,7 @@ export default function PilatesMirrorReview() {
               ピラティスミラーは、<strong>コナミスポーツが運営</strong>するマシンピラティススタジオです。
               スタジオの<strong>天井に鏡</strong>を設置し、自分の動きを確認しながら<strong>1レッスン30分</strong>・<strong>6〜15名の少人数制</strong>で行うのが特徴です。
               料金は<strong>入会金11,000円＋月会費11,000円(月6回まで)</strong>(2026年11月度から月会費12,100円に改定予定)で、フルに通えば<strong>1回あたり約1,833円</strong>となり、回数単価は安い部類に入ります。
-              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>・<strong>体験も通常は有料(2,200円)</strong>という条件があります。
+              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>・<strong>体験も有料(2,200円)</strong>という条件があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>短時間(30分)で通いたい方／週1〜2回のペースが合う方</li>
@@ -117,7 +117,7 @@ export default function PilatesMirrorReview() {
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">体験レッスン</td>
                   <td className="px-3 py-2 font-bold text-[#7C3AED]">1回2,200円</td>
-                  <td className="px-3 py-2">お一人様1回まで。秋キャンペーンの実施スタジオは無料(2026年10月17日確認)</td>
+                  <td className="px-3 py-2">お一人様1回まで(2026年10月30日確認)</td>
                 </tr>
               </tbody>
             </table>
@@ -204,7 +204,7 @@ export default function PilatesMirrorReview() {
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700 leading-relaxed">
               <li><strong>男性</strong>：18歳以上の女性限定です。</li>
               <li><strong>クレジットカードを利用しない方</strong>：支払いはカード決済のみです。</li>
-              <li><strong>まず無料で試したい方</strong>：体験レッスンは通常2,200円の有料です(秋キャンペーンの実施スタジオを除く)。</li>
+              <li><strong>まず無料で試したい方</strong>：体験レッスンは1回2,200円の有料です。</li>
               <li>月2回程度の利用を想定している方：月会費プランでは1回あたりの単価が上がります。</li>
               <li>1回60分など、時間をかけて取り組みたい方</li>
             </ul>
