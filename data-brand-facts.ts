@@ -38,7 +38,7 @@ export type BrandFacts = {
 export const BRAND_FACTS: Record<string, BrandFacts> = {
   "pilates-k": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
-    monthly: "月4回・月8回・通い放題などのコース制",
+    monthly: "マンスリー4メンバー（月4回）・マンスリー8メンバー（月8回）・マンスリープレミアムメンバー（毎日2レッスンまで）などのマンスリープラン（公式料金ページ・2026年10月30日確認）",
     joinFee: "5,500円（初期費用は入会時13,530円）",
     monthlyExtra: "施設維持費 825円／月",
     trial: "0円から体験可能",
@@ -69,7 +69,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年10月17日確認）",
     joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年10月17日確認）",
     monthlyExtra: "施設維持費 770円／月（税込・2026年10月17日確認）",
-    trial: "体験レッスンあり（体験料金は公式サイト・体験予約ページに記載なし。店舗でご確認ください・2026年10月21日確認）",
+    trial: "グループレッスンの体験料金は公式サイトに記載なし。プライベートレッスンの体験は60分 10,000円（税込11,000円）（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは9,000円（税込9,900円））（2026年10月30日確認）",
     source: "https://bdcpilates.com/#pilates_plan",
     // 公式料金プラン欄 2026年10月28日確認
     monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
@@ -230,6 +230,8 @@ export type TrialFee = {
   scope?: string;
   /** キャンペーン・条件付きの割引 */
   campaign?: string;
+  /** 集計（minYen）に含めない別形態の体験料（例：グループの料金が不明なブランドのプライベート体験） */
+  separateNote?: string;
   checkedAt: string;
   source: string;
 };
@@ -257,9 +259,12 @@ export const TRIAL_FEES: TrialFee[] = [
   { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時980円", checkedAt: "2026年10月30日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
   { slug: "melmake", name: "メルメイク", minYen: 5500, text: "50分5,500円", campaign: "当日入会で0円", checkedAt: "2026年10月30日", source: "https://mermake.co.jp/menu-pilates/" },
-  // トップ・FAQ・初めての方へ・銀座/池袋/表参道の店舗ページにグループの体験料金の記載なし。
-  // 恵比寿スタジオのページのみ「プライベートレッスンは10,000円(税込11,000円)で体験いただけます」
-  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています（恵比寿スタジオのページには、プライベートレッスンの体験が11,000円と記載されています）", checkedAt: "2026年10月30日", source: "https://bdcpilates.com/ebisu" },
+  // グループの体験料金：トップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし（2026年10月30日確認）。
+  // プライベート体験：/private_lessons「プライベート体験レッスン(60分)：10,000円(税込 11,000円)」、
+  //   恵比寿・二子玉川「プライベートレッスンは10,000円 (税込11,000円)で体験いただけます」、大宮「9,000円 (税込9,900円)」。
+  //   銀座・銀座並木・池袋・吉祥寺・表参道のページには記載なし。
+  // 他ブランドの minYen は「そのブランドで最も安い体験」の額のため、グループの額が不明な BDC のプライベート体験は混ぜずに別記する。
+  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています", separateNote: "プライベートレッスンの体験は60分 10,000円（税込11,000円）と記載されています（大宮スタジオのページは税込9,900円）", checkedAt: "2026年10月30日", source: "https://bdcpilates.com/private_lessons" },
 ];
 
 /** 体験料の範囲（目安）と母数。金額を確認できたブランドだけで計算する。 */
@@ -296,6 +301,6 @@ export function trialFeeLongText(): string {
   const paid = s.paid
     .map((t) => `${t.name} ${t.text}${t.campaign ? `（${t.campaign}）` : ""}`)
     .join("、");
-  const unknown = s.unknown.map((t) => `${t.name}は${t.text}。`).join("");
+  const unknown = s.unknown.map((t) => `${t.name}は${t.text}${t.separateNote ? `。なお、${t.separateNote}` : ""}。`).join("");
   return `当サイトが掲載する${s.total}ブランドのうち、公式サイトで体験料を確認できた${s.knownCount}ブランドでは、通常の体験料は${s.min}円〜${s.max}円（税込）が目安です（${s.checkedAt}確認）。0円で体験できるのは${free}の${s.free.length}ブランドです。有料のブランドは、${paid}です。${unknown}料金は店舗やキャンペーンにより異なるため、ご予約前に各公式サイトでご確認ください。`;
 }
