@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { PILATES_K_PRICES as PK } from "@/data-brand-facts";
 
 export const metadata: Metadata = {
   title: "ピラティスKの口コミ・評判は？料金と0円体験の条件【2026年8月】",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "ピラティスKの料金プランを教えてください。", a: "公式サイトでは月4回プランが月額11,220円〜、月8回プランが月額17,490円〜、通い放題プランが月額19,690円〜が目安とされています。プラン構成・最新価格・キャンペーン適用後の金額はスタジオや時期で変わるため、申し込み前に公式サイトでご確認ください。" },
+  { q: "ピラティスKの料金プランを教えてください。", a: `公式サイトの料金ページでは、月4回のマンスリー4メンバーが月額${PK.monthly4}、月8回のマンスリー8メンバーが月額${PK.monthly8}、毎日2レッスンまで受講できるマンスリープレミアムメンバーが月額${PK.premium}（いずれも税込）です。受講料は利用するスタジオにより異なり、別途 施設維持費 月${PK.maintenance}（税込）がかかります（${PK.checkedAt}確認）。キャンペーン適用後の金額は時期により変わるため、申し込み前に公式サイトでご確認ください。` },
   { q: "ピラティスKの口コミ・評判はどうですか？", a: "「0円体験で気軽に始められた」「おしゃれな空間でモチベーションが上がる」「女性専用で集中しやすい」といった声が見られる一方、「人気店舗・時間帯は予約が取りづらい」「男性は利用できない」という指摘もあります。評価は受講者の目的やお住まいのエリアによって分かれます。" },
   { q: "体験レッスンは無料ですか？", a: "公式サイトでは0円（無料）の体験レッスンを案内しています。ただし、手ぶらで参加できるかどうかやレンタルの範囲、当日入会の特典はキャンペーン・スタジオで異なる場合があるため、申し込み時に公式サイトでご確認ください。" },
   { q: "男性は利用できますか？", a: "いいえ、ピラティスKは女性専用スタジオです。男性の利用はできません。" },
@@ -47,9 +48,9 @@ const concernPoints = [
 ];
 
 const prices = [
-  { plan: "月4回プラン", price: "月額 11,220円〜（目安）", note: "公式サイトで確認できる代表的な月額プランです。店舗・時期により変動する場合があります。" },
-  { plan: "月8回プラン", price: "月額 17,490円〜（目安）", note: "通う頻度がやや高い方向けのプランです。最新価格は公式サイトをご確認ください。" },
-  { plan: "通い放題プラン", price: "月額 19,690円〜（目安）", note: "回数の制限なく通えるプランです。通う頻度が高い方に向いています。" },
+  { plan: "月4回プラン（マンスリー4メンバー）", price: `月額 ${PK.monthly4}（税込）`, note: "受講料は利用するスタジオにより異なります。" },
+  { plan: "月8回プラン（マンスリー8メンバー）", price: `月額 ${PK.monthly8}（税込）`, note: "通う頻度がやや高い方向けのプランです。受講料は利用するスタジオにより異なります。" },
+  { plan: "マンスリープレミアムメンバー", price: `月額 ${PK.premium}（税込）`, note: "毎日2レッスンまで受講できるプランです。通う頻度が高い方に向いています。" },
   { plan: "体験レッスン", price: "0円（無料）※特典は要確認", note: "0円体験が案内されています。当日入会の特典・条件は時期により変動するため、公式サイトをご確認ください。" },
 ];
 
@@ -82,7 +83,7 @@ export default function PilatesKReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">ピラティスKの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              ピラティスKは、<strong>0円体験</strong>で始めやすく、<strong>おしゃれな空間</strong>と<strong>ボディメイク特化</strong>のプログラムを特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月4回11,220円〜・通い放題19,690円〜（目安）</strong>です。見た目の変化を実感したい女性や、楽しく続けられる空間で通いたい女性に向いています。一方で、男性は利用できず、人気店舗・時間帯は予約が取りづらいことがあります。0円体験が用意されているため、まず雰囲気をご確認いただくことをおすすめします。
+              ピラティスKは、<strong>0円体験</strong>で始めやすく、<strong>おしゃれな空間</strong>と<strong>ボディメイク特化</strong>のプログラムを特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月4回 {PK.monthly4}・月8回 {PK.monthly8}（税込）</strong>です。見た目の変化を実感したい女性や、楽しく続けられる空間で通いたい女性に向いています。一方で、男性は利用できず、人気店舗・時間帯は予約が取りづらいことがあります。0円体験が用意されているため、まず雰囲気をご確認いただくことをおすすめします。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>ボディメイクが目的の女性／まず無料で試してから決めたい方</li>
@@ -103,7 +104,7 @@ export default function PilatesKReview() {
               <tbody>
                 {[
                   ["スタジオ名", "ピラティスK（PILATES K）"],
-                  ["月額料金", "月額11,220円〜（月4回プラン・目安／公式サイトで要確認）"],
+                  ["月額料金", `月4回 ${PK.monthly4}／月8回 ${PK.monthly8}（税込・スタジオにより異なる）`],
                   ["店舗", "全国の主要エリアを中心に展開（最新の店舗数・所在地は公式サイトで要確認）"],
                   ["レッスン形式", "マシングループレッスン"],
                   ["対象", "女性専用"],
@@ -136,7 +137,7 @@ export default function PilatesKReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">ピラティスKの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            ピラティスKの料金は月額制（回数制・通い放題）が中心です。公式サイトで確認できる代表的なプランは<strong>月4回・月額11,220円〜</strong>、<strong>通い放題・月額19,690円〜</strong>が目安です。下表はあくまで<strong>目安</strong>で、店舗・時期・キャンペーンで変動します。最新の正確な金額は公式サイトでご確認ください。
+            ピラティスKの料金は月額制（回数制・通い放題）が中心です。公式サイトの料金ページに記載されている月額は、<strong>月4回 {PK.monthly4}</strong>、<strong>月8回 {PK.monthly8}</strong>、<strong>毎日2レッスンまでのプレミアム {PK.premium}</strong>（いずれも税込）です。金額に幅があるのは、利用するスタジオにより受講料が異なるためです。月額のほかに施設維持費 月{PK.maintenance}（税込）がかかります。キャンペーンの適用により金額が変わる場合があるため、申し込み前に公式サイトでご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
@@ -159,6 +160,7 @@ export default function PilatesKReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+            ※月額の出典：<a href={PK.source} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">ピラティスK 公式サイト 料金表</a>（{PK.checkedAt}確認）。<br />
             ※「要確認」の項目は、公式サイトで価格が明示されていないか変動が大きいため、記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>

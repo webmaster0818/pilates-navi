@@ -199,3 +199,103 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
   { slug: "melmake", name: "メルメイク", yen: 33000, plan: "プライベート4", style: "50分のプライベート", kind: "personal",
     checkedAt: "2026年10月26日", source: "https://mermake.co.jp/menu-pilates/" },
 ];
+
+/**
+ * ピラティスK 公式料金ページ（https://pilates-k.jp/price）のマンスリープラン（税込）。
+ * 「ご利用のスタジオにより受講料が異なります」と記載があり、金額は全店舗の下限〜上限。2026年10月30日確認。
+ */
+export const PILATES_K_PRICES = {
+  checkedAt: "2026年10月30日",
+  source: "https://pilates-k.jp/price",
+  monthly4: "11,220円〜13,420円",
+  monthly8: "15,070円〜16,170円",
+  /** マンスリープレミアムメンバー（毎日2レッスンまで） */
+  premium: "17,820円〜18,920円",
+  maintenance: "825円",
+};
+
+/**
+ * 体験レッスンの料金（税込・通常料金の最低額）。各公式サイトで 2026年10月30日に確認した値だけを入れる。
+ * 公式に金額の記載がないブランドは minYen: null（範囲の計算に使わない）。
+ * TOP・/faq/ の「体験料の目安」はここから算出する（直書きしない）。
+ */
+export type TrialFee = {
+  slug: string;
+  name: string;
+  /** 通常の体験料の最低額（税込）。公式に記載がなければ null */
+  minYen: number | null;
+  /** 表示用の補足 */
+  text: string;
+  /** 0円の対象範囲（一覧で名前に添える） */
+  scope?: string;
+  /** キャンペーン・条件付きの割引 */
+  campaign?: string;
+  checkedAt: string;
+  source: string;
+};
+
+export const TRIAL_FEES_CHECKED_AT = "2026年10月30日";
+
+export const TRIAL_FEES: TrialFee[] = [
+  // 料金ページ「¥0 から体験可能」
+  { slug: "pilates-k", name: "ピラティスK", minYen: 0, text: "0円から", checkedAt: "2026年10月30日", source: "https://pilates-k.jp/price" },
+  // トップページの予約ボタン画像 alt「グループ：¥0体験」（パーソナル体験の料金は記載なし）
+  { slug: "the-silk", name: "the SILK", minYen: 0, text: "グループレッスン0円", scope: "グループレッスン", checkedAt: "2026年10月30日", source: "https://the-silk.co.jp/" },
+  // 料金ページ「無料体験会 0円」（LAVAコラボ店舗は店舗ごとに異なる）
+  { slug: "rintosull", name: "Rintosull", minYen: 0, text: "無料体験会0円（LAVAコラボ店舗は店舗ごとに異なる）", scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
+  // トップページ「30分間の無料体験クラスを開催しております」
+  { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: "30分の無料体験クラス", checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
+  // 店舗ページ「無料体験予約はこちら」
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
+  // 料金ページ「体験レッスン 1回 2,200円（税込）」（秋キャンペーンは終了の表示）
+  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 2200, text: "2,200円", checkedAt: "2026年10月30日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
+  // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
+  { slug: "zenplace", name: "zen place pilates", minYen: 2200, text: "マットグループ2,200円〜3,300円・マシングループ5,000円", checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
+  // 料金ページ「体験受付中！30分 3,000円」、店舗別の体験案内ページは期間限定で初回無料
+  { slug: "celestia", name: "Celestia", minYen: 3000, text: "30分3,000円", campaign: "期間限定で初回無料の案内あり", checkedAt: "2026年10月30日", source: "https://celes-pilates.jp/price/" },
+  // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 891円（税込980円）」先着20名
+  { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時980円", checkedAt: "2026年10月30日", source: "https://brest-gym.jp/studio/daikanyama/" },
+  // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
+  { slug: "melmake", name: "メルメイク", minYen: 5500, text: "50分5,500円", campaign: "当日入会で0円", checkedAt: "2026年10月30日", source: "https://mermake.co.jp/menu-pilates/" },
+  // トップ・FAQ・初めての方へ・銀座/池袋/表参道の店舗ページにグループの体験料金の記載なし。
+  // 恵比寿スタジオのページのみ「プライベートレッスンは10,000円(税込11,000円)で体験いただけます」
+  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています（恵比寿スタジオのページには、プライベートレッスンの体験が11,000円と記載されています）", checkedAt: "2026年10月30日", source: "https://bdcpilates.com/ebisu" },
+];
+
+/** 体験料の範囲（目安）と母数。金額を確認できたブランドだけで計算する。 */
+export function trialFeeSummary() {
+  const known = TRIAL_FEES.filter((t) => t.minYen !== null) as (TrialFee & { minYen: number })[];
+  const yens = known.map((t) => t.minYen);
+  const free = known.filter((t) => t.minYen === 0);
+  const paid = known.filter((t) => t.minYen > 0).sort((a, b) => a.minYen - b.minYen);
+  const unknown = TRIAL_FEES.filter((t) => t.minYen === null);
+  const fmt = (n: number) => n.toLocaleString("ja-JP");
+  return {
+    total: TRIAL_FEES.length,
+    knownCount: known.length,
+    min: fmt(Math.min(...yens)),
+    max: fmt(Math.max(...yens)),
+    free,
+    paid,
+    unknown,
+    fmt,
+    checkedAt: TRIAL_FEES_CHECKED_AT,
+  };
+}
+
+/** /faq/ 用の短い一文 */
+export function trialFeeShortText(): string {
+  const s = trialFeeSummary();
+  return `体験レッスンの料金は、当サイトが掲載する${s.total}ブランドのうち公式サイトで金額を確認できた${s.knownCount}ブランドで、通常${s.min}円〜${s.max}円（税込）が目安です。このうち${s.free.length}ブランドは0円で体験できます（${s.checkedAt}確認）。`;
+}
+
+/** TOP の FAQ 用の内訳つきの文 */
+export function trialFeeLongText(): string {
+  const s = trialFeeSummary();
+  const free = s.free.map((t) => (t.scope ? `${t.name}（${t.scope}）` : t.name)).join("・");
+  const paid = s.paid
+    .map((t) => `${t.name} ${t.text}${t.campaign ? `（${t.campaign}）` : ""}`)
+    .join("、");
+  const unknown = s.unknown.map((t) => `${t.name}は${t.text}。`).join("");
+  return `当サイトが掲載する${s.total}ブランドのうち、公式サイトで体験料を確認できた${s.knownCount}ブランドでは、通常の体験料は${s.min}円〜${s.max}円（税込）が目安です（${s.checkedAt}確認）。0円で体験できるのは${free}の${s.free.length}ブランドです。有料のブランドは、${paid}です。${unknown}料金は店舗やキャンペーンにより異なるため、ご予約前に各公式サイトでご確認ください。`;
+}
