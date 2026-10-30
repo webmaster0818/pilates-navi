@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { BDC_TRIAL as BT, BRAND_FACTS } from "@/data-brand-facts";
 
 export const metadata: Metadata = {
   title: "BDC PILATESの口コミ・料金・体験レッスン｜評判と銀座などの店舗情報【2026年】",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "BDC PILATESの料金プランは？", a: "公式サイトの料金表（2026年10月17日確認）では、グループレッスンの月4回プランが月額16,280円（税込）です。月6回23,100円・月8回29,260円、プライベートレッスンの月1回11,000円・月2回20,900円（いずれも税込）もあります。料金・キャンペーンは変更されることがあるため、申し込み前に公式サイトでご確認ください。" },
   { q: "BDC PILATESの口コミ・評判は良い？", a: "「少人数制で指導が丁寧」「プロダンサー考案メソッドで体幹・姿勢に効く」といった声が見られる一方、「料金がやや高め」「店舗が東京中心で通いにくい」という指摘もあります。評価は受講者の目的や通うエリアによって異なります。" },
-  { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。グループ・プライベートいずれも1回約55分が目安です。体験料金や当日入会特典はキャンペーン・スタジオで異なるため、公式サイトでご確認ください。" },
+  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。公式サイトでは、プライベートレッスンの体験は${BT.privateMinutes}分 ${BT.privateFee}と記載されています（大宮スタジオのページは${BT.privateFeeOmiya}）。グループレッスンは1回${BT.groupMinutes}分で、体験料金は公式サイトに記載されていません（${BT.checkedAt}確認）。料金はスタジオにより異なる場合があるため、予約時に公式サイトでご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望のスタジオ・日時を選んで申し込むのが基本です。空き状況や予約システムはスタジオにより異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルはできますか？", a: "予約のキャンセル可否・期限・ペナルティの有無はプランやスタジオの規約によります。トラブルを避けるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "ダンス経験がなくても大丈夫ですか？", a: "はい、ダンス経験は不要です。プロダンサーが考案したメソッドですが、ピラティスとして運動経験を問わず参加できます。" },
@@ -50,7 +51,8 @@ const prices = [
   { plan: "月4回プラン（グループ）", price: "月額 16,280円（税込）", note: "税抜14,800円。月6回23,100円・月8回29,260円（税込）。一部店舗には月3回12,375円（税込）もあります。" },
   { plan: "追加レッスン（グループ）", price: "1回 4,070円（税込）", note: "所属店舗以外で受講する場合も追加レッスン料が必要です。" },
   { plan: "プライベートレッスン", price: "月1回 11,000円／月2回 20,900円（税込）", note: "マンツーマン指導です。追加レッスンは1回11,000円（税込）です。" },
-  { plan: "体験レッスン", price: "要確認（キャンペーンあり）", note: "グループ／プライベートとも約55分です。料金・特典は時期により変動します。" },
+  { plan: "プライベート体験レッスン", price: `${BT.privateMinutes}分 ${BT.privateFee}`, note: `公式「プライベートレッスン」ページの記載です。大宮スタジオのページは${BT.privateFeeOmiya}です（${BT.checkedAt}確認）。` },
+  { plan: "グループ体験レッスン", price: "公式サイトに記載なし", note: `グループレッスンは1回${BT.groupMinutes}分です。体験料金は予約時にご確認ください（${BT.checkedAt}確認）。` },
 ];
 
 const stores = [
@@ -118,7 +120,7 @@ export default function BdcPilatesReview() {
                   ["レッスン形式", "マシングループ（最大8名程度）/ プライベート"],
                   ["対象", "男女兼用・運動経験不問"],
                   ["特徴", "米国ブロードウェイダンスセンター発・マシン専門、少人数制、体幹特化"],
-                  ["体験レッスン", "あり（グループ約55分／プライベート約55分・料金は要確認）"],
+                  ["体験レッスン", BRAND_FACTS.bdc.trial],
                 ].map(([label, value]) => (
                   <tr key={label} className="border-b border-gray-100 last:border-0">
                     <th className="bg-[#F5F3FF] text-left px-4 py-3 font-medium text-gray-700 w-1/3">{label}</th>
@@ -169,6 +171,7 @@ export default function BdcPilatesReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+            ※体験レッスンの出典：<a href={BT.privateSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">BDC PILATES 公式サイト「プライベートレッスン」</a>・<a href={BT.omiyaSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">大宮スタジオ</a>・<a href={BT.groupSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">グループレッスン</a>（{BT.checkedAt}確認）。<br />
             ※「要確認」の項目は、公式サイトで価格が明示されていないか、変動が大きいため記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
@@ -277,12 +280,12 @@ export default function BdcPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">BDC PILATESの体験レッスンの流れ・予約方法</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            BDC PILATESでは、入会前に<strong>体験レッスン</strong>を受けられます。グループ・プライベートいずれも<strong>1回約55分</strong>が目安です。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティスが初めての方でも参加できます。
+            BDC PILATESでは、入会前に<strong>体験レッスン</strong>を受けられます。レッスン時間は、グループが<strong>{BT.groupMinutes}分</strong>、プライベートが<strong>{BT.privateMinutes}分</strong>です（公式サイト・{BT.checkedAt}確認）。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティスが初めての方でも参加できます。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
             <li><strong>予約する</strong>：公式サイトから希望のスタジオ（銀座・表参道・恵比寿など）と日時を選んで申し込みます。</li>
             <li><strong>来店・カウンセリング</strong>：当日は動きやすい服装で来店します。目的や体の悩みについてヒアリングを受けます。</li>
-            <li><strong>体験レッスン（約55分）</strong>：マシンの使い方を学びながら、実際のレッスンを体験します。</li>
+            <li><strong>体験レッスン（グループ{BT.groupMinutes}分・プライベート{BT.privateMinutes}分）</strong>：マシンの使い方を学びながら、実際のレッスンを体験します。</li>
             <li><strong>説明・入会案内</strong>：料金プランの説明を受けます。その場で入会しなくても問題ありません。</li>
           </ol>
           <div className="bg-white rounded-lg p-4 border border-gray-200">

@@ -14,6 +14,25 @@ export const CELESTIA_TRIAL_SOURCES = {
   lp: "https://celes-pilates.jp/lp/trial01/",
 };
 
+/**
+ * BDC PILATES の体験レッスン（2026年10月30日、公式サイトで確認）。
+ * - プライベート：/private_lessons「プライベート体験レッスン(60分)：10,000円(税込 11,000円)」。
+ *   恵比寿・二子玉川のスタジオページも同額、大宮のスタジオページは「9,000円 (税込9,900円)」。
+ *   銀座・銀座並木・池袋・吉祥寺・表参道のスタジオページには記載なし。
+ * - グループ：/group_lessons「レッスンは55分間です」、FAQ「体験レッスン当日…レッスン時間は55分です」。
+ *   体験料金はトップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし。
+ */
+export const BDC_TRIAL = {
+  checkedAt: "2026年10月30日",
+  privateMinutes: 60,
+  privateFee: "10,000円（税込11,000円）",
+  privateFeeOmiya: "9,000円（税込9,900円）",
+  privateSource: "https://bdcpilates.com/private_lessons",
+  omiyaSource: "https://bdcpilates.com/omiya",
+  groupMinutes: 55,
+  groupSource: "https://bdcpilates.com/group_lessons",
+};
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -69,7 +88,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年10月17日確認）",
     joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年10月17日確認）",
     monthlyExtra: "施設維持費 770円／月（税込・2026年10月17日確認）",
-    trial: "グループレッスンの体験料金は公式サイトに記載なし。プライベートレッスンの体験は60分 10,000円（税込11,000円）（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは9,000円（税込9,900円））（2026年10月30日確認）",
+    trial: `グループレッスンの体験料金は公式サイトに記載なし。プライベートレッスンの体験は${BDC_TRIAL.privateMinutes}分 ${BDC_TRIAL.privateFee}（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは${BDC_TRIAL.privateFeeOmiya}）（${BDC_TRIAL.checkedAt}確認）`,
     source: "https://bdcpilates.com/#pilates_plan",
     // 公式料金プラン欄 2026年10月28日確認
     monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
