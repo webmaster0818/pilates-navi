@@ -308,7 +308,7 @@ export default function ZenPlaceReview() {
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">予約・体験レッスン前の確認事項</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金（マット／マシンで異なる）・当日入会の特典</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金（マット／マシンで異なる）・入会金の扱い（公式のよくある質問では、入会金はグレードにより22,000円〜33,000円で、「体験当日のご入会なら入会金は無料」と案内されています。2026年10月31日確認）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>通いたい店舗のグレード・月額料金（店舗で異なる）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／靴下のレンタルや購入の要否</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>予約のキャンセル可否・期限・ペナルティの有無</li>
