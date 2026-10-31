@@ -291,7 +291,7 @@ export default function BdcPilatesReview() {
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">予約・体験レッスン前の確認事項</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金・当日入会の特典（キャンペーンで変動）</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金・キャンペーンの有無と適用条件（2026年10月31日時点の公式の各スタジオページでは、期間・人数限定で体験申込み時に適用されるキャンペーンが案内されています）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／靴下のレンタルや購入の要否</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>予約のキャンセル可否・期限・ペナルティの有無</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗・希望時間帯の空き状況</li>

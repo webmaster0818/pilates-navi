@@ -92,7 +92,7 @@ export default function ZenPlaceReview() {
       <section className="bg-[#F5F3FF] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">zen place pilatesの口コミ・料金・体験レッスンを解説</h1>
-          <p className="mt-3 text-gray-600">マットとマシンの両方に対応し、全国最大級の店舗を相互利用できる（一部差額あり）ピラティススタジオの評判をまとめています。</p>
+          <p className="mt-3 text-gray-600">マットとマシンの両方に対応し、全国の店舗を相互利用できる（一部差額あり）ピラティススタジオの評判をまとめています。</p>
         </div>
       </section>
 
@@ -112,7 +112,7 @@ export default function ZenPlaceReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">zen place pilatesの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              zen place pilatesは、<strong>全国最大級の店舗数</strong>と<strong>全店相互利用（一部差額あり）</strong>、<strong>マット／マシン両対応</strong>を特徴とするピラティススタジオです。料金は<strong>マシンのグループ月4回15,400円（開催スタジオのみ）、マットのグループ月4回9,625円〜・通い放題14,960円〜（税込）</strong>です。マットのグループ料金は、{zenMatRankShort()}。<strong>男女兼用</strong>です。費用を抑えて長く続けたい方、出張や引っ越しがあっても通い続けたい方、マットとマシンを使い分けたい方に向いています。一方で、店舗数が多い分、設備や雰囲気に差があり、手厚い少人数指導を求める方には物足りない場合があります。
+              zen place pilatesは、<strong>全国150店舗（公式サイトの案内・ヨガのスタジオを含む）</strong>と<strong>全店相互利用（一部差額あり）</strong>、<strong>マット／マシン両対応</strong>を特徴とするピラティススタジオです。料金は<strong>マシンのグループ月4回15,400円（開催スタジオのみ）、マットのグループ月4回9,625円〜・通い放題14,960円〜（税込）</strong>です。マットのグループ料金は、{zenMatRankShort()}。<strong>男女兼用</strong>です。費用を抑えて長く続けたい方、出張や引っ越しがあっても通い続けたい方、マットとマシンを使い分けたい方に向いています。一方で、店舗数が多い分、設備や雰囲気に差があり、手厚い少人数指導を求める方には物足りない場合があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>費用を抑えて長く続けたい方／転勤・出張が多い方</li>
@@ -134,7 +134,7 @@ export default function ZenPlaceReview() {
                 {[
                   ["スタジオ名", "zen place pilates（ゼンプレイス ピラティス）"],
                   ["月額料金", "マシングループ月4回 15,400円（開催スタジオのみ）／マットグループ月4回 9,625円〜・通い放題 14,960円〜（税込・2026年10月19日公式料金表で確認）"],
-                  ["店舗", "全国に多数展開（国内最大級／全店相互利用可・一部差額あり）※最新情報は公式サイト参照"],
+                  ["店舗", "公式サイトの案内では全国150店舗（ヨガのスタジオを含む。ピラティスのスタジオは全国100以上）／全店相互利用可・一部差額あり（2026年10月31日 公式サイトで確認）"],
                   ["レッスン形式", "マットグループ / マシングループ / プライベート"],
                   ["対象", "男女兼用"],
                   ["特徴", "全店相互利用可（一部差額あり）、マット・マシン両対応、オンラインレッスンあり"],
@@ -200,7 +200,7 @@ export default function ZenPlaceReview() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">zen place pilatesの強み</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { title: "全国最大級の店舗数", desc: "多数の店舗を相互利用できる（一部差額あり）ため、引っ越しや転勤があっても継続しやすい点が特徴です。" },
+              { title: "全国150店舗の相互利用", desc: "公式サイトで全国150店舗（ヨガのスタジオを含む）と案内されている店舗を相互利用できる（一部差額あり）ため、引っ越しや転勤があっても継続しやすい点が特徴です。" },
               { title: "選べるレッスン形式", desc: "マット・マシン・プライベートから、目的に応じてレッスン形式を選べます。" },
               { title: "費用の手頃さ", desc: zenMatRankText() },
             ].map((s) => (
@@ -254,7 +254,7 @@ export default function ZenPlaceReview() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              zen place pilatesは、コストパフォーマンスと通いやすさのバランスが最も優れたピラティススタジオの一つです。マットグループ月4回9,625円〜（税込）は、{zenMatRankShort()}。そのうえで、マットとマシンの両方に対応し、全国の店舗を相互利用できる（一部差額あり）点が主な特徴です。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方に向いています。
+              zen place pilatesのマットグループ月4回9,625円〜（税込）は、{zenMatRankShort()}。料金のほかに、マットとマシンの両方に対応している点と、公式サイトで全国150店舗（ヨガのスタジオを含む）と案内されている店舗を相互利用できる（一部差額あり）点が主な特徴です。特に出張や引っ越しが多い方、ライフスタイルの変化に合わせて柔軟に通いたい方に向いています。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               ピラティスKやthe SILKは女性専用でマシンに特化しているため、男性の方やマットピラティスも受講したい方にはzen placeが選択肢になります。CLUB PILATESは国際ブランドとしての品質管理を特徴としていますが、料金面ではzen placeのほうが手頃です。BDC PILATESのような少人数制の手厚い指導を求める方には物足りない場合もありますが、レベル別のクラス編成でこの点を補っています。
@@ -297,7 +297,7 @@ export default function ZenPlaceReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">zen place pilatesの体験レッスンの流れ・予約方法</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            zen place pilatesは全国最大級のピラティススタジオで、入会前に<strong>体験レッスン</strong>を受けられます。マシン（リフォーマー等）とマットの両方に対応し、グループ・プライベートから選べます。全店相互利用できる（一部差額あり）ため、自宅・職場の近くなど複数店舗を使い分けたい方にも向いています。
+            zen place pilatesは、公式サイトの案内では全国に100以上のスタジオがあるピラティススタジオで、入会前に<strong>体験レッスン</strong>を受けられます。マシン（リフォーマー等）とマットの両方に対応し、グループ・プライベートから選べます。全店相互利用できる（一部差額あり）ため、自宅・職場の近くなど複数店舗を使い分けたい方にも向いています。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
             <li><strong>予約する</strong>：公式サイトから最寄りスタジオと日時・レッスン形式（マット／マシン・グループ／プライベート）を選んで申し込みます。</li>
