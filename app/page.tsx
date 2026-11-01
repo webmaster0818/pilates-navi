@@ -71,7 +71,7 @@ const studios = [
     rank: 4,
     name: "the SILK",
     tagline: "音楽と照明を演出に取り入れた、女性専用のマシンピラティススタジオです。",
-    monthlyFee: "月額12,280円〜",
+    monthlyFee: monthlyShortOf("the-silk"),
     features: ["女性専用スタジオ", "全店が駅近の立地", "音楽と照明による空間演出", "マシンピラティス専門"],
     pros: ["駅から近く通いやすい立地", "意欲を保ちやすい空間演出", "女性専用で集中しやすい環境"],
     cons: ["店舗数が少ない点", "男性は利用不可"],

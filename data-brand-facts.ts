@@ -33,6 +33,25 @@ export const BDC_TRIAL = {
   groupSource: "https://bdcpilates.com/group_lessons",
 };
 
+/**
+ * the SILK 公式料金ページ（https://the-silk.co.jp/price/）のグループレッスン月会費（税込）。
+ * 2026年4月1日改定でエリアA/Bの2区分。別途、施設利用料 毎月700円（税込）。2026年11月1日確認。
+ * Full は「毎月1〜末日までの間で毎日1グループレッスン受講可能」、
+ * Full (Day) は「平日(月〜金)OPEN〜15時までに開始するグループレッスンを毎日一回受講可能」。
+ */
+export const THE_SILK_PRICES = {
+  checkedAt: "2026年11月1日",
+  source: "https://the-silk.co.jp/price/",
+  light3: { a: 13280, b: 12280 },
+  standard4: { a: 15280, b: 14370 },
+  full: { a: 22280, b: 19980 },
+  fullDay: { a: 19280, b: 17780 },
+  facilityFee: 700,
+};
+
+/** 円表記（例：12,280円） */
+export const fmtYen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -69,11 +88,11 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     style: "マシンピラティス", format: "グループ＋プライベート", gender: "女性専用",
     monthly: "月3回／月4回／フルデイ／フル（2026年4月1日改定・エリアA/Bの2区分）",
     joinFee: "公式の料金ページに記載なし（店舗で確認）",
-    monthlyExtra: "施設利用料 700円／月（エリアB会員がエリアA店舗を使う場合は1回550円）",
+    monthlyExtra: `施設利用料 ${fmtYen(THE_SILK_PRICES.facilityFee)}／月（エリアB会員がエリアA店舗を使う場合は1回550円）`,
     trial: "グループレッスンの体験は0円（公式サイトの予約ボタンに「¥0体験」「無料体験予約」と表記）。パーソナル体験の料金は公式に記載なし（2026年10月21日確認）",
     source: "https://the-silk.co.jp/price/",
-    // 公式料金ページ「Light 3 月3回 エリアB ¥12,280（税込）」2026年10月28日確認（別途施設利用料700円/月）
-    monthlyShort: "月3回 12,280円〜（税込・エリアにより異なる）",
+    // 公式料金ページ「Light 3 月3回 エリアB ¥12,280（税込）」（THE_SILK_PRICES・別途施設利用料700円/月）
+    monthlyShort: `月3回 ${fmtYen(THE_SILK_PRICES.light3.b)}〜（税込・エリアにより異なる）`,
   },
   "rintosull": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
@@ -205,9 +224,9 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
     monthlyExtraYen: 825, monthlyExtraNote: "施設維持費 月825円", joinNote: "入会金 5,500円",
     checkedAt: "2026年10月28日", source: "https://pilates-k.jp/price" },
   // 料金ページ「Standard 4 月4回 エリアA ¥15,280／エリアB ¥14,370（税込）」「施設利用料として毎月700円（税込）」
-  { slug: "the-silk", name: "the SILK", yen: 14370, plan: "Standard 4", style: "マシンのグループ", note: "エリアBの店舗。エリアAは15,280円", kind: "group",
-    monthlyExtraYen: 700, monthlyExtraNote: "施設利用料 月700円",
-    checkedAt: "2026年10月29日", source: "https://the-silk.co.jp/price/" },
+  { slug: "the-silk", name: "the SILK", yen: THE_SILK_PRICES.standard4.b, plan: "Standard 4", style: "マシンのグループ", note: `エリアBの店舗。エリアAは${fmtYen(THE_SILK_PRICES.standard4.a)}`, kind: "group",
+    monthlyExtraYen: THE_SILK_PRICES.facilityFee, monthlyExtraNote: `施設利用料 月${fmtYen(THE_SILK_PRICES.facilityFee)}`,
+    checkedAt: THE_SILK_PRICES.checkedAt, source: THE_SILK_PRICES.source },
   { slug: "bdc", name: "BDC PILATES", yen: 16280, plan: "グループ 月4回", style: "マシンのグループ", kind: "group",
     monthlyExtraYen: 770, monthlyExtraNote: "施設維持費 月770円", joinNote: "入会金 11,000円＋事務手数料 2,200円",
     checkedAt: "2026年10月28日", source: "https://bdcpilates.com/#pilates_plan" },

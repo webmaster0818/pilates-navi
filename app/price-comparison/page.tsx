@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, fmtYen } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ type Studio = { slug: string; name: string; price: string; type: string; note: s
 const studios: Studio[] = [
   { slug: "zenplace", name: "zen place pilates", price: "マシン月4回 15,400円／マット月4回 9,625円〜（税込）", type: "マシン/マットピラティス", note: "全国展開・店舗数最多クラス。グループレッスン中心。マシンのグループは開催スタジオのみ（2026年10月19日公式料金表で確認）" },
   { slug: "pilates-k", name: "ピラティスK", price: "月額11,220円〜（入会金5,500円・初期費用13,530円）", type: "女性専用マシンピラティス", note: "女性専用・マシン専門。駅近の店舗が中心" },
-  { slug: "the-silk", name: "the SILK", price: "月額12,280円〜（月3回・エリアB）", type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
+  { slug: "the-silk", name: "the SILK", price: `月額${fmtYen(THE_SILK_PRICES.light3.b)}〜（月3回・エリアB）`, type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
   { slug: "club-pilates", name: "CLUB PILATES", price: "月4回 税込10,890円〜17,050円（店舗ごとに設定。最も多いのは13,090円）", type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系。月額は各店舗ページの料金プラン欄（2026年10月26日に88件中85件で確認）" },
   { slug: "bdc", name: "BDC PILATES", price: "月4回 16,280円（税込）", type: "マシンピラティス", note: "都心中心。本格的に取り組みたい方向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: "月4回 税込み33,000円（1回8,250円）／月2回 20,000円〜通い放題 66,000円", type: "セミパーソナル（約2名）", note: "ほぼマンツーマン。手厚い指導を求める方向け。公式料金ページの料金画像（2026年10月26日確認）" },

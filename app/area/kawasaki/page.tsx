@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
+import { THE_SILK_PRICES, fmtYen } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -17,8 +18,8 @@ const CHAINS: Chain[] = [
     name: "ピラティススタジオ the SILK 川崎店",
     access: "京急川崎駅 徒歩2分／JR川崎駅 徒歩4分",
     trial: "50分の初回体験レッスン 期間限定0円（税込）。グループレッスンのみの店舗です",
-    monthly: "月3回 12,280円／月4回 14,370円／Full Day 17,780円／Full 19,980円（税込）。通い放題プランはありません",
-    m4: 14370,
+    monthly: `月3回 ${fmtYen(THE_SILK_PRICES.light3.b)}／月4回 ${fmtYen(THE_SILK_PRICES.standard4.b)}／Full Day ${fmtYen(THE_SILK_PRICES.fullDay.b)}／Full ${fmtYen(THE_SILK_PRICES.full.b)}（税込）。通い放題プランはありません`,
+    m4: THE_SILK_PRICES.standard4.b,
     source: "https://the-silk.co.jp/studios/kanagawa/kawasaki/",
   },
   {

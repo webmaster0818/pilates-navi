@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { THE_SILK_PRICES as SILK, fmtYen } from "@/data-brand-facts";
+
+/** エリアB〜エリアAの金額（例：12,280円〜13,280円） */
+const silkRange = (p: { a: number; b: number }) => `${fmtYen(p.b)}〜${fmtYen(p.a)}`;
 
 export const metadata: Metadata = {
   title: "the SILK（ザ・シルク）の口コミ・評判｜料金・体験レッスンの解説【2026年】",
@@ -10,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "the SILKの料金プランは？", a: "公式料金ページ（2026年7月20日確認）では、月3回のLight 3が月額12,280円〜13,280円、月4回のStandard 4が月額14,370円〜15,280円、通い放題のFullが月額19,980円〜22,280円です（店舗エリアA/Bで金額が異なります。別途、施設利用料が月700円かかります）。キャンペーン適用後の金額は時期により変わるため、申し込み前に公式サイトにて最新情報をご確認ください。" },
+  { q: "the SILKの料金プランは？", a: `公式料金ページ（${SILK.checkedAt}確認）では、月3回のLight 3が月額${silkRange(SILK.light3)}、月4回のStandard 4が月額${silkRange(SILK.standard4)}、毎日1レッスンまで受講できるFullが月額${silkRange(SILK.full)}です（店舗エリアA/Bで金額が異なります。別途、施設利用料が月${fmtYen(SILK.facilityFee)}かかります）。キャンペーン適用後の金額は時期により変わるため、申し込み前に公式サイトにて最新情報をご確認ください。` },
   { q: "the SILKの口コミ・評判は良い？", a: "「音楽と照明の空間演出が魅力的で通うのが楽しい」「全店駅チカで仕事帰りに寄りやすい」といった声が見られる一方、「店舗数が少なく通える人が限られる」「男性は利用できない」という指摘もあります。評価は受講者の目的や住むエリアによって異なります。" },
   { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。グループレッスンの体験は0円と公式サイトの予約ボタンに表記されています（「¥0体験」「無料体験予約」・2026年10月21日確認）。パーソナル体験の料金は公式サイトに記載がありません。体験は1回限りです。公式トップページでは、体験当日に入会した方限定の入会特典（グループレッスンは月会費 最大3か月50%OFF、入会金 通常10,000円→0円、登録手数料 通常1,000円→0円など。キャンペーン期間は2026年10月1日〜11月13日）が案内されています（2026年10月31日確認）。適用条件は申し込み前に公式サイトでご確認ください。" },
   { q: "男性は利用できますか？", a: "いいえ、the SILKは女性専用スタジオです。男性の利用はできません。" },
@@ -47,9 +51,9 @@ const concernPoints = [
 ];
 
 const prices = [
-  { plan: "Light 3（月3回）", price: "月額 12,280円〜13,280円", note: "店舗エリア（A/B）により金額が異なります。2026年7月20日に公式サイトで確認しました。" },
-  { plan: "Standard 4（月4回）", price: "月額 14,370円〜15,280円", note: "店舗エリア（A/B）により金額が異なります。2026年7月20日に公式サイトで確認しました。" },
-  { plan: "Full（通い放題）", price: "月額 19,980円〜22,280円", note: "回数制限はありません。平日昼間限定のFull(Day)は17,780円〜19,280円です。別途、施設利用料が月700円かかります。" },
+  { plan: "Light 3（月3回）", price: `月額 ${silkRange(SILK.light3)}`, note: `店舗エリア（A/B）により金額が異なります。${SILK.checkedAt}に公式サイトで確認しました。` },
+  { plan: "Standard 4（月4回）", price: `月額 ${silkRange(SILK.standard4)}`, note: `店舗エリア（A/B）により金額が異なります。${SILK.checkedAt}に公式サイトで確認しました。` },
+  { plan: "Full（毎日1レッスンまで）", price: `月額 ${silkRange(SILK.full)}`, note: `毎日1回までグループレッスンを受講できます。平日（月〜金）15時までに開始するレッスンに限るFull (Day)は${silkRange(SILK.fullDay)}です。別途、施設利用料が月${fmtYen(SILK.facilityFee)}かかります。` },
   { plan: "プライベートレッスン", price: "要確認", note: "マンツーマン指導の有無・価格は公式サイトをご確認ください。" },
   { plan: "体験レッスン", price: "グループ体験 0円（パーソナルは公式に記載なし）", note: "公式サイトの予約ボタンの表記にもとづきます（2026年10月21日確認）。体験当日に入会した方限定の入会特典は、公式トップページにキャンペーン期間（2026年10月1日〜11月13日）とともに掲載されています（2026年10月31日確認）。" },
 ];
@@ -84,7 +88,7 @@ export default function TheSilkReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">the SILKの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              the SILKは、<strong>音楽と照明による空間演出</strong>と<strong>駅から近い立地</strong>を特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月3回12,280円〜・通い放題19,980円〜（2026年7月20日公式サイト確認・店舗エリアにより変動）</strong>です。空間演出によって運動の意欲を保ちたい女性や、仕事帰りに無理なく通いたい女性に向いています。一方で、店舗数が限られるため通えるエリアが限定され、男性は利用できません。通える範囲に店舗がある方には、体験レッスンで雰囲気を確認することをおすすめします。
+              the SILKは、<strong>音楽と照明による空間演出</strong>と<strong>駅から近い立地</strong>を特徴とする<strong>女性専用</strong>のマシンピラティススタジオです。料金は<strong>月3回{fmtYen(SILK.light3.b)}〜・毎日1レッスンまでのFull {fmtYen(SILK.full.b)}〜（{SILK.checkedAt}公式サイト確認・店舗エリアにより変動）</strong>です。空間演出によって運動の意欲を保ちたい女性や、仕事帰りに無理なく通いたい女性に向いています。一方で、店舗数が限られるため通えるエリアが限定され、男性は利用できません。通える範囲に店舗がある方には、体験レッスンで雰囲気を確認することをおすすめします。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>通うこと自体を楽しみたい女性／仕事帰りに駅近くで通いたい方</li>
@@ -105,7 +109,7 @@ export default function TheSilkReview() {
               <tbody>
                 {[
                   ["スタジオ名", "the SILK（ザ・シルク）"],
-                  ["月額料金", "月額12,280円〜（月3回・エリアB／2026年7月20日公式サイト確認）"],
+                  ["月額料金", `月額${fmtYen(SILK.light3.b)}〜（月3回・エリアB／${SILK.checkedAt}公式サイト確認）`],
                   ["店舗", "都市部中心に展開（全店舗が駅近と案内）※最新情報は公式サイト参照"],
                   ["レッスン形式", "マシングループレッスン"],
                   ["対象", "女性専用"],
@@ -138,7 +142,7 @@ export default function TheSilkReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">the SILKの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            the SILKの料金は月額制（回数制・通い放題）で、<strong>店舗のエリア区分（A/B）によって金額が異なります</strong>。公式料金ページ（2026年7月20日確認）の主なプランは下表のとおりです（別途施設利用料 月700円）。キャンペーンにより変動するため、正確な金額は公式サイトにて最新情報をご確認ください。
+            the SILKの料金は月額制（月3回・月4回の回数制と、毎日1レッスンまで受講できるプラン）で、<strong>店舗のエリア区分（A/B）によって金額が異なります</strong>。公式料金ページ（{SILK.checkedAt}確認）の主なプランは下表のとおりです（別途施設利用料 月{fmtYen(SILK.facilityFee)}）。キャンペーンにより変動するため、正確な金額は公式サイトにて最新情報をご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">

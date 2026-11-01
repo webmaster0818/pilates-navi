@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
+import { THE_SILK_PRICES, fmtYen } from "@/data-brand-facts";
 
 const LISTED = loadArea("yokohama").listed.length;
 
@@ -25,7 +26,7 @@ const YOKOHAMA_PRICES = [
   {
     brand: "the SILK",
     href: "/review/the-silk/",
-    text: "横浜店は公式の「エリアA」区分で、グループ 月4回 15,280円・月3回 13,280円（税込）。別途 施設利用料 700円／月（税込）",
+    text: `横浜店は公式の「エリアA」区分で、グループ 月4回 ${fmtYen(THE_SILK_PRICES.standard4.a)}・月3回 ${fmtYen(THE_SILK_PRICES.light3.a)}（税込）。別途 施設利用料 ${fmtYen(THE_SILK_PRICES.facilityFee)}／月（税込）`,
     source: "https://the-silk.co.jp/price/",
   },
   {
