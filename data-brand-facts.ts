@@ -81,7 +81,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: "施設維持費 825円／月",
     trial: "0円から体験可能",
     source: "https://pilates-k.jp/price",
-    // 公式料金ページ「マンスリー4メンバー ¥11,220〜¥13,420（税込）」2026年10月28日確認
+    // 公式料金ページ「マンスリー4メンバー ¥11,220〜¥13,420（税込）」2026年10月28日確認・11月2日再確認（同額）
     monthlyShort: "月4回 11,220円〜（税込・店舗により異なる）",
   },
   "the-silk": {
