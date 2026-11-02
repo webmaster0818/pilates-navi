@@ -126,7 +126,7 @@ const M4_MIN = Math.min(...CHAINS.map((c) => c.m4));
 const M4_MAX = Math.max(...CHAINS.map((c) => c.m4));
 const AREAS = [...new Set(CHAINS.map((c) => c.area))].map((a) => ({ a, n: CHAINS.filter((c) => c.area === a).length }));
 const yen = (n: number) => n.toLocaleString();
-// 冒頭の料金の目安で示す最安・最高の店舗は、2026年11月2日に公式店舗ページで再確認（URBAN CLASSIC 川崎 8,580円・CLUB PILATES 武蔵小杉 14,190円、同額）
+// 冒頭の料金の目安で示す最安・最高の店舗は、2026年11月2日に公式店舗ページで再確認（URBAN CLASSIC 川崎 8,580円・the SILK 川崎店 Standard 4 14,370円、同額）
 const M4_RECHECKED_AT = "2026年11月2日";
 const M4_MIN_NAMES = CHAINS.filter((c) => c.m4 === M4_MIN).map((c) => c.name).join("・");
 const M4_MAX_NAMES = CHAINS.filter((c) => c.m4 === M4_MAX).map((c) => c.name).join("・");
