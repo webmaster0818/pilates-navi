@@ -342,3 +342,68 @@ export function trialFeeLongText(): string {
   const unknown = s.unknown.map((t) => `${t.name}は${t.text}${t.separateNote ? `。なお、${t.separateNote}` : ""}。`).join("");
   return `当サイトが掲載する${s.total}ブランドのうち、公式サイトで体験料を確認できた${s.knownCount}ブランドでは、通常の体験料は${s.min}円〜${s.max}円（税込）が目安です（${s.checkedAt}確認）。0円で体験できるのは${free}の${s.free.length}ブランドです。有料のブランドは、${paid}です。${unknown}料金は店舗やキャンペーンにより異なるため、ご予約前に各公式サイトでご確認ください。`;
 }
+
+/**
+ * グループレッスンの通い放題プラン（税込・各ブランドの最も安い額）。2026年11月2日までに各公式サイトで確認した値だけを入れる。
+ * 数え方：月の回数に上限がなく、時間帯の制限がないプラン（1日1〜2回までの制限は含む）。平日昼だけのプラン（zen place のデイフリー・the SILK の Full Day）は入れない。
+ * 通い放題のプランがないブランド（BDC は月8回まで・ピラティスミラーは月6回のコース）と、パーソナル・セミパーソナル（BREST・Celestia・メルメイク）は入れない。
+ * TOP・/faq/ の「月額料金の相場」はここと MONTHLY4_LOWEST から算出する（直書きしない）。
+ */
+export type UnlimitedPlan = {
+  slug: string;
+  name: string;
+  yen: number;
+  plan: string;
+  note?: string;
+  checkedAt: string;
+  source: string;
+};
+
+export const UNLIMITED_GROUP_LOWEST: UnlimitedPlan[] = [
+  // 料金ページ「ライト・フルタイム 10,800円(税込)~15,800円(税込) 店舗によって料金が異なります」「通い放題」「1日1回」（登録した1店舗）
+  { slug: "rintosull", name: "Rintosull", yen: 10800, plan: "ライト・フルタイム", note: "登録した1店舗・1日1回まで。店舗により15,800円まで", checkedAt: "2026年11月2日", source: "https://rintosull.jp/price/" },
+  // 川崎店ページの料金表画像の alt「レギュラー 11,800円（税込12,980円） 通い放題 ※１日１回まで」
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", yen: 12980, plan: "レギュラー", note: "1日1回まで・全店共通", checkedAt: "2026年11月2日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
+  // 料金ページ「フリー マットグループ無制限 グレード01 16,940円／グレード02 14,960円（税込）」
+  { slug: "zenplace", name: "zen place pilates", yen: 14960, plan: "マットグループ フリー", note: "マットのグループ。グレード01のスタジオは16,940円", checkedAt: "2026年11月2日", source: "https://www.zenplace.co.jp/price" },
+  // BRAND_FACTS club-pilates の店舗ページ確認値（通い放題 17,490円〜40,590円）
+  { slug: "club-pilates", name: "CLUB PILATES", yen: 17490, plan: "通い放題", note: "店舗ごとに設定。店舗により40,590円まで", checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
+  // PILATES_K_PRICES.premium（マンスリープレミアムメンバー・毎日2レッスンまで）
+  { slug: "pilates-k", name: "ピラティスK", yen: 17820, plan: "マンスリープレミアムメンバー", note: "毎日2レッスンまで。店舗により18,920円まで", checkedAt: PILATES_K_PRICES.checkedAt, source: PILATES_K_PRICES.source },
+  // THE_SILK_PRICES.full（毎日1グループレッスン）
+  { slug: "the-silk", name: "the SILK", yen: THE_SILK_PRICES.full.b, plan: "Full", note: `毎日1レッスンまで・エリアBの店舗。エリアAは${fmtYen(THE_SILK_PRICES.full.a)}`, checkedAt: THE_SILK_PRICES.checkedAt, source: THE_SILK_PRICES.source },
+];
+
+const jpDateNum = (s: string) => {
+  const m = s.match(/(\d+)年(\d+)月(\d+)日/);
+  return m ? Number(m[1]) * 10000 + Number(m[2]) * 100 + Number(m[3]) : 0;
+};
+const jpDateShort = (s: string) => s.replace(/^\d+年/, "");
+
+/** 月額料金の相場（掲載ブランドの公式料金から算出）。月4回はブランドごとの最も安い月4回プランで数える。 */
+export function monthlyFeeSummary() {
+  const lowestBy = (rows: { slug: string; yen: number }[]) => {
+    const m = new Map<string, number>();
+    for (const r of rows) m.set(r.slug, Math.min(m.get(r.slug) ?? Infinity, r.yen));
+    return [...m.values()].sort((a, b) => a - b);
+  };
+  const g4 = lowestBy(MONTHLY4_LOWEST.filter((r) => r.kind === "group"));
+  const p4 = lowestBy(MONTHLY4_LOWEST.filter((r) => r.kind === "personal"));
+  const un = lowestBy(UNLIMITED_GROUP_LOWEST);
+  const dates = [...MONTHLY4_LOWEST, ...UNLIMITED_GROUP_LOWEST].map((r) => r.checkedAt).sort((a, b) => jpDateNum(a) - jpDateNum(b));
+  return {
+    total: TRIAL_FEES.length,
+    g4: { n: g4.length, min: g4[0], max: g4[g4.length - 1] },
+    p4: { n: p4.length, min: p4[0], max: p4[p4.length - 1] },
+    un: { n: un.length, min: un[0], max: un[un.length - 1] },
+    from: dates[0],
+    to: dates[dates.length - 1],
+  };
+}
+
+/** TOP・/faq/ 共通の「月額料金の相場」の答え */
+export function monthlyFeeText(): string {
+  const s = monthlyFeeSummary();
+  const per = (n: number) => fmtYen(Math.round(n / 4));
+  return `当サイトが掲載する${s.total}ブランドの公式料金（税込・${jpDateShort(s.from)}〜${jpDateShort(s.to)}確認）から、各ブランドで最も安いプランの月会費を集計すると、グループレッスンの月4回は${s.g4.n}ブランドで${fmtYen(s.g4.min)}〜${fmtYen(s.g4.max)}です（ピラティスミラーは月6回のコースのため含みません）。グループレッスンの通い放題（1日1〜2回までの制限を含み、平日昼だけのプランを除く）は${s.un.n}ブランドで${fmtYen(s.un.min)}〜${fmtYen(s.un.max)}です。パーソナル・セミパーソナルの月4回は${s.p4.n}ブランドで${fmtYen(s.p4.min)}〜${fmtYen(s.p4.max)}（1回あたり${per(s.p4.min)}〜${per(s.p4.max)}）です。同じブランドでも店舗やエリアで月会費が上がる場合があり、月会費のほかに管理費・入会金がかかるブランドもあります。`;
+}

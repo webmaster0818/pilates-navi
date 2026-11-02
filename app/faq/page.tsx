@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
-import { trialFeeShortText } from "@/data-brand-facts";
+import { monthlyFeeText, trialFeeShortText } from "@/data-brand-facts";
 
 export const metadata: Metadata = {
   title: "ピラティスに関するよくある質問（FAQ）",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "ピラティススタジオの月額料金の相場はいくらですか？",
-    a: "グループレッスンの月4回プランで9,000円〜15,000円程度が相場です。通い放題プランは15,000円〜22,000円程度、プライベートレッスンは1回8,000円〜15,000円が目安です。スタジオの立地やブランドによっても異なります。" + trialFeeShortText(),
+    a: monthlyFeeText() + trialFeeShortText(),
   },
   {
     q: "ピラティスに通う頻度の目安を教えてください。",
