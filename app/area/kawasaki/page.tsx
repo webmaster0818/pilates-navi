@@ -126,10 +126,14 @@ const M4_MIN = Math.min(...CHAINS.map((c) => c.m4));
 const M4_MAX = Math.max(...CHAINS.map((c) => c.m4));
 const AREAS = [...new Set(CHAINS.map((c) => c.area))].map((a) => ({ a, n: CHAINS.filter((c) => c.area === a).length }));
 const yen = (n: number) => n.toLocaleString();
+// 冒頭の料金の目安で示す最安・最高の店舗は、2026年11月2日に公式店舗ページで再確認（URBAN CLASSIC 川崎 8,580円・CLUB PILATES 武蔵小杉 14,190円、同額）
+const M4_RECHECKED_AT = "2026年11月2日";
+const M4_MIN_NAMES = CHAINS.filter((c) => c.m4 === M4_MIN).map((c) => c.name).join("・");
+const M4_MAX_NAMES = CHAINS.filter((c) => c.m4 === M4_MAX).map((c) => c.name).join("・");
 
 export const metadata: Metadata = {
-  title: `川崎のピラティスおすすめ${LISTED}店｜武蔵小杉・溝の口も口コミ比較`,
-  description: `川崎のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数（2026年9月取得の実数）で比較しています。武蔵小杉・溝の口・川崎駅周辺など区別の店舗数、口コミ上位、大手ブランドの公式料金・体験も掲載しています。`,
+  title: `川崎のピラティスおすすめ${LISTED}店｜料金・武蔵小杉・溝の口を比較`,
+  description: `川崎のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。川崎駅・武蔵小杉・溝の口の大手${CHAINS.length}店舗の月4回の月額（${yen(M4_MIN)}円〜${yen(M4_MAX)}円・公式確認）と駅からの距離も掲載しています。`,
   alternates: { canonical: "https://pilatest.com/area/kawasaki/" },
 };
 
@@ -138,8 +142,13 @@ export default function AreaPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "川崎のピラティススタジオ" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        川崎のピラティススタジオおすすめ{LISTED}店【Google口コミ実測データで比較】
+        川崎のピラティススタジオおすすめ{LISTED}店【料金・Google口コミ実測データで比較】
       </h1>
+      <p className="mb-6 text-sm text-gray-700 leading-relaxed">
+        川崎駅・武蔵小杉・溝の口などにある大手{CHAINS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です。
+        最も安いのは{M4_MIN_NAMES}、最も高いのは{M4_MAX_NAMES}で、入会金・管理費は含みません（各公式店舗ページ {CHAIN_CHECKED_AT}確認。最安・最高の店舗は{M4_RECHECKED_AT}に再確認）。
+        {CHAINS.length}店舗とも各店舗の最寄り駅から徒歩1〜8分です。店舗ごとの駅からの距離・体験・月額は、下の「川崎駅・武蔵小杉・溝の口の大手ピラティススタジオの料金とアクセス」の表に掲載しています。
+      </p>
       <AreaAnswerBox area="kawasaki" areaName="川崎" ward={true} places={["武蔵小杉", "溝の口"]} />
 
       <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6" aria-label="川崎の大手ピラティススタジオの料金とアクセス">

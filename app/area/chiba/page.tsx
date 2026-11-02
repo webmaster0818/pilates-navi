@@ -16,8 +16,9 @@ const studioSlugMap = new Map(
   (studioIdx.entries as { slug: string; name: string; address: string }[]).map((e) => [e.name + e.address, e.slug])
 );
 
-// 千葉駅周辺にある大手ブランド3店舗の公式店舗ページの記載（2026年10月24日確認）。公式に記載のない値は掲載しない
-const CHIBA_CHECKED_AT = "2026年10月24日";
+// 千葉駅周辺にある大手ブランド3店舗の公式店舗ページの記載（2026年10月24日確認・11月2日に3店舗とも再確認し同額・同表記）。公式に記載のない値は掲載しない
+// m4 は月4回プランの月額（冒頭の料金の目安に使う）
+const CHIBA_CHECKED_AT = "2026年11月2日";
 const CHIBA_BRANDS = [
   {
     name: "CLUB PILATES 千葉店",
@@ -26,6 +27,7 @@ const CHIBA_BRANDS = [
     target: "マシンを使用したグループレッスン（最大12名）・プライベートレッスン",
     trial: "30分の体験レッスン 無料",
     monthly: "月4回 11,990円／月8回 15,290円／通い放題 18,590円、入会金 5,500円（店舗ページに税込・税別の記載なし）",
+    m4: 11990,
     source: "https://clubpilates.co.jp/studio/chiba",
   },
   {
@@ -35,6 +37,7 @@ const CHIBA_BRANDS = [
     target: "女性専用・マシンピラティス（グループ）",
     trial: "体験レッスン 0円",
     monthly: "月4回 13,420円／月8回 16,170円／マンスリープレミアム 18,920円（税込）、別途 施設維持費 月825円（税込）",
+    m4: 13420,
     source: "https://pilates-k.jp/studio/chiba-ken/chiba/",
   },
   {
@@ -43,10 +46,15 @@ const CHIBA_BRANDS = [
     access: "JR「千葉駅」東口から徒歩7分、京成「京成千葉駅」東口から徒歩6分",
     target: "女性専用・マシンピラティス",
     trial: "無料体験会",
-    monthly: "月会費 8,800円／13,800円／16,800円（税込・プラン別）、別途 運営管理費 月680円（税込）",
+    monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）、別途 運営管理費 月680円（税込）",
+    m4: 8800,
     source: "https://rintosull.jp/shop/chiba/chiba/",
   },
 ];
+
+const M4_MIN = Math.min(...CHIBA_BRANDS.map((b) => b.m4));
+const M4_MAX = Math.max(...CHIBA_BRANDS.map((b) => b.m4));
+const yen = (n: number) => n.toLocaleString();
 
 function jpDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);
@@ -54,8 +62,8 @@ function jpDate(iso: string) {
 }
 
 export const metadata: Metadata = {
-  title: `千葉のピラティスおすすめ${LISTED}店｜千葉駅周辺・船橋を口コミ比較`,
-  description: `千葉県のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。千葉市中央区の${CHUO.length}店の一覧と、千葉駅周辺の大手3店舗の駅からの距離・体験料金・月額（公式確認）も掲載しています。`,
+  title: `千葉のピラティスおすすめ${LISTED}店｜料金・千葉駅周辺・船橋を比較`,
+  description: `千葉県のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。千葉駅周辺の大手3店舗の月4回の月額（${yen(M4_MIN)}円〜${yen(M4_MAX)}円・公式確認）、駅からの距離、千葉市中央区の${CHUO.length}店の一覧も掲載しています。`,
   alternates: { canonical: "https://pilatest.com/area/chiba/" },
 };
 
@@ -64,8 +72,14 @@ export default function AreaPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "千葉のピラティススタジオ" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        千葉のピラティススタジオおすすめ{LISTED}店【Google口コミ実測データで比較】
+        千葉のピラティススタジオおすすめ{LISTED}店【料金・Google口コミ実測データで比較】
       </h1>
+      <p className="mb-6 text-sm text-gray-700 leading-relaxed">
+        千葉駅から徒歩2〜7分にある大手{CHIBA_BRANDS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円</strong>です（
+        {CHIBA_BRANDS.slice().sort((a, b) => a.m4 - b.m4).map((b, i) => `${i > 0 ? "、" : ""}${b.name} ${yen(b.m4)}円`).join("")}
+        。CLUB PILATES は店舗ページに税込・税別の表記がなく、ほかの2店舗は税込です。入会金・管理費は含みません。{CHIBA_CHECKED_AT}に各公式店舗ページで確認）。
+        店舗ごとの駅からの距離・体験・月額は、下の「千葉駅周辺のピラティススタジオ」の表に掲載しています。
+      </p>
       <AreaAnswerBox area="chiba" areaName="千葉" ward={false} places={["船橋", "津田沼", "稲毛"]} />
 
       <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6" aria-label="千葉駅周辺のピラティススタジオ">
@@ -73,7 +87,7 @@ export default function AreaPage() {
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           当サイトの千葉県の掲載店舗{LISTED}店のうち、住所が千葉駅のある千葉市中央区の店舗は{CHUO.length}店です。
           大手ブランドでは、CLUB PILATES・ピラティスK・Rintosull の各千葉店が千葉駅から徒歩7分以内にあります。
-          駅からの距離・体験料金・月額は、各公式店舗ページで{CHIBA_CHECKED_AT}に確認した内容です。
+          駅からの距離・体験料金・月額は、各公式店舗ページで2026年10月24日に確認し、{CHIBA_CHECKED_AT}に再確認した内容です。
         </p>
 
         <div className="mt-4 overflow-x-auto">
