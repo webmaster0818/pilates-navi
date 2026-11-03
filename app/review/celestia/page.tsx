@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES } from "@/data-brand-facts";
+import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, ZENPLACE_PRICES, fmtYen } from "@/data-brand-facts";
 
 const TRIAL = BRAND_FACTS["celestia"].trial;
 
@@ -256,7 +256,7 @@ export default function CelestiaReview() {
               Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオです。「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」の両立を特徴としています。1レッスン約2名という少人数制のため、実質的にマンツーマンに近い指導を受けられ、フォームの修正や個別のアドバイスが充実しています。チキンジム・チキンゴルフの運営ノウハウを活かしたスタジオ運営にも安定感があります。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり6,625円〜10,000円（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額9,625円〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
+              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり6,625円〜10,000円（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額{fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               編集部として、Celestiaは「グループレッスンだと物足りないが、完全プライベートほどの出費は避けたい方」に適したスタジオと考えます。店舗は16店舗で、大手のグループ型スタジオと比べると通える地域が限られる点は課題ですが、通える範囲にお住まいの方には体験レッスンの受講をおすすめします。手ぶらで通えるため、仕事帰りにもピラティスを続けやすい環境です。

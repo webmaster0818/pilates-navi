@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { THE_SILK_PRICES, fmtYen } from "@/data-brand-facts";
+import { THE_SILK_PRICES, ZENPLACE_PRICES as ZP, fmtYen } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -53,9 +53,9 @@ const CHAINS: Chain[] = [
     area: "川崎駅周辺",
     name: "zen place ピラティス 川崎",
     access: "京急川崎駅 中央口 徒歩5分／JR川崎駅 中央東口 徒歩6分",
-    trial: "マットグループ 初回体験1,000円（通常3,300円〜）／マシングループ 初回体験3,000円（通常5,000円〜）",
-    monthly: "マット 月4回 10,450円・フリー 16,940円（グレード01）／マシン（リフォーマーグループ）月4回 15,400円（税込）。設備運営管理費 月550円（税込）",
-    m4: 10450,
+    trial: `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`,
+    monthly: `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`,
+    m4: ZP.mat4.g1,
     source: "https://www.zenplace.co.jp/studios/pilates-kawasaki",
   },
   {
@@ -80,9 +80,9 @@ const CHAINS: Chain[] = [
     area: "武蔵小杉・新丸子",
     name: "zen place ピラティス 武蔵小杉",
     access: "JR武蔵小杉駅 北口 徒歩1分／東急 武蔵小杉駅 中央口1 徒歩4分",
-    trial: "マットグループ 初回体験1,000円（通常3,300円〜）／マシングループ 初回体験3,000円（通常5,000円〜）",
-    monthly: "マット 月4回 10,450円・フリー 16,940円（グレード01）／マシン（リフォーマーグループ）月4回 15,400円（税込）。設備運営管理費 月550円（税込）",
-    m4: 10450,
+    trial: `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`,
+    monthly: `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`,
+    m4: ZP.mat4.g1,
     source: "https://www.zenplace.co.jp/studios/pilates-musashikosugi",
   },
   {

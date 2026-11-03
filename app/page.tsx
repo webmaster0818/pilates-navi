@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
-import { BRAND_FACTS, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
+import { BRAND_FACTS, ZENPLACE_PRICES as ZP, fmtYen, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
 import Icon from "@/components/Icon";
 import studioIdx from "@/data-studio-index.json";
 
@@ -38,9 +38,9 @@ const studios = [
     rank: 1,
     name: "zen place pilates",
     tagline: "マット・マシンの両方に対応し、全国100店舗以上を展開しています。",
-    monthlyFee: "マシン月4回 15,400円／マット月4回 9,625円〜（税込）",
+    monthlyFee: `マシン月4回 ${fmtYen(ZP.rg4)}／マット月4回 ${fmtYen(ZP.mat4.g2)}〜（税込）`,
     features: ["全国100店舗以上", "マット・マシン両対応", "少人数制レッスン", "オンラインレッスンあり"],
-    pros: ["マットグループレッスン月4回9,625円〜（税込）", "全店舗相互利用が可能（一部差額あり）", "初心者からプロまで対応"],
+    pros: [`マットグループレッスン月4回${fmtYen(ZP.mat4.g2)}〜（税込）`, "全店舗相互利用が可能（一部差額あり）", "初心者からプロまで対応"],
     cons: ["店舗による設備の差", "人気の時間帯は予約が取りにくい傾向"],
     recommend: "費用を抑えて長く通いたい方におすすめです。",
     slug: "zenplace", reviewPath: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/",

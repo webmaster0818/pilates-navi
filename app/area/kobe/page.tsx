@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
+import { ZENPLACE_PRICES as ZP, fmtYen } from "@/data-brand-facts";
 import studioIdx from "@/data-studio-index.json";
 
 const { listed, surveyedAt } = loadArea("kobe");
@@ -47,9 +48,9 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     review: "/review/zenplace/",
     access: "JR「三ノ宮駅」中央改札口から徒歩8分、地下鉄海岸線「三宮・花時計前駅」4番出口から徒歩1分",
     target: "マット・マシン（リフォーマー）・プライベート",
-    trial: "マットグループ 2,200円〜（初回キャンペーン 1,000円）、マシングループ 5,000円〜（初回キャンペーン 3,000円）、プライベート 8,250円〜",
-    monthly: "グレード02：マットグループ 月4回 9,625円、マシングループ 月4回 15,400円（税込・公式料金表 2026年11月2日確認）",
-    m4: 9625,
+    trial: `マットグループ ${fmtYen(ZP.trial.mat.g2)}〜（初回キャンペーン 1,000円）、マシングループ ${fmtYen(ZP.trial.machine)}〜（初回キャンペーン 3,000円）、プライベート ${fmtYen(ZP.trial.private.g2)}〜`,
+    monthly: `グレード02：マットグループ 月4回 ${fmtYen(ZP.mat4.g2)}、マシングループ 月4回 ${fmtYen(ZP.rg4)}（税込・公式料金表 2026年11月2日確認）`,
+    m4: ZP.mat4.g2,
     source: "https://www.zenplace.co.jp/studios/pilates-sannomiya",
   },
   {
