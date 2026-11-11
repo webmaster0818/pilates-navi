@@ -6,22 +6,22 @@ import Breadcrumb from "@/components/Breadcrumb";
 const AFFILIATE = "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727";
 
 export const metadata: Metadata = {
-  title: "BREST（ブレスト）ピラティスの口コミ・評判｜料金表・体験の持ち物・店舗・退会方法【2026年10月】",
+  title: "BREST（ブレスト）ピラティスの口コミ・評判｜料金・体験500円・16店舗・他社比較【2026年11月】",
   description:
-    "BREST（ブレスト）ピラティスの口コミ・評判と料金を公式の店舗ページで確認し整理しています。月4回 税込22,880円（東京3店は25,080円）、体験料 税込5,280円（キャンペーン時980円）、入会金 税込22,000円（同0円）、店舗、来店のみの退会方法を解説します（10/25確認）。",
+    "BREST（ブレスト）ピラティスの口コミ・評判と料金を、公式の全16店舗ページで確認しています。月4回 税込22,880円（東京3店は25,080円）、体験料 税込5,280円（キャンペーン時500円）、入会金 税込22,000円（同0円）、パーソナル型との比較、退会方法を解説します（11/11確認）。",
   alternates: { canonical: "/review/brest/" },
 };
 
 // 料金は各店舗ページの料金表（画像の代替テキストに税抜・税込を併記）で2026-10-25に確認
 const faqs = [
-  { q: "BREST PILATES & BODYMAKEの料金はいくらですか？", a: "各店舗ページの料金表（2026年10月25日確認・税込）では、茅ヶ崎・相模大野・川崎・淡路・今福鶴見・なんば千日前・呉服町の7店舗がパーソナルM4（月4回）22,880円、M8（月8回）39,380円、フリー（通い放題）44,880円です。本郷三丁目・二子玉川・代官山の東京3店舗はM4 25,080円、M8 41,580円、M12（月12回）47,080円で、平日12:30〜17:00のみ利用できるデイタイムM4 20,680円もあります。いずれも1日1回までです。このほか入会時に施設利用料2,200円、3か月目の月会費から運営管理費として毎月480円がかかります。公式サイトには「料金は店舗や時期により変動する場合がございます」と記載されています。" },
+  { q: "BREST PILATES & BODYMAKEの料金はいくらですか？", a: "各店舗ページの料金表（2026年11月11日確認・税込）では、東京3店舗以外の営業中9店舗はパーソナルM4（月4回）22,880円です。10月25日の確認時は茅ヶ崎・相模大野・川崎・淡路・今福鶴見・なんば千日前・呉服町の7店舗にM8（月8回）39,380円、フリー（通い放題）44,880円も掲載されていましたが、11月11日時点の店舗ページの料金表はM4のみです（トップページには「パーソナルフリー会員で1月あたり26日通った場合」1回1,726円〜との記載が残っています）。本郷三丁目・二子玉川・代官山の東京3店舗はM4 25,080円、M8 41,580円、M12（月12回）47,080円で、平日12:30〜17:00のみ利用できるデイタイムM4 20,680円もあります。いずれも1日1回までです。このほか入会時に施設利用料2,200円、3か月目の月会費から運営管理費として毎月480円がかかります。公式サイトには「料金は店舗や時期により変動する場合がございます」と記載されています。" },
   { q: "都度払い（1回だけの利用）はできますか？", a: "はい。公式FAQに「1レッスンあたり税込6,380円」と記載されています（2026年10月25日確認）。" },
-  { q: "体験レッスンの料金と持ち物を教えてください。", a: "体験料は通常税込5,280円（税抜4,800円）です。2026年10月25日時点では、営業中の全11店舗のページにキャンペーン画像（「モニター会員募集」または「先行入会キャンペーン」・先着20名）が掲載されており、体験料は税込980円と表示されています。キャンペーンは定員になり次第終了すると記載されています。持ち物は、運動できるウェアと、運転免許証・マイナンバーカードなどの本人確認書類です（公式サイト「ご利用までの流れ」・FAQ）。" },
-  { q: "入会金はかかりますか？", a: "各店舗ページのキャンペーン画像では、入会金は通常税込22,000円（税抜20,000円）と表示されています。2026年10月25日時点では、営業中の全11店舗で先着20名の入会金0円が案内されています（開業予定の綱島・武庫之荘・西鉄二日市はオープン前の先着100名が対象）。このほか、入会時の施設利用料税込2,200円と、3か月目からの運営管理費月480円がかかります。" },
+  { q: "体験レッスンの料金と持ち物を教えてください。", a: "体験料は通常税込5,280円（税抜4,800円）です。2026年11月11日時点では、営業中の全12店舗のページにキャンペーン画像（「モニター会員募集」または「先行入会キャンペーン」・先着20名）が掲載されており、体験料は税込500円（税抜455円）と表示されています（10月25日の確認時は税込980円）。キャンペーンは定員になり次第終了すると記載されています。持ち物は、運動できるウェアと、運転免許証・マイナンバーカードなどの本人確認書類です（公式サイト「ご利用までの流れ」・FAQ）。" },
+  { q: "入会金はかかりますか？", a: "各店舗ページのキャンペーン画像では、入会金は通常税込22,000円（税抜20,000円）と表示されています。2026年11月11日時点では、営業中の全12店舗で先着20名の入会金0円が案内されています（開業予定の綱島・武庫之荘はオープン前の先着100名が対象）。キャンペーン画像には「毎月の会費がずっと2,200円割引」とも表示されています。このほか、入会時の施設利用料税込2,200円と、3か月目からの運営管理費月480円がかかります。" },
   { q: "月会費はいつ支払いますか？", a: "特定商取引法に基づく表示では、支払方法はクレジットカード決済で、入会初月と2か月目の月会費は申込み時、3か月目以降は前月20日に決済されます。申込み完了後の撤回はできないと記載されています（2026年10月25日確認）。" },
   { q: "BREST PILATESの口コミ・評判を教えてください。", a: "Googleマップでは、当サイト収録の2店舗（代官山・呉服町）の平均評点が5.0（口コミ48件・2026年9月2日時点）です。公式サイト掲載の声は「初心者でもわかるように教えてくれる」「30分で効率よく通える」といった内容が中心です。一方で、東京3店舗は他店舗より月額が高い点、退会手続きが来店のみで締め日（5日）がある点は、入会前にご確認ください。" },
   { q: "BREST PILATESはどんなスタジオですか？", a: "マシンピラティスとウェイトトレーニングを組み合わせた、1回30分のパーソナルトレーニングスタジオです。運営は株式会社VB NEXT（2020年12月11日設立・東京都港区北青山／URBAN CLASSIC PILATESと同じ運営会社）で、BREST会員は姉妹ブランドのURBAN CLASSIC PILATESを全店追加料金なしで利用できます（公式サイト）。" },
-  { q: "BREST（ブレスト）の店舗はどこにありますか？", a: "公式サイトの店舗一覧（2026年10月25日確認）では16店舗です。営業中は本郷三丁目・二子玉川・代官山・茅ヶ崎・相模大野・川崎・今池・淡路・今福鶴見・なんば千日前・呉服町の11店舗、開業予定が西鉄二日市（11月OPEN）・武庫之荘（12月OPEN）・綱島（1月OPEN）・市川・南茨木（いずれもCOMING SOON）の5店舗です。定休日はいずれも日曜日です。" },
+  { q: "BREST（ブレスト）の店舗はどこにありますか？", a: "公式サイトの店舗一覧（2026年11月11日確認）では16店舗です。営業中は本郷三丁目・二子玉川・代官山・茅ヶ崎・相模大野・川崎・今池・淡路・今福鶴見・なんば千日前・呉服町・西鉄二日市の12店舗、開業予定が武庫之荘（2026年12月1日OPEN）・綱島（2027年1月4日OPEN）・市川・南茨木（いずれもCOMING SOON）の4店舗です。西鉄二日市は10月25日の確認時の「11月OPEN」の表示がなくなり、今池と同じ「先行入会キャンペーン」が掲載されています。定休日はいずれも日曜日です。" },
   { q: "営業時間を教えてください。", a: "店舗により異なります。東京3店舗は平日10:30〜21:30／土祝9:00〜20:00、茅ヶ崎・相模大野・川崎・淡路・今福鶴見・なんば千日前・呉服町は平日10:00〜21:00／土祝10:00〜19:30、今池は平日9:30〜20:00／土祝9:30〜18:30です。いずれも日曜定休です（各店舗ページ・2026年10月25日確認）。" },
   { q: "予約方法を教えてください。", a: "体験レッスンは、各店舗ページの「体験予約はこちら」からWEBで予約し、来店して体験・手続きを行う2ステップです（公式サイト）。入会後のレッスン予約の方法は、体験時に店舗でご確認ください。" },
   { q: "30代以上でないと通えませんか？", a: "「30才からのピラティス×ボディメイク」という打ち出しはありますが、会員規約の入会資格は「満16歳以上」（未成年者は親権者の同意が必要）で、30代以上という条件はありません。公式サイト掲載のお客様の声には20代女性・40代男性も含まれます。男性も入会できることが公式FAQに明記されています。" },
@@ -50,7 +50,7 @@ const concernPoints = [
   "東京3店舗は他の店舗より月額が高い点（M4で税込2,200円の差）",
   "月額のほか、入会時の施設利用料2,200円と、3か月目からの運営管理費月480円がかかる点",
   "退会・休会の手続きは来店のみで、締め日（5日）を過ぎると退会が1〜2か月先になる点",
-  "営業中の店舗は11店舗（2026年10月25日時点）で、通える範囲が限られる点",
+  "営業中の店舗は12店舗（2026年11月11日時点）で、通える範囲が限られる点",
 ];
 
 // 2026-10-25 各店舗ページの料金表（税込）。1回あたりは当サイトで月額÷回数を計算（運営管理費・施設利用料を除く）
@@ -74,16 +74,16 @@ const stores = [
   { name: "茅ヶ崎", pref: "神奈川", access: "JR東海道本線・相模線「茅ヶ崎」徒歩2分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
   { name: "相模大野", pref: "神奈川", access: "小田急線「相模大野」直結", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
   { name: "川崎", pref: "神奈川", access: "JR「川崎」徒歩4分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
-  { name: "綱島", pref: "神奈川", access: "東急東横線「綱島」徒歩2分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "1月OPEN" },
+  { name: "綱島", pref: "神奈川", access: "東急東横線「綱島」徒歩2分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "2027年1月4日OPEN" },
   { name: "市川", pref: "千葉", access: "JR総武線「市川」徒歩1分", hours: "平日10:00〜21:00／土祝10:00〜20:00", status: "COMING SOON" },
   { name: "今池", pref: "愛知", access: "名古屋市営地下鉄東山線「今池」直結", hours: "平日9:30〜20:00／土祝9:30〜18:30", status: "営業中" },
   { name: "淡路", pref: "大阪", access: "阪急京都線・千里線「淡路」徒歩1分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
   { name: "今福鶴見", pref: "大阪", access: "大阪メトロ長堀鶴見緑地線「今福鶴見」徒歩3分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
   { name: "なんば千日前", pref: "大阪", access: "大阪メトロ堺筋線・千日前線「日本橋」徒歩1分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
   { name: "南茨木", pref: "大阪", access: "阪急京都本線「南茨木」徒歩1分", hours: "平日10:00〜21:00／土祝10:00〜20:00", status: "COMING SOON" },
-  { name: "武庫之荘", pref: "兵庫", access: "阪急神戸本線「武庫之荘」徒歩2分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "12月OPEN" },
+  { name: "武庫之荘", pref: "兵庫", access: "阪急神戸本線「武庫之荘」徒歩2分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "2026年12月1日OPEN" },
   { name: "呉服町", pref: "福岡", access: "福岡市地下鉄箱崎線「呉服町」徒歩1分", hours: "平日10:00〜21:00／土祝10:00〜19:30", status: "営業中" },
-  { name: "西鉄二日市", pref: "福岡", access: "西鉄天神大牟田線・太宰府線「西鉄二日市」徒歩3分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "11月OPEN" },
+  { name: "西鉄二日市", pref: "福岡", access: "西鉄天神大牟田線・太宰府線「西鉄二日市」徒歩3分", hours: "平日10:00〜20:00／土祝10:00〜18:30", status: "営業中" },
 ];
 
 export default function BrestReview() {
@@ -108,20 +108,20 @@ export default function BrestReview() {
             BREST（ブレスト）ピラティスの口コミ・評判｜料金・店舗・退会方法
           </h1>
           <p className="mt-3 text-gray-600">BREST PILATES & BODYMAKEは、マシンピラティスとウェイトトレーニングを30分で行うパーソナルスタジオです。公式サイト・各店舗ページ・会員規約・Googleマップの情報をもとに、出典を明記して料金と評判を整理しています。</p>
-          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月25日（公式サイト・店舗一覧・全16店舗の店舗ページ・会員規約・体験予約画面）</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年11月11日（公式サイト・店舗一覧・全16店舗の店舗ページの料金表とキャンペーン画像）。会員規約・体験予約画面は2026年10月25日確認</p>
 
           {/* 1画面目の要約（料金・口コミ） */}
           <div className="mt-6 bg-white border border-violet-200 rounded-xl p-5">
             <h2 className="text-base font-bold text-gray-900 mb-3">BRESTの料金・体験・口コミの概要</h2>
             <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-700">
-              <div><dt className="font-bold text-gray-900">月額（税込）</dt><dd>月4回 22,880円／月8回 39,380円／通い放題 44,880円。東京3店舗は月4回 25,080円・月8回 41,580円・月12回 47,080円</dd></div>
+              <div><dt className="font-bold text-gray-900">月額（税込）</dt><dd>月4回 22,880円（東京3店舗以外の店舗ページは11月11日時点でこのプランのみ掲載）。東京3店舗は月4回 25,080円・月8回 41,580円・月12回 47,080円</dd></div>
               <div><dt className="font-bold text-gray-900">月額以外の費用（税込）</dt><dd>入会時の施設利用料 2,200円／3か月目から運営管理費 月480円／都度払いは1回 6,380円</dd></div>
-              <div><dt className="font-bold text-gray-900">体験・入会金（税込）</dt><dd>体験料 5,280円・入会金 22,000円。営業中の全11店舗で先着20名のキャンペーン（体験料980円・入会金0円）を掲載中</dd></div>
+              <div><dt className="font-bold text-gray-900">体験・入会金（税込）</dt><dd>体験料 5,280円・入会金 22,000円。営業中の全12店舗で先着20名のキャンペーン（体験料500円・入会金0円・毎月の会費が2,200円割引）を掲載中（11月11日確認）</dd></div>
               <div><dt className="font-bold text-gray-900">口コミ</dt><dd>Googleマップ 平均5.0・48件（収録2店舗・9月2日時点）。公式掲載の声は「初心者でも教えてもらえる」「30分で通いやすい」が中心</dd></div>
-              <div><dt className="font-bold text-gray-900">店舗・運営</dt><dd>営業中11店舗・開業予定5店舗（日曜定休）。運営は株式会社VB NEXT（2020年設立）で、URBAN CLASSIC PILATESも追加料金なしで利用可</dd></div>
+              <div><dt className="font-bold text-gray-900">店舗・運営</dt><dd>営業中12店舗・開業予定4店舗（日曜定休）。運営は株式会社VB NEXT（2020年設立）で、URBAN CLASSIC PILATESも追加料金なしで利用可</dd></div>
               <div><dt className="font-bold text-gray-900">退会</dt><dd>来店のみ・毎月5日締め（2025年9月以降の入会者は前月5日までの手続きで翌月末退会）</dd></div>
             </dl>
-            <p className="mt-3 text-xs text-gray-500">出典: BREST公式サイト・各店舗ページの料金表とキャンペーン画像・会員規約（2026年10月25日確認）。詳しくは<a href="#price" className="underline hover:text-gray-700">料金表</a>・<a href="#stores" className="underline hover:text-gray-700">店舗一覧</a>をご覧ください。</p>
+            <p className="mt-3 text-xs text-gray-500">出典: BREST公式サイト・各店舗ページの料金表とキャンペーン画像（2026年11月11日確認）・会員規約（2026年10月25日確認）。詳しくは<a href="#price" className="underline hover:text-gray-700">料金表</a>・<a href="#stores" className="underline hover:text-gray-700">店舗一覧</a>をご覧ください。</p>
           </div>
         </div>
       </section>
@@ -142,7 +142,7 @@ export default function BrestReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">BREST PILATESの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              BREST PILATES & BODYMAKEは、<strong>マシンピラティス×ウェイトトレーニング</strong>を<strong>1回30分のパーソナル</strong>で行うスタジオで、「30才からのピラティス×ボディメイク」を打ち出しています。運営はURBAN CLASSIC PILATESと同じ株式会社VB NEXTで、<strong>URBAN CLASSIC PILATESを全店追加料金なしで利用できる</strong>点が他社にない特徴です。月額は<strong>月4回 税込22,880円</strong>（東京3店舗は25,080円）からで、都度払い（1回 税込6,380円）と比べると、月4回でも1回あたり5,720円になります。営業中の店舗は11店舗のため、まず通える範囲に店舗があるかをご確認ください。
+              BREST PILATES & BODYMAKEは、<strong>マシンピラティス×ウェイトトレーニング</strong>を<strong>1回30分のパーソナル</strong>で行うスタジオで、「30才からのピラティス×ボディメイク」を打ち出しています。運営はURBAN CLASSIC PILATESと同じ株式会社VB NEXTで、<strong>URBAN CLASSIC PILATESを全店追加料金なしで利用できる</strong>点が他社にない特徴です。月額は<strong>月4回 税込22,880円</strong>（東京3店舗は25,080円）からで、都度払い（1回 税込6,380円）と比べると、月4回でも1回あたり5,720円になります。営業中の店舗は12店舗（2026年11月11日時点）のため、まず通える範囲に店舗があるかをご確認ください。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>短時間のパーソナルでピラティスと筋力トレーニングの両方に取り組みたい方</li>
@@ -177,9 +177,9 @@ export default function BrestReview() {
                   ["対象", "男女とも入会可（公式FAQ）。満16歳以上・未成年者は親権者の同意が必要（会員規約）"],
                   ["月額（税込）", "月4回22,880円〜（東京3店舗は25,080円〜）。詳細は下の料金表"],
                   ["その他の費用（税込）", "入会時の施設利用料2,200円／3か月目から運営管理費 月480円／都度払い1回6,380円"],
-                  ["体験料・入会金（税込）", "体験料5,280円・入会金22,000円（2026年10月25日時点、営業中の全11店舗で先着20名は体験料980円・入会金0円）"],
+                  ["体験料・入会金（税込）", "体験料5,280円・入会金22,000円（2026年11月11日時点、営業中の全12店舗で先着20名は体験料500円・入会金0円）"],
                   ["特典", "URBAN CLASSIC PILATES全店が追加料金なしで通い放題"],
-                  ["店舗", "16店舗（営業中11・開業予定5／2026年10月25日公式店舗一覧）。日曜定休"],
+                  ["店舗", "16店舗（営業中12・開業予定4／2026年11月11日公式店舗一覧）。日曜定休"],
                   ["Googleマップ", "当サイト収録2店舗の平均5.0・口コミ48件（2026年9月2日時点）"],
                 ].map(([label, value]) => (
                   <tr key={label} className="border-b border-gray-100 last:border-0">
@@ -227,7 +227,7 @@ export default function BrestReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">BREST PILATESの料金表（税込）</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            公式サイトのトップページの料金表には、東京3店舗と同じ月額（M4・M8・M12）が表示されています。店舗ごとの月額は<strong>各店舗ページの料金表に「永久割引価格」として掲載</strong>されています。2026年10月25日に営業中の全11店舗のページを確認したところ、料金は<strong>東京3店舗（本郷三丁目・二子玉川・代官山）</strong>と<strong>その他の店舗</strong>の2通りでした。1回あたりの金額は、当サイトで月額を利用回数で割って計算したものです（施設利用料・運営管理費を除く）。
+            公式サイトのトップページの料金表には、東京3店舗と同じ月額（M4・M8・M12）が表示されています。店舗ごとの月額は<strong>各店舗ページの料金表に「永久割引価格」として掲載</strong>されています。2026年10月25日に営業中（当時）の全11店舗のページを確認したところ、料金は<strong>東京3店舗（本郷三丁目・二子玉川・代官山）</strong>と<strong>その他の店舗</strong>の2通りでした。11月11日に全16店舗のページを再確認したところ、金額の変更はありませんでしたが、東京3店舗以外の店舗ページの料金表はM4（22,880円）のみの掲載になっています（下表の「その他」のM8・フリーは10月25日時点の掲載額です）。1回あたりの金額は、当サイトで月額を利用回数で割って計算したものです（施設利用料・運営管理費を除く）。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-x-auto">
             <table className="w-full text-sm min-w-[560px]">
@@ -235,7 +235,7 @@ export default function BrestReview() {
                 <tr className="bg-[#7C3AED] text-white">
                   <th className="text-left px-4 py-3 font-medium">会員種別</th>
                   <th className="text-left px-4 py-3 font-medium">東京3店舗</th>
-                  <th className="text-left px-4 py-3 font-medium">その他の営業中7店舗</th>
+                  <th className="text-left px-4 py-3 font-medium">その他の店舗（M8・フリーは10/25時点）</th>
                 </tr>
               </thead>
               <tbody>
@@ -264,21 +264,78 @@ export default function BrestReview() {
                 </tr>
                 <tr className="align-top">
                   <td className="px-4 py-3 font-medium text-gray-800">体験料</td>
-                  <td className="px-4 py-3 text-gray-700" colSpan={2}>5,280円（税抜4,800円）<span className="block text-xs text-gray-500">キャンペーン適用時980円（税抜891円）</span></td>
+                  <td className="px-4 py-3 text-gray-700" colSpan={2}>5,280円（税抜4,800円）<span className="block text-xs text-gray-500">キャンペーン適用時500円（税抜455円）</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <ul className="mt-4 space-y-1.5 text-xs text-gray-500 leading-relaxed list-disc pl-5">
-            <li>その他の営業中7店舗：茅ヶ崎・相模大野・川崎・淡路・今福鶴見・なんば千日前・呉服町。今池はM4（22,880円）のみ掲載されています。</li>
+            <li>その他の店舗：10月25日時点でM8・フリーまで掲載されていたのは茅ヶ崎・相模大野・川崎・淡路・今福鶴見・なんば千日前・呉服町の7店舗です。11月11日時点では、東京3店舗以外の営業中9店舗（今池・西鉄二日市を含む）と開業予定の綱島・武庫之荘の店舗ページに、M4（22,880円）のみが掲載されています。M8・フリーの入会可否は店舗でご確認ください。</li>
             <li>いずれのプランも1日1回までです。東京3店舗の4つ目のプランは「M12（月12回）」、その他の店舗は「フリー（通い放題）」で、内容が異なります。</li>
             <li>通い放題の「約1,726円」は月26回利用した場合の計算で、公式サイトの「1回あたり1,726円〜（パーソナルフリー会員で1月あたり26日通った場合）」と一致します。</li>
-            <li>開業予定店舗のうち、綱島・武庫之荘・西鉄二日市はM4 22,880円のみ掲載（オープン前の先着100名の永久割引価格として案内）、市川・南茨木は料金表の掲載がありません。</li>
-            <li>入会金・体験料は、各店舗ページのキャンペーン画像の表示です。2026年10月25日時点で、営業中の11店舗のうち10店舗が「モニター会員募集」、今池が「先行入会キャンペーン」（いずれも先着20名）、開業予定の綱島・武庫之荘・西鉄二日市が「オープン前先行入会キャンペーン」（先着100名）を掲載しており、内容はいずれも入会金0円・体験料980円・「毎月の会費がずっと2,200円割引」です。市川・南茨木には掲載がありません。キャンペーンは定員になり次第終了すると記載されています。</li>
+            <li>開業予定店舗（2026年10月25日時点）のうち、綱島・武庫之荘・西鉄二日市はM4 22,880円のみ掲載（オープン前の先着100名の永久割引価格として案内）、市川・南茨木は料金表の掲載がありません。</li>
+            <li>入会金・体験料は、各店舗ページのキャンペーン画像の表示です。2026年11月11日時点で、営業中の12店舗のうち10店舗が「モニター会員募集」、今池・西鉄二日市が「先行入会キャンペーン」（いずれも先着20名）、開業予定の綱島・武庫之荘が「オープン前先行入会キャンペーン」（先着100名）を掲載しており、内容はいずれも入会金0円・体験料500円（税抜455円）・「毎月の会費がずっと2,200円割引」です。10月25日の確認時は体験料が980円でした。市川・南茨木は画像の掲載がなく、本文に「オープン前の今なら、先着100名様のみ永久割引価格」と記載されています。キャンペーンは定員になり次第終了すると記載されています。</li>
             <li>月会費の支払いはクレジットカードで、入会初月と2か月目の月会費は申込み時、3か月目以降は前月20日に決済されます（特定商取引法に基づく表示）。</li>
             <li>公式サイトには「料金は店舗や時期により変動する場合がございます」と記載されています。入会前に、通う店舗のページでご確認ください。</li>
           </ul>
           <p className="mt-3 text-xs text-gray-400">出典: BREST公式サイト 各店舗ページの料金表・キャンペーン画像・よくあるご質問・特定商取引法に基づく表示（2026年10月25日確認）。料金比較は<Link href="/price-comparison/" className="underline">ピラティス料金比較</Link>もあわせてご覧ください。</p>
+        </div>
+      </section>
+
+      {/* パーソナル型・姉妹ブランドとの比較（2026-11-11） */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">BREST（ブレスト）ピラティスとほかのパーソナル型・URBAN CLASSICの比較</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            当サイトで料金を公式に確認している少人数・パーソナル型のスタジオと、BREST会員が追加料金なしで使える姉妹ブランドのURBAN CLASSIC PILATESを、月4回のプランで比べました。1回あたりは月額を4で割った当サイトの計算です（税込・毎月の管理費等を除く）。
+          </p>
+          <div className="bg-white border border-gray-200 rounded-xl overflow-x-auto">
+            <table className="w-full text-sm min-w-[640px]">
+              <thead>
+                <tr className="bg-[#F5F3FF] text-gray-700">
+                  <th className="text-left px-3 py-2 font-medium">ブランド</th>
+                  <th className="text-left px-3 py-2 font-medium">形式・1回の時間</th>
+                  <th className="text-left px-3 py-2 font-medium">月4回の月額（1回あたり）</th>
+                  <th className="text-left px-3 py-2 font-medium">体験料</th>
+                  <th className="text-left px-3 py-2 font-medium">店舗</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 align-top bg-violet-50">
+                  <td className="px-3 py-2 font-medium text-gray-800">BREST PILATES & BODYMAKE</td>
+                  <td className="px-3 py-2 text-gray-700">マシンピラティス×ウェイトのパーソナル・30分</td>
+                  <td className="px-3 py-2 text-gray-700">22,880円（5,720円）<span className="block text-xs text-gray-500">東京3店舗は25,080円（6,270円）</span></td>
+                  <td className="px-3 py-2 text-gray-700">5,280円<span className="block text-xs text-gray-500">キャンペーン時500円</span></td>
+                  <td className="px-3 py-2 text-gray-700">営業中12・開業予定4</td>
+                </tr>
+                <tr className="border-b border-gray-100 align-top">
+                  <td className="px-3 py-2 text-gray-800"><Link href="/review/celestia/" className="text-violet-600 underline">Celestia</Link></td>
+                  <td className="px-3 py-2 text-gray-700">約2名のセミパーソナル（マシン）</td>
+                  <td className="px-3 py-2 text-gray-700">33,000円（8,250円）</td>
+                  <td className="px-3 py-2 text-gray-700">30分3,000円<span className="block text-xs text-gray-500">店舗別ページに初回無料の案内あり</span></td>
+                  <td className="px-3 py-2 text-gray-700">Celestiaのページで整理</td>
+                </tr>
+                <tr className="border-b border-gray-100 align-top">
+                  <td className="px-3 py-2 text-gray-800"><Link href="/review/melmake/" className="text-violet-600 underline">メルメイク</Link></td>
+                  <td className="px-3 py-2 text-gray-700">完全個室のプライベート・50分</td>
+                  <td className="px-3 py-2 text-gray-700">33,000円（8,250円）</td>
+                  <td className="px-3 py-2 text-gray-700">50分5,500円<span className="block text-xs text-gray-500">当日入会で0円</span></td>
+                  <td className="px-3 py-2 text-gray-700">ピラティス対応3店舗（名古屋2・福岡1）</td>
+                </tr>
+                <tr className="align-top">
+                  <td className="px-3 py-2 text-gray-800"><Link href="/review/urban-classic/" className="text-violet-600 underline">URBAN CLASSIC PILATES</Link></td>
+                  <td className="px-3 py-2 text-gray-700">マシンのサーキット形式・予約不要・30分</td>
+                  <td className="px-3 py-2 text-gray-700">8,580円（2,145円）<span className="block text-xs text-gray-500">BREST会員は全店追加料金なし</span></td>
+                  <td className="px-3 py-2 text-gray-700">無料</td>
+                  <td className="px-3 py-2 text-gray-700">公式一覧に102店舗</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+            BRESTは、比較した3つのパーソナル・セミパーソナル型のなかで月4回の月額が最も低く、1回の時間は30分と短めです。50分のメルメイクと1分あたりで比べると、BREST（東京以外）は約191円、メルメイクは165円です（当サイトの計算）。BRESTの特徴は、パーソナルの回数に加えてURBAN CLASSIC PILATESを追加料金なしで利用できる点で、近くに両方の店舗がある方ほど利用しやすい仕組みです。
+          </p>
+          <p className="mt-2 text-xs text-gray-500 leading-relaxed">出典: BREST公式サイト 各店舗ページ（2026年11月11日確認）／Celestia公式「料金」（2026年10月26日確認）・体験案内ページ（10月27日確認）／メルメイク公式「コース・料金【ピラティス】」・店舗一覧（2026年11月11日確認）／URBAN CLASSIC PILATES公式 全102店舗ページ（2026年11月11日確認）。Celestiaのレッスン時間は、当サイトでは公式の記載を確認できていないため記載していません。</p>
         </div>
       </section>
 
@@ -326,7 +383,7 @@ export default function BrestReview() {
               BREST PILATES & BODYMAKEは、マシンピラティス（インナー）とウェイトトレーニング（アウター）を1回30分のパーソナルで組み合わせるスタジオです。「30才からのピラティス×ボディメイク」を打ち出していますが、公式に年齢制限はなく、男女とも入会できます。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              料金は、東京以外の店舗で月4回 税込22,880円（1回あたり5,720円）、通い放題 44,880円です。都度払い（1回6,380円）と比べると、月4回の時点で1回あたり660円安くなります。zen place pilatesやピラティスKなどのグループ型と比べるとパーソナルで指導密度が高い一方、店舗数は少なめです。これを補うのが「URBAN CLASSIC PILATES全店通い放題」の特典で、パーソナルで習った動きをサーキット形式のURBAN CLASSICで反復するという使い方ができます。
+              料金は、東京以外の店舗で月4回 税込22,880円（1回あたり5,720円）です（通い放題44,880円は10月25日時点の店舗ページの掲載額）。都度払い（1回6,380円）と比べると、月4回の時点で1回あたり660円安くなります。zen place pilatesやピラティスKなどのグループ型と比べるとパーソナルで指導密度が高い一方、店舗数は少なめです。これを補うのが「URBAN CLASSIC PILATES全店通い放題」の特典で、パーソナルで習った動きをサーキット形式のURBAN CLASSICで反復するという使い方ができます。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               編集部では、短時間のパーソナルでピラティスと筋力トレーニングを両立したい方に向いたスタジオと評価しています。注意点は、東京3店舗の月額が他店舗より高いこと、施設利用料と運営管理費が月額とは別にかかること、退会手続きが来店のみ・5日締めであることです。体験時に、継続必須期間の有無と退会の締め日をご確認のうえ、入会をご検討ください。
@@ -351,7 +408,7 @@ export default function BrestReview() {
             <div className="bg-red-50 rounded-xl p-6">
               <h3 className="font-bold text-red-800 mb-3">デメリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>営業中の店舗は11店舗（2026年10月25日時点）</li>
+                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>営業中の店舗は12店舗（2026年11月11日時点）</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>東京3店舗は月額が高く、施設利用料・運営管理費も別途かかる</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>退会・休会は来店のみ・5日締め</li>
               </ul>
@@ -368,13 +425,13 @@ export default function BrestReview() {
             公式サイトの「ご利用までの流れ」では、体験は次の2ステップです。トレーナーが一人ひとりに合った強度を設定すると案内されており（公式サイト）、運動初心者の方でも始められます。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
-            <li><strong>WEB体験予約</strong>：各店舗ページの「体験予約はこちら」から予約します。予約画面では「【BREST】初回体験」が1時間枠で表示されています。体験料は通常税込5,280円で、キャンペーン適用時は税込980円です（2026年10月25日確認）。</li>
+            <li><strong>WEB体験予約</strong>：各店舗ページの「体験予約はこちら」から予約します。予約画面では「【BREST】初回体験」が1時間枠で表示されています。体験料は通常税込5,280円で、キャンペーン適用時は税込500円です（2026年11月11日確認）。</li>
             <li><strong>店頭で体験・手続き</strong>：運動できるウェアを持参します。当日入会を希望する場合は、運転免許証・マイナンバーカードなどの本人確認書類を用意します。</li>
           </ol>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">体験時に確認いただきたい項目</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>キャンペーン（体験料980円・入会金0円）の残り枠と適用条件（先着20名・定員になり次第終了）</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>キャンペーン（体験料500円・入会金0円）の残り枠と適用条件（先着20名・定員になり次第終了）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>継続必須期間の有無（期間中の退会は違約金の対象・会員規約第11条）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>入会後のレッスン予約の方法・キャンセルの期限</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>シューズ・タオルなど、ウェア以外の持ち物</li>
@@ -387,7 +444,7 @@ export default function BrestReview() {
       <section id="stores" className="py-10 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">BREST（ブレスト）の店舗一覧・営業時間</h2>
-          <p className="text-sm text-gray-700 leading-relaxed mb-4">公式サイトの店舗一覧に掲載されているのは<strong>16店舗</strong>（営業中11・開業予定5）です。定休日はいずれも日曜日です。BREST会員はURBAN CLASSIC PILATESも利用できるため、自宅・職場の近くにどちらかの店舗があるかにより通いやすさが変わります。</p>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">公式サイトの店舗一覧に掲載されているのは<strong>16店舗</strong>（営業中12・開業予定4・2026年11月11日確認）です。定休日はいずれも日曜日です。BREST会員はURBAN CLASSIC PILATESも利用できるため、自宅・職場の近くにどちらかの店舗があるかにより通いやすさが変わります。</p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-x-auto">
             <table className="w-full text-sm min-w-[600px]">
               <thead>
@@ -408,7 +465,7 @@ export default function BrestReview() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-gray-400">出典: BREST公式サイト 店舗一覧・各店舗ページ（2026年10月25日確認）。開業予定店舗の営業時間は店舗ページの記載です。開業・移転により変わるため、最新情報は公式サイトでご確認ください。URBAN CLASSIC PILATESの店舗は<Link href="/review/urban-classic/" className="underline">URBAN CLASSIC PILATESの口コミ・評判</Link>で整理しています。</p>
+          <p className="mt-3 text-xs text-gray-400">出典: BREST公式サイト 店舗一覧・各店舗ページ（2026年11月11日確認）。開業予定店舗の営業時間は店舗ページの記載です。開業・移転により変わるため、最新情報は公式サイトでご確認ください。URBAN CLASSIC PILATESの店舗は<Link href="/review/urban-classic/" className="underline">URBAN CLASSIC PILATESの口コミ・評判</Link>で整理しています。</p>
         </div>
       </section>
 
@@ -499,7 +556,7 @@ export default function BrestReview() {
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-4">BREST PILATES & BODYMAKEの体験レッスンに申し込む</h2>
-          <p className="text-gray-600 text-sm mb-6">30分のピラティス×ウェイトのパーソナルを、体験レッスンでお試しいただけます（体験料 税込5,280円、キャンペーン適用時 税込980円）。キャンペーンの残り枠と継続必須期間は、予約時または店舗でご確認ください。</p>
+          <p className="text-gray-600 text-sm mb-6">30分のピラティス×ウェイトのパーソナルを、体験レッスンでお試しいただけます（体験料 税込5,280円、キャンペーン適用時 税込500円）。キャンペーンの残り枠と継続必須期間は、予約時または店舗でご確認ください。</p>
           <a href={AFFILIATE} target="_blank" rel="noopener noreferrer nofollow" className="inline-block bg-[#7C3AED] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[#6D28D9] transition-colors">
             公式サイトを見る
           </a>
@@ -523,7 +580,7 @@ export default function BrestReview() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月25日</p>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年11月11日</p>
           <BrandAreaLinks slug="brest" />
         </div>
       </section>

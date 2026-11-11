@@ -334,8 +334,8 @@ export const TRIAL_FEES: TrialFee[] = [
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
   // 料金ページ「体験受付中！30分 3,000円」、店舗別の体験案内ページは期間限定で初回無料
   { slug: "celestia", name: "Celestia", minYen: 3000, text: "30分3,000円", campaign: "期間限定で初回無料の案内あり", checkedAt: "2026年10月30日", source: "https://celes-pilates.jp/price/" },
-  // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 891円（税込980円）」先着20名
-  { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時980円", checkedAt: "2026年10月30日", source: "https://brest-gym.jp/studio/daikanyama/" },
+  // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
+  { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時500円", checkedAt: "2026年11月11日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
   { slug: "melmake", name: "メルメイク", minYen: 5500, text: "50分5,500円", campaign: "当日入会で0円", checkedAt: "2026年10月30日", source: "https://mermake.co.jp/menu-pilates/" },
   // グループの体験料金：トップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし（2026年10月30日確認）。

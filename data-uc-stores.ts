@@ -1,7 +1,7 @@
 // URBAN CLASSIC PILATES 公式店舗一覧（https://urbanclassic.jp/pilates-studio/）と各店舗ページの「アクセス」欄を転記（2026-10-15確認・2026-10-25に全102店舗を再確認し洛西を追加）。
 // station は「」内の駅名（バス停のみの店舗は null）。studio は当サイトの店舗詳細ページ（/studio/<slug>/）があるものだけ。
 export type UcStore = { pref: string; store: string; access: string; station: string | null; open: string; studio: string | null };
-export const UC_STORES_CHECKED = "2026年10月25日";
+export const UC_STORES_CHECKED = "2026年11月11日";
 export const UC_STORES: UcStore[] = [
   {"pref": "北海道", "store": "白石", "access": "札幌市営地下鉄東西線「白石」徒歩1分", "station": "白石駅", "open": "11月OPEN", "studio": null},
   {"pref": "北海道", "store": "美しが丘", "access": "北海道中央バス「美しが丘3条7丁目」より徒歩2分", "station": null, "open": "11月OPEN", "studio": null},
@@ -63,7 +63,7 @@ export const UC_STORES: UcStore[] = [
   {"pref": "千葉県", "store": "本八幡", "access": "JR「本八幡駅」徒歩2分", "station": "本八幡駅", "open": "", "studio": null},
   {"pref": "千葉県", "store": "船橋", "access": "JR総武線「船橋」より徒歩2分", "station": "船橋駅", "open": "", "studio": null},
   {"pref": "千葉県", "store": "市川", "access": "JR総武線「市川」徒歩1分", "station": "市川駅", "open": "", "studio": null},
-  {"pref": "千葉県", "store": "稲毛", "access": "JR総武線「稲毛」徒歩1分", "station": "稲毛駅", "open": "9月OPEN", "studio": null},
+  {"pref": "千葉県", "store": "稲毛", "access": "JR総武線「稲毛」徒歩1分", "station": "稲毛駅", "open": "", "studio": null},
   {"pref": "埼玉県", "store": "南浦和", "access": "JR京浜東北線・武蔵野線「南浦和」より徒歩1分", "station": "南浦和駅", "open": "", "studio": "URBAN-CLASSIC-PILATES-南浦和-5c47"},
   {"pref": "埼玉県", "store": "川越", "access": "JR川越線「川越」西口より徒歩1分", "station": "川越駅", "open": "", "studio": null},
   {"pref": "埼玉県", "store": "川口", "access": "JR京浜東北線「川口」より徒歩3分", "station": "川口駅", "open": "", "studio": null},

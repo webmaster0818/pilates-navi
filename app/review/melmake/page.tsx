@@ -4,9 +4,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "メルメイク（mermake）ピラティスの口コミ・評判｜料金・店舗・退会方法【2026年10月】",
+  title: "メルメイクのピラティスの口コミ・評判｜料金 月2回17,300円〜・名古屋/福岡の3店舗【2026年11月】",
   description:
-    "メルメイクのピラティスの口コミ・評判を、掲載元別の件数（3媒体35件）とともに整理しています。月2回17,300円〜の月謝制、入会時2か月分の前納、受講資格、対応3店舗、退会・休会の規定を公式サイトで確認しています（2026年10月26日確認）。",
+    "メルメイク（mermake）のピラティスは完全個室のマンツーマンで、50分×月2回17,300円〜（税込）、体験5,500円は当日入会で0円です。受けられる店舗は名古屋の伏見・女性専用名古屋駅と福岡の西新の3店舗です。口コミ35件の出典と内訳、入会時の前納、退会規定も整理しています（11月11日公式確認）。",
   alternates: { canonical: "/review/melmake/" },
 };
 
@@ -99,7 +99,21 @@ export default function MelmakeReview() {
             メルメイク（mermake）ピラティスの口コミ・評判｜料金・店舗・退会方法
           </h1>
           <p className="mt-3 text-gray-600">メルメイクは、完全個室のパーソナルジム＆マシンピラティススタジオです。公式サイトの料金表・利用規約・店舗一覧と、掲載されている口コミの出典を確認して整理しています。</p>
-          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年10月26日（公式サイト「コース・料金【ピラティス】」・ご利用規約【ピラティス】・よくある質問・店舗一覧・会社概要・消費者志向自主宣言）</p>
+          <p className="mt-2 text-xs text-gray-500">最終確認: 2026年11月11日（公式サイト「コース・料金【ピラティス】」・店舗一覧）。ご利用規約【ピラティス】・よくある質問・会社概要・消費者志向自主宣言は2026年10月26日確認</p>
+
+          {/* 1画面目の要約（料金・店舗・体験） */}
+          <div className="mt-6 bg-white border border-violet-200 rounded-xl p-5">
+            <h2 className="text-base font-bold text-gray-900 mb-3">メルメイクのピラティスの料金・店舗・体験の要点</h2>
+            <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-700">
+              <div><dt className="font-bold text-gray-900">料金（税込・月謝制）</dt><dd>50分×月2回 17,300円／月4回 33,000円／月6回 47,100円。75分は月2回 22,800円〜。回数券 50分 9,050円</dd></div>
+              <div><dt className="font-bold text-gray-900">体験・入会金（税込）</dt><dd>体験50分 5,500円（当日入会で0円・ホームページ限定）。入会金・事務手数料 33,000円はカウンセリング時の入会で無料</dd></div>
+              <div><dt className="font-bold text-gray-900">ピラティスを受けられる店舗</dt><dd>伏見店・女性専用名古屋駅店（マシン）、西新店（福岡・マット）の3店舗。新横浜・横浜日吉・豊田は「人員不足にて停止」の表示</dd></div>
+              <div><dt className="font-bold text-gray-900">入会時の支払い</dt><dd>利用規約第6条で2か月分の月会費を前納（月2回なら34,600円・当サイトの計算）</dd></div>
+              <div><dt className="font-bold text-gray-900">口コミ</dt><dd>3媒体35件を確認。いずれもパーソナルトレーニング（ダイエット）の口コミで、ピラティスに触れた口コミは0件（10月26日時点）</dd></div>
+              <div><dt className="font-bold text-gray-900">退会・休会</dt><dd>前月10日までに来店・書面で手続き（利用規約第14条）</dd></div>
+            </dl>
+            <p className="mt-3 text-xs text-gray-500">出典: メルメイク公式サイト「コース・料金【ピラティス】」・トップページの店舗一覧（2026年11月11日確認・10月26日の確認時と同じ内容）、ご利用規約【ピラティス】（2026年10月26日確認）。</p>
+          </div>
         </div>
       </section>
 
@@ -530,7 +544,7 @@ export default function MelmakeReview() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年10月26日</p>
+          <p className="mt-6 text-xs text-gray-400">最終更新: 2026年11月11日</p>
           <BrandAreaLinks slug="melmake" />
         </div>
       </section>
