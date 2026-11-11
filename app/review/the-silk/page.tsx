@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { THE_SILK_PRICES as SILK, fmtYen } from "@/data-brand-facts";
+import { THE_SILK_PRICES as SILK, THE_SILK_JOIN_CAMPAIGN as SILK_CP, isCampaignActive, fmtYen } from "@/data-brand-facts";
+
+/** 体験当日入会の特典を載せるか（静的書き出しのためビルド時判定。期限後のビルドで記載が消える） */
+const silkCampaignOn = isCampaignActive(SILK_CP);
 
 /** エリアB〜エリアAの金額（例：12,280円〜13,280円） */
 const silkRange = (p: { a: number; b: number }) => `${fmtYen(p.b)}〜${fmtYen(p.a)}`;
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "the SILKの料金プランは？", a: `公式料金ページ（${SILK.checkedAt}確認）では、月3回のLight 3が月額${silkRange(SILK.light3)}、月4回のStandard 4が月額${silkRange(SILK.standard4)}、毎日1レッスンまで受講できるFullが月額${silkRange(SILK.full)}です（店舗エリアA/Bで金額が異なります。別途、施設利用料が月${fmtYen(SILK.facilityFee)}かかります）。キャンペーン適用後の金額は時期により変わるため、申し込み前に公式サイトにて最新情報をご確認ください。` },
   { q: "the SILKの口コミ・評判は良い？", a: "「音楽と照明の空間演出が魅力的で通うのが楽しい」「全店駅チカで仕事帰りに寄りやすい」といった声が見られる一方、「店舗数が少なく通える人が限られる」「男性は利用できない」という指摘もあります。評価は受講者の目的や住むエリアによって異なります。" },
-  { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。グループレッスンの体験は0円と公式サイトの予約ボタンに表記されています（「¥0体験」「無料体験予約」・2026年10月21日確認）。パーソナル体験の料金は公式サイトに記載がありません。体験は1回限りです。公式トップページでは、体験当日に入会した方限定の入会特典（グループレッスンは月会費 最大3か月50%OFF、入会金 通常10,000円→0円、登録手数料 通常1,000円→0円など。キャンペーン期間は2026年10月1日〜11月13日）が案内されています（2026年10月31日確認）。適用条件は申し込み前に公式サイトでご確認ください。" },
+  { q: "体験レッスンはありますか？料金は？", a: "はい、入会前に体験レッスンを受けられます。グループレッスンの体験は0円と公式サイトの予約ボタンに表記されています（「¥0体験」「無料体験予約」・2026年10月21日確認）。パーソナル体験の料金は公式サイトに記載がありません。体験は1回限りです。" + (silkCampaignOn ? `公式トップページでは、体験当日に入会した方限定の入会特典（${SILK_CP.detail}。キャンペーン期間は${SILK_CP.periodText}）が案内されています（${SILK_CP.checkedAt}確認）。適用条件は申し込み前に公式サイトでご確認ください。` : "体験当日入会の特典はキャンペーン期間ごとに変わるため、申し込み前に公式サイトでご確認ください。") },
   { q: "男性は利用できますか？", a: "いいえ、the SILKは女性専用スタジオです。男性の利用はできません。" },
   { q: "駅からどのくらいの距離ですか？", a: "公式サイトでは、全店舗が最寄り駅から徒歩圏内にあると案内されています。具体的な所在地・最寄り駅は店舗により異なるため、公式サイトの店舗一覧でご確認ください。" },
   { q: "音楽や照明の演出について教えてください。", a: "レッスンに合わせた音楽と照明の演出があり、暗めの照明で自分の動きに集中しやすい空間が特徴とされています。具体的な演出内容は店舗・プログラムで異なります。" },
@@ -55,7 +58,7 @@ const prices = [
   { plan: "Standard 4（月4回）", price: `月額 ${silkRange(SILK.standard4)}`, note: `店舗エリア（A/B）により金額が異なります。${SILK.checkedAt}に公式サイトで確認しました。` },
   { plan: "Full（毎日1レッスンまで）", price: `月額 ${silkRange(SILK.full)}`, note: `毎日1回までグループレッスンを受講できます。平日（月〜金）15時までに開始するレッスンに限るFull (Day)は${silkRange(SILK.fullDay)}です。別途、施設利用料が月${fmtYen(SILK.facilityFee)}かかります。` },
   { plan: "プライベートレッスン", price: "要確認", note: "マンツーマン指導の有無・価格は公式サイトをご確認ください。" },
-  { plan: "体験レッスン", price: "グループ体験 0円（パーソナルは公式に記載なし）", note: "公式サイトの予約ボタンの表記にもとづきます（2026年10月21日確認）。体験当日に入会した方限定の入会特典は、公式トップページにキャンペーン期間（2026年10月1日〜11月13日）とともに掲載されています（2026年10月31日確認）。" },
+  { plan: "体験レッスン", price: "グループ体験 0円（パーソナルは公式に記載なし）", note: "公式サイトの予約ボタンの表記にもとづきます（2026年10月21日確認）。" + (silkCampaignOn ? `体験当日に入会した方限定の入会特典は、公式トップページにキャンペーン期間（${SILK_CP.periodText}）とともに掲載されています（${SILK_CP.checkedAt}確認）。` : "体験当日入会の特典はキャンペーン期間ごとに変わるため、申し込み時に公式サイトでご確認ください。") },
 ];
 
 export default function TheSilkReview() {

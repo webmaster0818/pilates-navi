@@ -49,6 +49,24 @@ export const THE_SILK_PRICES = {
   facilityFee: 700,
 };
 
+/**
+ * the SILK 公式トップ（https://the-silk.co.jp/）の体験当日入会限定の入会特典。2026年11月11日確認。
+ * endsAt を過ぎると isCampaignActive() が false になり、ページから特典の記載が消える。
+ * output: 'export' の静的書き出しのため判定はビルド時。期限後に再ビルドされるまで旧HTMLが残る点に注意。
+ */
+export const THE_SILK_JOIN_CAMPAIGN = {
+  checkedAt: "2026年11月11日",
+  source: "https://the-silk.co.jp/",
+  periodText: "2026年10月1日〜11月13日（11月13日までに予約完了、11月30日までに来店）",
+  // 予約受付の締切（11/13）の日本時間終わり。来店期限（11/30）ではなく予約締切で切る
+  endsAt: "2026-11-13T23:59:59+09:00",
+  detail: "グループレッスンは月会費 最大3か月50%OFF（Standard 4・Full・Full (Day)が対象、Light 3は対象外）、入会金 通常10,000円→0円、登録手数料 通常1,000円→0円など",
+};
+
+/** キャンペーンが掲載期限内か（ビルド時に判定） */
+export const isCampaignActive = (c: { endsAt: string }, now: Date = new Date()) =>
+  now.getTime() <= new Date(c.endsAt).getTime();
+
 /** 円表記（例：12,280円） */
 export const fmtYen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
 
