@@ -49,7 +49,7 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     access: "JR「三ノ宮駅」中央改札口から徒歩8分、地下鉄海岸線「三宮・花時計前駅」4番出口から徒歩1分",
     target: "マット・マシン（リフォーマー）・プライベート",
     trial: `マットグループ ${fmtYen(ZP.trial.mat.g2)}〜（初回キャンペーン 1,000円）、マシングループ ${fmtYen(ZP.trial.machine)}〜（初回キャンペーン 3,000円）、プライベート ${fmtYen(ZP.trial.private.g2)}〜`,
-    monthly: `グレード02：マットグループ 月4回 ${fmtYen(ZP.mat4.g2)}、マシングループ 月4回 ${fmtYen(ZP.rg4)}（税込・公式料金表 2026年11月2日確認）`,
+    monthly: `グレード02：マットグループ 月4回 ${fmtYen(ZP.mat4.g2)}、マシングループ 月4回 ${fmtYen(ZP.rg4)}（税込・公式料金表 2026年11月12日確認）`,
     m4: ZP.mat4.g2,
     source: "https://www.zenplace.co.jp/studios/pilates-sannomiya",
   },
@@ -66,8 +66,8 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
   },
 ];
 
-// 冒頭の料金の目安。上の表の月4回の額から集計する（2026年11月2日に Rintosull・ピラティスK・zen place の公式ページで再確認）
-const PRICE_RECHECKED_AT = "2026年11月2日";
+// 冒頭の料金の目安。上の表の月4回の額から集計する（2026年11月2日・11月12日に Rintosull・ピラティスK・zen place の公式ページで再確認・同額）
+const PRICE_RECHECKED_AT = "2026年11月12日";
 const M4 = SANNOMIYA_BRANDS.filter((b): b is SannomiyaBrand & { m4: number } => typeof b.m4 === "number");
 const M4_MIN = Math.min(...M4.map((b) => b.m4));
 const M4_MAX = Math.max(...M4.map((b) => b.m4));
@@ -79,7 +79,7 @@ function jpDate(iso: string) {
 }
 
 export const metadata: Metadata = {
-  title: `神戸のピラティスおすすめ${LISTED}店｜料金・三宮・元町を口コミ比較`,
+  title: `神戸のピラティス・マシンピラティス料金｜三宮・元町のおすすめ${LISTED}店を比較`,
   description: `神戸のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。三宮の大手店舗の月4回の月額（${yen(M4_MIN)}円〜${yen(M4_MAX)}円・公式確認）、駅からの距離、体験料金も掲載しています。`,
   alternates: { canonical: "https://pilatest.com/area/kobe/" },
 };
@@ -89,7 +89,7 @@ export default function AreaPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "神戸のピラティススタジオ" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        神戸のピラティススタジオおすすめ{LISTED}店【料金・Google口コミ実測データで比較】
+        神戸のピラティス・マシンピラティスの料金とおすすめ{LISTED}店【三宮・元町／Google口コミ実測データで比較】
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         三宮にある大手ブランド{SANNOMIYA_BRANDS.length}店舗のうち、月4回プランの料金を公式ページで確認できた{M4.length}店舗の月額は

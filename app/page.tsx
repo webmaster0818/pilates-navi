@@ -24,6 +24,20 @@ const AREA_REGIONS: { name: string; slugs: string[] }[] = [
 ];
 
 /** 実測DB(2026年9月2日時点)から、エリアごとのスタジオ数と表示名を作る */
+/*
+ * 冒頭に大手ブランドの月4回の月額と駅からの距離（各公式で確認）を載せているエリアページ。
+ * 2026-11-12 追加：検索表示のあるエリアへ「地域名＋ピラティス料金」のアンカーで直接つなぐ。
+ */
+const AREA_PRICE_LINKS: { slug: string; label: string }[] = [
+  { slug: "sendai", label: "仙台（仙台駅・泉中央・長町）" },
+  { slug: "yokohama", label: "横浜（横浜駅・みなとみらい・関内）" },
+  { slug: "kawasaki", label: "川崎（川崎駅・武蔵小杉・溝の口）" },
+  { slug: "chiba", label: "千葉（千葉駅周辺）" },
+  { slug: "kanazawa", label: "金沢" },
+  { slug: "nagoya", label: "名古屋（名古屋駅・栄）" },
+  { slug: "kobe", label: "神戸（三宮）" },
+];
+
 const AREA_INFO: Record<string, { name: string; n: number }> = (() => {
   const m: Record<string, { name: string; n: number }> = {};
   for (const e of studioIdx.entries as { area: string; areaName: string }[]) {
@@ -271,6 +285,22 @@ export default function HomePage() {
             ))}
           </div>
 
+          <div className="mt-8 rounded-2xl border border-[var(--brand-line)] bg-white p-5">
+            <h3 className="text-[15px] font-bold text-[var(--ink)]">マシンピラティスの料金と駅からの距離を掲載しているエリア</h3>
+            <p className="mt-1 text-xs leading-relaxed text-[var(--ink-3)]">
+              以下のエリアページでは、大手ブランド各店舗の月4回の月額・体験料金・最寄り駅からの徒歩分数を、各公式店舗ページで確認した内容で掲載しています。
+            </p>
+            <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
+              {AREA_PRICE_LINKS.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/area/${a.slug}/`} className="text-[#7C3AED] underline underline-offset-2">
+                    {a.label}のピラティス・マシンピラティスの料金
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <p className="mt-8 text-center">
             <Link href="/area/" className="pl-btn pl-btn-outline pl-btn-sm">エリア一覧を見る</Link>
           </p>
@@ -387,7 +417,7 @@ export default function HomePage() {
           <p className="text-gray-600 text-center mb-10">各スタジオの詳細レビューをご覧いただけます。</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: "Rintosull(リントスル)", slug: "rintosull", desc: "LAVA系列、当サイト収録58店舗の大型チェーン", href: "/review/rintosull/", url: "https://rintosull.jp/" },
+              { name: "Rintosull(リントスル)", anchor: "Rintosull", slug: "rintosull", desc: "LAVA系列、当サイト収録58店舗の大型チェーン", href: "/review/rintosull/", url: "https://rintosull.jp/" },
               { name: "ピラティスミラー", slug: "pilates-mirror", desc: "コナミスポーツ運営、天井の鏡×30分レッスン", href: "/review/pilates-mirror/", url: "https://www.konami.com/sportsclub/pilatesmirror/" },
               { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/" },
               { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/", url: "https://pilates-k.jp/" },
@@ -395,8 +425,8 @@ export default function HomePage() {
               { name: "the SILK", slug: "the-silk", desc: "女性専用・全店駅近・音楽と照明による空間演出", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
               { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/", url: "https://bdcpilates.com/" },
               { name: "Celestia", slug: "celestia", desc: "セミパーソナル・マシン専門・手ぶらで通える", href: "/review/celestia/", url: "https://celes-pilates.jp/" },
-              { name: "BREST PILATES & BODYMAKE", slug: "brest", desc: "30分のピラティス×ウェイトのパーソナル", href: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727" },
-              { name: "URBAN CLASSIC PILATES", slug: "urban-classic", desc: "予約不要・30分のサーキット", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
+              { name: "BREST PILATES & BODYMAKE", anchor: "BREST（ブレスト）ピラティス", slug: "brest", desc: "30分のピラティス×ウェイトのパーソナル", href: "/review/brest/", url: "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727" },
+              { name: "URBAN CLASSIC PILATES", anchor: "アーバンクラシックピラティス", slug: "urban-classic", desc: "予約不要・30分のサーキット", href: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727" },
               { name: "メルメイク", slug: "melmake", desc: "完全個室のパーソナルピラティス", href: "/review/melmake/", url: "https://t.felmat.net/fmcl?ak=I3527W.1.M69538E.P1361727" },
             ].map((studio) => (
               <div key={studio.name} className="pl-card flex flex-col overflow-hidden">
@@ -409,7 +439,7 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-gray-500 mb-3">{studio.desc}</p>
                   <div className="mt-auto flex flex-wrap items-center gap-3">
-                    <Link href={studio.href} className="text-sm text-[#7C3AED] font-semibold">詳細を見る →</Link>
+                    <Link href={studio.href} className="text-sm text-[#7C3AED] font-semibold">{studio.anchor ?? studio.name}の口コミ・評判 →</Link>
                     {isAffiliate(studio.url) && (
                       <a
                         href={studio.url}

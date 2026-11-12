@@ -126,13 +126,13 @@ const M4_MIN = Math.min(...CHAINS.map((c) => c.m4));
 const M4_MAX = Math.max(...CHAINS.map((c) => c.m4));
 const AREAS = [...new Set(CHAINS.map((c) => c.area))].map((a) => ({ a, n: CHAINS.filter((c) => c.area === a).length }));
 const yen = (n: number) => n.toLocaleString();
-// 冒頭の料金の目安で示す最安・最高の店舗は、2026年11月2日に公式店舗ページで再確認（URBAN CLASSIC 川崎 8,580円・the SILK 川崎店 Standard 4 14,370円、同額）
-const M4_RECHECKED_AT = "2026年11月2日";
+// 冒頭の料金の目安で示す最安・最高の店舗は、2026年11月2日・11月12日に公式店舗ページで再確認（URBAN CLASSIC 川崎 8,580円・the SILK 川崎店 Standard 4 14,370円、いずれも同額・アクセス表記も同じ）
+const M4_RECHECKED_AT = "2026年11月12日";
 const M4_MIN_NAMES = CHAINS.filter((c) => c.m4 === M4_MIN).map((c) => c.name).join("・");
 const M4_MAX_NAMES = CHAINS.filter((c) => c.m4 === M4_MAX).map((c) => c.name).join("・");
 
 export const metadata: Metadata = {
-  title: `川崎のピラティスおすすめ${LISTED}店｜料金・武蔵小杉・溝の口を比較`,
+  title: `川崎のピラティス・マシンピラティス料金｜おすすめ${LISTED}店を武蔵小杉・溝の口まで比較`,
   description: `川崎のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。川崎駅・武蔵小杉・溝の口の大手${CHAINS.length}店舗の月4回の月額（${yen(M4_MIN)}円〜${yen(M4_MAX)}円・公式確認）と駅からの距離も掲載しています。`,
   alternates: { canonical: "https://pilatest.com/area/kawasaki/" },
 };
@@ -142,7 +142,7 @@ export default function AreaPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "川崎のピラティススタジオ" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        川崎のピラティススタジオおすすめ{LISTED}店【料金・Google口コミ実測データで比較】
+        川崎のピラティス・マシンピラティスの料金とおすすめ{LISTED}店【Google口コミ実測データで比較】
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         川崎駅・武蔵小杉・溝の口などにある大手{CHAINS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です。

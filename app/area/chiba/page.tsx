@@ -17,9 +17,9 @@ const studioSlugMap = new Map(
   (studioIdx.entries as { slug: string; name: string; address: string }[]).map((e) => [e.name + e.address, e.slug])
 );
 
-// 千葉駅周辺にある大手ブランド3店舗の公式店舗ページの記載（2026年10月24日確認・11月2日に3店舗とも再確認し同額・同表記）。公式に記載のない値は掲載しない
+// 千葉駅周辺にある大手ブランド3店舗の公式店舗ページの記載（2026年10月24日確認・11月2日と11月12日に3店舗とも再確認し同額・同表記）。公式に記載のない値は掲載しない
 // m4 は月4回プランの月額（冒頭の料金の目安に使う）
-const CHIBA_CHECKED_AT = "2026年11月2日";
+const CHIBA_CHECKED_AT = "2026年11月12日";
 const CHIBA_BRANDS = [
   {
     name: "CLUB PILATES 千葉店",
@@ -63,7 +63,7 @@ function jpDate(iso: string) {
 }
 
 export const metadata: Metadata = {
-  title: `千葉のピラティスおすすめ${LISTED}店｜料金・千葉駅周辺・船橋を比較`,
+  title: `千葉のピラティス・マシンピラティス料金｜千葉駅周辺・船橋のおすすめ${LISTED}店を比較`,
   description: `千葉県のピラティススタジオ${LISTED}店を、Googleマップの評点・口コミ件数で比較しています。千葉駅周辺の大手3店舗の月4回の月額（${yen(M4_MIN)}円〜${yen(M4_MAX)}円・公式確認）、駅からの距離、千葉市中央区の${CHUO.length}店の一覧も掲載しています。`,
   alternates: { canonical: "https://pilatest.com/area/chiba/" },
 };
@@ -73,7 +73,7 @@ export default function AreaPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <Breadcrumb items={[{ name: "千葉のピラティススタジオ" }]} />
       <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4 mt-4">
-        千葉のピラティススタジオおすすめ{LISTED}店【料金・Google口コミ実測データで比較】
+        千葉のピラティス・マシンピラティスの料金とおすすめ{LISTED}店【Google口コミ実測データで比較】
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         千葉駅から徒歩2〜7分にある大手{CHIBA_BRANDS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円</strong>です（
