@@ -67,6 +67,28 @@ export const THE_SILK_JOIN_CAMPAIGN = {
 export const isCampaignActive = (c: { endsAt: string }, now: Date = new Date()) =>
   now.getTime() <= new Date(c.endsAt).getTime();
 
+/**
+ * Rintosull 公式の各店舗ページ「開催中のキャンペーン」欄（ピラティススタートキャンペーン）。
+ * 2026年11月12日に金沢増泉店・京都四条烏丸店・京都駅前店の店舗ページで同じ内容を確認。
+ * 期間は「11月末まで」。endsAt を過ぎるとエリアページから記載が消える（判定はビルド時）。
+ */
+export const RINTOSULL_START_CAMPAIGN = {
+  checkedAt: "2026年11月12日",
+  periodText: "2026年11月30日まで",
+  endsAt: "2026-11-30T23:59:59+09:00",
+  detail:
+    "体験当日に店舗で登録した場合、利用開始月を含む3か月間、対象ブランド全店通い放題コース（通常 月16,800円）が月1,980円（税込）になります（特別価格期間の月額は3か月目にまとめて5,940円の請求）。過去5か月以内に Rintosull の体験会を受けた方や、系列ブランドでマンスリー登録をしている方などは対象外です。特別価格の終了後12か月間の継続が適用の条件で、別途 運営管理費 月680円がかかります",
+};
+
+/**
+ * 公式サイトの店舗一覧に掲載されている店舗数（当サイトのGoogleマップ収録数と差が大きいブランドのみ）。
+ * Celestia：新宿・池袋・町田・札幌・仙台・船橋・横浜・松戸・名古屋栄・梅田・心斎橋・セブンパーク天美・姫路・神戸三宮・京都・福岡赤坂の16店舗。
+ * 当サイトの収録（2026年9月2日時点のGoogleマップ取得分）は8店舗。
+ */
+export const OFFICIAL_STORE_COUNT: Record<string, { n: number; checkedAt: string; source: string }> = {
+  celestia: { n: 16, checkedAt: "2026年11月12日", source: "https://celes-pilates.jp/stores/" },
+};
+
 /** 円表記（例：12,280円） */
 export const fmtYen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
 
@@ -186,11 +208,12 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
   },
   "pilates-mirror": {
-    style: "マシンピラティス（天井の鏡・30分レッスン）", format: "グループ＋パーソナル", gender: "男女可",
-    monthly: "11,000円（月6回、7回目以降は1回1,100円）。2026年11月度から12,100円に改定（公式告知・2026年10月17日確認）",
+    style: "マシンピラティス（天井の鏡・30分レッスン）", format: "グループ＋パーソナル", gender: "女性専用（18歳以上）",
+    // 2026-11-12: 公式トップ・店舗ページ（四条烏丸・山科・別府・茅ヶ崎ほか）で「18歳以上の女性が対象」「月会費 12,100円（税込）」「体験レッスン お一人様1回限り無料」を確認
+    monthly: "12,100円（税込・月6回まで、7回目以降は1回1,100円）。2026年11月度に11,000円から改定（公式・2026年11月12日確認）",
     joinFee: "11,000円",
     monthlyExtra: "公式に記載なし",
-    trial: "1回2,200円（税込・お一人様1回まで。2026年10月30日確認）",
+    trial: "無料（お一人様1回限り。2026年11月12日に公式サイトで確認。10月30日時点は1回2,200円）",
     source: "https://www.konami.com/sportsclub/pilatesmirror/",
   },
   "celestia": {
@@ -347,7 +370,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = "2026年10月30日";
+export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月12日";
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -360,8 +383,8 @@ export const TRIAL_FEES: TrialFee[] = [
   { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: "30分の無料体験クラス", checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
   // 店舗ページ「無料体験予約はこちら」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
-  // 料金ページ「体験レッスン 1回 2,200円（税込）」（秋キャンペーンは終了の表示）
-  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 2200, text: "2,200円", checkedAt: "2026年10月30日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
+  // 2026-11-12: 公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ「体験（お一人様１回まで）0円」（10/30 時点は 1回 2,200円）
+  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月12日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
   // 料金ページ「体験受付中！30分 3,000円」、店舗別の体験案内ページは期間限定で初回無料

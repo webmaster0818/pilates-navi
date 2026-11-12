@@ -9,17 +9,17 @@ const DB_DATE = "2026年9月2日";
 export const metadata: Metadata = {
   title: "ピラティスミラーの口コミ・料金を解説｜評判は？コナミ運営の30分マシンピラティス【2026年】",
   description:
-    "ピラティスミラー(コナミスポーツ運営)の料金・評判を解説します。月会費11,000円(月6回まで)、入会金11,000円、チケット1回2,750円、体験2,200円、18歳以上の女性限定・カード決済のみの条件を公式サイトで確認しました(2026年9月22日)。実測13店舗の評点も掲載しています。",
+    "ピラティスミラー(コナミスポーツ運営)の料金・評判を解説します。月会費12,100円(月6回まで・2026年11月度改定)、入会金11,000円、チケット1回2,750円、体験無料、18歳以上の女性限定・カード決済のみの条件を公式サイトで確認しました(2026年11月12日)。実測13店舗の評点も掲載しています。",
 };
 
 const faqs = [
   {
     q: "ピラティスミラーの料金はいくらですか？",
-    a: "公式サイト(2026年9月22日確認)では、月会費プランが入会金11,000円＋月会費11,000円(税込・月6回まで)です。7回目以降の追加利用は1回1,100円(税込)です。月会費プランに登録していない方向けにチケットプラン(1回2,750円・税込)もあります。月6回まで通うと1回あたり約1,833円で、回数単価としては大型チェーンの中でも安い部類です。なお、公式サイトでは2026年11月度から月会費を12,100円(税込)に改定すると告知されています(2026年10月17日確認)。改定後に月6回通う場合、1回あたりは約2,017円です。",
+    a: "公式サイト(2026年11月12日確認)では、月会費プランが入会金11,000円＋月会費12,100円(税込・月6回まで)です。7回目以降の追加利用は1回1,100円(税込)です。月会費プランに登録していない方向けにチケットプラン(1回2,750円・税込)もあります。月6回まで通うと1回あたり約2,017円です。月会費は2026年11月度に11,000円から12,100円(税込)に改定されました(公式の告知・2026年10月17日確認)。",
   },
   {
     q: "体験レッスンは無料ですか？",
-    a: "有料です。体験レッスンは1回2,200円(税込・お一人様1回まで)と公式サイトに記載されています(2026年10月30日確認)。無料体験のキャンペーンが実施される時期もあるため、最新の実施状況は公式サイトのお知らせでご確認ください。",
+    a: "2026年11月12日時点では無料です。公式サイトの料金欄に「体験レッスン お一人様1回限り無料」、各店舗ページに「体験（お一人様１回まで）0円」と記載されています。2026年10月30日の確認時点では1回2,200円(税込)だったため、ご予約の際に公式サイトで最新の料金をご確認ください。",
   },
   {
     q: "男性も通えますか？支払い方法は？",
@@ -72,8 +72,8 @@ export default function PilatesMirrorReview() {
             <p className="text-sm text-gray-700 leading-relaxed">
               ピラティスミラーは、<strong>コナミスポーツが運営</strong>するマシンピラティススタジオです。
               スタジオの<strong>天井に鏡</strong>を設置し、自分の動きを確認しながら<strong>1レッスン30分</strong>・<strong>6〜15名の少人数制</strong>で行うのが特徴です。
-              料金は<strong>入会金11,000円＋月会費11,000円(月6回まで)</strong>(2026年11月度から月会費12,100円に改定予定)で、フルに通えば<strong>1回あたり約1,833円</strong>となり、回数単価は安い部類に入ります。
-              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>・<strong>体験も有料(2,200円)</strong>という条件があります。
+              料金は<strong>入会金11,000円＋月会費12,100円(月6回まで)</strong>(2026年11月度に11,000円から改定)で、フルに通えば<strong>1回あたり約2,017円</strong>です。
+              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>という条件があります。体験レッスンは<strong>無料(お一人様1回限り・2026年11月12日確認)</strong>です。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>短時間(30分)で通いたい方／週1〜2回のペースが合う方</li>
@@ -106,8 +106,8 @@ export default function PilatesMirrorReview() {
                 </tr>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">月会費プラン</td>
-                  <td className="px-3 py-2 font-bold text-[#7C3AED]">月11,000円</td>
-                  <td className="px-3 py-2">月6回まで。7回目以降は1回1,100円の追加利用。2026年11月度から月12,100円に改定(公式告知)</td>
+                  <td className="px-3 py-2 font-bold text-[#7C3AED]">月12,100円</td>
+                  <td className="px-3 py-2">月6回まで。7回目以降は1回1,100円の追加利用。2026年11月度に月11,000円から改定(2026年11月12日確認)</td>
                 </tr>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">チケットプラン</td>
@@ -116,8 +116,8 @@ export default function PilatesMirrorReview() {
                 </tr>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">体験レッスン</td>
-                  <td className="px-3 py-2 font-bold text-[#7C3AED]">1回2,200円</td>
-                  <td className="px-3 py-2">お一人様1回まで(2026年10月30日確認)</td>
+                  <td className="px-3 py-2 font-bold text-[#7C3AED]">無料</td>
+                  <td className="px-3 py-2">お一人様1回まで(2026年11月12日確認。10月30日時点は1回2,200円)</td>
                 </tr>
               </tbody>
             </table>
@@ -130,8 +130,8 @@ export default function PilatesMirrorReview() {
             </ul>
           </div>
           <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-            ※月6回まで通った場合、月会費11,000円÷6回＝<strong>1回あたり約1,833円</strong>です。ただし、月2回の利用にとどまる月は1回5,500円相当になるため、
-            通える頻度の見通しが立たない場合は、チケットプラン(1回2,750円)との比較もご検討ください。2026年11月度以降の月会費12,100円では、月6回で1回あたり約2,017円です。
+            ※月6回まで通った場合、月会費12,100円÷6回＝<strong>1回あたり約2,017円</strong>です。ただし、月2回の利用にとどまる月は1回6,050円相当になるため、
+            通える頻度の見通しが立たない場合は、チケットプラン(1回2,750円)との比較もご検討ください。
           </p>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function PilatesMirrorReview() {
             <h2 className="text-base font-bold text-gray-900">向いている方</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700 leading-relaxed">
               <li><strong>30分で終えたい方</strong>：仕事や家事の合間に組み込みやすい長さです。</li>
-              <li><strong>月4〜6回のペースで通える方</strong>：月6回まで通うと1回約1,833円まで単価が下がります。</li>
+              <li><strong>月4〜6回のペースで通える方</strong>：月6回まで通うと1回約2,017円まで単価が下がります。</li>
               <li><strong>店舗ごとの差を避けたい方</strong>：実測データでも評点が4.6〜4.9に収まっています。</li>
               <li>上場企業グループ(コナミスポーツ)による運営の安心感を重視する方</li>
             </ul>
@@ -204,7 +204,6 @@ export default function PilatesMirrorReview() {
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700 leading-relaxed">
               <li><strong>男性</strong>：18歳以上の女性限定です。</li>
               <li><strong>クレジットカードを利用しない方</strong>：支払いはカード決済のみです。</li>
-              <li><strong>まず無料で試したい方</strong>：体験レッスンは1回2,200円の有料です。</li>
               <li>月2回程度の利用を想定している方：月会費プランでは1回あたりの単価が上がります。</li>
               <li>1回60分など、時間をかけて取り組みたい方</li>
             </ul>

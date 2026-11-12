@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
-import { BRAND_FACTS, FACTS_SURVEYED_AT } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, OFFICIAL_STORE_COUNT } from "@/data-brand-facts";
 
 // スタジオ選びで実際に見られている3点(エリア／サービス内容／料金)を、
 // カードの中で必ず同じ並びで出すためのブロック(施主指示 2026-09-30)。
@@ -58,6 +58,11 @@ export default function BrandKeyFacts({ slug, compact = false }: { slug: string;
                 </span>
               ))}
               ）
+            </>
+          )}
+          {OFFICIAL_STORE_COUNT[slug] && (
+            <>
+              。公式サイトの店舗一覧では<strong>{OFFICIAL_STORE_COUNT[slug].n}店舗</strong>です（{OFFICIAL_STORE_COUNT[slug].checkedAt}確認）
             </>
           )}
         </Row>

@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
+import { RINTOSULL_START_CAMPAIGN as RSC, isCampaignActive } from "@/data-brand-facts";
 
 const { listed, surveyedAt } = loadArea("kanazawa");
 const LISTED = listed.length;
@@ -52,6 +53,8 @@ const MACHINE_BRANDS = [
 const M4_MIN = Math.min(...MACHINE_BRANDS.map((b) => b.m4));
 const M4_MAX = Math.max(...MACHINE_BRANDS.map((b) => b.m4));
 const yen = (n: number) => n.toLocaleString();
+// Rintosull 金沢増泉店の店舗ページに掲載のキャンペーン（11月末まで）。期限後のビルドでは表示しない
+const SHOW_RSC = isCampaignActive(RSC);
 
 function jpDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);
@@ -119,6 +122,12 @@ export default function AreaPage() {
           ))}
           （{MACHINE_CHECKED_AT}確認）。料金・キャンペーンは変更される場合があります。
         </p>
+        {SHOW_RSC && (
+          <p className="mt-3 rounded-xl bg-amber-50 border border-amber-200 p-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <strong>Rintosull 金沢増泉店のキャンペーン（{RSC.periodText}）</strong>：{RSC.detail}。
+            （<a href="https://rintosull.jp/shop/ishikawa/kanazawamasuizumi/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Rintosull 金沢増泉店 公式</a>の「開催中のキャンペーン」欄・{RSC.checkedAt}確認）
+          </p>
+        )}
         <h3 className="mt-6 text-base font-bold text-gray-800">店名に「マシン」を含む掲載店舗（口コミ件数の多い順）</h3>
         <ul className="mt-2 space-y-1 text-sm text-gray-700 list-disc pl-5">
           {MACHINE.map((s) => (

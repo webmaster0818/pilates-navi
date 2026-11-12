@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, CLUBPILATES_PRICES as CP, fmtYen } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, CLUBPILATES_PRICES as CP, OFFICIAL_STORE_COUNT, fmtYen } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
@@ -151,6 +151,9 @@ export default function PriceComparisonPage() {
                       <td className="border border-gray-200 p-2 text-xs">{f.trial}</td>
                       <td className="border border-gray-200 p-2 text-xs whitespace-nowrap">
                         {a ? <>{a.studios}店舗／{a.cities}都市</> : "—"}
+                        {OFFICIAL_STORE_COUNT[slug] && (
+                          <span className="block text-[10px] text-gray-500">公式の店舗一覧は{OFFICIAL_STORE_COUNT[slug].n}店舗（{OFFICIAL_STORE_COUNT[slug].checkedAt}確認）</span>
+                        )}
                       </td>
                     </tr>
                   );

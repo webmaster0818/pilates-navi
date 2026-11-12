@@ -25,7 +25,7 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
   {
     name: "Rintosull 三宮店",
     review: "/review/rintosull/",
-    access: "阪急「神戸三宮駅」西口から徒歩2分、地下鉄西神・山手線「三宮駅」西出口1から徒歩1分",
+    access: "地下鉄西神・山手線「三宮駅」西出口1から徒歩1分、阪急「神戸三宮駅」西口から徒歩2分、JR「三ノ宮駅」西口から徒歩4分",
     target: "女性専用・マシンピラティス",
     trial: "無料体験会",
     monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）、別途 運営管理費 月680円（税込）",
@@ -68,6 +68,8 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
 
 // 冒頭の料金の目安。上の表の月4回の額から集計する（2026年11月2日・11月12日に Rintosull・ピラティスK・zen place の公式ページで再確認・同額）
 const PRICE_RECHECKED_AT = "2026年11月12日";
+// 冒頭の駅からの距離（4店舗とも各公式店舗ページで再確認。Rintosull に JR 三ノ宮駅からの距離を追加）
+const ACCESS_CHECKED_AT = "2026年11月12日";
 const M4 = SANNOMIYA_BRANDS.filter((b): b is SannomiyaBrand & { m4: number } => typeof b.m4 === "number");
 const M4_MIN = Math.min(...M4.map((b) => b.m4));
 const M4_MAX = Math.max(...M4.map((b) => b.m4));
@@ -96,7 +98,8 @@ export default function AreaPage() {
         <strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です（
         {M4.slice().sort((a, b) => a.m4 - b.m4).map((b, i) => `${i > 0 ? "、" : ""}${b.name.replace(/（.*?）/, "")} ${yen(b.m4)}円`).join("")}
         。zen place はマットグループの額で、入会金・管理費は含みません。{PRICE_RECHECKED_AT}確認）。
-        {SANNOMIYA_BRANDS.length}店舗とも各店舗の最寄り駅から徒歩1〜3分です。店舗ごとの駅からの距離・体験料金は、下の「三宮のピラティススタジオ」の表に掲載しています。
+        各店舗の公式ページに記載された最寄り駅からの距離は、Rintosull 三宮店が地下鉄「三宮駅」から徒歩1分、zen place 三宮が地下鉄海岸線「三宮・花時計前駅」から徒歩1分、Celestia 神戸三宮店が「三宮・花時計前駅」から徒歩2分、ピラティスK 神戸三宮店が阪急「神戸三宮駅」から徒歩3分です。
+        JR「三ノ宮駅」からは、Rintosull が徒歩4分、Celestia が徒歩5分、ピラティスK が徒歩6分、zen place が徒歩8分です（{ACCESS_CHECKED_AT}に各公式店舗ページで確認）。店舗ごとの駅からの距離・体験料金は、下の「三宮のピラティススタジオ」の表に掲載しています。
       </p>
       <AreaAnswerBox area="kobe" areaName="神戸" ward={true} places={["三宮", "元町"]} />
 
@@ -105,7 +108,7 @@ export default function AreaPage() {
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           当サイトの神戸の掲載店舗{LISTED}店のうち、店名または住所に「三宮」を含む店舗は{SANNOMIYA.length}店です。
           大手ブランドでは、Rintosull・ピラティスK・zen place・Celestia の4店舗が三宮にあります（Celestia 神戸三宮店は当サイトのGoogleマップ取得後に公式の店舗一覧に掲載されたため、下の掲載店舗一覧には含まれていません）。
-          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}（Celestiaは2026年10月27日）に確認した内容です。ピラティスK 神戸三宮店の料金・アクセスと、Rintosull・zen place の月額は{PRICE_RECHECKED_AT}に再確認しました。
+          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}（Celestiaは2026年10月27日）に確認した内容です。ピラティスK 神戸三宮店の料金と、Rintosull・zen place の月額は{PRICE_RECHECKED_AT}に、4店舗の駅からの距離は{ACCESS_CHECKED_AT}に再確認しました。
         </p>
 
         <div className="mt-4 overflow-x-auto">
@@ -142,7 +145,7 @@ export default function AreaPage() {
               <a href={b.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">{b.name} 公式</a>
             </span>
           ))}
-          （{SANNOMIYA_CHECKED_AT}確認。Celestiaは2026年10月27日確認、ピラティスK・Rintosull・zen place の月額は{PRICE_RECHECKED_AT}再確認）。キャンペーン料金は期間限定の場合があります。
+          （{SANNOMIYA_CHECKED_AT}確認。Celestiaは2026年10月27日確認、ピラティスK・Rintosull・zen place の月額は{PRICE_RECHECKED_AT}、4店舗の駅からの距離は{ACCESS_CHECKED_AT}再確認）。キャンペーン料金は期間限定の場合があります。
         </p>
 
         <h3 className="mt-6 text-base font-bold text-gray-800">三宮の掲載店舗（口コミ件数の多い順）</h3>
