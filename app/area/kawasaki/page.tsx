@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { THE_SILK_PRICES, ZENPLACE_PRICES as ZP, fmtYen } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -36,8 +36,8 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 川崎",
     access: "JR川崎駅 徒歩8分",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 11,990円／月8回 19,900円／通い放題 21,890円（税込）。入会金 5,500円",
-    m4: 11990,
+    monthly: `${clubPilatesPlanText(CP.stores.kawasaki)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.kawasaki.m4,
     source: "https://clubpilates.co.jp/studio/kawasaki/",
   },
   {
@@ -72,8 +72,8 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 武蔵小杉",
     access: "武蔵小杉駅 中央2出口 徒歩1分",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 14,190円／月8回 26,290円／通い放題 40,590円（税込）。入会金 5,500円",
-    m4: 14190,
+    monthly: `${clubPilatesPlanText(CP.stores.musashikosugi)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.musashikosugi.m4,
     source: "https://clubpilates.co.jp/studio/musashikosugi/",
   },
   {
@@ -99,8 +99,8 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 溝の口",
     access: "溝の口駅 徒歩3分／武蔵溝ノ口駅 徒歩3分／高津駅 徒歩5分",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 13,090円／月8回 24,090円／通い放題 37,290円（税込）。入会金 5,500円",
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.mizonokuchi)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.mizonokuchi.m4,
     source: "https://clubpilates.co.jp/studio/mizonokuchi/",
   },
   {
@@ -117,8 +117,8 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 宮前平",
     access: "宮前平駅 徒歩2分（提携駐車場あり）",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 13,090円／月8回 24,090円／通い放題 37,290円（税込）。入会金 5,500円",
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.miyamaedaira)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.miyamaedaira.m4,
     source: "https://clubpilates.co.jp/studio/miyamaedaira/",
   },
 ];

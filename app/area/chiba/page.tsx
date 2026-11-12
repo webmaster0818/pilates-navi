@@ -5,6 +5,7 @@ import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
 import studioIdx from "@/data-studio-index.json";
+import { CLUBPILATES_PRICES as CP, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
 
 const { listed, surveyedAt } = loadArea("chiba");
 const LISTED = listed.length;
@@ -26,8 +27,8 @@ const CHIBA_BRANDS = [
     access: "JR総武線「千葉駅」から徒歩2分",
     target: "マシンを使用したグループレッスン（最大12名）・プライベートレッスン",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 11,990円／月8回 15,290円／通い放題 18,590円、入会金 5,500円（店舗ページに税込・税別の記載なし）",
-    m4: 11990,
+    monthly: `${clubPilatesPlanText(CP.stores.chiba)}、入会金 ${fmtYen(CP.joinFee)}（店舗ページに税込・税別の記載なし）`,
+    m4: CP.stores.chiba.m4,
     source: "https://clubpilates.co.jp/studio/chiba",
   },
   {

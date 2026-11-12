@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, fmtYen } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, CLUBPILATES_PRICES as CP, fmtYen } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ const studios: Studio[] = [
   { slug: "zenplace", name: "zen place pilates", price: `マシン月4回 ${fmtYen(ZENPLACE_PRICES.rg4)}／マット月4回 ${fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（税込）`, type: "マシン/マットピラティス", note: "全国展開・店舗数最多クラス。グループレッスン中心。マシンのグループは開催スタジオのみ（2026年10月19日公式料金表で確認）" },
   { slug: "pilates-k", name: "ピラティスK", price: `${BRAND_FACTS["pilates-k"].monthlyShort}。入会金${BRAND_FACTS["pilates-k"].joinFee}`, type: "女性専用マシンピラティス", note: "女性専用・マシン専門。駅近の店舗が中心" },
   { slug: "the-silk", name: "the SILK", price: `月額${fmtYen(THE_SILK_PRICES.light3.b)}〜（月3回・エリアB）`, type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
-  { slug: "club-pilates", name: "CLUB PILATES", price: "月4回 税込10,890円〜17,050円（店舗ごとに設定。最も多いのは13,090円）", type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系。月額は各店舗ページの料金プラン欄（2026年10月26日に88件中85件で確認）" },
+  { slug: "club-pilates", name: "CLUB PILATES", price: `月4回 税込${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}（店舗ごとに設定。最も多いのは${fmtYen(CP.m4.mode)}）`, type: "マシンピラティス（米国発）", note: "世界展開ブランド。レベル別レッスン体系。月額は各店舗ページの料金プラン欄（2026年10月26日に88件中85件で確認）" },
   { slug: "bdc", name: "BDC PILATES", price: "月4回 16,280円（税込）", type: "マシンピラティス", note: "都心中心。本格的に取り組みたい方向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: "月4回 税込み33,000円（1回8,250円）／月2回 20,000円〜通い放題 66,000円", type: "セミパーソナル（約2名）", note: "ほぼマンツーマン。手厚い指導を求める方向け。公式料金ページの料金画像（2026年10月26日確認）" },
   { slug: "brest", name: "BREST PILATES & BODYMAKE", price: "パーソナル月4回 税込22,880円（東京3店は25,080円）／都度払い 税込6,380円", type: "マシンピラティス×ウェイトのパーソナル（30分）", note: "月額は各店舗ページの料金表（2026年10月25日確認）。URBAN CLASSIC PILATESも全店追加料金なしで利用可能" },
@@ -66,7 +66,7 @@ function cheapestAnswer(): string {
 }
 
 const faqs = [
-  { q: "ピラティススタジオの料金相場はいくらですか？", a: `グループ系のマシンピラティスは月額1万〜1万6千円程度が中心です（zen place マシン月4回${fmtYen(ZENPLACE_PRICES.rg4)}（税込）、ピラティスK 11,220円〜、CLUB PILATES 月4回10,890円〜17,050円（税込・店舗により異なります）など）。セミパーソナルのCelestiaは月4回33,000円（税込み・1回8,250円）と単価は高めです。いずれも2026年時点の当サイト調査値です。最新の料金は各公式サイトでご確認ください。` },
+  { q: "ピラティススタジオの料金相場はいくらですか？", a: `グループ系のマシンピラティスは月額1万〜1万6千円程度が中心です（zen place マシン月4回${fmtYen(ZENPLACE_PRICES.rg4)}（税込）、ピラティスK 11,220円〜、CLUB PILATES 月4回${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}（税込・店舗により異なります）など）。セミパーソナルのCelestiaは月4回33,000円（税込み・1回8,250円）と単価は高めです。いずれも2026年時点の当サイト調査値です。最新の料金は各公式サイトでご確認ください。` },
   { q: "いちばん安いピラティススタジオはどこですか？", a: cheapestAnswer() },
   { q: "グループとセミパーソナルは、どちらがよいですか？", a: "費用を抑えて気軽に続けたい方にはグループ系（zen place・ピラティスK等）、丁寧な指導を受けたい方にはセミパーソナル（Celestia等）が向いています。料金の目安は、グループ系が月1万円前後、セミパーソナル（Celestia）が1回6,625円〜10,000円（税込み）です。" },
 ];

@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { ZENPLACE_PRICES as ZP, fmtYen } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
 
 const LISTED = loadArea("nagoya").listed.length;
 
@@ -53,8 +53,8 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 久屋大通店",
     access: "地下鉄 久屋大通駅 徒歩1分",
     trial: "30分の体験レッスン 無料",
-    monthly: "月4回 13,090円／月8回 16,390円／通い放題 26,090円（店舗ページに税込・税別の記載なし）。入会金 5,500円",
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.hisayaodori)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.hisayaodori.m4,
     source: "https://clubpilates.co.jp/studio/hisayaodori/",
   },
   {

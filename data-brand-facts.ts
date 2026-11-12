@@ -93,6 +93,38 @@ export const ZENPLACE_PRICES = {
 };
 const ZP = ZENPLACE_PRICES;
 
+/**
+ * CLUB PILATES の料金。全国共通の料金ページは無く、公式の各店舗ページ（https://clubpilates.co.jp/studio/<店舗>/）の
+ * 「料金プラン」欄に店舗ごとの額が載っている。
+ * - 2026年10月26日：店舗ページ88件中85件で確認（サイト表示の確認日・件数はこの日の値）
+ * - 2026年11月12日：店舗ページ90件中88件で再確認（赤坂薬院・江の島は料金プラン欄なし）。範囲・最多額・入会金・下記店舗の額はすべて同額。
+ *   月4回 13,090円は44店舗、月4回13,090円・月8回24,090円・通い放題37,290円の組み合わせは39店舗。
+ *   事務手数料2,200円（税込）の記載は88件中59件。月会費の欄に税込・税別の表記がある店舗ページは無い（入会金はキャンペーン欄に「5,500（税込）」）。
+ */
+export const CLUBPILATES_PRICES = {
+  checkedAt: "2026年10月26日",
+  recheckedAt: "2026年11月12日",
+  source: "https://clubpilates.co.jp/studio/",
+  m4: { min: 10890, max: 17050, mode: 13090 },
+  m8: { min: 14190, max: 26290, mode: 24090 },
+  unlimited: { min: 17490, max: 40590, mode: 37290 },
+  joinFee: 5500,
+  adminFee: 2200,
+  /** 個別店舗（エリアページで使用） */
+  stores: {
+    chiba: { m4: 11990, m8: 15290, unlimited: 18590 },
+    kawasaki: { m4: 11990, m8: 19900, unlimited: 21890 },
+    musashikosugi: { m4: 14190, m8: 26290, unlimited: 40590 },
+    mizonokuchi: { m4: 13090, m8: 24090, unlimited: 37290 },
+    miyamaedaira: { m4: 13090, m8: 24090, unlimited: 37290 },
+    hisayaodori: { m4: 13090, m8: 16390, unlimited: 26090 },
+  },
+};
+const CP = CLUBPILATES_PRICES;
+/** 「月4回 X円／月8回 Y円／通い放題 Z円」 */
+export const clubPilatesPlanText = (p: { m4: number; m8: number; unlimited: number }) =>
+  `月4回 ${fmtYen(p.m4)}／月8回 ${fmtYen(p.m8)}／通い放題 ${fmtYen(p.unlimited)}`;
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -173,12 +205,12 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "club-pilates": {
     style: "マシンピラティス（マット＋リフォーマー）", format: "グループ（最大12名）・4段階レベル別", gender: "男女可",
-    monthly: "店舗ごとに設定（税込）。月4回 10,890円〜17,050円／月8回 14,190円〜26,290円／通い放題 17,490円〜40,590円。最も多い設定は月4回 13,090円・月8回 24,090円・通い放題 37,290円（吉祥寺店など39店舗）。各店舗ページの料金プラン欄に記載（2026年10月26日、店舗ページ88件中85件で確認）",
-    joinFee: "入会金 5,500円（税込）＋入会時の事務手数料 2,200円（税込・多くの店舗ページに記載）。キャンペーンで0円になる店舗あり（2026年10月26日確認）",
+    monthly: `店舗ごとに設定（税込）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}。最も多い設定は月4回 ${fmtYen(CP.m4.mode)}・月8回 ${fmtYen(CP.m8.mode)}・通い放題 ${fmtYen(CP.unlimited.mode)}（吉祥寺店など39店舗）。各店舗ページの料金プラン欄に記載（2026年10月26日、店舗ページ88件中85件で確認）`,
+    joinFee: `入会金 ${fmtYen(CP.joinFee)}（税込）＋入会時の事務手数料 ${fmtYen(CP.adminFee)}（税込・多くの店舗ページに記載）。キャンペーンで0円になる店舗あり（2026年10月26日確認）`,
     monthlyExtra: "店舗ページに記載なし（2026年10月26日確認）",
     trial: "30分の無料体験クラス",
     source: "https://clubpilates.co.jp/studio/",
-    monthlyShort: "月4回 10,890円〜（税込・店舗により異なる）",
+    monthlyShort: `月4回 ${fmtYen(CP.m4.min)}〜（税込・店舗により異なる）`,
   },
 };
 
@@ -259,8 +291,8 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
     monthlyExtraYen: ZP.facilityFee, monthlyExtraNote: `設備運営管理費 月${fmtYen(ZP.facilityFee)}`,
     checkedAt: "2026年10月29日", source: "https://www.zenplace.co.jp/price" },
   // 以下は BRAND_FACTS / MONTHLY_SHORT_EXTRA の確認値
-  { slug: "club-pilates", name: "CLUB PILATES", yen: 10890, plan: "月4回", style: "マシンのグループ", note: "店舗ごとに設定", kind: "group",
-    joinNote: "入会金 5,500円＋事務手数料 2,200円", checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
+  { slug: "club-pilates", name: "CLUB PILATES", yen: CP.m4.min, plan: "月4回", style: "マシンのグループ", note: "店舗ごとに設定", kind: "group",
+    joinNote: `入会金 ${fmtYen(CP.joinFee)}＋事務手数料 ${fmtYen(CP.adminFee)}`, checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
   { slug: "pilates-k", name: "ピラティスK", yen: 11220, plan: "マンスリー4メンバー", style: "マシンのグループ", note: "店舗により13,420円まで", kind: "group",
     monthlyExtraYen: 825, monthlyExtraNote: "施設維持費 月825円", joinNote: "入会金 5,500円",
     checkedAt: "2026年10月28日", source: "https://pilates-k.jp/price" },
@@ -408,7 +440,7 @@ export const UNLIMITED_GROUP_LOWEST: UnlimitedPlan[] = [
   // 料金ページ「フリー マットグループ無制限 グレード01 16,940円／グレード02 14,960円（税込）」
   { slug: "zenplace", name: "zen place pilates", yen: ZP.matFree.g2, plan: "マットグループ フリー", note: `マットのグループ。グレード01のスタジオは${fmtYen(ZP.matFree.g1)}`, checkedAt: "2026年11月2日", source: "https://www.zenplace.co.jp/price" },
   // BRAND_FACTS club-pilates の店舗ページ確認値（通い放題 17,490円〜40,590円）
-  { slug: "club-pilates", name: "CLUB PILATES", yen: 17490, plan: "通い放題", note: "店舗ごとに設定。店舗により40,590円まで", checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
+  { slug: "club-pilates", name: "CLUB PILATES", yen: CP.unlimited.min, plan: "通い放題", note: `店舗ごとに設定。店舗により${fmtYen(CP.unlimited.max)}まで`, checkedAt: "2026年10月26日", source: "https://clubpilates.co.jp/studio/" },
   // PILATES_K_PRICES.premium（マンスリープレミアムメンバー・毎日2レッスンまで）
   { slug: "pilates-k", name: "ピラティスK", yen: 17820, plan: "マンスリープレミアムメンバー", note: "毎日2レッスンまで。店舗により18,920円まで", checkedAt: PILATES_K_PRICES.checkedAt, source: PILATES_K_PRICES.source },
   // THE_SILK_PRICES.full（毎日1グループレッスン）
