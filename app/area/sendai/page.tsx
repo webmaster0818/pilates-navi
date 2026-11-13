@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT } from "@/data-brand-facts";
 
 const LISTED = loadArea("sendai").listed.length;
 
@@ -62,7 +62,7 @@ const CHAINS: Chain[] = [
     review: "/review/rintosull/",
     access: "JR仙山線「東照宮駅」徒歩7分",
     trial: "無料体験会 0円",
-    monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）",
+    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: 8800,
     source: "https://rintosull.jp/shop/miyagi/sendaitoshogu/",
   },

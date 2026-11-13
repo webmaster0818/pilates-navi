@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB } from "@/data-brand-facts";
 
 const LISTED = loadArea("nagoya").listed.length;
 
@@ -17,7 +17,7 @@ const CHAINS: Chain[] = [
     name: "マシンピラティスRintosull 名古屋駅前店",
     access: "地下鉄 名古屋駅 L2出入口 徒歩1分",
     trial: "無料体験会",
-    monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）",
+    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: 8800,
     source: "https://rintosull.jp/shop/aichi/nagoyaekimae/",
   },
@@ -35,7 +35,7 @@ const CHAINS: Chain[] = [
     name: "マシンピラティスRintosull 栄店",
     access: "地下鉄 栄駅 8番出口直結（ホットヨガスタジオLAVA 栄店内）",
     trial: "無料体験会",
-    monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）",
+    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT_LAVA_COLLAB}`,
     m4: 8800,
     source: "https://rintosull.jp/shop/aichi/sakae/",
   },

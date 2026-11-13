@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, ZENPLACE_PRICES, fmtYen } from "@/data-brand-facts";
+import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, OFFICIAL_STORE_COUNT, ZENPLACE_PRICES, fmtYen } from "@/data-brand-facts";
+import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
+
+const AREA_SURVEYED_JA = AREA_SURVEYED_AT.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日");
 
 const TRIAL = BRAND_FACTS["celestia"].trial;
 
@@ -16,7 +19,7 @@ const faqs = [
   { q: "Celestia（セレスティア）の料金はいくらですか？", a: "公式サイトの料金ページでは、月2回20,000円、月4回33,000円、月6回47,000円、月8回53,000円、通い放題66,000円（いずれも税込み）と記載されています（2026年10月26日確認）。1回あたりに換算すると、月4回で8,250円、月8回で6,625円です。通常プランは翌月以降へのチケットの繰り越しが可能です。入会金は利用規約に定めがありますが、金額は公式サイトに記載がないため、申し込み前に店舗でご確認ください。" },
   { q: "Celestiaの口コミ・評判は良い？", a: "「約2名の少人数でしっかり見てもらえる」「スタジオが清潔」「手ぶらで通えて便利」といった声が見られる一方、「1回あたりの単価がやや高め」「店舗がまだ少ない」という指摘もあります。評価は目的や通うエリアによって異なります。" },
   { q: "セミパーソナルとは何ですか？", a: "1レッスンあたり約2名の少人数制です。インストラクターの目が行き届くため、マンツーマンに近い指導を受けられます。グループレッスンより手厚く、完全プライベートより費用を抑えられる中間的な形式です。" },
-  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分3,000円と記載されています。一方、店舗別の体験案内ページでは「OPEN特別キャンペーン（期間限定）」として初回体験レッスンを無料と表記しています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。` },
+  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分3,000円と記載されています。一方、体験案内ページでは「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」と案内されており、料金ページや店舗ページの予約ボタンにも「無料体験」と記載されています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望の店舗・日時を選んで申し込むのが基本です。空き状況や予約システムは店舗により異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルや繰り越しはできますか？", a: "未消化分の繰り越しが可能とされています。キャンセルの可否・期限・ペナルティの有無はプランや店舗の規約によるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "手ぶらで通えますか？", a: "はい、ウェアやタオルなどのレンタルがあり、手ぶらで通えるとされています。仕事帰りにも立ち寄りやすい環境です（レンタルの範囲・料金は店舗にてご確認ください）。" },
@@ -321,7 +324,7 @@ export default function CelestiaReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Celestiaの店舗・エリア（池袋ほか）</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            Celestiaは<strong>全国16店舗</strong>を展開しています。下表は公式サイトの店舗一覧（2026年10月27日確認・11月12日再確認）にもとづく店舗名と所在地です。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できます。各店舗の正確な所在地・営業時間・取り扱いプランは、公式サイトの店舗一覧でご確認ください。
+            Celestiaは<strong>全国16店舗</strong>を展開しています。下表は公式サイトの店舗一覧（2026年10月27日確認・11月12日再確認）にもとづく店舗名と所在地です。なお、当サイトがGoogleマップから取得した店舗データ（{BRAND_AREA.celestia.studios}店舗・{AREA_SURVEYED_JA}取得）は公式の店舗数より少なく、取得後に公式の店舗一覧へ掲載された店舗は含まれていません（公式の店舗数は{OFFICIAL_STORE_COUNT.celestia.n}店舗・{OFFICIAL_STORE_COUNT.celestia.checkedAt}確認）。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できます。各店舗の正確な所在地・営業時間・取り扱いプランは、公式サイトの店舗一覧でご確認ください。
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {stores.map((s) => (

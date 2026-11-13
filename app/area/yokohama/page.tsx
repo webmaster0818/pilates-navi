@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, clubPilatesPlanText, fmtYen } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT } from "@/data-brand-facts";
 
 const LISTED = loadArea("yokohama").listed.length;
 
@@ -81,7 +81,7 @@ const CHAINS: Chain[] = [
     review: "/review/rintosull/",
     access: "JR「関内駅」北口 徒歩3分",
     trial: "無料体験会 0円",
-    monthly: "月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）",
+    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: 8800,
     source: "https://rintosull.jp/shop/kanagawa/kannai/",
   },

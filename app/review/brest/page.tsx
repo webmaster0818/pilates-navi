@@ -312,7 +312,7 @@ export default function BrestReview() {
                   <td className="px-3 py-2 text-gray-800"><Link href="/review/celestia/" className="text-violet-600 underline">Celestia</Link></td>
                   <td className="px-3 py-2 text-gray-700">約2名のセミパーソナル（マシン）</td>
                   <td className="px-3 py-2 text-gray-700">33,000円（8,250円）</td>
-                  <td className="px-3 py-2 text-gray-700">30分3,000円<span className="block text-xs text-gray-500">店舗別ページに初回無料の案内あり</span></td>
+                  <td className="px-3 py-2 text-gray-700">30分3,000円<span className="block text-xs text-gray-500">体験案内ページに「体験無料」の案内あり（2026年11月13日確認）</span></td>
                   <td className="px-3 py-2 text-gray-700">Celestiaのページで整理</td>
                 </tr>
                 <tr className="border-b border-gray-100 align-top">
@@ -335,7 +335,7 @@ export default function BrestReview() {
           <p className="mt-3 text-sm text-gray-700 leading-relaxed">
             BRESTは、比較した3つのパーソナル・セミパーソナル型のなかで月4回の月額が最も低く、1回の時間は30分と短めです。50分のメルメイクと1分あたりで比べると、BREST（東京以外）は約191円、メルメイクは165円です（当サイトの計算）。BRESTの特徴は、パーソナルの回数に加えてURBAN CLASSIC PILATESを追加料金なしで利用できる点で、近くに両方の店舗がある方ほど利用しやすい仕組みです。
           </p>
-          <p className="mt-2 text-xs text-gray-500 leading-relaxed">出典: BREST公式サイト 各店舗ページ（2026年11月11日確認）／Celestia公式「料金」（2026年10月26日確認）・体験案内ページ（10月27日確認）／メルメイク公式「コース・料金【ピラティス】」・店舗一覧（2026年11月11日確認）／URBAN CLASSIC PILATES公式 全102店舗ページ（2026年11月11日確認）。Celestiaのレッスン時間は、当サイトでは公式の記載を確認できていないため記載していません。</p>
+          <p className="mt-2 text-xs text-gray-500 leading-relaxed">出典: BREST公式サイト 各店舗ページ（2026年11月11日確認）／Celestia公式「料金」（2026年10月26日確認）・体験案内ページ（11月13日確認）／メルメイク公式「コース・料金【ピラティス】」・店舗一覧（2026年11月11日確認）／URBAN CLASSIC PILATES公式 全102店舗ページ（2026年11月11日確認）。Celestiaのレッスン時間は、当サイトでは公式の記載を確認できていないため記載していません。</p>
         </div>
       </section>
 

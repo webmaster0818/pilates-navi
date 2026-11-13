@@ -8,8 +8,10 @@
 export const FACTS_SURVEYED_AT = "2026年9月30日";
 
 /** Celestia 体験料金の出典(料金ページと店舗別の体験案内ページで表記が異なるため両方を示す) */
+// 2026-11-13: /lp/trial01/ のメイン画像に「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」、本文に「無料体験レッスンまでの流れ」。
+// 10/27 に記録した「OPEN特別キャンペーン（期間限定）」の文言は本文に無い。期間の記載なし。料金ページは「体験受付中 30分 3,000円」のまま。
 export const CELESTIA_TRIAL_SOURCES = {
-  checkedAt: "2026年10月27日",
+  checkedAt: "2026年11月13日",
   price: "https://celes-pilates.jp/price/",
   lp: "https://celes-pilates.jp/lp/trial01/",
 };
@@ -89,12 +91,21 @@ export const RINTOSULL_JOIN_TEXT =
   "入会時に入会金 5,000円・登録金 5,000円（税込・体験当日の入会やキャンペーンでの入会では不要）と施設使用料 2,500円（過去にLAVA・Rintosullへの入会歴がある方は0円）（2026年11月13日確認）";
 
 /**
+ * LAVA店舗内のRintosullスタジオ（LAVAコラボ店舗）の入会時費用（2026年11月13日、栄店の店舗ページで確認）。
+ * FAQ「入会手続きに必要な持ち物」：入会金5,000円（税込）※・登録金5,000円（税込）※・施設使用料2,500円（税込）、
+ * 「※」は体験当日に入会する場合は無料。LAVA・Rintosull入会歴による施設使用料0円の記載はこのページに無い。
+ * 2026-11-13: 千葉・川崎・関内・フレスポ仙台東照宮・三宮・名古屋駅前の6店舗ページの持ち物欄は RINTOSULL_JOIN_TEXT と同じ記載（一致）。
+ */
+export const RINTOSULL_JOIN_TEXT_LAVA_COLLAB =
+  "入会時に入会金 5,000円・登録金 5,000円（税込・体験当日の入会では不要）と施設使用料 2,500円（税込）（店舗ページ・2026年11月13日確認）";
+
+/**
  * 公式サイトの店舗一覧に掲載されている店舗数（当サイトのGoogleマップ収録数と差が大きいブランドのみ）。
  * Celestia：新宿・池袋・町田・札幌・仙台・船橋・横浜・松戸・名古屋栄・梅田・心斎橋・セブンパーク天美・姫路・神戸三宮・京都・福岡赤坂の16店舗。
  * 当サイトの収録（2026年9月2日時点のGoogleマップ取得分）は8店舗。
  */
 export const OFFICIAL_STORE_COUNT: Record<string, { n: number; checkedAt: string; source: string }> = {
-  celestia: { n: 16, checkedAt: "2026年11月12日", source: "https://celes-pilates.jp/stores/" },
+  celestia: { n: 16, checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/stores/" },
 };
 
 /** 円表記（例：12,280円） */
@@ -242,7 +253,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "月2回 20,000円／月4回 33,000円／月6回 47,000円／月8回 53,000円／通い放題 66,000円（税込み・公式料金ページの料金画像に記載・2026年10月26日確認、11月13日再確認）",
     joinFee: "入会金あり（利用規約第14条）。金額は公式サイトに記載なし（2026年10月26日確認）",
     monthlyExtra: "公式に記載なし",
-    // 2026-11-13: 料金ページは「体験受付中！30分 3,000円」、同じページと京都店ページの予約ボタンは「無料体験ご予約はこちら！」。/lp/trial01/ の本文は「無料体験レッスンまでの流れ」（OPEN特別キャンペーンの文字は本文に無い・画像は未確認）
+    // 2026-11-13: 料金ページは「体験受付中！30分 3,000円」、同じページと京都店ページの予約ボタンは「無料体験ご予約はこちら！」。/lp/trial01/ の本文は「無料体験レッスンまでの流れ」、メイン画像は「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」（期間の記載なし）
     trial: "公式サイトの料金ページでは「体験受付中 30分 3,000円」と記載されています。一方、体験案内ページ（/lp/trial01/）と料金ページ・店舗ページの予約ボタンには「無料体験」と記載されています。体験料金は予約時にご確認ください（2026年11月13日確認）",
     source: "https://celes-pilates.jp/price/",
     // 公式料金ページの料金画像で最低額（月2回）を2026年10月28日に再確認。11月13日に5枚の料金画像（月2・4・6・8回・通い放題）を再確認（一致）
@@ -395,7 +406,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月12日";
+export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月12日・Celestia は11月13日";
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -412,8 +423,8 @@ export const TRIAL_FEES: TrialFee[] = [
   { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月12日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
-  // 料金ページ「体験受付中！30分 3,000円」、店舗別の体験案内ページは期間限定で初回無料
-  { slug: "celestia", name: "Celestia", minYen: 3000, text: "30分3,000円", campaign: "期間限定で初回無料の案内あり", checkedAt: "2026年10月30日", source: "https://celes-pilates.jp/price/" },
+  // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
+  { slug: "celestia", name: "Celestia", minYen: 3000, text: "30分3,000円", campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/price/" },
   // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
   { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時500円", checkedAt: "2026年11月11日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
