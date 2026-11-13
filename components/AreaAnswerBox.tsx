@@ -98,6 +98,7 @@ export default function AreaAnswerBox({
                   <tr key={b.slug}>
                     <td className="p-2 font-semibold">
                       <Link href={b.href} className="text-[#7C3AED] underline underline-offset-2">{b.name}</Link>
+                      <span className="block text-[11px] font-normal text-gray-500">{b.facts.checkedAt ?? FACTS_SURVEYED_AT}確認</span>
                     </td>
                     <td className="p-2">{b.n}店</td>
                     <td className="p-2">{b.facts.monthly}</td>
@@ -108,7 +109,7 @@ export default function AreaAnswerBox({
             </table>
           </div>
           <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
-            料金・体験は{FACTS_SURVEYED_AT}に各ブランドの公式サイトで確認した内容です（店舗やキャンペーンにより異なる場合があります）。
+            料金・体験は各ブランドの公式サイトで確認した内容です（確認日はブランド名の下に記載しています。店舗やキャンペーンにより異なる場合があります）。
             入会金や毎月の固定費は、<Link href="/price-comparison/" className="underline">料金比較</Link>のページに掲載しています。
           </p>
         </div>
