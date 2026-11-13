@@ -8,7 +8,7 @@ import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubP
 const LISTED = loadArea("kawasaki").listed.length;
 
 // 川崎市内の大手・チェーン7ブランド12店舗の公式店舗ページ(zen place の月額は同社公式の料金ページ)の記載(2026年10月28日確認)。
-// 公式に記載のない値は書かない。m4 は「月4回」の税込月額(下の料金の目安の集計に使う)。
+// 公式に記載のない値は書かない。m4 は「月4回」の月額(下の料金の目安の集計に使う)。CLUB PILATES は店舗ページに税込・税別の記載がない(ほかは税込)。
 const CHAIN_CHECKED_AT = "2026年10月28日";
 type Chain = { area: string; name: string; access: string; trial: string; monthly: string; m4: number; source: string };
 const ZEN_PRICE = "https://www.zenplace.co.jp/price";
@@ -36,7 +36,7 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 川崎",
     access: "JR川崎駅 徒歩8分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP.stores.kawasaki)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    monthly: `${clubPilatesPlanText(CP.stores.kawasaki)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
     m4: CP.stores.kawasaki.m4,
     source: "https://clubpilates.co.jp/studio/kawasaki/",
   },
@@ -72,7 +72,7 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 武蔵小杉",
     access: "武蔵小杉駅 中央2出口 徒歩1分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP.stores.musashikosugi)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    monthly: `${clubPilatesPlanText(CP.stores.musashikosugi)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
     m4: CP.stores.musashikosugi.m4,
     source: "https://clubpilates.co.jp/studio/musashikosugi/",
   },
@@ -99,7 +99,7 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 溝の口",
     access: "溝の口駅 徒歩3分／武蔵溝ノ口駅 徒歩3分／高津駅 徒歩5分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP.stores.mizonokuchi)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    monthly: `${clubPilatesPlanText(CP.stores.mizonokuchi)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
     m4: CP.stores.mizonokuchi.m4,
     source: "https://clubpilates.co.jp/studio/mizonokuchi/",
   },
@@ -117,7 +117,7 @@ const CHAINS: Chain[] = [
     name: "CLUB PILATES 宮前平",
     access: "宮前平駅 徒歩2分（提携駐車場あり）",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP.stores.miyamaedaira)}（税込）。入会金 ${fmtYen(CP.joinFee)}`,
+    monthly: `${clubPilatesPlanText(CP.stores.miyamaedaira)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
     m4: CP.stores.miyamaedaira.m4,
     source: "https://clubpilates.co.jp/studio/miyamaedaira/",
   },
@@ -145,8 +145,8 @@ export default function AreaPage() {
         川崎のピラティス・マシンピラティスの料金とおすすめ{LISTED}店【Google口コミ実測データで比較】
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
-        川崎駅・武蔵小杉・溝の口などにある大手{CHAINS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です。
-        最も安いのは{M4_MIN_NAMES}、最も高いのは{M4_MAX_NAMES}で、入会金・管理費は含みません（各公式店舗ページ {CHAIN_CHECKED_AT}確認。最安・最高の店舗は{M4_RECHECKED_AT}に再確認）。
+        川崎駅・武蔵小杉・溝の口などにある大手{CHAINS.length}店舗の月4回プランの月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円</strong>です。
+        最も安いのは{M4_MIN_NAMES}、最も高いのは{M4_MAX_NAMES}で、入会金・管理費は含みません（CLUB PILATES は店舗ページに税込・税別の表記がなく、ほかの店舗は税込です。各公式店舗ページ {CHAIN_CHECKED_AT}確認。最安・最高の店舗は{M4_RECHECKED_AT}に再確認）。
         {CHAINS.length}店舗とも各店舗の最寄り駅から徒歩1〜8分です。店舗ごとの駅からの距離・体験・月額は、下の「川崎駅・武蔵小杉・溝の口の大手ピラティススタジオの料金とアクセス」の表に掲載しています。
       </p>
       <AreaAnswerBox area="kawasaki" areaName="川崎" ward={true} places={["武蔵小杉", "溝の口"]} />
@@ -156,7 +156,7 @@ export default function AreaPage() {
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           川崎市内の大手・チェーン7ブランド{CHAINS.length}店舗について、駅からの距離・体験・月額を各公式店舗ページで{CHAIN_CHECKED_AT}に確認しました（
           {AREAS.map((x, i) => `${i > 0 ? "、" : ""}${x.a} ${x.n}店`).join("")}）。
-          月4回の月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円（税込）</strong>です（各店舗の月4回プランの最低額で集計。zen place はマットグループの額。入会金・管理費などは含みません）。
+          月4回の月額は<strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円</strong>です（各店舗の月4回プランの最低額で集計。zen place はマットグループの額です。CLUB PILATES は店舗ページに税込・税別の表記がなく、ほかの店舗は税込です。入会金・管理費などは含みません）。
           体験は、CLUB PILATES・ピラティスK・Rintosull が無料、the SILK が期間限定で0円です。
         </p>
         <div className="mt-4 overflow-x-auto">

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * 「費用の手頃さ」の順位は MONTHLY4_LOWEST（月4回の月会費・税込）から算出する（直書きしない）。
+ * 「費用の手頃さ」の順位は MONTHLY4_LOWEST（月4回の月会費。CLUB PILATES 以外は税込）から算出する（直書きしない）。
  * 比べるのはグループ形式の月会費のみ（毎月の管理費・入会金は含めない）。
  */
 function zenMatRank() {
@@ -24,7 +24,7 @@ function zenMatRank() {
 /** 本文用の短い表記（例：グループ形式7ブランドの月4回の月会費で比べると3番目に低い金額です） */
 function zenMatRankShort(): string {
   const { brands, rank } = zenMatRank();
-  return `当サイトの料金比較に掲載しているグループ形式${brands.length}ブランドの月4回の月会費（税込・管理費と入会金を除く）で比べると、${rank}番目に低い金額です`;
+  return `当サイトの料金比較に掲載しているグループ形式${brands.length}ブランドの月4回の月会費（管理費と入会金を除く。CLUB PILATES は店舗ページに税込・税別の記載がなく、ほかは税込）で比べると、${rank}番目に低い金額です`;
 }
 
 function zenMatRankText(): string {

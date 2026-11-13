@@ -308,7 +308,7 @@ export default function UrbanClassicReview() {
             </table>
           </div>
           <p className="mt-2 text-xs text-gray-500 leading-relaxed">
-            出典: 各ブランドの公式サイトの料金ページ・店舗ページ（確認日: {[...new Set(m4Compare.map((r) => r.checkedAt))].join("・")}。アーバンクラシックピラティスは2026年11月11日に全102店舗の料金表を再確認・同額）。税込・各ブランドで最も安い店舗やグレードの額で、入会金などの初期費用は含みません。アーバンクラシックピラティスは1回30分・予約不要のサーキット形式で、1回の時間や予約の要否はブランドにより異なるため、金額だけでなく通い方の違いもあわせてご検討ください。詳しくは<Link href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</Link>をご覧ください。
+            出典: 各ブランドの公式サイトの料金ページ・店舗ページ（確認日: {[...new Set(m4Compare.map((r) => r.checkedAt))].join("・")}。アーバンクラシックピラティスは2026年11月11日に全102店舗の料金表を再確認・同額）。各ブランドで最も安い店舗やグレードの額で、CLUB PILATES は店舗ページに税込・税別の記載がなく、ほかは税込です。入会金などの初期費用は含みません。アーバンクラシックピラティスは1回30分・予約不要のサーキット形式で、1回の時間や予約の要否はブランドにより異なるため、金額だけでなく通い方の違いもあわせてご検討ください。詳しくは<Link href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</Link>をご覧ください。
           </p>
         </div>
       </section>

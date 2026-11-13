@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "CLUB PILATESの料金プランを教えてください。", a: `料金は店舗ごとに設定されており、公式サイトの各店舗ページに記載されています。2026年10月26日に店舗ページ88件中85件で確認したところ、月4回プランは${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}、月8回プランは${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}、通い放題プランは${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}（いずれも税込）でした。最も多い設定は月4回${fmtYen(CP.m4.mode)}・月8回${fmtYen(CP.m8.mode)}・通い放題${fmtYen(CP.unlimited.mode)}（吉祥寺店など39店舗）です。入会金は${fmtYen(CP.joinFee)}（税込）で、多くの店舗ページに入会時の事務手数料${fmtYen(CP.adminFee)}（税込）の記載があります。キャンペーンの内容は店舗により異なるため、申し込み前に希望店舗のページでご確認ください。` },
+  { q: "CLUB PILATESの料金プランを教えてください。", a: `料金は店舗ごとに設定されており、公式サイトの各店舗ページに記載されています。${CP.checkedAt}に店舗ページ${CP.checkedCount}で確認したところ、月4回プランは${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}、月8回プランは${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}、通い放題プランは${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}でした（店舗ページの月会費欄に税込・税別の記載はありません）。最も多い設定は月4回${fmtYen(CP.m4.mode)}・月8回${fmtYen(CP.m8.mode)}・通い放題${fmtYen(CP.unlimited.mode)}（吉祥寺店など39店舗）です。入会金は${fmtYen(CP.joinFee)}（税込）で、多くの店舗ページに入会時の事務手数料${fmtYen(CP.adminFee)}（税込）の記載があります。キャンペーンの内容は店舗により異なるため、申し込み前に希望店舗のページでご確認ください。` },
   { q: "CLUB PILATESの口コミ・評判はどうですか？", a: "「レベル分けが明確で段階的にステップアップできる」「インストラクターの指導品質が安定している」「クラスの種類が多く飽きにくい」といった声が見られる一方、「料金はやや高め」「都市部中心で通えるエリアが限られる」という指摘もあります。評価は受講者の目的やお住まいのエリアによって分かれます。" },
   { q: "4段階のレベル分けとは何ですか？", a: "初心者向けから上級者向けまで複数段階にレベルが分かれており、入会時のレベルチェックをもとに自分に合ったクラスを案内される仕組みとされています。具体的なレベル区分や判定方法は変更される場合があるため、詳細は公式サイトでご確認ください。" },
   { q: "体験レッスンはありますか？料金はいくらですか？", a: `はい、入会前に体験レッスンを受けられます。公式サイトでは30分の無料体験クラスと記載しています（2026年10月26日確認）。当日入会の特典は一部のスタジオページに掲載されており、内容はスタジオごとに異なります（2026年10月31日に公式のスタジオページ88件を確認したところ、35件に当日入会限定のキャンペーンが掲載されていました。例：入会金${fmtYen(CP.joinFee)}（税込）→0円）。申し込むスタジオのページでご確認ください。` },
@@ -48,9 +48,9 @@ const concernPoints = [
 ];
 
 const prices = [
-  { plan: "月4回プラン", price: `${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}（税込）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.m4.mode)}です（月8回${fmtYen(CP.m8.mode)}・通い放題${fmtYen(CP.unlimited.mode)}との組み合わせは吉祥寺店など39店舗）。` },
-  { plan: "月8回プラン", price: `${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}（税込）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.m8.mode)}です。` },
-  { plan: "通い放題プラン", price: `${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}（税込）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.unlimited.mode)}です。` },
+  { plan: "月4回プラン", price: `${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}（税込・税別の記載なし）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.m4.mode)}です（月8回${fmtYen(CP.m8.mode)}・通い放題${fmtYen(CP.unlimited.mode)}との組み合わせは吉祥寺店など39店舗）。` },
+  { plan: "月8回プラン", price: `${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}（税込・税別の記載なし）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.m8.mode)}です。` },
+  { plan: "通い放題プラン", price: `${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}（税込・税別の記載なし）`, note: `店舗ごとに設定されています。最も多い設定は${fmtYen(CP.unlimited.mode)}です。` },
   { plan: "入会金・事務手数料", price: `入会金 ${fmtYen(CP.joinFee)}＋事務手数料 ${fmtYen(CP.adminFee)}（税込）`, note: "事務手数料は多くの店舗ページに記載されています。キャンペーンで0円となる店舗があります。" },
   { plan: "プライベート／追加プラン", price: "要確認", note: "マンツーマンや追加レッスンの有無・価格は公式サイトをご確認ください。" },
   { plan: "体験レッスン", price: "無料（30分）", note: "公式サイトの記載です。当日入会の特典は一部のスタジオページに掲載されており、内容はスタジオごとに異なります（2026年10月31日確認）。" },
@@ -85,7 +85,7 @@ export default function ClubPilatesReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">CLUB PILATESの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>としての実績と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は店舗ごとに設定されており、<strong>{`月4回${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}・月8回${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}（税込）`}</strong>です（2026年10月26日、各店舗ページで確認）。体系的なカリキュラムで着実に上達したい方や、指導品質の安定したスタジオを選びたい方に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲に店舗がある場合は、まず体験レッスンでレッスンの質と雰囲気をご確認いただくことをおすすめします。
+              CLUB PILATESは、<strong>世界規模で展開するブランド</strong>としての実績と<strong>明確なレベル分け</strong>を特徴とする<strong>男女利用可</strong>のマシンピラティススタジオです。料金は店舗ごとに設定されており、<strong>{`月4回${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}・月8回${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}`}</strong>です（{CP.checkedAt}、各店舗ページで確認。店舗ページに税込・税別の記載はありません）。体系的なカリキュラムで着実に上達したい方や、指導品質の安定したスタジオを選びたい方に向いています。一方で、料金はやや高めで、都市部中心の展開のため通えるエリアが限られる場合があります。通える範囲に店舗がある場合は、まず体験レッスンでレッスンの質と雰囲気をご確認いただくことをおすすめします。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>段階を踏んで体系的に上達したい方／指導品質を重視する方</li>
@@ -106,7 +106,7 @@ export default function ClubPilatesReview() {
               <tbody>
                 {[
                   ["スタジオ名", "CLUB PILATES（クラブピラティス）"],
-                  ["月額料金", `店舗ごとに設定（税込）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}（2026年10月26日、公式サイトの店舗ページ88件中85件で確認）`],
+                  ["月額料金", `店舗ごとに設定（店舗ページに税込・税別の記載なし）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}（${CP.checkedAt}、公式サイトの店舗ページ${CP.checkedCount}で確認）`],
                   ["入会金", `${fmtYen(CP.joinFee)}＋入会時の事務手数料 ${fmtYen(CP.adminFee)}（税込・多くの店舗ページに記載）`],
                   ["店舗", "米国発で世界規模に展開する大手ブランド。国内は主要都市を中心に展開（最新の店舗数・所在地は公式サイトで要確認）"],
                   ["レッスン形式", "マシングループレッスン（複数のクラス形式）"],
@@ -140,7 +140,7 @@ export default function ClubPilatesReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">CLUB PILATESの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            CLUB PILATESの料金は月額制（回数制）が中心です。料金は店舗ごとに設定されており、公式サイトの各店舗ページの「料金プラン」欄に記載されています。下表は、2026年10月26日に店舗ページ88件中85件（残る3件は料金プランの掲載なし）で確認した金額の範囲です。いずれも税込です。キャンペーンの内容は店舗により異なるため、申し込み前に希望店舗のページでご確認ください。
+            CLUB PILATESの料金は月額制（回数制）が中心です。料金は店舗ごとに設定されており、公式サイトの各店舗ページの「料金プラン」欄に記載されています。下表は、{CP.checkedAt}に店舗ページ{CP.checkedCount}（残る2件は料金プランの掲載なし）で確認した金額の範囲です。月会費は、店舗ページに税込・税別の記載がありません。入会金・事務手数料は税込と記載されています。キャンペーンの内容は店舗により異なるため、申し込み前に希望店舗のページでご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
@@ -163,7 +163,7 @@ export default function ClubPilatesReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-            ※出典：<a href="https://clubpilates.co.jp/studio/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">CLUB PILATES公式サイト 店舗一覧</a>から各店舗ページの「料金プラン」欄（2026年10月26日確認）。「要確認」の項目は、公式サイトで価格が明示されていないため、記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
+            ※出典：<a href="https://clubpilates.co.jp/studio/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">CLUB PILATES公式サイト 店舗一覧</a>から各店舗ページの「料金プラン」欄（{CP.checkedAt}確認）。「要確認」の項目は、公式サイトで価格が明示されていないため、記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
       </section>
