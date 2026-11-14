@@ -14,6 +14,7 @@ const MACHINE = listed.filter((s) => /マシン/.test(s.name)).sort((a, b) => b.
 // 金沢のマシンピラティスを扱う大手・チェーンの公式店舗ページの記載。公式に無い値は書かない
 // 2026-10-27 確認・11/11 に4店舗を再確認(DEP 2スタジオの料金改定 月4回 28,800円→32,000円ほか。Rintosull・LAVA は同額)
 // 2026-11-14: 競合比較で抜けていた3店舗を追加(ピラティスK ラパーク金沢店 2026/5/29開業・La pilates 金沢店・COCOLANCE 金沢店 2026/6/8開業)。各公式店舗ページで確認
+// 2026-11-14 16:00: 24/7 Pilates 金沢店を追加（公式店舗ページで確認）。La pilates の年会費 10,000円（税込）を追記
 // m4 は「月4回」プランの月額(冒頭の料金の目安に使う)。style はグループ／パーソナルの別(公式の表記に基づく)
 const MACHINE_CHECKED_AT = "2026年11月11日";
 const ADDED_CHECKED_AT = "2026年11月14日";
@@ -54,6 +55,19 @@ const MACHINE_BRANDS: Brand[] = [
     trialYen: 0,
     checkedAt: ADDED_CHECKED_AT,
     source: "https://pilates-k.jp/studio/ishikawa/kanazawa",
+  },
+  {
+    // 2026-11-14 16:00 追加: 24/7 Pilates（旧 Real Pilates。real-pilates.jp に「RealPilatesは、現在の24/7Pilatesの旧名称です」）金沢店の公式店舗ページで確認
+    name: "24/7 Pilates 金沢店",
+    style: "パーソナル",
+    styleNote: "マンツーマン・完全個室（女性専用・50分）",
+    access: "金沢駅から北陸鉄道バスで「香林坊」下車、徒歩2分（香林坊ファーストビル7F。住所は24/7Workout 金沢店と同じ）",
+    trial: "無料体験 0円（ウェア・靴下のレンタル無料）",
+    monthly: "月2回 14,500円〜／月4回 27,000円〜／月8回 52,000円〜／月12回 74,400円〜（税込）。入会金不要",
+    m4: 27000,
+    trialYen: 0,
+    checkedAt: ADDED_CHECKED_AT,
+    source: "https://247-sports.jp/pilates/studio/hokuetsu/ishikawa/kanazawa.html",
   },
   {
     name: "ピラティススタジオDEP 金沢店 鳴和スタジオ",
@@ -97,7 +111,7 @@ const MACHINE_BRANDS: Brand[] = [
     styleNote: "プライベート（女性専用・整体×マシンピラティス）",
     access: "金沢市出雲町（公式の最寄り駅表記は「金沢」・駅からの距離の記載なし）。敷地内に駐車場あり",
     trial: "90分のお試し体験 通常14,000円（税込）が、初回トライアル価格 3,000円（税込）",
-    monthly: "会員サブスク 月4回 40,000円（1回10,000円）／月2回 22,000円／月6回 54,000円（税込）。年払いコースもあり",
+    monthly: "会員サブスク 月4回 40,000円（1回10,000円）／月2回 22,000円／月6回 54,000円（税込）、別途 年会費 10,000円（税込）。年払いコースもあり",
     m4: 40000,
     trialYen: 3000,
     checkedAt: ADDED_CHECKED_AT,
@@ -134,10 +148,10 @@ export default function AreaPage() {
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         金沢でマシンピラティスを扱う大手・チェーン{MACHINE_BRANDS.length}店舗の月4回プランの月額は、グループレッスンの{GROUP.length}店舗が<strong>{yen(G_MIN)}円〜{yen(G_MAX)}円</strong>、パーソナル（マンツーマン・個室）の{PERSONAL.length}店舗が<strong>{yen(P_MIN)}円〜{yen(P_MAX)}円</strong>です。
-        グループの3店舗（Rintosull 金沢増泉店・LAVA イオンタウン金沢示野店・ピラティスK ラパーク金沢店）は税込で、別途 運営管理費・施設維持費が月680〜825円かかります。DEP の2スタジオは店舗ページに税込・税別の表記がなく、COCOLANCE・La pilates は税込です。入会金・管理費は月額に含みません。
+        グループの3店舗（Rintosull 金沢増泉店・LAVA イオンタウン金沢示野店・ピラティスK ラパーク金沢店）は税込で、別途 運営管理費・施設維持費が月680〜825円かかります。DEP の2スタジオは店舗ページに税込・税別の表記がなく、24/7 Pilates・COCOLANCE・La pilates は税込です。パーソナルで最も安い24/7 Pilates 金沢店は、店舗ページの表記が「月4回 27,000円〜」です。入会金・管理費・年会費は月額に含みません。
         体験料金は{MACHINE_BRANDS.length}店舗中{FREE_TRIAL}店舗が0円（COCOLANCE はオープニングキャンペーン）で、DEP は2,980円、La pilates は3,000円です。
-        駅からの位置は、COCOLANCE が金沢駅から徒歩13分、ピラティスK が西泉駅から徒歩5分、Rintosull が野町駅から徒歩8分で、LAVA は金沢駅西口からバス、DEP は金沢駅から車で7分・15分です。COCOLANCE を除く6店舗は金沢駅から歩いて通える距離ではありません。Rintosull・ピラティスK・DEP の2スタジオ・La pilates の5店舗は、公式店舗ページに駐車場の案内があります。
-        いずれも各公式店舗ページで確認した値です（4店舗は{MACHINE_CHECKED_AT}、ピラティスK・COCOLANCE・La pilates は{ADDED_CHECKED_AT}に確認）。店舗ごとの形式・アクセス・体験・月額は、下の「金沢のマシンピラティススタジオ」の表に掲載しています。
+        駅からの位置は、COCOLANCE が金沢駅から徒歩13分、ピラティスK が西泉駅から徒歩5分、Rintosull が野町駅から徒歩8分で、24/7 Pilates は金沢駅からバスで香林坊下車・徒歩2分、LAVA は金沢駅西口からバス、DEP は金沢駅から車で7分・15分です。公式店舗ページで金沢駅からの徒歩での所要時間を案内しているのは COCOLANCE のみで、ほかの{MACHINE_BRANDS.length - 1}店舗は別の駅からの徒歩・バス・車での案内です。Rintosull・ピラティスK・DEP の2スタジオ・La pilates の5店舗は、公式店舗ページに駐車場の案内があります。
+        いずれも各公式店舗ページで確認した値です（4店舗は{MACHINE_CHECKED_AT}、ピラティスK・24/7 Pilates・COCOLANCE・La pilates は{ADDED_CHECKED_AT}に確認）。店舗ごとの形式・アクセス・体験・月額は、下の「金沢のマシンピラティススタジオ」の表に掲載しています。
       </p>
       <AreaAnswerBox area="kanazawa" areaName="金沢" ward={false} places={["金沢駅", "香林坊"]} />
 
@@ -146,7 +160,7 @@ export default function AreaPage() {
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           当サイトの金沢の掲載店舗{LISTED}店のうち、店名に「マシン」を含む店舗は{MACHINE.length}店です。
           下の表は大手・チェーンの{MACHINE_BRANDS.length}店舗について、形式・アクセス・体験・月額を各公式店舗ページで確認したものです。Rintosull・LAVA・DEP の4店舗は2026年10月27日に確認し、{MACHINE_CHECKED_AT}に再確認しました（DEP の2スタジオは料金プランが改定されていたため、新しい金額に更新しています）。
-          ピラティスK ラパーク金沢店（2026年5月開業）・COCOLANCE 金沢店（2026年6月開業）・La pilates 金沢店は{ADDED_CHECKED_AT}に追加しました。月額の安い順に、グループ、パーソナルの順で並べています。
+          ピラティスK ラパーク金沢店（2026年5月開業）・24/7 Pilates 金沢店・COCOLANCE 金沢店（2026年6月開業）・La pilates 金沢店は{ADDED_CHECKED_AT}に追加しました。月額の安い順に、グループ、パーソナルの順で並べています。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full min-w-[760px] text-left text-xs sm:text-sm border border-gray-200 rounded-xl">
