@@ -28,7 +28,6 @@ const PILATES_K_MONTHLY = "月4回 13,420円／月8回 16,170円／プレミア�
 const ZEN_TRIAL = `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`;
 const ZEN_MONTHLY = `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`;
 const UC_MONTHLY = "マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。3か月目から運営管理費 月480円（税込）";
-const CP_KYOTO = { m4: 11990, m8: 17490, unlimited: 29590 };
 const CHAINS: Chain[] = [
   {
     area: "四条烏丸",
@@ -95,8 +94,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "地下鉄烏丸線「烏丸御池駅」徒歩1分／阪急「烏丸駅」徒歩8分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP_KYOTO)}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: CP_KYOTO.m4,
+    monthly: `${clubPilatesPlanText(CP.stores.karasumaoike)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.karasumaoike.m4,
     source: "https://clubpilates.co.jp/studio/karasumaoike/",
   },
   {
@@ -135,8 +134,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "京福「西大路三条駅」徒歩1分／地下鉄東西線「西大路御池駅」徒歩5分／阪急「西院駅」徒歩6分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText(CP_KYOTO)}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: CP_KYOTO.m4,
+    monthly: `${clubPilatesPlanText(CP.stores.saiin)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.saiin.m4,
     source: "https://clubpilates.co.jp/studio/saiin/",
   },
   {

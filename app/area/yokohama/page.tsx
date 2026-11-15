@@ -41,8 +41,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "「横浜駅」きた西口 徒歩5分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText({ m4: 13090, m8: 24090, unlimited: 37290 })}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.yokohama)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.yokohama.m4,
     source: "https://clubpilates.co.jp/studio/yokohama/",
   },
   {
@@ -61,8 +61,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "「みなとみらい駅」徒歩1分（駅直結）",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText({ m4: 14190, m8: 26290, unlimited: 40590 })}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: 14190,
+    monthly: `${clubPilatesPlanText(CP.stores.minatomirai)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.minatomirai.m4,
     source: "https://clubpilates.co.jp/studio/minatomirai/",
   },
   {

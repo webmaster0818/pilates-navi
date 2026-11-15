@@ -52,8 +52,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "地下鉄南北線「北四番丁駅」徒歩5分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText({ m4: 13090, m8: 15290, unlimited: 18590 })}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.kitayobancho)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.kitayobancho.m4,
     source: "https://clubpilates.co.jp/studio/kitayobancho/",
   },
   {
@@ -72,8 +72,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "JR・地下鉄「長町駅」徒歩7分／JR「太子堂駅」徒歩8分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText({ m4: 13090, m8: 16390, unlimited: 19690 })}。入会金 ${fmtYen(CP.joinFee)}`,
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.sendainagamachi)}。入会金 ${fmtYen(CP.joinFee)}`,
+    m4: CP.stores.sendainagamachi.m4,
     source: "https://clubpilates.co.jp/studio/sendainagamachi/",
   },
   {
@@ -92,8 +92,8 @@ const CHAINS: Chain[] = [
     review: "/review/club-pilates/",
     access: "「泉中央駅」徒歩1分",
     trial: "30分の体験レッスン 無料",
-    monthly: `${clubPilatesPlanText({ m4: 13090, m8: 15290, unlimited: 18590 })}。入会金 ${fmtYen(CP.joinFee)}・事務手数料 ${fmtYen(CP.adminFee)}（税込）`,
-    m4: 13090,
+    monthly: `${clubPilatesPlanText(CP.stores.selvaterraceizumichuo)}。入会金 ${fmtYen(CP.joinFee)}・事務手数料 ${fmtYen(CP.adminFee)}（税込）`,
+    m4: CP.stores.selvaterraceizumichuo.m4,
     source: "https://clubpilates.co.jp/studio/selvaterraceizumichuo/",
   },
 ];

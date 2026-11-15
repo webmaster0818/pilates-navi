@@ -17,7 +17,7 @@ export const CELESTIA_TRIAL_SOURCES = {
 };
 
 /**
- * BDC PILATES の体験レッスン（2026年10月30日、公式サイトで確認）。
+ * BDC PILATES の体験レッスン（2026年10月30日、公式サイトで確認。2026年11月15日に下記ページを再取得し同内容）。
  * - プライベート：/private_lessons「プライベート体験レッスン(60分)：10,000円(税込 11,000円)」。
  *   恵比寿・二子玉川のスタジオページも同額、大宮のスタジオページは「9,000円 (税込9,900円)」。
  *   銀座・銀座並木・池袋・吉祥寺・表参道のスタジオページには記載なし。
@@ -25,7 +25,7 @@ export const CELESTIA_TRIAL_SOURCES = {
  *   体験料金はトップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし。
  */
 export const BDC_TRIAL = {
-  checkedAt: "2026年10月30日",
+  checkedAt: "2026年11月15日",
   privateMinutes: 60,
   privateFee: "10,000円（税込11,000円）",
   privateFeeOmiya: "9,000円（税込9,900円）",
@@ -163,6 +163,14 @@ export const CLUBPILATES_PRICES = {
     mizonokuchi: { m4: 13090, m8: 24090, unlimited: 37290 },
     miyamaedaira: { m4: 13090, m8: 24090, unlimited: 37290 },
     hisayaodori: { m4: 13090, m8: 16390, unlimited: 26090 },
+    // 以下は各エリアページの店舗ページ確認値（2026年11月12日確認）
+    kitayobancho: { m4: 13090, m8: 15290, unlimited: 18590 },
+    sendainagamachi: { m4: 13090, m8: 16390, unlimited: 19690 },
+    selvaterraceizumichuo: { m4: 13090, m8: 15290, unlimited: 18590 },
+    yokohama: { m4: 13090, m8: 24090, unlimited: 37290 },
+    minatomirai: { m4: 14190, m8: 26290, unlimited: 40590 },
+    karasumaoike: { m4: 11990, m8: 17490, unlimited: 29590 },
+    saiin: { m4: 11990, m8: 17490, unlimited: 29590 },
   },
 };
 const CP = CLUBPILATES_PRICES;
@@ -435,7 +443,7 @@ export const TRIAL_FEES: TrialFee[] = [
   //   恵比寿・二子玉川「プライベートレッスンは10,000円 (税込11,000円)で体験いただけます」、大宮「9,000円 (税込9,900円)」。
   //   銀座・銀座並木・池袋・吉祥寺・表参道のページには記載なし。
   // 他ブランドの minYen は「そのブランドで最も安い体験」の額のため、グループの額が不明な BDC のプライベート体験は混ぜずに別記する。
-  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています", separateNote: "プライベートレッスンの体験は60分 10,000円（税込11,000円）と記載されています（大宮スタジオのページは税込9,900円）", checkedAt: "2026年10月30日", source: "https://bdcpilates.com/private_lessons" },
+  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています", separateNote: "プライベートレッスンの体験は60分 10,000円（税込11,000円）と記載されています（大宮スタジオのページは税込9,900円）", checkedAt: "2026年11月15日", source: "https://bdcpilates.com/private_lessons" },
 ];
 
 /** 体験料の範囲（目安）と母数。金額を確認できたブランドだけで計算する。 */
