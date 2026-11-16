@@ -12,6 +12,8 @@ import {
   fmtYen,
   isCampaignActive,
   RINTOSULL_JOIN_TEXT,
+  RINTOSULL_PRICES as RIN,
+  rintosullStoreText,
 } from "@/data-brand-facts";
 
 const LISTED = loadArea("kyoto").listed.length;
@@ -23,7 +25,7 @@ const LISTED = loadArea("kyoto").listed.length;
 const CHAIN_CHECKED_AT = "2026年11月12日";
 const ZEN_PRICE = "https://www.zenplace.co.jp/price";
 type Chain = { area: string; name: string; review?: string; access: string; trial: string; monthly: string; m4: number | null; source: string };
-const RINTOSULL_MONTHLY = `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`;
+const RINTOSULL_MONTHLY = `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`;
 const PILATES_K_MONTHLY = "月4回 13,420円／月8回 16,170円／プレミアム（毎日2レッスンまで）18,920円（税込）。施設維持費 月825円（税込）";
 const ZEN_TRIAL = `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`;
 const ZEN_MONTHLY = `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`;
@@ -65,7 +67,7 @@ const CHAINS: Chain[] = [
     access: "阪急「烏丸駅」15番出口 徒歩2分／地下鉄烏丸線「四条駅」1番出口 徒歩5分",
     trial: "無料体験会 0円",
     monthly: RINTOSULL_MONTHLY,
-    m4: 8800,
+    m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/kyoto/kyotoshijo/",
   },
   {
@@ -105,7 +107,7 @@ const CHAINS: Chain[] = [
     access: "JR「京都駅」中央出口 徒歩5分",
     trial: "無料体験会 0円",
     monthly: RINTOSULL_MONTHLY,
-    m4: 8800,
+    m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/kyoto/kyotoekimae/",
   },
   {

@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
 
 const LISTED = loadArea("nagoya").listed.length;
 
@@ -28,8 +28,8 @@ const CHAINS: Chain[] = [
     checkedAt: CHAIN_CHECKED_AT,
     access: "地下鉄 名古屋駅 L2出入口 徒歩1分",
     trial: "無料体験会",
-    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
-    m4: 8800,
+    monthly: `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
+    m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/aichi/nagoyaekimae/",
   },
   {
@@ -57,8 +57,8 @@ const CHAINS: Chain[] = [
     access: "地下鉄 栄駅 8番出口直結（ホットヨガスタジオLAVA 栄店内）",
     // 2026-11-14: 栄店の店舗ページ・店舗キャンペーンページは「無料体験会」「無料体験」と表記。公式料金ページには「LAVAコラボ店舗の体験レッスンの料金はキャンペーン期間により異なる」と注記
     trial: "無料体験（栄店の店舗ページの表記。公式料金ページでは、LAVA店舗内のスタジオの体験料金はキャンペーン期間により異なると案内されています。2026年11月14日確認）",
-    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT_LAVA_COLLAB}`,
-    m4: 8800,
+    monthly: `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT_LAVA_COLLAB}`,
+    m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/aichi/sakae/",
   },
   {
@@ -253,7 +253,7 @@ export default function AreaPage() {
               <a href={c.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">{c.name} 公式</a>（{c.checkedAt}確認）
             </span>
           ))}
-          ／<a href={ZP.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">zen place 料金ページ</a>（{CHAIN_CHECKED_AT}確認）／<a href="https://repilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Repilates 公式サイトの料金表</a>・<a href="https://www.aichinow.pref.aichi.jp/spots/detail/2401/" target="_blank" rel="noopener noreferrer nofollow" className="underline">愛知県観光公式サイト Aichi Now「グローバルゲート」</a>（{ADDED_CHECKED_AT}確認）。料金・キャンペーンは変更される場合があります。
+          ／<a href={ZP.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">zen place 料金ページ</a>（{CHAIN_CHECKED_AT}確認）／<a href="https://repilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Repilates 公式サイトの料金表</a>・<a href="https://www.aichinow.pref.aichi.jp/spots/detail/2401/" target="_blank" rel="noopener noreferrer nofollow" className="underline">愛知県観光公式サイト Aichi Now「グローバルゲート」</a>（{ADDED_CHECKED_AT}確認）。CLUB PILATES 久屋大通店の月額は、{CP.checkedAt}に公式店舗ページで再確認し、同額でした（駅からの距離・体験は{CHAIN_CHECKED_AT}の確認です）。料金・キャンペーンは変更される場合があります。
         </p>
       </section>
 

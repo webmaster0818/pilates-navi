@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { RINTOSULL_START_CAMPAIGN as RSC, RINTOSULL_JOIN_TEXT, isCampaignActive } from "@/data-brand-facts";
+import { RINTOSULL_START_CAMPAIGN as RSC, RINTOSULL_JOIN_TEXT, isCampaignActive, RINTOSULL_PRICES as RIN, rintosullStoreText, fmtYen } from "@/data-brand-facts";
 
 const { listed, surveyedAt } = loadArea("kanazawa");
 const LISTED = listed.length;
@@ -26,8 +26,8 @@ const MACHINE_BRANDS: Brand[] = [
     styleNote: "グループ（女性専用）",
     access: "北陸鉄道石川線「野町駅」徒歩8分（無料駐車場あり）",
     trial: "無料体験会 0円（約45分）",
-    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）、別途 運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
-    m4: 8800,
+    monthly: `${rintosullStoreText(RIN.stores.standard)}、別途 運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
+    m4: RIN.stores.standard.m4,
     trialYen: 0,
     checkedAt: MACHINE_CHECKED_AT,
     source: "https://rintosull.jp/shop/ishikawa/kanazawamasuizumi/",

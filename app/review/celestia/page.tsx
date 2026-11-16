@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, OFFICIAL_STORE_COUNT, ZENPLACE_PRICES, fmtYen } from "@/data-brand-facts";
+import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, OFFICIAL_STORE_COUNT, ZENPLACE_PRICES, fmtYen, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 const AREA_SURVEYED_JA = AREA_SURVEYED_AT.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日");
@@ -12,14 +12,14 @@ const TRIAL = BRAND_FACTS["celestia"].trial;
 export const metadata: Metadata = {
   title: "Celestiaの口コミ・料金・体験レッスン｜セミパーソナルの特徴と評判【2026年】",
   description:
-    "Celestia（セレスティア）の口コミ・評判、料金プラン（月4回33,000円・税込み）、体験レッスンの流れ・予約方法、池袋などの店舗情報を解説します。約2名のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオを中立的な立場で紹介します（料金・特典は公式サイトでご確認ください）。",
+    `Celestia（セレスティア）の口コミ・評判、料金プラン（月4回${fmtYen(CEL.m4)}・税込み）、体験レッスンの流れ・予約方法、池袋などの店舗情報を解説します。約2名のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオを中立的な立場で紹介します（料金・特典は公式サイトでご確認ください）。`,
 };
 
 const faqs = [
-  { q: "Celestia（セレスティア）の料金はいくらですか？", a: "公式サイトの料金ページでは、月2回20,000円、月4回33,000円、月6回47,000円、月8回53,000円、通い放題66,000円（いずれも税込み）と記載されています（2026年10月26日確認）。1回あたりに換算すると、月4回で8,250円、月8回で6,625円です。通常プランは翌月以降へのチケットの繰り越しが可能です。入会金は利用規約に定めがありますが、金額は公式サイトに記載がないため、申し込み前に店舗でご確認ください。" },
+  { q: "Celestia（セレスティア）の料金はいくらですか？", a: `公式サイトの料金ページでは、月2回${fmtYen(CEL.m2)}、月4回${fmtYen(CEL.m4)}、月6回${fmtYen(CEL.m6)}、月8回${fmtYen(CEL.m8)}、通い放題${fmtYen(CEL.unlimited)}（いずれも税込み）と記載されています（${CEL.checkedAt}確認）。1回あたりに換算すると、月4回で${fmtYen(CEL.perLesson.m4)}、月8回で${fmtYen(CEL.perLesson.m8)}です。通常プランは翌月以降へのチケットの繰り越しが可能です。入会金は利用規約に定めがありますが、金額は公式サイトに記載がないため、申し込み前に店舗でご確認ください。` },
   { q: "Celestiaの口コミ・評判は良い？", a: "「約2名の少人数でしっかり見てもらえる」「スタジオが清潔」「手ぶらで通えて便利」といった声が見られる一方、「1回あたりの単価がやや高め」「店舗がまだ少ない」という指摘もあります。評価は目的や通うエリアによって異なります。" },
   { q: "セミパーソナルとは何ですか？", a: "1レッスンあたり約2名の少人数制です。インストラクターの目が行き届くため、マンツーマンに近い指導を受けられます。グループレッスンより手厚く、完全プライベートより費用を抑えられる中間的な形式です。" },
-  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分3,000円と記載されています。一方、体験案内ページでは「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」と案内されており、料金ページや店舗ページの予約ボタンにも「無料体験」と記載されています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。` },
+  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分${fmtYen(CEL.trial)}と記載されています。一方、体験案内ページでは「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」と案内されており、料金ページや店舗ページの予約ボタンにも「無料体験」と記載されています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望の店舗・日時を選んで申し込むのが基本です。空き状況や予約システムは店舗により異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルや繰り越しはできますか？", a: "未消化分の繰り越しが可能とされています。キャンセルの可否・期限・ペナルティの有無はプランや店舗の規約によるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "手ぶらで通えますか？", a: "はい、ウェアやタオルなどのレンタルがあり、手ぶらで通えるとされています。仕事帰りにも立ち寄りやすい環境です（レンタルの範囲・料金は店舗にてご確認ください）。" },
@@ -46,18 +46,18 @@ const goodPoints = [
 ];
 
 const concernPoints = [
-  "1回あたりの単価が高め（月4回で8,250円・月8回で6,625円）という指摘",
+  `1回あたりの単価が高め（月4回で${fmtYen(CEL.perLesson.m4)}・月8回で${fmtYen(CEL.perLesson.m8)}）という指摘`,
   "店舗数が少なく、通える地域が限られる点",
   "費用を最優先する方や、大人数で気軽に通いたい方にはグループ型が適している点",
   "男性の利用可否が店舗により異なる場合がある点",
 ];
 
 const prices = [
-  { plan: "月2回プラン", price: "20,000円（税込み・1回あたり10,000円）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
-  { plan: "月4回プラン", price: "33,000円（税込み・1回あたり8,250円）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
-  { plan: "月6回プラン", price: "47,000円（税込み・1回あたり7,833円）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
-  { plan: "月8回プラン", price: "53,000円（税込み・1回あたり6,625円）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
-  { plan: "通い放題プラン", price: "66,000円（税込み）", note: "公式料金ページの料金画像に記載されている金額です（2026年10月26日確認）。" },
+  { plan: "月2回プラン", price: `${fmtYen(CEL.m2)}（税込み・1回あたり${fmtYen(CEL.perLesson.m2)}）`, note: `公式料金ページの料金画像に記載されている金額です（${CEL.checkedAt}確認）。` },
+  { plan: "月4回プラン", price: `${fmtYen(CEL.m4)}（税込み・1回あたり${fmtYen(CEL.perLesson.m4)}）`, note: `公式料金ページの料金画像に記載されている金額です（${CEL.checkedAt}確認）。` },
+  { plan: "月6回プラン", price: `${fmtYen(CEL.m6)}（税込み・1回あたり${fmtYen(CEL.perLesson.m6)}）`, note: `公式料金ページの料金画像に記載されている金額です（${CEL.checkedAt}確認）。` },
+  { plan: "月8回プラン", price: `${fmtYen(CEL.m8)}（税込み・1回あたり${fmtYen(CEL.perLesson.m8)}）`, note: `公式料金ページの料金画像に記載されている金額です（${CEL.checkedAt}確認）。` },
+  { plan: "通い放題プラン", price: `${fmtYen(CEL.unlimited)}（税込み）`, note: `公式料金ページの料金画像に記載されている金額です（${CEL.checkedAt}確認）。` },
   { plan: "入会金", price: "あり（金額は公式サイトに記載なし）", note: "利用規約第14条に入会金の定めがあります。金額は店舗でご確認ください。" },
   { plan: "繰り越し", price: "あり（通常プラン）", note: "公式料金ページに、翌月以降へのチケットの繰り越しが可能と記載されています。" },
   { plan: "体験レッスン", price: TRIAL, note: "料金ページと店舗別の体験案内ページで表記が異なります。予約時に適用される料金をご確認ください。" },
@@ -111,7 +111,7 @@ export default function CelestiaReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">Celestiaの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Celestiaは、<strong>約2名のセミパーソナル</strong>と<strong>マシンピラティス専門</strong>を特徴とするスタジオです。料金は<strong>月4回33,000円（税込み・1回あたり8,250円）</strong>とグループより高めですが、その分、マンツーマンに近い指導密度を重視する方に向いています。手ぶらで通えることや繰り越しができることも利点で、店舗は<strong>札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗</strong>です（2026年10月27日公式サイトで確認）。通える範囲に店舗がある方には、体験レッスンの受講をおすすめします。一方で、費用を重視する方や大人数で気軽に通いたい方には適さない場合があります。
+              Celestiaは、<strong>約2名のセミパーソナル</strong>と<strong>マシンピラティス専門</strong>を特徴とするスタジオです。料金は<strong>月4回{fmtYen(CEL.m4)}（税込み・1回あたり{fmtYen(CEL.perLesson.m4)}）</strong>とグループより高めですが、その分、マンツーマンに近い指導密度を重視する方に向いています。手ぶらで通えることや繰り越しができることも利点で、店舗は<strong>札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗</strong>です（2026年10月27日公式サイトで確認）。通える範囲に店舗がある方には、体験レッスンの受講をおすすめします。一方で、費用を重視する方や大人数で気軽に通いたい方には適さない場合があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>フォームを丁寧に確認してほしい方／グループレッスンでは物足りない方</li>
@@ -134,7 +134,7 @@ export default function CelestiaReview() {
                   ["スタジオ名", "ピラティススタジオ Celestia（セレスティア）"],
                   ["運営", "チキンジム / チキンゴルフ系列"],
                   ["タイプ", "セミパーソナル（約2名）マシンピラティス専門"],
-                  ["月額料金", "月2回 20,000円／月4回 33,000円／月6回 47,000円／月8回 53,000円／通い放題 66,000円（税込み・2026年10月26日公式料金ページで確認）"],
+                  ["月額料金", `月2回 ${fmtYen(CEL.m2)}／月4回 ${fmtYen(CEL.m4)}／月6回 ${fmtYen(CEL.m6)}／月8回 ${fmtYen(CEL.m8)}／通い放題 ${fmtYen(CEL.unlimited)}（税込み・${CEL.checkedAt}公式料金ページで確認）`],
                   ["入会金・繰り越し", "入会金あり（金額は公式サイトに記載なし）/ 通常プランは翌月以降へ繰り越し可"],
                   ["店舗", "札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗（2026年10月27日公式サイトで確認・11月12日再確認）"],
                   ["レッスン形式", "セミパーソナル（約2名の少人数制）"],
@@ -168,7 +168,7 @@ export default function CelestiaReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Celestiaの料金プラン</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            Celestiaの料金は、月額制（回数制）が中心です。公式サイトの料金ページには、<strong>月2回20,000円から通い放題66,000円まで</strong>の5プランが料金画像で掲載されており、いずれも税込みです（2026年10月26日確認）。通常プランは翌月以降へのチケットの繰り越しが可能です。下表は公式サイトの記載にもとづいています。料金は改定される場合があるため、申し込み前に公式サイトにて最新情報をご確認ください。
+            Celestiaの料金は、月額制（回数制）が中心です。公式サイトの料金ページには、<strong>月2回{fmtYen(CEL.m2)}から通い放題{fmtYen(CEL.unlimited)}まで</strong>の5プランが料金画像で掲載されており、いずれも税込みです（{CEL.checkedAt}確認）。通常プランは翌月以降へのチケットの繰り越しが可能です。下表は公式サイトの記載にもとづいています。料金は改定される場合があるため、申し込み前に公式サイトにて最新情報をご確認ください。
           </p>
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
@@ -259,7 +259,7 @@ export default function CelestiaReview() {
               Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオです。「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」の両立を特徴としています。1レッスン約2名という少人数制のため、実質的にマンツーマンに近い指導を受けられ、フォームの修正や個別のアドバイスが充実しています。チキンジム・チキンゴルフの運営ノウハウを活かしたスタジオ運営にも安定感があります。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり6,625円〜10,000円（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額{fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
+              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり{fmtYen(CEL.perLesson.m8)}〜{fmtYen(CEL.perLesson.m2)}（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額{fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               編集部として、Celestiaは「グループレッスンだと物足りないが、完全プライベートほどの出費は避けたい方」に適したスタジオと考えます。店舗は16店舗で、大手のグループ型スタジオと比べると通える地域が限られる点は課題ですが、通える範囲にお住まいの方には体験レッスンの受講をおすすめします。手ぶらで通えるため、仕事帰りにもピラティスを続けやすい環境です。
@@ -285,7 +285,7 @@ export default function CelestiaReview() {
             <div className="bg-red-50 rounded-xl p-6">
               <h3 className="font-bold text-red-800 mb-3">デメリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>1回あたりの単価が高め（6,625円〜10,000円）</li>
+                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>1回あたりの単価が高め（{fmtYen(CEL.perLesson.m8)}〜{fmtYen(CEL.perLesson.m2)}）</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>店舗数が少なく、通える地域が限られる点</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>男性の利用可否は店舗により異なる場合あり</li>
               </ul>

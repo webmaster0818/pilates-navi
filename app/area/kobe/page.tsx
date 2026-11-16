@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
-import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT } from "@/data-brand-facts";
+import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
 import studioIdx from "@/data-studio-index.json";
 
 const { listed, surveyedAt } = loadArea("kobe");
@@ -28,8 +28,8 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     access: "地下鉄西神・山手線「三宮駅」西出口1から徒歩1分、阪急「神戸三宮駅」西口から徒歩2分、JR「三ノ宮駅」西口から徒歩4分",
     target: "女性専用・マシンピラティス",
     trial: "無料体験会",
-    monthly: `月4回 8,800円／通い放題 13,800円・16,800円（税込・プラン別）、別途 運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
-    m4: 8800,
+    monthly: `${rintosullStoreText(RIN.stores.standard)}、別途 運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
+    m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/hyogo/sannomiya/",
   },
   {
@@ -59,8 +59,8 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     review: "/review/celestia/",
     access: "市営地下鉄「三宮・花時計前」駅 徒歩2分、JR「三ノ宮」駅・市営地下鉄「三宮」駅・阪急/阪神「神戸三宮」駅 徒歩5分",
     target: "マシンピラティス・セミパーソナル（約2名）",
-    trial: "公式料金ページでは30分 3,000円。店舗ページの予約案内は「無料体験」（期間の記載なし）",
-    monthly: "月2回 20,000円〜通い放題 66,000円（税込み・公式料金ページ 2026年10月26日確認）",
+    trial: `公式料金ページでは30分 ${fmtYen(CEL.trial)}。店舗ページの予約案内は「無料体験」（期間の記載なし）`,
+    monthly: `月2回 ${fmtYen(CEL.m2)}〜通い放題 ${fmtYen(CEL.unlimited)}（税込み・公式料金ページ ${CEL.checkedAt}確認）`,
     m4: null,
     source: "https://celes-pilates.jp/stores/kobe-sannnomiya/",
   },

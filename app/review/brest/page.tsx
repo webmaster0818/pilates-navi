@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { CELESTIA_PRICES as CEL, fmtYen } from "@/data-brand-facts";
 
 const AFFILIATE = "https://t.felmat.net/fmcl?ak=C11549B.1.91592951.P1361727";
 
@@ -311,8 +312,8 @@ export default function BrestReview() {
                 <tr className="border-b border-gray-100 align-top">
                   <td className="px-3 py-2 text-gray-800"><Link href="/review/celestia/" className="text-violet-600 underline">Celestia</Link></td>
                   <td className="px-3 py-2 text-gray-700">約2名のセミパーソナル（マシン）</td>
-                  <td className="px-3 py-2 text-gray-700">33,000円（8,250円）</td>
-                  <td className="px-3 py-2 text-gray-700">30分3,000円<span className="block text-xs text-gray-500">体験案内ページに「体験無料」の案内あり（2026年11月13日確認）</span></td>
+                  <td className="px-3 py-2 text-gray-700">{fmtYen(CEL.m4)}（{fmtYen(CEL.perLesson.m4)}）</td>
+                  <td className="px-3 py-2 text-gray-700">30分{fmtYen(CEL.trial)}<span className="block text-xs text-gray-500">体験案内ページに「体験無料」の案内あり（2026年11月13日確認）</span></td>
                   <td className="px-3 py-2 text-gray-700">Celestiaのページで整理</td>
                 </tr>
                 <tr className="border-b border-gray-100 align-top">

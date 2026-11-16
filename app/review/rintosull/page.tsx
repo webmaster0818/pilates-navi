@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { RINTOSULL_PRICES as RIN, fmtYen } from "@/data-brand-facts";
 
 const SURVEY_DATE = "2026年9月22日";
 // 2026-11-13: 公式料金ページで3プランの月会費・運営管理費680円・施設使用料2,500円・1回券・レンタル料金・12か月継続条件・系列の受講回数を再確認（すべて一致）。
@@ -12,25 +13,25 @@ const DB_DATE = "2026年9月2日";
 export const metadata: Metadata = {
   title: "Rintosull(リントスル)の口コミ・料金を解説｜評判は？LAVA系マシンピラティス【2026年】",
   description:
-    "Rintosull(リントスル)の料金・評判を解説します。月会費8,800円〜(店舗により異なる)の3プラン、別途必要な運営管理費680円/月と施設使用料2,500円、キャンペーンの12か月継続条件を2026年11月13日に公式サイトで確認しました。実測58店舗のGoogleマップ評点(平均4.74)も掲載しています。",
+    `Rintosull(リントスル)の料金・評判を解説します。月会費${fmtYen(RIN.m4.min)}〜(店舗により異なる)の3プラン、別途必要な運営管理費${fmtYen(RIN.adminFee)}/月と施設使用料${fmtYen(RIN.facilityFee)}、キャンペーンの12か月継続条件を2026年11月13日に公式サイトで確認しました。実測58店舗のGoogleマップ評点(平均4.74)も掲載しています。`,
 };
 
 const faqs = [
   {
     q: "Rintosullの料金はいくらですか？",
-    a: "公式サイトの料金ページ(2026年11月13日確認)では3プランが案内されています。マンスリー4・フルタイム(月4回・1店舗)が月会費8,800円〜10,800円(税込)、ライト・フルタイム(通い放題・2店舗)が10,800円〜15,800円(税込)、プレミアム フリー・フルタイム(系列全店通い放題)が16,800円(税込)です。いずれも「店舗によって料金が異なります」と明記されています。加えて初回引落し時より運営管理費として毎月680円(税込)、入会時に施設使用料2,500円が別途かかります。入会時には入会金5,000円とマンスリーメンバー登録金5,000円(いずれも税込)もかかりますが、体験当日に入会する場合やキャンペーンで入会する場合は不要です(公式料金ページ・店舗ページ、2026年11月13日確認)。",
+    a: `公式サイトの料金ページ(2026年11月13日確認)では3プランが案内されています。マンスリー4・フルタイム(月4回・1店舗)が月会費${fmtYen(RIN.m4.min)}〜${fmtYen(RIN.m4.max)}(税込)、ライト・フルタイム(通い放題・2店舗)が${fmtYen(RIN.light.min)}〜${fmtYen(RIN.light.max)}(税込)、プレミアム フリー・フルタイム(系列全店通い放題)が${fmtYen(RIN.premium)}(税込)です。いずれも「店舗によって料金が異なります」と明記されています。加えて初回引落し時より運営管理費として毎月${fmtYen(RIN.adminFee)}(税込)、入会時に施設使用料${fmtYen(RIN.facilityFee)}が別途かかります。入会時には入会金${fmtYen(RIN.joinFee)}とマンスリーメンバー登録金${fmtYen(RIN.registrationFee)}(いずれも税込)もかかりますが、体験当日に入会する場合やキャンペーンで入会する場合は不要です(公式料金ページ・店舗ページ、2026年11月13日確認)。`,
   },
   {
     q: "月会費以外にかかる費用はありますか？",
-    a: "あります。公式サイトの表記では、(1)運営管理費 毎月680円(税込)、(2)入会時の施設使用料 2,500円(過去にLAVA・Rintosullへ入会したことがある方は0円)、(3)入会金5,000円・マンスリーメンバー登録金5,000円(税込・体験当日の入会やキャンペーンでの入会では不要)が別途必要です(施設使用料・入会金・登録金は2026年11月13日に公式料金ページと店舗ページで確認)。また、レンタル品は都度払いで、レンタルウェア上下各410円、レンタルソックス200円、フェイスタオル110円、水(500ml)140円です。セット利用の場合はレッスンセット500円、ウォーター込み570円です(いずれも税込・2026年11月13日確認)。手ぶらで通う場合は、月会費とは別に毎回500〜600円程度がかかる計算になります。",
+    a: `あります。公式サイトの表記では、(1)運営管理費 毎月${fmtYen(RIN.adminFee)}(税込)、(2)入会時の施設使用料 ${fmtYen(RIN.facilityFee)}(過去にLAVA・Rintosullへ入会したことがある方は0円)、(3)入会金${fmtYen(RIN.joinFee)}・マンスリーメンバー登録金${fmtYen(RIN.registrationFee)}(税込・体験当日の入会やキャンペーンでの入会では不要)が別途必要です(施設使用料・入会金・登録金は2026年11月13日に公式料金ページと店舗ページで確認)。また、レンタル品は都度払いで、レンタルウェア上下各410円、レンタルソックス200円、フェイスタオル110円、水(500ml)140円です。セット利用の場合はレッスンセット500円、ウォーター込み570円です(いずれも税込・2026年11月13日確認)。手ぶらで通う場合は、月会費とは別に毎回500〜600円程度がかかる計算になります。`,
   },
   {
-    q: "キャンペーンの「3ヶ月1,980円」には条件がありますか？",
-    a: "あります。公式サイトの適用条件に「特典の適用には、特別価格終了後12ヶ月間の継続が必要です」と明記されています(2026年11月13日確認)。対象は通常16,800円/月の全店通い放題コースです。利用開始月を含む3か月間が1,980円/月となり、特別価格期間中の月額は3か月目にまとめて5,940円が請求されます。4か月目以降は8,800円〜のコースに変更できますが、12か月の継続が前提である点を申し込み前にご確認ください。",
+    q: `キャンペーンの「3ヶ月${fmtYen(RIN.campaign.monthly)}」には条件がありますか？`,
+    a: `あります。公式サイトの適用条件に「特典の適用には、特別価格終了後12ヶ月間の継続が必要です」と明記されています(2026年11月13日確認)。対象は通常${fmtYen(RIN.premium)}/月の全店通い放題コースです。利用開始月を含む3か月間が${fmtYen(RIN.campaign.monthly)}/月となり、特別価格期間中の月額は3か月目にまとめて${fmtYen(RIN.campaign.total)}が請求されます。4か月目以降は${fmtYen(RIN.m4.min)}〜のコースに変更できますが、12か月の継続が前提である点を申し込み前にご確認ください。`,
   },
   {
     q: "他ブランドのレッスンも受けられますか？",
-    a: "プレミアム フリー・フルタイム(16,800円/月)であれば、ホットヨガLAVA・Rintosull・暗闇キックボクシングBurnesStyle・FIVE ELEMENT FIT・UPPER 9の系列ブランド全店が対象です。Rintosullは1日2回まで、その他ブランドはいずれか1日1回まで受講可能と公式に記載されています(2026年11月13日確認)。ピラティス以外も試したい方にとっては、この系列横断の利用がRintosullの最大の特徴です。",
+    a: `プレミアム フリー・フルタイム(${fmtYen(RIN.premium)}/月)であれば、ホットヨガLAVA・Rintosull・暗闇キックボクシングBurnesStyle・FIVE ELEMENT FIT・UPPER 9の系列ブランド全店が対象です。Rintosullは1日2回まで、その他ブランドはいずれか1日1回まで受講可能と公式に記載されています(2026年11月13日確認)。ピラティス以外も試したい方にとっては、この系列横断の利用がRintosullの最大の特徴です。`,
   },
   {
     q: "Rintosullの口コミ評価は高いですか？",
@@ -74,9 +75,9 @@ export default function RintosullReview() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">Rintosullの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
               Rintosullは、<strong>ホットヨガLAVAと同じ運営</strong>(系列ブランド: LAVA／Rintosull／BurnesStyle／FIVE ELEMENT FIT／UPPER 9)のマシンピラティススタジオです。
-              月会費は<strong>8,800円〜(税込・店舗により異なる)</strong>の3プランで、最上位の<strong>プレミアム フリー・フルタイム16,800円では系列全ブランドが通い放題</strong>になります。
+              月会費は<strong>{fmtYen(RIN.m4.min)}〜(税込・店舗により異なる)</strong>の3プランで、最上位の<strong>プレミアム フリー・フルタイム{fmtYen(RIN.premium)}では系列全ブランドが通い放題</strong>になります。
               ピラティスとホットヨガの両方を試したい方や、外出先でも同じ会員資格で通いたい方に向いています。
-              一方で<strong>月会費とは別に運営管理費680円/月・入会時の施設使用料2,500円</strong>がかかり、レンタル品も都度払いです。入会金5,000円・登録金5,000円(税込)も定められていますが、体験当日の入会やキャンペーンでの入会では不要です。
+              一方で<strong>月会費とは別に運営管理費{fmtYen(RIN.adminFee)}/月・入会時の施設使用料{fmtYen(RIN.facilityFee)}</strong>がかかり、レンタル品も都度払いです。入会金{fmtYen(RIN.joinFee)}・登録金{fmtYen(RIN.registrationFee)}(税込)も定められていますが、体験当日の入会やキャンペーンでの入会では不要です。
               キャンペーン価格には<strong>特別価格終了後12か月の継続条件</strong>があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
@@ -106,19 +107,19 @@ export default function RintosullReview() {
               <tbody>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">マンスリー4・フルタイム</td>
-                  <td className="px-3 py-2 font-bold text-[#7C3AED]">8,800円〜10,800円</td>
+                  <td className="px-3 py-2 font-bold text-[#7C3AED]">{fmtYen(RIN.m4.min)}〜{fmtYen(RIN.m4.max)}</td>
                   <td className="px-3 py-2">Rintosull 1店舗</td>
                   <td className="px-3 py-2">月4回／1日1回</td>
                 </tr>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">ライト・フルタイム</td>
-                  <td className="px-3 py-2 font-bold text-[#7C3AED]">10,800円〜15,800円</td>
+                  <td className="px-3 py-2 font-bold text-[#7C3AED]">{fmtYen(RIN.light.min)}〜{fmtYen(RIN.light.max)}</td>
                   <td className="px-3 py-2">Rintosull 2店舗</td>
                   <td className="px-3 py-2">通い放題／1日1回</td>
                 </tr>
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">プレミアム フリー・フルタイム</td>
-                  <td className="px-3 py-2 font-bold text-[#7C3AED]">16,800円</td>
+                  <td className="px-3 py-2 font-bold text-[#7C3AED]">{fmtYen(RIN.premium)}</td>
                   <td className="px-3 py-2">Rintosull系列全店(LAVA／BurnesStyle／FIVE ELEMENT FIT／UPPER 9を含む)</td>
                   <td className="px-3 py-2">通い放題／Rintosullは1日2回、他ブランドは各1日1回</td>
                 </tr>
@@ -126,7 +127,7 @@ export default function RintosullReview() {
             </table>
           </div>
           <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-            ※公式サイトに「店舗によって料金が異なります」と明記されています。上記に加え、<strong>初回引落し時より運営管理費 毎月680円(税込)</strong>、<strong>入会時に施設使用料2,500円</strong>が必要です。入会金5,000円・マンスリーメンバー登録金5,000円(税込)は、体験当日の入会やキャンペーンでの入会では不要です(2026年11月13日確認)。
+            ※公式サイトに「店舗によって料金が異なります」と明記されています。上記に加え、<strong>初回引落し時より運営管理費 毎月{fmtYen(RIN.adminFee)}(税込)</strong>、<strong>入会時に施設使用料{fmtYen(RIN.facilityFee)}</strong>が必要です。入会金{fmtYen(RIN.joinFee)}・マンスリーメンバー登録金{fmtYen(RIN.registrationFee)}(税込)は、体験当日の入会やキャンペーンでの入会では不要です(2026年11月13日確認)。
             1回券は3,500円〜3,700円(税込/回)。無料体験会は0円です。
           </p>
 
@@ -150,14 +151,14 @@ export default function RintosullReview() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-6">
             <h2 className="text-lg font-bold text-amber-900">キャンペーン利用時の「12か月継続」条件について</h2>
             <p className="mt-2 text-sm text-amber-900 leading-relaxed">
-              {RECHECK_DATE}時点で、通常16,800円/月の全店通い放題コースを<strong>利用開始月を含む3か月間1,980円/月</strong>とする特別価格が案内されています(キャンペーン期間: 11月末まで)。
+              {RECHECK_DATE}時点で、通常{fmtYen(RIN.premium)}/月の全店通い放題コースを<strong>利用開始月を含む3か月間{fmtYen(RIN.campaign.monthly)}/月</strong>とする特別価格が案内されています(キャンペーン期間: 11月末まで)。
               ただし、公式サイトの適用条件に<strong>「特典の適用には、特別価格終了後12ヶ月間の継続が必要です」</strong>と明記されています。
             </p>
             <ul className="mt-3 space-y-1.5 text-sm text-amber-900">
-              <li>・特別価格期間中の月額は<strong>3か月目にまとめて5,940円を請求</strong></li>
-              <li>・4か月目以降は8,800円〜のコースに変更可能(コース・店舗により価格は異なる／変更内容により手数料がかかる場合あり)</li>
+              <li>・特別価格期間中の月額は<strong>3か月目にまとめて{fmtYen(RIN.campaign.total)}を請求</strong></li>
+              <li>・4か月目以降は{fmtYen(RIN.m4.min)}〜のコースに変更可能(コース・店舗により価格は異なる／変更内容により手数料がかかる場合あり)</li>
               <li>・対象は<strong>過去5か月以内にRintosullの体験会を受講していない方</strong>などの条件あり(法人会員は対象外)</li>
-              <li>・初回請求時より<strong>運営管理費680円/月</strong>、入会時に<strong>施設使用料2,500円</strong></li>
+              <li>・初回請求時より<strong>運営管理費{fmtYen(RIN.adminFee)}/月</strong>、入会時に<strong>施設使用料{fmtYen(RIN.facilityFee)}</strong></li>
             </ul>
             <p className="mt-3 text-xs text-amber-800">3か月間だけ特別価格で試す目的での申し込みは、この条件に合いません。短期間で判断したい場合は、まず<strong>無料体験会(0円)</strong>のご利用をおすすめします。</p>
           </div>
@@ -202,7 +203,7 @@ export default function RintosullReview() {
           <div className="rounded-lg border border-gray-200 p-5">
             <h2 className="text-base font-bold text-gray-900">向いている方</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700 leading-relaxed">
-              <li><strong>ピラティス以外も試したい方</strong>：16,800円のプレミアムでは、ホットヨガLAVAなど系列全ブランドが通い放題です。</li>
+              <li><strong>ピラティス以外も試したい方</strong>：{fmtYen(RIN.premium)}のプレミアムでは、ホットヨガLAVAなど系列全ブランドが通い放題です。</li>
               <li><strong>通える店舗の選択肢を重視する方</strong>：当サイト収録分で58店舗と、収録ブランドの中で最大級です。</li>
               <li>マシン(リフォーマー)を中心に取り組みたい方：公式サイトでもマシンピラティス専門であることを打ち出しています。</li>
             </ul>
@@ -210,7 +211,7 @@ export default function RintosullReview() {
           <div className="rounded-lg border border-gray-200 p-5">
             <h2 className="text-base font-bold text-gray-900">向かない可能性がある方</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700 leading-relaxed">
-              <li><strong>月会費以外の出費を避けたい方</strong>：運営管理費680円/月・施設使用料2,500円に加え、手ぶらで通う場合は毎回500〜600円のレンタル代がかかります。</li>
+              <li><strong>月会費以外の出費を避けたい方</strong>：運営管理費{fmtYen(RIN.adminFee)}/月・施設使用料{fmtYen(RIN.facilityFee)}に加え、手ぶらで通う場合は毎回500〜600円のレンタル代がかかります。</li>
               <li><strong>短期間だけ試したい方</strong>：キャンペーン価格は特別価格終了後12か月の継続が条件です。</li>
               <li>少人数・完全マンツーマンを最優先する方：グループレッスン中心の大型スタジオである点にご留意ください。</li>
             </ul>

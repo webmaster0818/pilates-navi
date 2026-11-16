@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -63,8 +63,8 @@ const CHAINS: Chain[] = [
     name: "マシンピラティスRintosull 川崎店",
     access: "JR川崎駅 東口 徒歩5分／京急川崎駅 中央口改札 徒歩7分",
     trial: "無料体験会 0円",
-    monthly: `月4回 9,800円／通い放題 14,800円・16,800円（税込・プラン別）。運営管理費 月680円（税込）。${RINTOSULL_JOIN_TEXT}`,
-    m4: 9800,
+    monthly: `${rintosullStoreText(RIN.stores.kawasaki)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
+    m4: RIN.stores.kawasaki.m4,
     source: "https://rintosull.jp/shop/kanagawa/kawasaki/",
   },
   {
@@ -192,7 +192,7 @@ export default function AreaPage() {
             </span>
           ))}
           ／<a href={ZEN_PRICE} target="_blank" rel="noopener noreferrer nofollow" className="underline">zen place 料金ページ</a>
-          （{CHAIN_CHECKED_AT}確認）。zen place の月額は店舗ページに記載がないため、料金ページのグレード01（両店舗の店舗ページの表記）の額です。料金・キャンペーンは変更される場合があるため、ご利用前に公式サイトにて最新情報をご確認ください。
+          （{CHAIN_CHECKED_AT}確認）。CLUB PILATES 4店舗（川崎・武蔵小杉・溝の口・宮前平）の月額は、{CP.checkedAt}に各公式店舗ページで再確認し、同額でした（駅からの距離・体験は{CHAIN_CHECKED_AT}の確認です）。zen place の月額は店舗ページに記載がないため、料金ページのグレード01（両店舗の店舗ページの表記）の額です。料金・キャンペーンは変更される場合があるため、ご利用前に公式サイトにて最新情報をご確認ください。
         </p>
       </section>
 

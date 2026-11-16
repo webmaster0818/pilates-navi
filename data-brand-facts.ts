@@ -178,6 +178,61 @@ const CP = CLUBPILATES_PRICES;
 export const clubPilatesPlanText = (p: { m4: number; m8: number; unlimited: number }) =>
   `月4回 ${fmtYen(p.m4)}／月8回 ${fmtYen(p.m8)}／通い放題 ${fmtYen(p.unlimited)}`;
 
+/**
+ * Rintosull の料金（公式料金ページ https://rintosull.jp/price/ と各店舗ページ）。
+ * - 2026年11月13日：料金ページで3プランの月会費・運営管理費・入会金・登録金・施設使用料を照合（サイト表示の確認日はこの日の値）
+ * - 2026年11月16日：料金ページ（4・フルタイム 8,800〜10,800円／ライト・フルタイム 10,800〜15,800円／プレミアム 16,800円・運営管理費680円・
+ *   入会金5,000円・登録金5,000円・施設使用料2,500円・キャンペーン 月1,980円・3か月目に5,940円）と、エリアページ掲載の10店舗の店舗ページ
+ *   （千葉・フレスポ仙台東照宮・川崎・関内・三宮・金沢増泉・名古屋駅前・栄・京都四条烏丸・京都駅前）の月会費を再確認。すべて同額。
+ */
+export const RINTOSULL_PRICES = {
+  checkedAt: "2026年11月13日",
+  source: "https://rintosull.jp/price/",
+  /** マンスリー4・フルタイム（店舗により異なる） */
+  m4: { min: 8800, max: 10800 },
+  /** ライト・フルタイム（店舗により異なる） */
+  light: { min: 10800, max: 15800 },
+  /** プレミアム フリー・フルタイム */
+  premium: 16800,
+  adminFee: 680,
+  facilityFee: 2500,
+  joinFee: 5000,
+  registrationFee: 5000,
+  /** ピラティススタートキャンペーンの特別価格（月額）と3か月目の請求額 */
+  campaign: { monthly: 1980, total: 5940 },
+  /** 店舗ページの月会費（m4＝4・フルタイム、light＝ライト・フルタイム） */
+  stores: {
+    /** 千葉・フレスポ仙台東照宮・関内・三宮・金沢増泉・名古屋駅前・栄・京都四条烏丸・京都駅前 */
+    standard: { m4: 8800, light: 13800 },
+    kawasaki: { m4: 9800, light: 14800 },
+  },
+};
+/** 「月4回 X円／通い放題 Y円・Z円（税込・プラン別）」 */
+export const rintosullStoreText = (p: { m4: number; light: number }) =>
+  `月4回 ${fmtYen(p.m4)}／通い放題 ${fmtYen(p.light)}・${fmtYen(RINTOSULL_PRICES.premium)}（税込・プラン別）`;
+
+/**
+ * Celestia の料金（公式料金ページ https://celes-pilates.jp/price/ の料金画像）。
+ * - 2026年10月26日：5枚の料金画像で確認（サイト表示の確認日はこの日の値）。11月13日に再確認（一致）
+ * - 2026年11月16日：料金画像5枚（Celestia_price-2.jpg 月4回・Celestia_price.jpg 月6回・Celestia_price-4.jpg 月8回・
+ *   Celestia_HP_ticket-9.jpg 月2回・7c2ee79c282c4fc2ab0b0dc73ea53310.jpg 通い放題）と料金ページ本文「体験受付中 30分 3,000円」を再確認。すべて同額（いずれも「税込み」表記）。
+ */
+export const CELESTIA_PRICES = {
+  checkedAt: "2026年10月26日",
+  source: "https://celes-pilates.jp/price/",
+  m2: 20000,
+  m4: 33000,
+  m6: 47000,
+  m8: 53000,
+  unlimited: 66000,
+  /** 料金画像に記載の「1回あたり」 */
+  perLesson: { m2: 10000, m4: 8250, m6: 7833, m8: 6625 },
+  /** 料金ページ本文「体験受付中 30分 3,000円」 */
+  trial: 3000,
+};
+const CEL = CELESTIA_PRICES;
+const RIN = RINTOSULL_PRICES;
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -226,11 +281,11 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "rintosull": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
-    monthly: "8,800円〜16,800円（税込・コース・店舗により変動）",
+    monthly: `${fmtYen(RIN.m4.min)}〜${fmtYen(RIN.premium)}（税込・コース・店舗により変動）`,
     // 2026-11-13: 公式料金ページ「入会金 通常価格5,000円（税込）」「マンスリーメンバー登録金 通常価格5,000円（税込）」（体験当日入会で各0円）、
     // 店舗ページの持ち物欄「施設使用料2,500円※1／入会金5,000円・登録金5,000円※2」（※1 過去にLAVA・Rintosull入会歴があれば0円、※2 キャンペーン入会の場合は不要）を確認
     joinFee: "入会金 5,000円＋マンスリーメンバー登録金 5,000円（税込・体験当日の入会やキャンペーンでの入会では0円）、入会時の施設使用料 2,500円（過去にLAVA・Rintosullへの入会歴がある方は0円）（公式料金ページ・店舗ページ・2026年11月13日確認）",
-    monthlyExtra: "運営管理費 680円／月",
+    monthlyExtra: `運営管理費 ${fmtYen(RIN.adminFee)}／月`,
     trial: "無料体験会 0円（LAVA店舗内のRintosullスタジオはキャンペーン期間により料金が異なる・2026年11月13日確認）",
     source: "https://rintosull.jp/price/",
     // 2026-11-13: 公式料金ページで 4・フルタイム 8,800〜10,800円／ライト 10,800〜15,800円／プレミアム 16,800円（税込）を照合（一致）
@@ -259,14 +314,14 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "celestia": {
     style: "マシンピラティス", format: "セミパーソナル（約2名）", gender: "男女可",
-    monthly: "月2回 20,000円／月4回 33,000円／月6回 47,000円／月8回 53,000円／通い放題 66,000円（税込み・公式料金ページの料金画像に記載・2026年10月26日確認、11月13日再確認）",
+    monthly: `月2回 ${fmtYen(CEL.m2)}／月4回 ${fmtYen(CEL.m4)}／月6回 ${fmtYen(CEL.m6)}／月8回 ${fmtYen(CEL.m8)}／通い放題 ${fmtYen(CEL.unlimited)}（税込み・公式料金ページの料金画像に記載・${CEL.checkedAt}確認、11月13日再確認）`,
     joinFee: "入会金あり（利用規約第14条）。金額は公式サイトに記載なし（2026年10月26日確認）",
     monthlyExtra: "公式に記載なし",
     // 2026-11-13: 料金ページは「体験受付中！30分 3,000円」、同じページと京都店ページの予約ボタンは「無料体験ご予約はこちら！」。/lp/trial01/ の本文は「無料体験レッスンまでの流れ」、メイン画像は「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」（期間の記載なし）
     trial: "公式サイトの料金ページでは「体験受付中 30分 3,000円」と記載されています。一方、体験案内ページ（/lp/trial01/）と料金ページ・店舗ページの予約ボタンには「無料体験」と記載されています。体験料金は予約時にご確認ください（2026年11月13日確認）",
     source: "https://celes-pilates.jp/price/",
     // 公式料金ページの料金画像で最低額（月2回）を2026年10月28日に再確認。11月13日に5枚の料金画像（月2・4・6・8回・通い放題）を再確認（一致）
-    monthlyShort: "月2回 20,000円〜（税込）",
+    monthlyShort: `月2回 ${fmtYen(CEL.m2)}〜（税込）`,
     checkedAt: "2026年11月13日",
   },
   "club-pilates": {
@@ -348,8 +403,8 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
     monthlyExtraYen: 480, monthlyExtraNote: "運営管理費 月480円（3か月目から）", joinNote: "入会時の施設利用料 2,200円",
     checkedAt: "2026年10月29日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 料金ページ「マンスリー4・フルタイム 月会費 8,800円(税込)~10,800円(税込) 店舗によって料金が異なります」「運営管理費として毎月680円」「施設使用料2,500円」
-  { slug: "rintosull", name: "Rintosull", yen: 8800, plan: "マンスリー4・フルタイム", style: "マシンのグループ", note: "店舗により10,800円まで", kind: "group",
-    monthlyExtraYen: 680, monthlyExtraNote: "運営管理費 月680円", joinNote: "入会時の施設使用料 2,500円、入会金 5,000円・登録金 5,000円（体験当日の入会やキャンペーンでの入会では入会金・登録金は不要・11/13確認）",
+  { slug: "rintosull", name: "Rintosull", yen: RIN.m4.min, plan: "マンスリー4・フルタイム", style: "マシンのグループ", note: `店舗により${fmtYen(RIN.m4.max)}まで`, kind: "group",
+    monthlyExtraYen: RIN.adminFee, monthlyExtraNote: `運営管理費 月${fmtYen(RIN.adminFee)}`, joinNote: `入会時の施設使用料 ${fmtYen(RIN.facilityFee)}、入会金 ${fmtYen(RIN.joinFee)}・登録金 ${fmtYen(RIN.registrationFee)}（体験当日の入会やキャンペーンでの入会では入会金・登録金は不要・11/13確認）`,
     checkedAt: "2026年10月29日", source: "https://rintosull.jp/price/" },
   // 料金ページ「マットグループ月4回 グレード02 9,625円」「RG4 リフォーマーグループ 月4回 15,400円」「設備運営管理費 550円」「入会金 グレード02 22,000円」
   { slug: "zenplace", name: "zen place pilates", yen: ZP.mat4.g2, plan: "マットグループ 月4", style: "マットのグループ", note: `グレード02のスタジオ。グレード01のスタジオは${fmtYen(ZP.mat4.g1)}`, kind: "group",
@@ -373,8 +428,8 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
     checkedAt: "2026年10月28日", source: "https://bdcpilates.com/#pilates_plan" },
   { slug: "brest", name: "BREST PILATES & BODYMAKE", yen: 20680, plan: "デイタイムM4", style: "パーソナル", note: "東京の店舗・平日12:30〜17:00", kind: "personal",
     checkedAt: "2026年10月29日", source: "https://brest-gym.jp/studio/daikanyama/" },
-  { slug: "celestia", name: "Celestia", yen: 33000, plan: "月4回", style: "セミパーソナル", kind: "personal",
-    checkedAt: "2026年10月26日", source: "https://celes-pilates.jp/price/" },
+  { slug: "celestia", name: "Celestia", yen: CEL.m4, plan: "月4回", style: "セミパーソナル", kind: "personal",
+    checkedAt: CEL.checkedAt, source: CEL.source },
   { slug: "melmake", name: "メルメイク", yen: 33000, plan: "プライベート4", style: "50分のプライベート", kind: "personal",
     checkedAt: "2026年10月26日", source: "https://mermake.co.jp/menu-pilates/" },
 ];
@@ -433,7 +488,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
   // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
-  { slug: "celestia", name: "Celestia", minYen: 3000, text: "30分3,000円", campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/price/" },
+  { slug: "celestia", name: "Celestia", minYen: CEL.trial, text: `30分${fmtYen(CEL.trial)}`, campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/price/" },
   // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
   { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時500円", checkedAt: "2026年11月11日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
@@ -502,7 +557,7 @@ export type UnlimitedPlan = {
 
 export const UNLIMITED_GROUP_LOWEST: UnlimitedPlan[] = [
   // 料金ページ「ライト・フルタイム 10,800円(税込)~15,800円(税込) 店舗によって料金が異なります」「通い放題」「1日1回」（登録した1店舗）
-  { slug: "rintosull", name: "Rintosull", yen: 10800, plan: "ライト・フルタイム", note: "登録した1店舗・1日1回まで。店舗により15,800円まで", checkedAt: "2026年11月2日", source: "https://rintosull.jp/price/" },
+  { slug: "rintosull", name: "Rintosull", yen: RIN.light.min, plan: "ライト・フルタイム", note: `登録した1店舗・1日1回まで。店舗により${fmtYen(RIN.light.max)}まで`, checkedAt: "2026年11月2日", source: "https://rintosull.jp/price/" },
   // 川崎店ページの料金表画像の alt「レギュラー 11,800円（税込12,980円） 通い放題 ※１日１回まで」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", yen: 12980, plan: "レギュラー", note: "1日1回まで・全店共通", checkedAt: "2026年11月2日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 料金ページ「フリー マットグループ無制限 グレード01 16,940円／グレード02 14,960円（税込）」
