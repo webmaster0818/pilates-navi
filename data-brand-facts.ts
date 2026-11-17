@@ -71,19 +71,6 @@ export const isCampaignActive = (c: { endsAt: string }, now: Date = new Date()) 
   now.getTime() <= new Date(c.endsAt).getTime();
 
 /**
- * Rintosull 公式の各店舗ページ「開催中のキャンペーン」欄（ピラティススタートキャンペーン）。
- * 2026年11月12日に金沢増泉店・京都四条烏丸店・京都駅前店の店舗ページで同じ内容を確認。
- * 期間は「11月末まで」。endsAt を過ぎるとエリアページから記載が消える（判定はビルド時）。
- */
-export const RINTOSULL_START_CAMPAIGN = {
-  checkedAt: "2026年11月12日",
-  periodText: "2026年11月30日まで",
-  endsAt: "2026-11-30T23:59:59+09:00",
-  detail:
-    "体験当日に店舗で登録した場合、利用開始月を含む3か月間、対象ブランド全店通い放題コース（通常 月16,800円）が月1,980円（税込）になります（特別価格期間の月額は3か月目にまとめて5,940円の請求）。過去5か月以内に Rintosull の体験会を受けた方や、系列ブランドでマンスリー登録をしている方などは対象外です。特別価格の終了後12か月間の継続が適用の条件で、別途 運営管理費 月680円がかかります",
-};
-
-/**
  * Rintosull の入会時費用（2026年11月13日、公式料金ページと金沢増泉・京都四条烏丸・京都駅前の店舗ページで確認）。
  * 料金ページ：入会金 通常5,000円（税込）・マンスリーメンバー登録金 通常5,000円（税込）、体験当日入会で各0円。
  * 店舗ページの持ち物欄：施設使用料2,500円（過去にLAVA・Rintosull入会歴があれば0円）・入会金5,000円・登録金5,000円（キャンペーン入会の場合は不要）。
@@ -210,6 +197,23 @@ export const RINTOSULL_PRICES = {
 /** 「月4回 X円／通い放題 Y円・Z円（税込・プラン別）」 */
 export const rintosullStoreText = (p: { m4: number; light: number }) =>
   `月4回 ${fmtYen(p.m4)}／通い放題 ${fmtYen(p.light)}・${fmtYen(RINTOSULL_PRICES.premium)}（税込・プラン別）`;
+
+/**
+ * Rintosull 公式の各店舗ページ「開催中のキャンペーン」欄（ピラティススタートキャンペーン）。
+ * 2026年11月12日に金沢増泉店・京都四条烏丸店・京都駅前店の店舗ページで同じ内容を確認。
+ * 期間は「11月末まで」。endsAt を過ぎるとエリアページから記載が消える（判定はビルド時）。
+ * 2026-11-17: 公式料金ページと金沢増泉・京都四条烏丸（/shop/kyoto/kyotoshijo/）・京都駅前の店舗ページで再確認。
+ *   「キャンペーン期間：11月末まで」・通い放題コース［16,800円/月］→特別価格［1,980円/月］・3ヶ月目にまとめて5,940円・
+ *   運営管理費 毎月680円・特別価格終了後12ヶ月間の継続が条件。すべて同じ（開催中）。料金は RINTOSULL_PRICES を参照する。
+ *   表示の確認日は従来の値のまま。
+ */
+export const RINTOSULL_START_CAMPAIGN = {
+  checkedAt: "2026年11月12日",
+  periodText: "2026年11月30日まで",
+  endsAt: "2026-11-30T23:59:59+09:00",
+  detail:
+    `体験当日に店舗で登録した場合、利用開始月を含む3か月間、対象ブランド全店通い放題コース（通常 月${fmtYen(RINTOSULL_PRICES.premium)}）が月${fmtYen(RINTOSULL_PRICES.campaign.monthly)}（税込）になります（特別価格期間の月額は3か月目にまとめて${fmtYen(RINTOSULL_PRICES.campaign.total)}の請求）。過去5か月以内に Rintosull の体験会を受けた方や、系列ブランドでマンスリー登録をしている方などは対象外です。特別価格の終了後12か月間の継続が適用の条件で、別途 運営管理費 月${fmtYen(RINTOSULL_PRICES.adminFee)}がかかります`,
+};
 
 /**
  * Celestia の料金（公式料金ページ https://celes-pilates.jp/price/ の料金画像）。
