@@ -16,6 +16,8 @@ const LISTED = loadArea("nagoya").listed.length;
 const CHAIN_CHECKED_AT = "2026年11月11日";
 const LA_PILATES_MONTHLY = "会員サブスク 月4回 40,000円（1回10,000円）／月2回 22,000円／月6回 54,000円（税込）、別途 年会費 10,000円（税込）。年払いコースもあり";
 const ADDED_CHECKED_AT = "2026年11月14日";
+/** Repilates 名古屋グローバルゲート店：公式トップの料金表と店舗ページを再確認した日 */
+const REPILATES_CHECKED_AT = "2026年11月18日";
 type Chain = { area: string; name: string; review?: string; style: "グループ" | "パーソナル"; styleNote: string; access: string; walk: number | null; trial: string; monthly: string; m4: number | null; checkedAt: string; source: string };
 const CHAINS: Chain[] = [
   {
@@ -152,9 +154,9 @@ const CHAINS: Chain[] = [
     access: "名古屋グローバルゲート5F（名古屋市中村区平池町）。店舗ページに駅からの距離の記載なし（愛知県観光公式サイトでは、施設へは あおなみ線「ささしまライブ」駅下車と案内）",
     walk: null,
     trial: "グループ体験 通常3,300円が期間限定で0円（期限の記載なし）。体験当日の入会で入会金5,000円・事務手数料5,000円が0円",
-    monthly: "月3回 12,900円／月4回 14,190円／月6回 19,650円／月8回 23,000円／通い放題 28,490円（公式サイトの料金表。店舗別・税込/税別の記載なし）。入会金 5,000円・事務手数料 5,000円",
+    monthly: "月3回 12,900円／月4回 14,190円／月6回 19,650円／月8回 23,000円／通い放題 28,490円（公式トップの料金表（店舗の指定なし）。店舗ページには月額の記載なし。税込・税別の記載なし）。入会金 5,000円・事務手数料 5,000円",
     m4: 14190,
-    checkedAt: ADDED_CHECKED_AT,
+    checkedAt: REPILATES_CHECKED_AT,
     source: "https://repilates.jp/studio/nagoyagg/",
   },
   {
@@ -203,7 +205,7 @@ export default function AreaPage() {
         CLUB PILATES は店舗ページに、Repilates は公式サイトの料金表に税込・税別の表記がなく、ほかは税込です。入会金・管理費は含みません。
         パーソナルでは、La pilates の名駅店・名古屋栄店（プライベート）が月4回40,000円（税込・別途 年会費10,000円）です。Celestia 名古屋栄店（セミパーソナル）は店舗ページに料金の記載がないため、月額の比較から除いています。
         駅からの距離の記載がある{WALKS.length}店舗は、いずれも最寄り駅から徒歩{WALK_MAX}分以内です（Rintosull 栄店は栄駅8番出口直結）。Repilates 名古屋グローバルゲート店は、店舗ページに駅からの距離の記載がありません（名古屋グローバルゲート5F）。
-        確認日は、6店舗が{CHAIN_CHECKED_AT}（zen place は同社の料金ページで確認）、URBAN CLASSIC PILATES 伏見・Celestia 名古屋栄店・La pilates 名駅店・Repilates 名古屋グローバルゲート店・La pilates 名古屋栄店が{ADDED_CHECKED_AT}です。店舗ごとの形式・駅からの距離・体験・月額は、下の「名古屋駅・伏見・栄・久屋大通の大手ピラティススタジオ」の表に掲載しています。
+        確認日は、6店舗が{CHAIN_CHECKED_AT}（zen place は同社の料金ページで確認）、URBAN CLASSIC PILATES 伏見・Celestia 名古屋栄店・La pilates 名駅店・La pilates 名古屋栄店が{ADDED_CHECKED_AT}、Repilates 名古屋グローバルゲート店が{REPILATES_CHECKED_AT}です。店舗ごとの形式・駅からの距離・体験・月額は、下の「名古屋駅・伏見・栄・久屋大通の大手ピラティススタジオ」の表に掲載しています。
       </p>
       <AreaAnswerBox area="nagoya" areaName="名古屋" ward={true} places={["栄", "名駅", "久屋大通"]} />
 
@@ -253,7 +255,7 @@ export default function AreaPage() {
               <a href={c.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">{c.name} 公式</a>（{c.checkedAt}確認）
             </span>
           ))}
-          ／<a href={ZP.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">zen place 料金ページ</a>（{CHAIN_CHECKED_AT}確認）／<a href="https://repilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Repilates 公式サイトの料金表</a>・<a href="https://www.aichinow.pref.aichi.jp/spots/detail/2401/" target="_blank" rel="noopener noreferrer nofollow" className="underline">愛知県観光公式サイト Aichi Now「グローバルゲート」</a>（{ADDED_CHECKED_AT}確認）。CLUB PILATES 久屋大通店の月額は、{CP.checkedAt}に公式店舗ページで再確認し、同額でした（駅からの距離・体験は{CHAIN_CHECKED_AT}の確認です）。料金・キャンペーンは変更される場合があります。
+          ／<a href={ZP.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">zen place 料金ページ</a>（{CHAIN_CHECKED_AT}確認）／<a href="https://repilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Repilates 公式トップの料金表（店舗の指定なし。店舗ページには月額の記載なし）</a>（{REPILATES_CHECKED_AT}確認）／<a href="https://www.aichinow.pref.aichi.jp/spots/detail/2401/" target="_blank" rel="noopener noreferrer nofollow" className="underline">愛知県観光公式サイト Aichi Now「グローバルゲート」</a>（{ADDED_CHECKED_AT}確認）。CLUB PILATES 久屋大通店の月額は、{CP.checkedAt}に公式店舗ページで再確認し、同額でした（駅からの距離・体験は{CHAIN_CHECKED_AT}の確認です）。料金・キャンペーンは変更される場合があります。
         </p>
       </section>
 
