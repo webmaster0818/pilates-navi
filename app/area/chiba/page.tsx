@@ -26,7 +26,7 @@ const CHIBA_BRANDS = [
     review: "/review/club-pilates/",
     access: "JR総武線「千葉駅」から徒歩2分",
     target: "マシンを使用したグループレッスン（最大12名）・プライベートレッスン",
-    trial: "30分の体験レッスン 無料",
+    trial: CP.storeTrial,
     monthly: `${clubPilatesPlanText(CP.stores.chiba)}、入会金 ${fmtYen(CP.joinFee)}（店舗ページに税込・税別の記載なし）`,
     m4: CP.stores.chiba.m4,
     source: "https://clubpilates.co.jp/studio/chiba",

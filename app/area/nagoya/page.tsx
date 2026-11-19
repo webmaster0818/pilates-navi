@@ -86,7 +86,7 @@ const CHAINS: Chain[] = [
     walk: 1,
     checkedAt: CHAIN_CHECKED_AT,
     access: "地下鉄 久屋大通駅 徒歩1分",
-    trial: "30分の体験レッスン 無料",
+    trial: CP.storeTrial,
     monthly: `${clubPilatesPlanText(CP.stores.hisayaodori)}（店舗ページに税込・税別の記載なし）。入会金 ${fmtYen(CP.joinFee)}`,
     m4: CP.stores.hisayaodori.m4,
     source: "https://clubpilates.co.jp/studio/hisayaodori/",

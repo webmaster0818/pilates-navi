@@ -142,6 +142,12 @@ export const CLUBPILATES_PRICES = {
   unlimited: { min: 17490, max: 40590, mode: 37290 },
   joinFee: 5500,
   adminFee: 2200,
+  /** 最も多い3プランの組み合わせ（月4回・月8回・通い放題がいずれも mode の額）の店舗数と例（2026年11月12日確認） */
+  modeCombo: { count: 39, example: "吉祥寺店" },
+  /** 店舗ページ「はじめての方」欄の体験（2026年11月12日・13日確認。11/19 に吉祥寺・西院・千葉・久屋大通で同表記） */
+  storeTrial: "30分の体験レッスン 無料",
+  /** 公式トップの体験の案内（2026年10月26日確認。11/19 トップに「30分間の無料体験クラス」） */
+  officialTrial: "30分の無料体験クラス",
   /** 個別店舗（エリアページで使用） */
   stores: {
     chiba: { m4: 11990, m8: 15290, unlimited: 18590 },
@@ -330,11 +336,11 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
   },
   "club-pilates": {
     style: "マシンピラティス（マット＋リフォーマー）", format: "グループ（最大12名）・4段階レベル別", gender: "男女可",
-    monthly: `店舗ごとに設定（店舗ページに税込・税別の記載なし）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}。最も多い設定は月4回 ${fmtYen(CP.m4.mode)}・月8回 ${fmtYen(CP.m8.mode)}・通い放題 ${fmtYen(CP.unlimited.mode)}（吉祥寺店など39店舗）。各店舗ページの料金プラン欄に記載（${CP.checkedAt}、店舗ページ${CP.checkedCount}で確認）`,
+    monthly: `店舗ごとに設定（店舗ページに税込・税別の記載なし）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}。最も多い設定は月4回 ${fmtYen(CP.m4.mode)}・月8回 ${fmtYen(CP.m8.mode)}・通い放題 ${fmtYen(CP.unlimited.mode)}（${CP.modeCombo.example}など${CP.modeCombo.count}店舗）。各店舗ページの料金プラン欄に記載（${CP.checkedAt}、店舗ページ${CP.checkedCount}で確認）`,
     joinFee: `入会金 ${fmtYen(CP.joinFee)}（税込）＋入会時の事務手数料 ${fmtYen(CP.adminFee)}（税込・多くの店舗ページに記載）。キャンペーンで0円になる店舗あり（${CP.checkedAt}確認）`,
     monthlyExtra: "店舗ページに記載なし（2026年10月26日確認）",
     // 2026-11-13: 西院・烏丸御池の店舗ページ「はじめての方 30分の体験レッスン 無料」を確認
-    trial: "30分の体験レッスン 無料（店舗ページの記載・2026年11月13日確認）",
+    trial: `${CP.storeTrial}（店舗ページの記載・2026年11月13日確認）`,
     source: "https://clubpilates.co.jp/studio/",
     checkedAt: `月額 ${CP.checkedAt}・体験 2026年11月13日`,
     monthlyShort: `月4回 ${fmtYen(CP.m4.min)}〜（店舗により異なる・税込・税別の記載なし）`,
@@ -484,7 +490,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「無料体験会 0円」（LAVAコラボ店舗は店舗ごとに異なる）
   { slug: "rintosull", name: "Rintosull", minYen: 0, text: "無料体験会0円（LAVAコラボ店舗は店舗ごとに異なる）", scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
   // トップページ「30分間の無料体験クラスを開催しております」
-  { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: "30分の無料体験クラス", checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
+  { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: CP.officialTrial, checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
   // 店舗ページ「無料体験予約はこちら」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 2026-11-12: 公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ「体験（お一人様１回まで）0円」（10/30 時点は 1回 2,200円）
