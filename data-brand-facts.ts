@@ -317,7 +317,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "12,100円（税込・月6回まで、7回目以降は1回1,100円）。2026年11月度に11,000円から改定（公式・2026年11月12日確認）",
     joinFee: "11,000円",
     monthlyExtra: "公式に記載なし",
-    trial: "無料（お一人様1回限り。2026年11月12日に公式サイトで確認。10月30日時点は1回2,200円）",
+    trial: "無料（お一人様1回限り。2026年11月20日に公式サイトで確認。10月30日時点は1回2,200円）",
     source: "https://www.konami.com/sportsclub/pilatesmirror/",
     // 2026-11-13: 公式トップで月会費12,100円・7回目以降1,100円・体験1回限り無料・18歳以上の女性を再確認（一致）
     checkedAt: "2026年11月13日",
@@ -480,7 +480,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月12日・Celestia は11月13日";
+export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月13日";
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -494,7 +494,8 @@ export const TRIAL_FEES: TrialFee[] = [
   // 店舗ページ「無料体験予約はこちら」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 2026-11-12: 公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ「体験（お一人様１回まで）0円」（10/30 時点は 1回 2,200円）
-  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月12日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
+  // 2026-11-20: 週1再確認。公式トップ「体験レッスン お一人様1回限り無料」・青葉台／阿佐ヶ谷の店舗ページ「体験（お１人様１回まで）0 円」（一致。2,200円の記載は店舗ページのコメントアウト内のみ）
+  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月20日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
   // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
