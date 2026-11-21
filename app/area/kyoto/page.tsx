@@ -11,6 +11,7 @@ import {
   clubPilatesPlanText,
   fmtYen,
   isCampaignActive,
+  PILATES_K_PRICES,
   RINTOSULL_JOIN_TEXT,
   RINTOSULL_PRICES as RIN,
   rintosullStoreText,
@@ -19,17 +20,26 @@ import {
 const LISTED = loadArea("kyoto").listed.length;
 
 // 京都市内（四条烏丸・河原町・烏丸御池・京都駅・西院）の大手ブランド12店舗の公式店舗ページの記載（2026年11月12日確認）。公式に記載のない値は書かない。
+// 2026-11-21: 12店舗の公式店舗ページと zen place 料金ページで駅からの距離・体験・月額を再照合。URBAN CLASSIC の運営管理費が
+//   「3ヶ月目の月会費より」→「4ヶ月目の月会費より」に変わっていたため訂正（四条河原町・西院とも同じ記載）。ほかの値はすべて同じ。
+//   Rintosull 2店舗の「開催中のキャンペーン」欄（11月末まで・通い放題 16,800円→1,980円・3か月目に5,940円・12か月継続が条件・運営管理費680円）も同じ。
 // zen place の月額は店舗ページに記載がないため、同社公式の料金ページ（京都・京都西院はいずれもグレード01）の額。
 // Celestia 京都店は店舗ページに料金の記載がなく、Pilates Mirror は月4回のプランがない（月6回まで 12,100円）ため、m4 を null にして集計から除く。
 // m4 は月4回プランの月額（冒頭の料金の目安に使う）。
-const CHAIN_CHECKED_AT = "2026年11月12日";
+const CHAIN_CHECKED_AT = "2026年11月21日";
 const ZEN_PRICE = "https://www.zenplace.co.jp/price";
 type Chain = { area: string; name: string; review?: string; access: string; trial: string; monthly: string; m4: number | null; source: string };
 const RINTOSULL_MONTHLY = `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`;
-const PILATES_K_MONTHLY = "月4回 13,420円／月8回 16,170円／プレミアム（毎日2レッスンまで）18,920円（税込）。施設維持費 月825円（税込）";
+// ピラティスK 京都四条烏丸店の店舗ページの月額（税込）。施設維持費はブランド共通（PILATES_K_PRICES）
+const PK_KYOTO = { m4: 13420, m8: 16170, premium: 18920 };
+const PILATES_K_MONTHLY = `月4回 ${fmtYen(PK_KYOTO.m4)}／月8回 ${fmtYen(PK_KYOTO.m8)}／プレミアム（毎日2レッスンまで）${fmtYen(PK_KYOTO.premium)}（税込）。施設維持費 月${PILATES_K_PRICES.maintenance}（税込）`;
+// Pilates Mirror の月会費（月6回まで・税込）
+const MIRROR_M6 = 12100;
 const ZEN_TRIAL = `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`;
 const ZEN_MONTHLY = `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`;
-const UC_MONTHLY = "マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。3か月目から運営管理費 月480円（税込）";
+// URBAN CLASSIC PILATES の店舗ページの料金表（画像の alt・税込）
+const UC = { m4: 8580, m8: 10780, regular: 12980, adminFee: 480 };
+const UC_MONTHLY = `マンスリー4 ${fmtYen(UC.m4)}／マンスリー8 ${fmtYen(UC.m8)}／レギュラー（通い放題・1日1回まで）${fmtYen(UC.regular)}（税込）。4か月目の月会費から運営管理費 月${fmtYen(UC.adminFee)}（税込）`;
 const CHAINS: Chain[] = [
   {
     area: "四条烏丸",
@@ -38,7 +48,7 @@ const CHAINS: Chain[] = [
     access: "阪急「烏丸駅」東改札口 徒歩1分（地下道18番出口直結）／地下鉄烏丸線「四条駅」1番出口 徒歩4分",
     trial: "体験レッスン 0円",
     monthly: PILATES_K_MONTHLY,
-    m4: 13420,
+    m4: PK_KYOTO.m4,
     source: "https://pilates-k.jp/studio/kyoto/kyoto-shijo-karasuma",
   },
   {
@@ -56,7 +66,7 @@ const CHAINS: Chain[] = [
     name: "Pilates Mirror 四条烏丸",
     access: "地下鉄烏丸線「四条駅」・阪急「烏丸駅」19番口 徒歩1分",
     trial: "体験 0円（お一人様1回まで）",
-    monthly: "月6回まで 12,100円（税込・7回目以降は1回1,100円）。入会金 11,000円（税込）。店舗ページでは18歳以上の女性が対象と記載",
+    monthly: `月6回まで ${fmtYen(MIRROR_M6)}（税込・7回目以降は1回1,100円）。入会金 11,000円（税込）。店舗ページでは18歳以上の女性が対象と記載`,
     m4: null,
     source: "https://www.konami.com/sportsclub/pilatesmirror/shijokarasuma/",
   },
@@ -77,7 +87,7 @@ const CHAINS: Chain[] = [
     access: "阪急「京都河原町駅」徒歩3分",
     trial: "無料体験",
     monthly: UC_MONTHLY,
-    m4: 8580,
+    m4: UC.m4,
     source: "https://urbanclassic.jp/pilates-studio/shijokawaramachi/",
   },
   {
@@ -117,7 +127,7 @@ const CHAINS: Chain[] = [
     access: "阪急「西院駅」徒歩1分",
     trial: "無料体験",
     monthly: UC_MONTHLY,
-    m4: 8580,
+    m4: UC.m4,
     source: "https://urbanclassic.jp/pilates-studio/saiin/",
   },
   {
@@ -154,6 +164,7 @@ const M4 = CHAINS.filter((c): c is Chain & { m4: number } => typeof c.m4 === "nu
 const M4_MIN = Math.min(...M4.map((c) => c.m4));
 const M4_MAX = Math.max(...M4.map((c) => c.m4));
 // DEP（月4回 32,000円）を除いた店舗の月4回の範囲
+const DEP_M4 = M4.find((c) => c.name.includes("DEP"))!.m4;
 const M4_NO_DEP = M4.filter((c) => !c.name.includes("DEP"));
 const M4_NO_DEP_MAX = Math.max(...M4_NO_DEP.map((c) => c.m4));
 const M4_MIN_NAMES = M4.filter((c) => c.m4 === M4_MIN).map((c) => c.name).join("・");
@@ -178,7 +189,7 @@ export default function AreaPage() {
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         四条烏丸・河原町・烏丸御池・京都駅・西院にある大手ブランドのうち、月4回プランの料金を公式ページで確認できた{M4.length}店舗の月額は
         <strong>{yen(M4_MIN)}円〜{yen(M4_MAX)}円</strong>です。
-        DEP 京都西院店（{yen(32000)}円）を除く{M4_NO_DEP.length}店舗は{yen(M4_MIN)}円〜{yen(M4_NO_DEP_MAX)}円で、最も安いのは{M4_MIN_NAMES}です
+        DEP 京都西院店（{yen(DEP_M4)}円）を除く{M4_NO_DEP.length}店舗は{yen(M4_MIN)}円〜{yen(M4_NO_DEP_MAX)}円で、最も安いのは{M4_MIN_NAMES}です
         （zen place はマットグループの額です。CLUB PILATES と DEP は店舗ページに税込・税別の表記がなく、ほかの店舗は税込です。入会金・管理費は含みません。{CHAIN_CHECKED_AT}に各公式ページで確認）。
         掲載した{CHAINS.length}店舗は、いずれも各店舗の最寄り駅から徒歩1〜5分です。店舗ごとの駅からの距離・体験・月額は、下の「京都の大手ピラティススタジオの料金とアクセス」の表に掲載しています。
       </p>
@@ -190,7 +201,7 @@ export default function AreaPage() {
           京都市内の大手{BRAND_COUNT}ブランド{CHAINS.length}店舗について、駅からの距離・体験・月額を各公式店舗ページで{CHAIN_CHECKED_AT}に確認しました（
           {AREAS.map((x, i) => `${i > 0 ? "、" : ""}${x.a} ${x.n}店`).join("")}）。
           体験は、ピラティスK・Rintosull・CLUB PILATES・URBAN CLASSIC PILATES・Pilates Mirror の各店舗が無料です。
-          Celestia 京都店は店舗ページに料金の記載がなく、Pilates Mirror は月4回のプランがない（月6回まで 12,100円）ため、月4回の集計から除いています。
+          Celestia 京都店は店舗ページに料金の記載がなく、Pilates Mirror は月4回のプランがない（月6回まで {yen(MIRROR_M6)}円）ため、月4回の集計から除いています。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-xs sm:text-sm border border-gray-200 rounded-xl">
@@ -236,7 +247,7 @@ export default function AreaPage() {
         {SHOW_RSC && (
           <p className="mt-3 rounded-xl bg-amber-50 border border-amber-200 p-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
             <strong>Rintosull 京都四条烏丸店・京都駅前店のキャンペーン（{RSC.periodText}）</strong>：{RSC.detail}。
-            （各店舗の公式ページの「開催中のキャンペーン」欄・{RSC.checkedAt}確認）
+            （各店舗の公式ページの「開催中のキャンペーン」欄・{CHAIN_CHECKED_AT}確認）
           </p>
         )}
       </section>
