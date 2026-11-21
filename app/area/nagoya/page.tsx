@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT } from "@/data-brand-facts";
 
 const LISTED = loadArea("nagoya").listed.length;
 
@@ -114,7 +114,7 @@ const CHAINS: Chain[] = [
     access: "地下鉄東山線・鶴舞線 伏見駅 徒歩1分",
     walk: 1,
     trial: "無料体験",
-    monthly: "マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。入会時の施設利用料 2,200円（税込）、3か月目から運営管理費 月480円（税込）",
+    monthly: `マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。入会時の施設利用料 2,200円（税込）、${UC_ADMIN_FEE_TEXT}`,
     m4: 8580,
     checkedAt: ADDED_CHECKED_AT,
     source: "https://urbanclassic.jp/pilates-studio/fushimi/",

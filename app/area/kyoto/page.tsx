@@ -15,6 +15,7 @@ import {
   RINTOSULL_JOIN_TEXT,
   RINTOSULL_PRICES as RIN,
   rintosullStoreText,
+  UC_ADMIN_FEE_TEXT,
 } from "@/data-brand-facts";
 
 const LISTED = loadArea("kyoto").listed.length;
@@ -38,8 +39,8 @@ const MIRROR_M6 = 12100;
 const ZEN_TRIAL = `マットグループ 初回体験1,000円（通常${fmtYen(ZP.trial.mat.g1)}〜）／マシングループ 初回体験3,000円（通常${fmtYen(ZP.trial.machine)}〜）`;
 const ZEN_MONTHLY = `マット 月4回 ${fmtYen(ZP.mat4.g1)}・フリー ${fmtYen(ZP.matFree.g1)}（グレード01）／マシン（リフォーマーグループ）月4回 ${fmtYen(ZP.rg4)}（税込）。設備運営管理費 月${fmtYen(ZP.facilityFee)}（税込）`;
 // URBAN CLASSIC PILATES の店舗ページの料金表（画像の alt・税込）
-const UC = { m4: 8580, m8: 10780, regular: 12980, adminFee: 480 };
-const UC_MONTHLY = `マンスリー4 ${fmtYen(UC.m4)}／マンスリー8 ${fmtYen(UC.m8)}／レギュラー（通い放題・1日1回まで）${fmtYen(UC.regular)}（税込）。4か月目の月会費から運営管理費 月${fmtYen(UC.adminFee)}（税込）`;
+const UC = { m4: 8580, m8: 10780, regular: 12980 };
+const UC_MONTHLY = `マンスリー4 ${fmtYen(UC.m4)}／マンスリー8 ${fmtYen(UC.m8)}／レギュラー（通い放題・1日1回まで）${fmtYen(UC.regular)}（税込）。${UC_ADMIN_FEE_TEXT}`;
 const CHAINS: Chain[] = [
   {
     area: "四条烏丸",

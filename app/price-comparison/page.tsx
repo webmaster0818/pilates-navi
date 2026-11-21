@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, CLUBPILATES_PRICES as CP, OFFICIAL_STORE_COUNT, fmtYen, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
+import { BRAND_FACTS, FACTS_SURVEYED_AT, MONTHLY4_LOWEST, THE_SILK_PRICES, ZENPLACE_PRICES, CLUBPILATES_PRICES as CP, OFFICIAL_STORE_COUNT, fmtYen, CELESTIA_PRICES as CEL, UC_ADMIN_FEE_TEXT } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ const studios: Studio[] = [
   { slug: "bdc", name: "BDC PILATES", price: "月4回 16,280円（税込）", type: "マシンピラティス", note: "都心中心。本格的に取り組みたい方向け" },
   { slug: "celestia", name: "Celestia（セレスティア）", price: `月4回 税込み${fmtYen(CEL.m4)}（1回${fmtYen(CEL.perLesson.m4)}）／月2回 ${fmtYen(CEL.m2)}〜通い放題 ${fmtYen(CEL.unlimited)}`, type: "セミパーソナル（約2名）", note: `ほぼマンツーマン。手厚い指導を求める方向け。公式料金ページの料金画像（${CEL.checkedAt}確認）` },
   { slug: "brest", name: "BREST PILATES & BODYMAKE", price: "パーソナル月4回 税込22,880円（東京3店は25,080円）／都度払い 税込6,380円", type: "マシンピラティス×ウェイトのパーソナル（30分）", note: "月額は各店舗ページの料金表（2026年10月25日確認）。URBAN CLASSIC PILATESも全店追加料金なしで利用可能" },
-  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: "月4回 税込8,580円／月8回 税込10,780円／通い放題 税込12,980円（全店共通）＋入会時 税込2,200円・3か月目から月 税込480円", type: "マシンピラティス×サーキット（予約不要・30分）", note: "月額は各店舗ページの料金表（2026年10月25日に全102店舗ページで確認）。全店舗相互利用可能" },
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", price: `月4回 税込8,580円／月8回 税込10,780円／通い放題 税込12,980円（全店共通）＋入会時 税込2,200円・${UC_ADMIN_FEE_TEXT}`, type: "マシンピラティス×サーキット（予約不要・30分）", note: "月額は各店舗ページの料金表（2026年10月25日に全102店舗ページで確認、11月21日に再確認）。全店舗相互利用可能" },
   { slug: "melmake", name: "メルメイク", price: "50分×月2回 17,300円〜（月4回33,000円）", type: "完全個室のパーソナルピラティス", note: "名古屋2店・福岡西新のみ。体験5,500円は当日入会で0円（2026年10月14日公式サイトで確認）" },
 ];
 

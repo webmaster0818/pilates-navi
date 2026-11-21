@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -27,7 +27,7 @@ const CHAINS: Chain[] = [
     name: "URBAN CLASSIC PILATES 川崎",
     access: "JR川崎駅 徒歩4分",
     trial: "店舗ページに「無料体験予約」の案内があります（金額の表記はありません）",
-    monthly: "マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。3か月目から運営管理費 月480円（税込）",
+    monthly: `マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。${UC_ADMIN_FEE_TEXT}`,
     m4: 8580,
     source: "https://urbanclassic.jp/pilates-studio/kawasaki/",
   },
@@ -90,7 +90,7 @@ const CHAINS: Chain[] = [
     name: "URBAN CLASSIC PILATES 新丸子",
     access: "東急東横線・目黒線 新丸子駅 徒歩1分",
     trial: "店舗ページに「無料体験予約」の案内があります（金額の表記はありません）",
-    monthly: "マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。3か月目から運営管理費 月480円（税込）",
+    monthly: `マンスリー4 8,580円／マンスリー8 10,780円／レギュラー（通い放題・1日1回まで）12,980円（税込）。${UC_ADMIN_FEE_TEXT}`,
     m4: 8580,
     source: "https://urbanclassic.jp/pilates-studio/shinmaruko/",
   },

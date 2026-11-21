@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
-import { BRAND_FACTS, ZENPLACE_PRICES as ZP, fmtYen, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
+import { BRAND_FACTS, UC_ADMIN_FEE_TEXT, ZENPLACE_PRICES as ZP, fmtYen, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
 import Icon from "@/components/Icon";
 import studioIdx from "@/data-studio-index.json";
 
@@ -123,7 +123,7 @@ const studios = [
     monthlyFee: monthlyShortOf("urban-classic"),
     features: ["予約不要", "1回30分", "サーキット形式", "全国102店舗相互利用"],
     pros: ["予約なしで空いた時間に通える点", "1回30分で継続しやすい点", "店舗数が多く、全店舗を相互利用できる点"],
-    cons: ["3か月目から運営管理費 月480円（税込）がかかる点", "退会は来店のみ・5日締め"],
+    cons: [`${UC_ADMIN_FEE_TEXT}がかかる点`, "退会は来店のみ・5日締め"],
     recommend: "決まった時間に通うことが難しい方、運動習慣をつけたい方におすすめです。",
     slug: "urban-classic", reviewPath: "/review/urban-classic/", url: "https://t.felmat.net/fmcl?ak=Z11337L.1.S1567449.P1361727",
   },

@@ -100,6 +100,23 @@ export const OFFICIAL_STORE_COUNT: Record<string, { n: number; checkedAt: string
 export const fmtYen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
 
 /**
+ * URBAN CLASSIC PILATES の運営管理費（各店舗ページの料金表の下の注記）。
+ * 2026-10-28 時点は「3ヶ月目の月会費より」。2026-11-21 に公式店舗一覧の全102店舗ページで
+ * 「※4ヶ月目の月会費より、運営管理費として毎月480円（税込）」を確認（全店同じ）。
+ * 同日、全102店舗で施設利用料「2,000円（税込2,200円）」と料金表画像 alt の月会費3種（税込8,580円・10,780円・12,980円）も同じ。
+ * 同じ運営会社の BREST は11/21時点も店舗ページに「3ヶ月目の月会費より」とあるため、こちらは使わない。
+ */
+export const UC_ADMIN_FEE = {
+  yen: 480,
+  /** 何か月目の月会費から運営管理費がかかるか */
+  startMonth: 4,
+  checkedAt: "2026年11月21日",
+  source: "https://urbanclassic.jp/pilates-studio/",
+};
+/** 「4か月目の月会費から運営管理費 月480円（税込）」 */
+export const UC_ADMIN_FEE_TEXT = `${UC_ADMIN_FEE.startMonth}か月目の月会費から運営管理費 月${fmtYen(UC_ADMIN_FEE.yen)}（税込）`;
+
+/**
  * zen place 公式料金ページ（https://www.zenplace.co.jp/price）の料金（税込）。2026年11月3日確認。
  * スタジオはグレード01／02の2区分（g1／g2）。
  * - マットグループ 月4：グレード01 10,450円／グレード02 9,625円
@@ -408,9 +425,9 @@ export type Monthly4 = {
 };
 
 export const MONTHLY4_LOWEST: Monthly4[] = [
-  // 川崎店ページの料金表画像の alt「7,800円（税込8,580円）」・本文「3ヶ月目の月会費より、運営管理費として毎月480円（税込）」「入会時のみ、施設利用料として…税込2,200円」
+  // 川崎店ページの料金表画像の alt「7,800円（税込8,580円）」・本文「入会時のみ、施設利用料として…税込2,200円」。運営管理費は UC_ADMIN_FEE（11/21 に「4ヶ月目の月会費より」へ変更を確認）
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", yen: 8580, plan: "マンスリー4", style: "マシンのサーキット形式・予約不要", note: "全店共通", kind: "group",
-    monthlyExtraYen: 480, monthlyExtraNote: "運営管理費 月480円（3か月目から）", joinNote: "入会時の施設利用料 2,200円",
+    monthlyExtraYen: UC_ADMIN_FEE.yen, monthlyExtraNote: `運営管理費 月${fmtYen(UC_ADMIN_FEE.yen)}（${UC_ADMIN_FEE.startMonth}か月目の月会費から）`, joinNote: "入会時の施設利用料 2,200円",
     checkedAt: "2026年10月29日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 料金ページ「マンスリー4・フルタイム 月会費 8,800円(税込)~10,800円(税込) 店舗によって料金が異なります」「運営管理費として毎月680円」「施設使用料2,500円」
   { slug: "rintosull", name: "Rintosull", yen: RIN.m4.min, plan: "マンスリー4・フルタイム", style: "マシンのグループ", note: `店舗により${fmtYen(RIN.m4.max)}まで`, kind: "group",
