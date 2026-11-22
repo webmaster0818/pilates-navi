@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { CELESTIA_INFO } from "@/data-brand-facts";
 
 export const metadata: Metadata = {
   title: "メルメイクのピラティスの口コミ・評判｜料金 月2回17,300円〜・名古屋/福岡の3店舗【2026年11月】",
@@ -291,7 +292,7 @@ export default function MelmakeReview() {
               メルメイクは、完全個室のパーソナルジムに「パーソナル専門マシンピラティス」を加えた名古屋発のブランドです。伏見店のピラティスでは筋力トレーニングにも対応しており、グループレッスンは一切行っていないと公式サイトに明記されています。グループレッスン主体のピラティススタジオとはコンセプトが大きく異なり、人目を気にせず集中してトレーニングしたい方や、自分専用のプログラムを希望する方に向いた施設です。姿勢矯正（猫背・巻き肩・反り腰・骨盤）を目的にしたプログラムを打ち出しています。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              zen place pilatesやCLUB PILATESなどのグループレッスン主体のスタジオと比較すると、メルメイクは完全個室のマンツーマン指導のため、料金は高めになる傾向があります。一方で、Celestiaのセミパーソナル（約2名制）やBDC PILATESの少人数制（最大8名）と比べても、メルメイクは完全マンツーマンのため、指導を受けられる時間の密度が高い点が特徴です。グループレッスンの雰囲気が苦手な方や、自分のペースで進めたい方に適しています。
+              zen place pilatesやCLUB PILATESなどのグループレッスン主体のスタジオと比較すると、メルメイクは完全個室のマンツーマン指導のため、料金は高めになる傾向があります。一方で、Celestiaのセミパーソナル（{CELESTIA_INFO.capacity}制）やBDC PILATESの少人数制（最大8名）と比べても、メルメイクは完全マンツーマンのため、指導を受けられる時間の密度が高い点が特徴です。グループレッスンの雰囲気が苦手な方や、自分のペースで進めたい方に適しています。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
               編集部では、メルメイクをプライバシーを重視する方や、目標に向けてマンツーマンの指導を受けたい方に向いたジムと評価しています。パーソナルトレーニングの利点は、一人ひとりの目標・体力・生活習慣に合わせたきめ細かな指導にあります。ダイエット、ボディメイク、姿勢改善など、目的が明確な方ほど活用しやすいといえます。なお、他の参加者と一緒にトレーニングしたい方には、グループレッスンのスタジオが向いています。

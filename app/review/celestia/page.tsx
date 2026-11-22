@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, OFFICIAL_STORE_COUNT, ZENPLACE_PRICES, fmtYen, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
+import { BRAND_FACTS, CELESTIA_TRIAL_SOURCES, CELESTIA_INFO as CI, OFFICIAL_STORE_COUNT, ZENPLACE_PRICES, fmtYen, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
 import { BRAND_AREA, AREA_SURVEYED_AT } from "@/data-brand-area";
 
 const AREA_SURVEYED_JA = AREA_SURVEYED_AT.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, "$1年$2月$3日");
@@ -12,20 +12,20 @@ const TRIAL = BRAND_FACTS["celestia"].trial;
 export const metadata: Metadata = {
   title: "Celestiaの口コミ・料金・体験レッスン｜セミパーソナルの特徴と評判【2026年】",
   description:
-    `Celestia（セレスティア）の口コミ・評判、料金プラン（月4回${fmtYen(CEL.m4)}・税込み）、体験レッスンの流れ・予約方法、池袋などの店舗情報を解説します。約2名のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオを中立的な立場で紹介します（料金・特典は公式サイトでご確認ください）。`,
+    `Celestia（セレスティア）の口コミ・評判、料金プラン（月4回${fmtYen(CEL.m4)}・税込み）、体験レッスンの流れ・予約方法、池袋などの店舗情報を解説します。${CI.capacity}のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオを中立的な立場で紹介します（料金・特典は公式サイトでご確認ください）。`,
 };
 
 const faqs = [
   { q: "Celestia（セレスティア）の料金はいくらですか？", a: `公式サイトの料金ページでは、月2回${fmtYen(CEL.m2)}、月4回${fmtYen(CEL.m4)}、月6回${fmtYen(CEL.m6)}、月8回${fmtYen(CEL.m8)}、通い放題${fmtYen(CEL.unlimited)}（いずれも税込み）と記載されています（${CEL.checkedAt}確認）。1回あたりに換算すると、月4回で${fmtYen(CEL.perLesson.m4)}、月8回で${fmtYen(CEL.perLesson.m8)}です。通常プランは翌月以降へのチケットの繰り越しが可能です。入会金は利用規約に定めがありますが、金額は公式サイトに記載がないため、申し込み前に店舗でご確認ください。` },
-  { q: "Celestiaの口コミ・評判は良い？", a: "「約2名の少人数でしっかり見てもらえる」「スタジオが清潔」「手ぶらで通えて便利」といった声が見られる一方、「1回あたりの単価がやや高め」「店舗がまだ少ない」という指摘もあります。評価は目的や通うエリアによって異なります。" },
-  { q: "セミパーソナルとは何ですか？", a: "1レッスンあたり約2名の少人数制です。インストラクターの目が行き届くため、マンツーマンに近い指導を受けられます。グループレッスンより手厚く、完全プライベートより費用を抑えられる中間的な形式です。" },
+  { q: "Celestiaの口コミ・評判は良い？", a: "「少人数でしっかり見てもらえる」「スタジオが清潔」「手ぶらで通えて便利」といった声が見られる一方、「1回あたりの単価がやや高め」「店舗がまだ少ない」という指摘もあります。評価は目的や通うエリアによって異なります。" },
+  { q: "セミパーソナルとは何ですか？", a: `1レッスンあたり${CI.capacity}の少人数制です（公式サイトの記載）。インストラクターの目が行き届くため、マンツーマンに近い指導を受けられます。グループレッスンより手厚く、完全プライベートより費用を抑えられる中間的な形式です。` },
   { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。体験料金は、公式サイトの料金ページでは30分${fmtYen(CEL.trial)}と記載されています。一方、体験案内ページでは「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」と案内されており、料金ページや店舗ページの予約ボタンにも「無料体験」と記載されています。キャンペーンの期間は公式サイトに記載がありません（いずれも${CELESTIA_TRIAL_SOURCES.checkedAt}確認）。表記が異なるため、予約時に適用される料金をご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望の店舗・日時を選んで申し込むのが基本です。空き状況や予約システムは店舗により異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルや繰り越しはできますか？", a: "未消化分の繰り越しが可能とされています。キャンセルの可否・期限・ペナルティの有無はプランや店舗の規約によるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "手ぶらで通えますか？", a: "はい、ウェアやタオルなどのレンタルがあり、手ぶらで通えるとされています。仕事帰りにも立ち寄りやすい環境です（レンタルの範囲・料金は店舗にてご確認ください）。" },
-  { q: "どの店舗がありますか？", a: "公式サイトの店舗一覧には、札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗が掲載されています（2026年10月27日確認・11月12日再確認）。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できると公式サイトに記載されています。各店の所在地・営業時間は公式サイトの店舗一覧でご確認ください。" },
+  { q: "どの店舗がありますか？", a: `公式サイトの店舗一覧には、${CI.storeRegions}の${OFFICIAL_STORE_COUNT.celestia.n}店舗が掲載されています（${CI.checkedAt}確認）。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できると公式サイトに記載されています。各店の所在地・営業時間は公式サイトの店舗一覧でご確認ください。` },
   { q: "マシン未経験でも参加できますか？", a: "はい。リフォーマー等のマシンの使い方はインストラクターが案内するため、マシンピラティスが初めての方でも参加できます。" },
-  { q: "男性も利用できますか？", a: "店舗によって異なる場合がありますので、利用前に公式サイトまたは店舗に直接お問い合わせください。" },
+  { q: "男性も利用できますか？", a: `はい。公式サイトのよくある質問に「男性のお客様も安心して気軽に通えます」と記載されています（${CI.checkedAt}確認）。` },
 ];
 
 const faqJsonLd = {
@@ -39,7 +39,7 @@ const faqJsonLd = {
 };
 
 const goodPoints = [
-  "約2名のセミパーソナルで、マンツーマンに近い丁寧な指導を受けられるという声",
+  `${CI.capacity}のセミパーソナルで、マンツーマンに近い丁寧な指導を受けられるという声`,
   "マシン（リフォーマー）専門のため、正しいフォームを身につけやすいという声",
   "手ぶらで通え、清潔な空間で利用しやすいという声",
   "未消化分を繰り越せるため、忙しい時期でもレッスンが無駄になりにくいという声",
@@ -49,7 +49,6 @@ const concernPoints = [
   `1回あたりの単価が高め（月4回で${fmtYen(CEL.perLesson.m4)}・月8回で${fmtYen(CEL.perLesson.m8)}）という指摘`,
   "店舗数が少なく、通える地域が限られる点",
   "費用を最優先する方や、大人数で気軽に通いたい方にはグループ型が適している点",
-  "男性の利用可否が店舗により異なる場合がある点",
 ];
 
 const prices = [
@@ -63,24 +62,7 @@ const prices = [
   { plan: "体験レッスン", price: TRIAL, note: "料金ページと店舗別の体験案内ページで表記が異なります。予約時に適用される料金をご確認ください。" },
 ];
 
-const stores = [
-  { area: "池袋店", note: "東京都豊島区" },
-  { area: "新宿店", note: "東京都新宿区" },
-  { area: "町田店", note: "東京都町田市" },
-  { area: "横浜店", note: "神奈川県横浜市" },
-  { area: "船橋店", note: "千葉県船橋市" },
-  { area: "松戸店", note: "千葉県松戸市" },
-  { area: "札幌店", note: "北海道札幌市" },
-  { area: "仙台店", note: "宮城県仙台市" },
-  { area: "名古屋栄店", note: "愛知県名古屋市" },
-  { area: "京都店", note: "京都府京都市" },
-  { area: "梅田店", note: "大阪府大阪市" },
-  { area: "心斎橋店", note: "大阪府大阪市" },
-  { area: "セブンパーク天美店", note: "大阪府松原市" },
-  { area: "神戸三宮店", note: "兵庫県神戸市中央区（2026年10月27日に公式の店舗一覧で確認）" },
-  { area: "姫路店", note: "兵庫県姫路市" },
-  { area: "福岡赤坂店", note: "福岡県福岡市" },
-];
+const stores = CI.stores;
 
 export default function CelestiaReview() {
   return (
@@ -91,7 +73,7 @@ export default function CelestiaReview() {
       <section className="bg-[#F5F3FF] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Celestia（セレスティア）の口コミ・料金・体験レッスンを解説</h1>
-          <p className="mt-3 text-gray-600">約2名のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオ（池袋ほか）の評判をまとめています。</p>
+          <p className="mt-3 text-gray-600">{CI.capacity}のセミパーソナル形式で、マンツーマンに近い指導を受けられるマシンピラティス専門スタジオ（池袋ほか）の評判をまとめています。</p>
         </div>
       </section>
 
@@ -111,7 +93,7 @@ export default function CelestiaReview() {
           <div className="bg-violet-50 border-l-4 border-[#7C3AED] rounded-r-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">Celestiaの概要と向いている方</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Celestiaは、<strong>約2名のセミパーソナル</strong>と<strong>マシンピラティス専門</strong>を特徴とするスタジオです。料金は<strong>月4回{fmtYen(CEL.m4)}（税込み・1回あたり{fmtYen(CEL.perLesson.m4)}）</strong>とグループより高めですが、その分、マンツーマンに近い指導密度を重視する方に向いています。手ぶらで通えることや繰り越しができることも利点で、店舗は<strong>札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗</strong>です（2026年10月27日公式サイトで確認）。通える範囲に店舗がある方には、体験レッスンの受講をおすすめします。一方で、費用を重視する方や大人数で気軽に通いたい方には適さない場合があります。
+              Celestiaは、<strong>{CI.capacity}のセミパーソナル</strong>と<strong>マシンピラティス専門</strong>を特徴とするスタジオです。料金は<strong>月4回{fmtYen(CEL.m4)}（税込み・1回あたり{fmtYen(CEL.perLesson.m4)}）</strong>とグループより高めですが、その分、マンツーマンに近い指導密度を重視する方に向いています。手ぶらで通えることや繰り越しができることも利点で、店舗は<strong>{CI.storeRegions}の{OFFICIAL_STORE_COUNT.celestia.n}店舗</strong>です（{CI.checkedAt}公式サイトで確認）。通える範囲に店舗がある方には、体験レッスンの受講をおすすめします。一方で、費用を重視する方や大人数で気軽に通いたい方には適さない場合があります。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>フォームを丁寧に確認してほしい方／グループレッスンでは物足りない方</li>
@@ -132,13 +114,13 @@ export default function CelestiaReview() {
               <tbody>
                 {[
                   ["スタジオ名", "ピラティススタジオ Celestia（セレスティア）"],
-                  ["運営", "チキンジム / チキンゴルフ系列"],
-                  ["タイプ", "セミパーソナル（約2名）マシンピラティス専門"],
+                  ["運営", CI.operator],
+                  ["タイプ", `セミパーソナル（${CI.capacity}）マシンピラティス専門`],
                   ["月額料金", `月2回 ${fmtYen(CEL.m2)}／月4回 ${fmtYen(CEL.m4)}／月6回 ${fmtYen(CEL.m6)}／月8回 ${fmtYen(CEL.m8)}／通い放題 ${fmtYen(CEL.unlimited)}（税込み・${CEL.checkedAt}公式料金ページで確認）`],
                   ["入会金・繰り越し", "入会金あり（金額は公式サイトに記載なし）/ 通常プランは翌月以降へ繰り越し可"],
-                  ["店舗", "札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡の16店舗（2026年10月27日公式サイトで確認・11月12日再確認）"],
-                  ["レッスン形式", "セミパーソナル（約2名の少人数制）"],
-                  ["対象", "運動経験不問 ※男性可否は店舗で要確認"],
+                  ["店舗", `${CI.storeRegions}の${OFFICIAL_STORE_COUNT.celestia.n}店舗（${CI.checkedAt}公式サイトで確認）`],
+                  ["レッスン形式", `セミパーソナル（${CI.capacity}の少人数制）`],
+                  ["対象", `運動経験不問／${CI.male}`],
                   ["特徴", "マンツーマンに近い指導 / 手ぶらで利用可 / 清潔なスタジオ"],
                   ["体験レッスン", TRIAL],
                 ].map(([label, value]) => (
@@ -191,7 +173,7 @@ export default function CelestiaReview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-            ※出典：<a href="https://celes-pilates.jp/price/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 料金ページ</a>・利用規約（2026年10月26日確認）。体験レッスンの料金は<a href={CELESTIA_TRIAL_SOURCES.price} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">料金ページ</a>と<a href={CELESTIA_TRIAL_SOURCES.lp} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">体験案内ページ</a>（{CELESTIA_TRIAL_SOURCES.checkedAt}確認）。入会金の金額は公式サイトに記載がないため掲載していません。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
+            ※出典：<a href="https://celes-pilates.jp/price/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 料金ページ</a>・利用規約（{CEL.checkedAt}確認）。体験レッスンの料金は<a href={CELESTIA_TRIAL_SOURCES.price} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">料金ページ</a>と<a href={CELESTIA_TRIAL_SOURCES.lp} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">体験案内ページ</a>（{CELESTIA_TRIAL_SOURCES.checkedAt}確認）。入会金の金額は公式サイトに記載がないため掲載していません。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
       </section>
@@ -202,7 +184,7 @@ export default function CelestiaReview() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">Celestiaの強み</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { title: "マンツーマンに近い指導", desc: "1レッスン約2名のセミパーソナル形式で、グループレッスンより丁寧な指導を受けられます。" },
+              { title: "マンツーマンに近い指導", desc: `1レッスン${CI.capacity}のセミパーソナル形式で、グループレッスンより丁寧な指導を受けられます。` },
               { title: "マシン専門", desc: "リフォーマーなどのマシンを使い、正しいフォームで効率的にボディメイクに取り組めます。" },
               { title: "手ぶらで通える清潔な空間", desc: "ウェア・タオルのレンタルがあり、手ぶらで通えます。清潔感のある空間でレッスンを受けられます。" },
             ].map((s) => (
@@ -256,13 +238,13 @@ export default function CelestiaReview() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 leading-relaxed">
-              Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオです。「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」の両立を特徴としています。1レッスン約2名という少人数制のため、実質的にマンツーマンに近い指導を受けられ、フォームの修正や個別のアドバイスが充実しています。チキンジム・チキンゴルフの運営ノウハウを活かしたスタジオ運営にも安定感があります。
+              Celestia（セレスティア）は、セミパーソナル形式のマシンピラティス専門スタジオです。「グループレッスンの手軽さ」と「プライベートレッスンの質の高さ」の両立を特徴としています。1レッスン{CI.capacity}という少人数制のため、実質的にマンツーマンに近い指導を受けられ、フォームの修正や個別のアドバイスが充実しています。運営は株式会社Belle Vieで、店舗は ChickenGolf の店舗内に併設されています（公式サイトの会社概要・店舗ページ）。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              BDC PILATESの最大8名制と比較すると、Celestiaの約2名制はさらに少人数で手厚い指導が受けられます。一方で1回あたり{fmtYen(CEL.perLesson.m8)}〜{fmtYen(CEL.perLesson.m2)}（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額{fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
+              BDC PILATESの最大8名制と比較すると、Celestiaの{CI.capacity}制はさらに少人数で手厚い指導が受けられます。一方で1回あたり{fmtYen(CEL.perLesson.m8)}〜{fmtYen(CEL.perLesson.m2)}（税込み・プランにより異なります）という単価はプライベートレッスン寄りの価格設定です。zen place pilatesのマットグループ月額{fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（月4回・税込・目安）と比べると割高になりますが、指導密度を考慮すると妥当な設定と考えられます。繰り越し制度がある点も、予定が不規則な方にとって利点です。
             </p>
             <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              編集部として、Celestiaは「グループレッスンだと物足りないが、完全プライベートほどの出費は避けたい方」に適したスタジオと考えます。店舗は16店舗で、大手のグループ型スタジオと比べると通える地域が限られる点は課題ですが、通える範囲にお住まいの方には体験レッスンの受講をおすすめします。手ぶらで通えるため、仕事帰りにもピラティスを続けやすい環境です。
+              編集部として、Celestiaは「グループレッスンだと物足りないが、完全プライベートほどの出費は避けたい方」に適したスタジオと考えます。店舗は{OFFICIAL_STORE_COUNT.celestia.n}店舗で、大手のグループ型スタジオと比べると通える地域が限られる点は課題ですが、通える範囲にお住まいの方には体験レッスンの受講をおすすめします。手ぶらで通えるため、仕事帰りにもピラティスを続けやすい環境です。
             </p>
           </div>
         </div>
@@ -276,7 +258,7 @@ export default function CelestiaReview() {
             <div className="bg-green-50 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-3">メリット</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>約2名のセミパーソナルによる丁寧な指導</li>
+                <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>{CI.capacity}のセミパーソナルによる丁寧な指導</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>姿勢改善・柔軟性向上を実感しやすい指導形式</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>繰り越し制度により、レッスンが無駄になりにくい点</li>
                 <li className="flex items-start gap-2"><span className="text-green-500">&#10003;</span>手ぶらで通えるため、仕事帰りにも利用しやすい点</li>
@@ -287,7 +269,6 @@ export default function CelestiaReview() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>1回あたりの単価が高め（{fmtYen(CEL.perLesson.m8)}〜{fmtYen(CEL.perLesson.m2)}）</li>
                 <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>店舗数が少なく、通える地域が限られる点</li>
-                <li className="flex items-start gap-2"><span className="text-red-400">&#8211;</span>男性の利用可否は店舗により異なる場合あり</li>
               </ul>
             </div>
           </div>
@@ -299,12 +280,12 @@ export default function CelestiaReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Celestiaの体験レッスンの流れ・予約方法</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            Celestiaでは、入会前に<strong>体験レッスン</strong>を受けられます。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティスが初めての方でも参加できます。約2名のセミパーソナル形式のため、初回からフォームについて丁寧な指導を受けられる点が特徴です。
+            Celestiaでは、入会前に<strong>体験レッスン</strong>を受けられます。マシン（リフォーマー等）の使い方はインストラクターが案内するため、マシンピラティスが初めての方でも参加できます。{CI.capacity}のセミパーソナル形式のため、初回からフォームについて丁寧な指導を受けられる点が特徴です。
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 mb-4">
             <li><strong>予約する</strong>：公式サイトから希望の店舗と日時を選んで申し込みます。</li>
             <li><strong>来店・カウンセリング</strong>：当日は動きやすい服装で来店します。目的や体の悩みについてヒアリングを受けます（手ぶらで来店できます）。</li>
-            <li><strong>体験レッスン</strong>：マシンの使い方を学びながら、約2名のセミパーソナルで実際のレッスンを体験します。</li>
+            <li><strong>体験レッスン</strong>：マシンの使い方を学びながら、{CI.capacity}のセミパーソナルで実際のレッスンを体験します。</li>
             <li><strong>説明・入会案内</strong>：料金プランや繰り越し制度の説明を受けます。その場で入会しなくても問題ありません。</li>
           </ol>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
@@ -313,7 +294,7 @@ export default function CelestiaReview() {
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金（料金ページと店舗別の体験案内ページで表記が異なります）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>レンタル（ウェア・タオル等）の範囲と料金</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>予約のキャンセル可否・期限・繰り越しの条件</li>
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗・希望時間帯の空き状況／男性利用の可否</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗・希望時間帯の空き状況</li>
             </ul>
           </div>
         </div>
@@ -324,7 +305,7 @@ export default function CelestiaReview() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Celestiaの店舗・エリア（池袋ほか）</h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            Celestiaは<strong>全国16店舗</strong>を展開しています。下表は公式サイトの店舗一覧（2026年10月27日確認・11月12日再確認）にもとづく店舗名と所在地です。なお、当サイトがGoogleマップから取得した店舗データ（{BRAND_AREA.celestia.studios}店舗・{AREA_SURVEYED_JA}取得）は公式の店舗数より少なく、取得後に公式の店舗一覧へ掲載された店舗は含まれていません（公式の店舗数は{OFFICIAL_STORE_COUNT.celestia.n}店舗・{OFFICIAL_STORE_COUNT.celestia.checkedAt}確認）。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できます。各店舗の正確な所在地・営業時間・取り扱いプランは、公式サイトの店舗一覧でご確認ください。
+            Celestiaは<strong>全国{OFFICIAL_STORE_COUNT.celestia.n}店舗</strong>を展開しています。下表は公式サイトの店舗一覧（{CI.checkedAt}確認）にもとづく店舗名と所在地です。なお、当サイトがGoogleマップから取得した店舗データ（{BRAND_AREA.celestia.studios}店舗・{AREA_SURVEYED_JA}取得）は公式の店舗数より少なく、取得後に公式の店舗一覧へ掲載された店舗は含まれていません（公式の店舗数は{OFFICIAL_STORE_COUNT.celestia.n}店舗・{OFFICIAL_STORE_COUNT.celestia.checkedAt}確認）。会員はご契約プランの回数内で、どの店舗でもレッスンを予約できます。各店舗の正確な所在地・営業時間・取り扱いプランは、公式サイトの店舗一覧でご確認ください。
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {stores.map((s) => (
@@ -334,7 +315,7 @@ export default function CelestiaReview() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs text-gray-500">※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href="https://celes-pilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください。出典：<a href="https://celes-pilates.jp/stores/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 店舗一覧</a>（2026年10月27日確認）。</p>
+          <p className="mt-4 text-xs text-gray-500">※店舗は開業・移転・閉店で変わります。最新の店舗一覧と所在地は<a href="https://celes-pilates.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式サイト</a>でご確認ください。出典：<a href={CI.storesSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">Celestia公式サイト 店舗一覧</a>（{CI.checkedAt}確認）。</p>
         </div>
       </section>
 

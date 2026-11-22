@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_INFO as CI } from "@/data-brand-facts";
 
 const LISTED = loadArea("sendai").listed.length;
 
@@ -41,8 +41,8 @@ const CHAINS: Chain[] = [
     name: "Celestia 仙台店",
     review: "/review/celestia/",
     access: "地下鉄東西線「青葉通一番町駅」徒歩3分",
-    trial: "店舗ページに記載なし",
-    monthly: "店舗ページに記載なし（ブランド全体の料金は公式料金ページに掲載）",
+    trial: CI.storePageTrial,
+    monthly: CI.storePageMonthly,
     m4: null,
     source: "https://celes-pilates.jp/stores/sendai/",
   },

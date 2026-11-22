@@ -16,6 +16,7 @@ import {
   RINTOSULL_PRICES as RIN,
   rintosullStoreText,
   UC_ADMIN_FEE_TEXT,
+  CELESTIA_INFO as CI,
 } from "@/data-brand-facts";
 
 const LISTED = loadArea("kyoto").listed.length;
@@ -96,8 +97,8 @@ const CHAINS: Chain[] = [
     name: "Celestia 京都店",
     review: "/review/celestia/",
     access: "阪急「京都河原町駅」徒歩5分",
-    trial: "店舗ページに料金の記載なし（無料体験の予約案内あり）",
-    monthly: "店舗ページに記載なし（ブランド全体の料金は公式料金ページに掲載）",
+    trial: CI.storePageTrial,
+    monthly: CI.storePageMonthly,
     m4: null,
     source: "https://celes-pilates.jp/stores/kyoto/",
   },

@@ -10,10 +10,54 @@ export const FACTS_SURVEYED_AT = "2026年9月30日";
 /** Celestia 体験料金の出典(料金ページと店舗別の体験案内ページで表記が異なるため両方を示す) */
 // 2026-11-13: /lp/trial01/ のメイン画像に「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」、本文に「無料体験レッスンまでの流れ」。
 // 10/27 に記録した「OPEN特別キャンペーン（期間限定）」の文言は本文に無い。期間の記載なし。料金ページは「体験受付中 30分 3,000円」のまま。
+// 2026-11-22: 料金ページ・店舗一覧・FAQ の下部「体験受付中！30分 3,000円」「無料体験ご予約はこちら！」、/lp/trial01/ のメイン画像
+// （4d59f492…-715x1024.webp）「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」、本文「無料体験レッスンまでの流れ」を再確認（変更なし・期間の記載なし）。
 export const CELESTIA_TRIAL_SOURCES = {
-  checkedAt: "2026年11月13日",
+  checkedAt: "2026年11月22日",
   price: "https://celes-pilates.jp/price/",
   lp: "https://celes-pilates.jp/lp/trial01/",
+};
+
+/**
+ * Celestia のレッスン形式・運営・店舗（公式サイト・2026年11月22日確認）。
+ * - 形式：公式トップ「セミパーソナルレッスン（最大2名）」（従来の当サイト表記「約2名」を公式の表記に訂正）
+ * - 男性：公式FAQ「Q：男性でも参加できますか？ A：男性のお客様も安心して気軽に通えます。」、公式トップ「男女問わず全ての方に寄り添い」
+ * - 運営：公式の会社概要「株式会社Belle Vie」（法人窓口は chicken-golf.com のアドレス）。店舗ページの道順に「ChickenGolf内にCelestiaが入っております」等
+ *   （仙台・横浜・京都・神戸三宮）。「チキンジム」との関係は公式に記載がないため書かない
+ * - 店舗：/stores/ の16店舗（新宿・池袋・町田／札幌・仙台／船橋・横浜・松戸／名古屋栄／梅田・心斎橋・セブンパーク天美・姫路・神戸三宮・京都／福岡赤坂）。
+ *   所在地は /lp/trial01/ の店舗一覧と町田・福岡赤坂・仙台・横浜・京都・名古屋栄・神戸三宮の店舗ページで確認
+ * - 全店利用：公式トップ「会員様はご契約プランの回数内で、どの店舗でもお好きな日時にレッスンをご予約いただけます」
+ * - 店舗ページ（仙台・横浜・京都・名古屋栄・神戸三宮）：料金の記載なし。予約ボタンは「無料体験ご予約はこちら！」
+ */
+export const CELESTIA_INFO = {
+  checkedAt: "2026年11月22日",
+  storesSource: "https://celes-pilates.jp/stores/",
+  capacity: "最大2名",
+  operator: "株式会社Belle Vie（公式サイトの会社概要。店舗は ChickenGolf の店舗内に併設）",
+  male: "男性も利用できます（公式FAQ「男性のお客様も安心して気軽に通えます」）",
+  storeRegions:
+    "札幌・仙台・東京（池袋・新宿・町田）・横浜・千葉（船橋・松戸）・名古屋・京都・大阪（梅田・心斎橋・セブンパーク天美）・兵庫（神戸三宮・姫路）・福岡",
+  stores: [
+    { area: "池袋店", note: "東京都豊島区" },
+    { area: "新宿店", note: "東京都新宿区" },
+    { area: "町田店", note: "東京都町田市" },
+    { area: "横浜店", note: "神奈川県横浜市" },
+    { area: "船橋店", note: "千葉県船橋市" },
+    { area: "松戸店", note: "千葉県松戸市" },
+    { area: "札幌店", note: "北海道札幌市" },
+    { area: "仙台店", note: "宮城県仙台市" },
+    { area: "名古屋栄店", note: "愛知県名古屋市" },
+    { area: "京都店", note: "京都府京都市" },
+    { area: "梅田店", note: "大阪府大阪市" },
+    { area: "心斎橋店", note: "大阪府大阪市" },
+    { area: "セブンパーク天美店", note: "大阪府松原市" },
+    { area: "神戸三宮店", note: "兵庫県神戸市中央区" },
+    { area: "姫路店", note: "兵庫県姫路市" },
+    { area: "福岡赤坂店", note: "福岡県福岡市" },
+  ],
+  /** 店舗ページに料金の記載がない店舗のエリアページ用表記 */
+  storePageMonthly: "店舗ページに記載なし（ブランド全体の料金は公式料金ページに掲載）",
+  storePageTrial: "店舗ページに料金の記載なし（無料体験の予約案内あり）",
 };
 
 /**
@@ -93,7 +137,7 @@ export const RINTOSULL_JOIN_TEXT_LAVA_COLLAB =
  * 当サイトの収録（2026年9月2日時点のGoogleマップ取得分）は8店舗。
  */
 export const OFFICIAL_STORE_COUNT: Record<string, { n: number; checkedAt: string; source: string }> = {
-  celestia: { n: 16, checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/stores/" },
+  celestia: { n: CELESTIA_INFO.stores.length, checkedAt: CELESTIA_INFO.checkedAt, source: CELESTIA_INFO.storesSource },
 };
 
 /** 円表記（例：12,280円） */
@@ -243,9 +287,12 @@ export const RINTOSULL_START_CAMPAIGN = {
  * - 2026年10月26日：5枚の料金画像で確認（サイト表示の確認日はこの日の値）。11月13日に再確認（一致）
  * - 2026年11月16日：料金画像5枚（Celestia_price-2.jpg 月4回・Celestia_price.jpg 月6回・Celestia_price-4.jpg 月8回・
  *   Celestia_HP_ticket-9.jpg 月2回・7c2ee79c282c4fc2ab0b0dc73ea53310.jpg 通い放題）と料金ページ本文「体験受付中 30分 3,000円」を再確認。すべて同額（いずれも「税込み」表記）。
+ * - 2026年11月22日：同じ5枚の料金画像（月2回 20,000円・1回あたり10,000円／月4回 33,000円・8,250円／月6回 47,000円・7,833円／
+ *   月8回 53,000円・6,625円／通い放題 66,000円）と「体験受付中 30分 3,000円」を再確認し一致。表示の確認日をこの日に更新。
+ *   公式トップの「1回あたり6,000円～」は対応するプランの記載がないため使わない。入会金は利用規約第14条（返金不可の定めのみ・金額の記載なし）
  */
 export const CELESTIA_PRICES = {
-  checkedAt: "2026年10月26日",
+  checkedAt: "2026年11月22日",
   source: "https://celes-pilates.jp/price/",
   m2: 20000,
   m4: 33000,
@@ -340,16 +387,16 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     checkedAt: "2026年11月13日",
   },
   "celestia": {
-    style: "マシンピラティス", format: "セミパーソナル（約2名）", gender: "男女可",
-    monthly: `月2回 ${fmtYen(CEL.m2)}／月4回 ${fmtYen(CEL.m4)}／月6回 ${fmtYen(CEL.m6)}／月8回 ${fmtYen(CEL.m8)}／通い放題 ${fmtYen(CEL.unlimited)}（税込み・公式料金ページの料金画像に記載・${CEL.checkedAt}確認、11月13日再確認）`,
-    joinFee: "入会金あり（利用規約第14条）。金額は公式サイトに記載なし（2026年10月26日確認）",
+    style: "マシンピラティス", format: `セミパーソナル（${CELESTIA_INFO.capacity}）`, gender: "男女可",
+    monthly: `月2回 ${fmtYen(CEL.m2)}／月4回 ${fmtYen(CEL.m4)}／月6回 ${fmtYen(CEL.m6)}／月8回 ${fmtYen(CEL.m8)}／通い放題 ${fmtYen(CEL.unlimited)}（税込み・公式料金ページの料金画像に記載・${CEL.checkedAt}確認）`,
+    joinFee: `入会金あり（利用規約第14条）。金額は公式サイトに記載なし（${CEL.checkedAt}確認）`,
     monthlyExtra: "公式に記載なし",
     // 2026-11-13: 料金ページは「体験受付中！30分 3,000円」、同じページと京都店ページの予約ボタンは「無料体験ご予約はこちら！」。/lp/trial01/ の本文は「無料体験レッスンまでの流れ」、メイン画像は「体験無料！」「新店舗OPEN オープン記念キャンペーン実施中！」（期間の記載なし）
-    trial: "公式サイトの料金ページでは「体験受付中 30分 3,000円」と記載されています。一方、体験案内ページ（/lp/trial01/）と料金ページ・店舗ページの予約ボタンには「無料体験」と記載されています。体験料金は予約時にご確認ください（2026年11月13日確認）",
+    trial: `公式サイトの料金ページでは「体験受付中 30分 ${fmtYen(CEL.trial)}」と記載されています。一方、体験案内ページ（/lp/trial01/）と料金ページ・店舗ページの予約ボタンには「無料体験」と記載されています。体験料金は予約時にご確認ください（${CELESTIA_TRIAL_SOURCES.checkedAt}確認）`,
     source: "https://celes-pilates.jp/price/",
     // 公式料金ページの料金画像で最低額（月2回）を2026年10月28日に再確認。11月13日に5枚の料金画像（月2・4・6・8回・通い放題）を再確認（一致）
     monthlyShort: `月2回 ${fmtYen(CEL.m2)}〜（税込）`,
-    checkedAt: "2026年11月13日",
+    checkedAt: CEL.checkedAt,
   },
   "club-pilates": {
     style: "マシンピラティス（マット＋リフォーマー）", format: "グループ（最大12名）・4段階レベル別", gender: "男女可",
@@ -497,7 +544,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月13日";
+export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月22日";
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -516,7 +563,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
   // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
-  { slug: "celestia", name: "Celestia", minYen: CEL.trial, text: `30分${fmtYen(CEL.trial)}`, campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: "2026年11月13日", source: "https://celes-pilates.jp/price/" },
+  { slug: "celestia", name: "Celestia", minYen: CEL.trial, text: `30分${fmtYen(CEL.trial)}`, campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: CELESTIA_TRIAL_SOURCES.checkedAt, source: CELESTIA_TRIAL_SOURCES.price },
   // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
   { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時500円", checkedAt: "2026年11月11日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）

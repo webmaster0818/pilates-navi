@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
-import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_PRICES as CEL } from "@/data-brand-facts";
+import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_PRICES as CEL, CELESTIA_INFO as CI } from "@/data-brand-facts";
 import studioIdx from "@/data-studio-index.json";
 
 const { listed, surveyedAt } = loadArea("kobe");
@@ -58,7 +58,7 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     name: "Celestia 神戸三宮店",
     review: "/review/celestia/",
     access: "市営地下鉄「三宮・花時計前」駅 徒歩2分、JR「三ノ宮」駅・市営地下鉄「三宮」駅・阪急/阪神「神戸三宮」駅 徒歩5分",
-    target: "マシンピラティス・セミパーソナル（約2名）",
+    target: `マシンピラティス・セミパーソナル（${CI.capacity}）`,
     trial: `公式料金ページでは30分 ${fmtYen(CEL.trial)}。店舗ページの予約案内は「無料体験」（期間の記載なし）`,
     monthly: `月2回 ${fmtYen(CEL.m2)}〜通い放題 ${fmtYen(CEL.unlimited)}（税込み・公式料金ページ ${CEL.checkedAt}確認）`,
     m4: null,
@@ -108,7 +108,7 @@ export default function AreaPage() {
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           当サイトの神戸の掲載店舗{LISTED}店のうち、店名または住所に「三宮」を含む店舗は{SANNOMIYA.length}店です。
           大手ブランドでは、Rintosull・ピラティスK・zen place・Celestia の4店舗が三宮にあります（Celestia 神戸三宮店は当サイトのGoogleマップ取得後に公式の店舗一覧に掲載されたため、下の掲載店舗一覧には含まれていません）。
-          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}（Celestiaは2026年10月27日）に確認した内容です。ピラティスK 神戸三宮店の料金と、Rintosull・zen place の月額は{PRICE_RECHECKED_AT}に、4店舗の駅からの距離は{ACCESS_CHECKED_AT}に再確認しました。
+          駅からの距離と体験料金は、各公式店舗ページで{SANNOMIYA_CHECKED_AT}（Celestiaは{CI.checkedAt}）に確認した内容です。ピラティスK 神戸三宮店の料金と、Rintosull・zen place の月額は{PRICE_RECHECKED_AT}に、4店舗の駅からの距離は{ACCESS_CHECKED_AT}に再確認しました。
         </p>
 
         <div className="mt-4 overflow-x-auto">
@@ -145,7 +145,7 @@ export default function AreaPage() {
               <a href={b.source} target="_blank" rel="noopener noreferrer nofollow" className="underline">{b.name} 公式</a>
             </span>
           ))}
-          （{SANNOMIYA_CHECKED_AT}確認。Celestiaは2026年10月27日確認、ピラティスK・Rintosull・zen place の月額は{PRICE_RECHECKED_AT}、4店舗の駅からの距離は{ACCESS_CHECKED_AT}再確認）。キャンペーン料金は期間限定の場合があります。
+          （{SANNOMIYA_CHECKED_AT}確認。Celestiaは{CI.checkedAt}確認、ピラティスK・Rintosull・zen place の月額は{PRICE_RECHECKED_AT}、4店舗の駅からの距離は{ACCESS_CHECKED_AT}再確認）。キャンペーン料金は期間限定の場合があります。
         </p>
 
         <h3 className="mt-6 text-base font-bold text-gray-800">三宮の掲載店舗（口コミ件数の多い順）</h3>
