@@ -115,23 +115,6 @@ export const isCampaignActive = (c: { endsAt: string }, now: Date = new Date()) 
   now.getTime() <= new Date(c.endsAt).getTime();
 
 /**
- * Rintosull の入会時費用（2026年11月13日、公式料金ページと金沢増泉・京都四条烏丸・京都駅前の店舗ページで確認）。
- * 料金ページ：入会金 通常5,000円（税込）・マンスリーメンバー登録金 通常5,000円（税込）、体験当日入会で各0円。
- * 店舗ページの持ち物欄：施設使用料2,500円（過去にLAVA・Rintosull入会歴があれば0円）・入会金5,000円・登録金5,000円（キャンペーン入会の場合は不要）。
- */
-export const RINTOSULL_JOIN_TEXT =
-  "入会時に入会金 5,000円・登録金 5,000円（税込・体験当日の入会やキャンペーンでの入会では不要）と施設使用料 2,500円（過去にLAVA・Rintosullへの入会歴がある方は0円）（2026年11月13日確認）";
-
-/**
- * LAVA店舗内のRintosullスタジオ（LAVAコラボ店舗）の入会時費用（2026年11月13日、栄店の店舗ページで確認）。
- * FAQ「入会手続きに必要な持ち物」：入会金5,000円（税込）※・登録金5,000円（税込）※・施設使用料2,500円（税込）、
- * 「※」は体験当日に入会する場合は無料。LAVA・Rintosull入会歴による施設使用料0円の記載はこのページに無い。
- * 2026-11-13: 千葉・川崎・関内・フレスポ仙台東照宮・三宮・名古屋駅前の6店舗ページの持ち物欄は RINTOSULL_JOIN_TEXT と同じ記載（一致）。
- */
-export const RINTOSULL_JOIN_TEXT_LAVA_COLLAB =
-  "入会時に入会金 5,000円・登録金 5,000円（税込・体験当日の入会では不要）と施設使用料 2,500円（税込）（店舗ページ・2026年11月13日確認）";
-
-/**
  * 公式サイトの店舗一覧に掲載されている店舗数（当サイトのGoogleマップ収録数と差が大きいブランドのみ）。
  * Celestia：新宿・池袋・町田・札幌・仙台・船橋・横浜・松戸・名古屋栄・梅田・心斎橋・セブンパーク天美・姫路・神戸三宮・京都・福岡赤坂の16店舗。
  * 当サイトの収録（2026年9月2日時点のGoogleマップ取得分）は8店舗。
@@ -238,6 +221,13 @@ export const clubPilatesPlanText = (p: { m4: number; m8: number; unlimited: numb
  * - 2026年11月16日：料金ページ（4・フルタイム 8,800〜10,800円／ライト・フルタイム 10,800〜15,800円／プレミアム 16,800円・運営管理費680円・
  *   入会金5,000円・登録金5,000円・施設使用料2,500円・キャンペーン 月1,980円・3か月目に5,940円）と、エリアページ掲載の10店舗の店舗ページ
  *   （千葉・フレスポ仙台東照宮・川崎・関内・三宮・金沢増泉・名古屋駅前・栄・京都四条烏丸・京都駅前）の月会費を再確認。すべて同額。
+ * - 2026年11月23日：料金ページで3プランの月会費・運営管理費680円・入会金/登録金 各5,000円（体験当日入会で0円）・施設使用料2,500円・
+ *   1回券 3,500〜3,700円・レンタル（ウェア上下各410円・ソックス200円・フェイスタオル110円・水500ml 140円・レッスンセット500円・
+ *   ウォーター込み570円）・水素水1,200円/月（専用バッグ1,270円）・安心サポート600円/月・無料体験会0円（所要時間 約45分）・
+ *   キャンペーン（期間「11月末まで」・3ヶ月間 16,800円→1,980円・3ヶ月目にまとめて5,940円・特別価格終了後12ヶ月間の継続・
+ *   過去5ヶ月以内の体験会受講者は対象外）を照合。上記10店舗の店舗ページ（月会費・「無料体験会 0円」・持ち物欄の入会時費用・
+ *   栄店を除く9店舗のキャンペーン欄）も再確認。すべて一致（値の変更なし）。直書きをこの定数の参照に置き換え（表示不変）。
+ *   表示の確認日は従来の値のまま。
  */
 export const RINTOSULL_PRICES = {
   checkedAt: "2026年11月13日",
@@ -252,14 +242,71 @@ export const RINTOSULL_PRICES = {
   facilityFee: 2500,
   joinFee: 5000,
   registrationFee: 5000,
-  /** ピラティススタートキャンペーンの特別価格（月額）と3か月目の請求額 */
-  campaign: { monthly: 1980, total: 5940 },
+  /**
+   * ピラティススタートキャンペーンの特別価格（月額）と3か月目の請求額。
+   * months＝特別価格の月数（利用開始月を含む）、commitMonths＝特別価格終了後の継続条件の月数、
+   * trialExcludeMonths＝「過去○ヶ月以内にRintosullの体験会を受講」した方は対象外、periodOfficial＝公式の期間表記
+   */
+  campaign: { monthly: 1980, total: 5940, months: 3, commitMonths: 12, trialExcludeMonths: 5, periodOfficial: "11月末まで" },
+  /** 無料体験会（料金ページ・店舗ページ「無料体験会 0円」・所要時間 約45分） */
+  trial: 0,
+  trialMinutes: 45,
+  /** 1回券（レッスン）税込/回 */
+  ticket: { min: 3500, max: 3700 },
+  /** 都度レンタル（税込）：ウェア上下各・ソックス・フェイスタオル・水500ml・レッスンセット・レッスンセット＋ウォーター */
+  rental: { wear: 410, socks: 200, towel: 110, water: 140, lessonSet: 500, lessonSetWater: 570 },
+  /** 月額オプション（税込）：水素水・水素水専用バッグ（登録時）・安心サポート */
+  options: { hydrogenWater: 1200, hydrogenBag: 1270, support: 600 },
   /** 店舗ページの月会費（m4＝4・フルタイム、light＝ライト・フルタイム） */
   stores: {
     /** 千葉・フレスポ仙台東照宮・関内・三宮・金沢増泉・名古屋駅前・栄・京都四条烏丸・京都駅前 */
     standard: { m4: 8800, light: 13800 },
     kawasaki: { m4: 9800, light: 14800 },
   },
+};
+/** 店舗ページ・料金ページの体験表記「無料体験会」 */
+export const RINTOSULL_TRIAL_LABEL = "無料体験会";
+/** 「無料体験会 0円」 */
+export const RINTOSULL_TRIAL_TEXT = `${RINTOSULL_TRIAL_LABEL} ${fmtYen(RINTOSULL_PRICES.trial)}`;
+
+/**
+ * Rintosull の入会時費用（2026年11月13日、公式料金ページと金沢増泉・京都四条烏丸・京都駅前の店舗ページで確認。11月23日に再確認・一致）。
+ * 料金ページ：入会金 通常5,000円（税込）・マンスリーメンバー登録金 通常5,000円（税込）、体験当日入会で各0円。
+ * 店舗ページの持ち物欄：施設使用料2,500円（過去にLAVA・Rintosull入会歴があれば0円）・入会金5,000円・登録金5,000円（キャンペーン入会の場合は不要）。
+ */
+export const RINTOSULL_JOIN_TEXT =
+  `入会時に入会金 ${fmtYen(RINTOSULL_PRICES.joinFee)}・登録金 ${fmtYen(RINTOSULL_PRICES.registrationFee)}（税込・体験当日の入会やキャンペーンでの入会では不要）と施設使用料 ${fmtYen(RINTOSULL_PRICES.facilityFee)}（過去にLAVA・Rintosullへの入会歴がある方は0円）（2026年11月13日確認）`;
+
+/**
+ * LAVA店舗内のRintosullスタジオ（LAVAコラボ店舗）の入会時費用（2026年11月13日、栄店の店舗ページで確認。11月23日に再確認・一致）。
+ * FAQ「入会手続きに必要な持ち物」：入会金5,000円（税込）※・登録金5,000円（税込）※・施設使用料2,500円（税込）、
+ * 「※」は体験当日に入会する場合は無料。LAVA・Rintosull入会歴による施設使用料0円の記載はこのページに無い。
+ * 2026-11-13: 千葉・川崎・関内・フレスポ仙台東照宮・三宮・名古屋駅前の6店舗ページの持ち物欄は RINTOSULL_JOIN_TEXT と同じ記載（一致）。
+ */
+export const RINTOSULL_JOIN_TEXT_LAVA_COLLAB =
+  `入会時に入会金 ${fmtYen(RINTOSULL_PRICES.joinFee)}・登録金 ${fmtYen(RINTOSULL_PRICES.registrationFee)}（税込・体験当日の入会では不要）と施設使用料 ${fmtYen(RINTOSULL_PRICES.facilityFee)}（税込）（店舗ページ・2026年11月13日確認）`;
+
+/**
+ * Rintosull の当サイト実測値（2026年9月2日に取得した Googleマップの表示値。公式の店舗数ではない）。
+ * stores＝実測データ全体（1,936店）での店舗数、statsStores 等＝店舗詳細ページのある1,412店ベース（/stats/ の集計方法）。
+ * 評点は表示桁のまま文字列で持つ。
+ */
+export const RINTOSULL_SITE_STATS = {
+  dbDate: "2026年9月2日",
+  stores: 58,
+  ratingAvg: "4.74",
+  ratingMedian: "4.80",
+  ratingMin: "3.8",
+  ratingMax: "5.0",
+  /** 評点4.8以上の店舗数／評点のある店舗数 */
+  high48: 33,
+  rated: 56,
+  reviews: 8811,
+  reviewMedian: 142,
+  reviewMax: 335,
+  statsStores: 55,
+  statsRatingAvg: "4.73",
+  statsReviews: 8810,
 };
 /** 「月4回 X円／通い放題 Y円・Z円（税込・プラン別）」 */
 export const rintosullStoreText = (p: { m4: number; light: number }) =>
@@ -290,6 +337,13 @@ export const RINTOSULL_START_CAMPAIGN = {
  * - 2026年11月22日：同じ5枚の料金画像（月2回 20,000円・1回あたり10,000円／月4回 33,000円・8,250円／月6回 47,000円・7,833円／
  *   月8回 53,000円・6,625円／通い放題 66,000円）と「体験受付中 30分 3,000円」を再確認し一致。表示の確認日をこの日に更新。
  *   公式トップの「1回あたり6,000円～」は対応するプランの記載がないため使わない。入会金は利用規約第14条（返金不可の定めのみ・金額の記載なし）
+ * - 2026年11月23日：料金画像5枚と「体験受付中 30分 3,000円」を再確認し一致。「6,000円～」の出どころを確認：
+ *   公式トップ（https://celes-pilates.jp/）の料金欄に「月額定額制」「月2回から」の説明に続けて「1回あたり6,000円～」（プランの指定なし）。
+ *   体験ページ（https://celes-pilates.jp/lp/trial01/）の画像 a7f291ee337b020b280a4398818dd3da.webp「3 通いやすい価格設定」にも
+ *   「※料金例：1回あたり6,000円〜」（根拠のプランの記載なし）。料金ページの1回あたり最安は月8回の6,625円で、回数券・都度払いのプランは
+ *   料金ページ・FAQ・利用規約に記載がない。同じ体験ページの画像 b7b1e8c01a3036978fb527decc7331cf.webp に「OPEN特別キャンペーン 期間限定 2大特典」
+ *   （特典1 初回体験レッスン無料／特典2 体験後に入会した方は全プラン10%OFF・期間の記載なし）が表示されている（11/13 の「本文に無い」は本文テキストの話で、画像には掲載）。
+ *   10%OFF を月8回に当てると5,962円で6,000円に近いが、公式の説明がないため推測にとどまる。「6,000円～」と10%OFF はサイトに載せない。
  */
 export const CELESTIA_PRICES = {
   checkedAt: "2026年11月22日",
@@ -358,9 +412,9 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: `${fmtYen(RIN.m4.min)}〜${fmtYen(RIN.premium)}（税込・コース・店舗により変動）`,
     // 2026-11-13: 公式料金ページ「入会金 通常価格5,000円（税込）」「マンスリーメンバー登録金 通常価格5,000円（税込）」（体験当日入会で各0円）、
     // 店舗ページの持ち物欄「施設使用料2,500円※1／入会金5,000円・登録金5,000円※2」（※1 過去にLAVA・Rintosull入会歴があれば0円、※2 キャンペーン入会の場合は不要）を確認
-    joinFee: "入会金 5,000円＋マンスリーメンバー登録金 5,000円（税込・体験当日の入会やキャンペーンでの入会では0円）、入会時の施設使用料 2,500円（過去にLAVA・Rintosullへの入会歴がある方は0円）（公式料金ページ・店舗ページ・2026年11月13日確認）",
+    joinFee: `入会金 ${fmtYen(RIN.joinFee)}＋マンスリーメンバー登録金 ${fmtYen(RIN.registrationFee)}（税込・体験当日の入会やキャンペーンでの入会では0円）、入会時の施設使用料 ${fmtYen(RIN.facilityFee)}（過去にLAVA・Rintosullへの入会歴がある方は0円）（公式料金ページ・店舗ページ・2026年11月13日確認）`,
     monthlyExtra: `運営管理費 ${fmtYen(RIN.adminFee)}／月`,
-    trial: "無料体験会 0円（LAVA店舗内のRintosullスタジオはキャンペーン期間により料金が異なる・2026年11月13日確認）",
+    trial: `${RINTOSULL_TRIAL_TEXT}（LAVA店舗内のRintosullスタジオはキャンペーン期間により料金が異なる・2026年11月13日確認）`,
     source: "https://rintosull.jp/price/",
     // 2026-11-13: 公式料金ページで 4・フルタイム 8,800〜10,800円／ライト 10,800〜15,800円／プレミアム 16,800円（税込）を照合（一致）
     checkedAt: "2026年11月13日",
@@ -552,7 +606,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // トップページの予約ボタン画像 alt「グループ：¥0体験」（パーソナル体験の料金は記載なし）
   { slug: "the-silk", name: "the SILK", minYen: 0, text: "グループレッスン0円", scope: "グループレッスン", checkedAt: "2026年10月30日", source: "https://the-silk.co.jp/" },
   // 料金ページ「無料体験会 0円」（LAVAコラボ店舗は店舗ごとに異なる）
-  { slug: "rintosull", name: "Rintosull", minYen: 0, text: "無料体験会0円（LAVAコラボ店舗は店舗ごとに異なる）", scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
+  { slug: "rintosull", name: "Rintosull", minYen: RIN.trial, text: `${RINTOSULL_TRIAL_LABEL}${fmtYen(RIN.trial)}（LAVAコラボ店舗は店舗ごとに異なる）`, scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
   // トップページ「30分間の無料体験クラスを開催しております」
   { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: CP.officialTrial, checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
   // 店舗ページ「無料体験予約はこちら」

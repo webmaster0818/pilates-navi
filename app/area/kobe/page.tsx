@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
-import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_PRICES as CEL, CELESTIA_INFO as CI } from "@/data-brand-facts";
+import { ZENPLACE_PRICES as ZP, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_TRIAL_LABEL, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_PRICES as CEL, CELESTIA_INFO as CI } from "@/data-brand-facts";
 import studioIdx from "@/data-studio-index.json";
 
 const { listed, surveyedAt } = loadArea("kobe");
@@ -27,7 +27,7 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     review: "/review/rintosull/",
     access: "地下鉄西神・山手線「三宮駅」西出口1から徒歩1分、阪急「神戸三宮駅」西口から徒歩2分、JR「三ノ宮駅」西口から徒歩4分",
     target: "女性専用・マシンピラティス",
-    trial: "無料体験会",
+    trial: RINTOSULL_TRIAL_LABEL,
     monthly: `${rintosullStoreText(RIN.stores.standard)}、別途 運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/hyogo/sannomiya/",

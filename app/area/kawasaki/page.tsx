@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, THE_SILK_PRICES, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_TRIAL_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT } from "@/data-brand-facts";
 
 const LISTED = loadArea("kawasaki").listed.length;
 
@@ -62,7 +62,7 @@ const CHAINS: Chain[] = [
     area: "川崎駅周辺",
     name: "マシンピラティスRintosull 川崎店",
     access: "JR川崎駅 東口 徒歩5分／京急川崎駅 中央口改札 徒歩7分",
-    trial: "無料体験会 0円",
+    trial: RINTOSULL_TRIAL_TEXT,
     monthly: `${rintosullStoreText(RIN.stores.kawasaki)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.kawasaki.m4,
     source: "https://rintosull.jp/shop/kanagawa/kawasaki/",

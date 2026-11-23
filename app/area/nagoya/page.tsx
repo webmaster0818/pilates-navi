@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT, CELESTIA_INFO as CI } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_JOIN_TEXT_LAVA_COLLAB, RINTOSULL_TRIAL_LABEL, RINTOSULL_PRICES as RIN, rintosullStoreText, UC_ADMIN_FEE_TEXT, CELESTIA_INFO as CI } from "@/data-brand-facts";
 
 const LISTED = loadArea("nagoya").listed.length;
 
@@ -29,7 +29,7 @@ const CHAINS: Chain[] = [
     walk: 1,
     checkedAt: CHAIN_CHECKED_AT,
     access: "地下鉄 名古屋駅 L2出入口 徒歩1分",
-    trial: "無料体験会",
+    trial: RINTOSULL_TRIAL_LABEL,
     monthly: `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/aichi/nagoyaekimae/",

@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { RINTOSULL_START_CAMPAIGN as RSC, RINTOSULL_JOIN_TEXT, isCampaignActive, RINTOSULL_PRICES as RIN, rintosullStoreText, fmtYen } from "@/data-brand-facts";
+import { RINTOSULL_START_CAMPAIGN as RSC, RINTOSULL_JOIN_TEXT, RINTOSULL_TRIAL_TEXT, isCampaignActive, RINTOSULL_PRICES as RIN, rintosullStoreText, fmtYen } from "@/data-brand-facts";
 
 const { listed, surveyedAt } = loadArea("kanazawa");
 const LISTED = listed.length;
@@ -25,10 +25,10 @@ const MACHINE_BRANDS: Brand[] = [
     style: "グループ",
     styleNote: "グループ（女性専用）",
     access: "北陸鉄道石川線「野町駅」徒歩8分（無料駐車場あり）",
-    trial: "無料体験会 0円（約45分）",
+    trial: `${RINTOSULL_TRIAL_TEXT}（約${RIN.trialMinutes}分）`,
     monthly: `${rintosullStoreText(RIN.stores.standard)}、別途 運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.standard.m4,
-    trialYen: 0,
+    trialYen: RIN.trial,
     checkedAt: MACHINE_CHECKED_AT,
     source: "https://rintosull.jp/shop/ishikawa/kanazawamasuizumi/",
   },
@@ -148,7 +148,7 @@ export default function AreaPage() {
       </h1>
       <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         金沢でマシンピラティスを扱う大手・チェーン{MACHINE_BRANDS.length}店舗の月4回プランの月額は、グループレッスンの{GROUP.length}店舗が<strong>{yen(G_MIN)}円〜{yen(G_MAX)}円</strong>、パーソナル（マンツーマン・個室）の{PERSONAL.length}店舗が<strong>{yen(P_MIN)}円〜{yen(P_MAX)}円</strong>です。
-        グループの3店舗（Rintosull 金沢増泉店・LAVA イオンタウン金沢示野店・ピラティスK ラパーク金沢店）は税込で、別途 運営管理費・施設維持費が月680〜825円かかります。DEP の2スタジオは店舗ページに税込・税別の表記がなく、24/7 Pilates・COCOLANCE・La pilates は税込です。パーソナルで最も安い24/7 Pilates 金沢店は、店舗ページの表記が「月4回 27,000円〜」です。入会金・管理費・年会費は月額に含みません。
+        グループの3店舗（Rintosull 金沢増泉店・LAVA イオンタウン金沢示野店・ピラティスK ラパーク金沢店）は税込で、別途 運営管理費・施設維持費が月{RIN.adminFee}〜825円かかります。DEP の2スタジオは店舗ページに税込・税別の表記がなく、24/7 Pilates・COCOLANCE・La pilates は税込です。パーソナルで最も安い24/7 Pilates 金沢店は、店舗ページの表記が「月4回 27,000円〜」です。入会金・管理費・年会費は月額に含みません。
         体験料金は{MACHINE_BRANDS.length}店舗中{FREE_TRIAL}店舗が0円（COCOLANCE はオープニングキャンペーン）で、DEP は2,980円、La pilates は3,000円です。
         駅からの位置は、COCOLANCE が金沢駅から徒歩13分、ピラティスK が西泉駅から徒歩5分、Rintosull が野町駅から徒歩8分で、24/7 Pilates は金沢駅からバスで香林坊下車・徒歩2分、LAVA は金沢駅西口からバス、DEP は金沢駅から車で7分・15分です。公式店舗ページで金沢駅からの徒歩での所要時間を案内しているのは COCOLANCE のみで、ほかの{MACHINE_BRANDS.length - 1}店舗は別の駅からの徒歩・バス・車での案内です。Rintosull・ピラティスK・DEP の2スタジオ・La pilates の5店舗は、公式店舗ページに駐車場の案内があります。
         いずれも各公式店舗ページで確認した値です（4店舗は{MACHINE_CHECKED_AT}、ピラティスK・24/7 Pilates・COCOLANCE・La pilates は{ADDED_CHECKED_AT}に確認）。店舗ごとの形式・アクセス・体験・月額は、下の「金沢のマシンピラティススタジオ」の表に掲載しています。

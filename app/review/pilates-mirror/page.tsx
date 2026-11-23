@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { RINTOSULL_SITE_STATS as RSS } from "@/data-brand-facts";
 
 const SURVEY_DATE = "2026年9月22日";
 const DB_DATE = "2026年9月2日";
@@ -178,7 +179,7 @@ export default function PilatesMirrorReview() {
             <p className="font-bold text-gray-900">評価の特徴：平均は標準的で、店舗間の差が小さい</p>
             <p className="mt-2">
               平均4.78は当サイト収録1,936店の平均4.85をわずかに下回ります。一方で、注目すべき点は<strong>ばらつきの小ささ</strong>で、
-              13店舗の評点は<strong>最低4.6〜最高4.9</strong>に収まっています(参考: <Link href="/review/rintosull/" className="underline">Rintosull</Link>は58店舗で最低3.8〜最高5.0)。
+              13店舗の評点は<strong>最低4.6〜最高4.9</strong>に収まっています(参考: <Link href="/review/rintosull/" className="underline">Rintosull</Link>は{RSS.stores}店舗で最低{RSS.ratingMin}〜最高{RSS.ratingMax})。
               チェーン運営の均質性という点では、<strong>どの店舗を選んでも評価の差が小さい</strong>点が特徴です。
               4.8以上が13店中10店という分布も、その傾向を裏づけています。
             </p>

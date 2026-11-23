@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { loadArea } from "@/components/area-data";
-import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_INFO as CI } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, ZENPLACE_PRICES as ZP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_TRIAL_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText, CELESTIA_INFO as CI } from "@/data-brand-facts";
 
 const LISTED = loadArea("sendai").listed.length;
 
@@ -61,7 +61,7 @@ const CHAINS: Chain[] = [
     name: "マシンピラティスRintosull フレスポ仙台東照宮店",
     review: "/review/rintosull/",
     access: "JR仙山線「東照宮駅」徒歩7分",
-    trial: "無料体験会 0円",
+    trial: RINTOSULL_TRIAL_TEXT,
     monthly: `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/miyagi/sendaitoshogu/",

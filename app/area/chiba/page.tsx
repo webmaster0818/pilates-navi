@@ -5,7 +5,7 @@ import AreaStudios from "@/components/AreaStudios";
 import AreaAnswerBox from "@/components/AreaAnswerBox";
 import { BRAND_REVIEWS, loadArea } from "@/components/area-data";
 import studioIdx from "@/data-studio-index.json";
-import { CLUBPILATES_PRICES as CP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
+import { CLUBPILATES_PRICES as CP, clubPilatesPlanText, fmtYen, RINTOSULL_JOIN_TEXT, RINTOSULL_TRIAL_LABEL, RINTOSULL_PRICES as RIN, rintosullStoreText } from "@/data-brand-facts";
 
 const { listed, surveyedAt } = loadArea("chiba");
 const LISTED = listed.length;
@@ -46,7 +46,7 @@ const CHIBA_BRANDS = [
     review: "/review/rintosull/",
     access: "JR「千葉駅」東口から徒歩7分、京成「京成千葉駅」東口から徒歩6分",
     target: "女性専用・マシンピラティス",
-    trial: "無料体験会",
+    trial: RINTOSULL_TRIAL_LABEL,
     monthly: `${rintosullStoreText(RIN.stores.standard)}、別途 運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`,
     m4: RIN.stores.standard.m4,
     source: "https://rintosull.jp/shop/chiba/chiba/",
