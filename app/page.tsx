@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandKeyFacts from "@/components/BrandKeyFacts";
-import { BRAND_FACTS, RINTOSULL_SITE_STATS, UC_ADMIN_FEE_TEXT, ZENPLACE_PRICES as ZP, fmtYen, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
+import { BRAND_FACTS, CLUBPILATES_PRICES as CP, RINTOSULL_SITE_STATS, UC_ADMIN_FEE_TEXT, ZENPLACE_PRICES as ZP, fmtYen, monthlyFeeText, monthlyShortOf, trialFeeLongText } from "@/data-brand-facts";
 import Icon from "@/components/Icon";
 import studioIdx from "@/data-studio-index.json";
 
@@ -73,9 +73,9 @@ const studios = [
   {
     rank: 3,
     name: "CLUB PILATES",
-    tagline: "世界最大級のピラティスブランドで、4段階のレベル別に段階的に学べます。",
+    tagline: `世界最大級のピラティスブランドで、${CP.levels}段階のレベル別に段階的に学べます。`,
     monthlyFee: BRAND_FACTS["club-pilates"].monthlyShort ?? "",
-    features: ["世界最大級のピラティスブランド", "4段階のレベル分け", "全インストラクター有資格者", "8種類のクラス形式"],
+    features: ["世界最大級のピラティスブランド", `${CP.levels}段階のレベル分け`, "全インストラクター有資格者", `${CP.classTypes}種類のクラス形式`],
     pros: ["レベルに合ったレッスンを受けられる点", "グローバル基準のレッスン体系", "多様なレッスン形式"],
     cons: ["料金がやや高め", "都市部中心の店舗展開"],
     recommend: "段階的にレベルアップしたい方におすすめです。",
@@ -421,7 +421,7 @@ export default function HomePage() {
               { name: "ピラティスミラー", slug: "pilates-mirror", desc: "コナミスポーツ運営、天井の鏡×30分レッスン", href: "/review/pilates-mirror/", url: "https://www.konami.com/sportsclub/pilatesmirror/" },
               { name: "zen place pilates", slug: "zenplace", desc: "全国100店舗以上、マット×マシン両対応", href: "/review/zenplace/", url: "https://www.zenplace.co.jp/pilates/" },
               { name: "ピラティスK", slug: "pilates-k", desc: "女性専用マシンピラティス、0円体験", href: "/review/pilates-k/", url: "https://pilates-k.jp/" },
-              { name: "CLUB PILATES", slug: "club-pilates", desc: "世界最大級、4段階レベル分け", href: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/" },
+              { name: "CLUB PILATES", slug: "club-pilates", desc: `世界最大級、${CP.levels}段階レベル分け`, href: "/review/club-pilates/", url: "https://www.clubpilates.co.jp/" },
               { name: "the SILK", slug: "the-silk", desc: "女性専用・全店駅近・音楽と照明による空間演出", href: "/review/the-silk/", url: "https://the-silk.co.jp/" },
               { name: "BDC PILATES", slug: "bdc", desc: "マシン専門、プロダンサー考案", href: "/review/bdc/", url: "https://bdcpilates.com/" },
               { name: "Celestia", slug: "celestia", desc: "セミパーソナル・マシン専門・手ぶらで通える", href: "/review/celestia/", url: "https://celes-pilates.jp/" },

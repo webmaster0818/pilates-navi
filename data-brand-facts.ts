@@ -175,10 +175,14 @@ const ZP = ZENPLACE_PRICES;
  *   月4回 13,090円は44店舗、月4回13,090円・月8回24,090円・通い放題37,290円の組み合わせは39店舗。
  *   事務手数料2,200円（税込）の記載は88件中59件。月会費の欄に税込・税別の表記がある店舗ページは無い（入会金はキャンペーン欄に「5,500（税込）」）。
  */
+/** 2026年11月12日に照合した店舗ページの件数（pagesWithPrice＝料金プラン欄があった件数） */
+const CP_PAGES = { total: 90, withPrice: 88 };
 export const CLUBPILATES_PRICES = {
   checkedAt: "2026年11月12日",
   /** checkedAt に照合した店舗ページの件数（料金プラン欄があった件数） */
-  checkedCount: "90件中88件",
+  checkedCount: `${CP_PAGES.total}件中${CP_PAGES.withPrice}件`,
+  pagesTotal: CP_PAGES.total,
+  pagesWithPrice: CP_PAGES.withPrice,
   firstCheckedAt: "2026年10月26日",
   source: "https://clubpilates.co.jp/studio/",
   m4: { min: 10890, max: 17050, mode: 13090 },
@@ -192,6 +196,22 @@ export const CLUBPILATES_PRICES = {
   storeTrial: "30分の体験レッスン 無料",
   /** 公式トップの体験の案内（2026年10月26日確認。11/19 トップに「30分間の無料体験クラス」） */
   officialTrial: "30分の無料体験クラス",
+  /** 体験クラスの時間（分）。公式トップ「30分間の無料体験クラス」（2026年11月24日にも同表記） */
+  trialMinutes: 30,
+  /** officialTrial を公式トップで確認した日（レビューFAQの表示）と、体験料金一覧（TRIAL_FEES）の確認日 */
+  officialTrialCheckedAt: "2026年10月26日",
+  trialFeesCheckedAt: "2026年10月30日",
+  /** storeTrial を店舗ページ（西院・烏丸御池）で確認した日（BRAND_FACTS の体験欄の表示） */
+  storeTrialCheckedAt: "2026年11月13日",
+  /** 当日入会限定キャンペーンの掲載状況（2026年10月31日に公式のスタジオページ88件を確認し、35件に掲載） */
+  sameDayCampaign: { checkedAt: "2026年10月31日", pages: 88, count: 35 },
+  /**
+   * 公式「クラブピラティスについて」（https://clubpilates.co.jp/about/）・クラス内容（/classes/）の記載。2026年11月24日確認。
+   * 「初級から上級まで4段階のレベル」「8種類のクラス」「どのクラスも最大12名のグループレッスン」「インストラクターは、全員が認定資格を取得」
+   */
+  levels: 4,
+  classTypes: 8,
+  maxGroup: 12,
   /** 個別店舗（エリアページで使用） */
   stores: {
     chiba: { m4: 11990, m8: 15290, unlimited: 18590 },
@@ -453,14 +473,14 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     checkedAt: CEL.checkedAt,
   },
   "club-pilates": {
-    style: "マシンピラティス（マット＋リフォーマー）", format: "グループ（最大12名）・4段階レベル別", gender: "男女可",
+    style: "マシンピラティス（マット＋リフォーマー）", format: `グループ（最大${CP.maxGroup}名）・${CP.levels}段階レベル別`, gender: "男女可",
     monthly: `店舗ごとに設定（店舗ページに税込・税別の記載なし）。月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}／月8回 ${fmtYen(CP.m8.min)}〜${fmtYen(CP.m8.max)}／通い放題 ${fmtYen(CP.unlimited.min)}〜${fmtYen(CP.unlimited.max)}。最も多い設定は月4回 ${fmtYen(CP.m4.mode)}・月8回 ${fmtYen(CP.m8.mode)}・通い放題 ${fmtYen(CP.unlimited.mode)}（${CP.modeCombo.example}など${CP.modeCombo.count}店舗）。各店舗ページの料金プラン欄に記載（${CP.checkedAt}、店舗ページ${CP.checkedCount}で確認）`,
     joinFee: `入会金 ${fmtYen(CP.joinFee)}（税込）＋入会時の事務手数料 ${fmtYen(CP.adminFee)}（税込・多くの店舗ページに記載）。キャンペーンで0円になる店舗あり（${CP.checkedAt}確認）`,
-    monthlyExtra: "店舗ページに記載なし（2026年10月26日確認）",
+    monthlyExtra: `店舗ページに記載なし（${CP.firstCheckedAt}確認）`,
     // 2026-11-13: 西院・烏丸御池の店舗ページ「はじめての方 30分の体験レッスン 無料」を確認
-    trial: `${CP.storeTrial}（店舗ページの記載・2026年11月13日確認）`,
+    trial: `${CP.storeTrial}（店舗ページの記載・${CP.storeTrialCheckedAt}確認）`,
     source: "https://clubpilates.co.jp/studio/",
-    checkedAt: `月額 ${CP.checkedAt}・体験 2026年11月13日`,
+    checkedAt: `月額 ${CP.checkedAt}・体験 ${CP.storeTrialCheckedAt}`,
     monthlyShort: `月4回 ${fmtYen(CP.m4.min)}〜（店舗により異なる・税込・税別の記載なし）`,
   },
 };
@@ -608,7 +628,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「無料体験会 0円」（LAVAコラボ店舗は店舗ごとに異なる）
   { slug: "rintosull", name: "Rintosull", minYen: RIN.trial, text: `${RINTOSULL_TRIAL_LABEL}${fmtYen(RIN.trial)}（LAVAコラボ店舗は店舗ごとに異なる）`, scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
   // トップページ「30分間の無料体験クラスを開催しております」
-  { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: CP.officialTrial, checkedAt: "2026年10月30日", source: "https://www.clubpilates.co.jp/" },
+  { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: CP.officialTrial, checkedAt: CP.trialFeesCheckedAt, source: "https://www.clubpilates.co.jp/" },
   // 店舗ページ「無料体験予約はこちら」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 2026-11-12: 公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ「体験（お一人様１回まで）0円」（10/30 時点は 1回 2,200円）
