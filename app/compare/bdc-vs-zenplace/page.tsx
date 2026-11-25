@@ -6,7 +6,7 @@ import { ZENPLACE_PRICES as ZP, fmtYen } from '@/data-brand-facts';
 export const metadata: Metadata = {
   title: 'BDC PILATES と zen place pilates を比較【2026年】料金・店舗数・マシンの違いとどちらがおすすめか',
   description:
-    'BDC PILATESとzen place pilatesを、料金・店舗数・レッスン形式で比較しています。マシンのグループ月4回はBDCが16,280円、zen placeが15,400円、zen placeのマット月4回は9,625円〜です（いずれも税込・2026年10月17日公式確認）。向いている方も解説します。',
+    `BDC PILATESとzen place pilatesを料金・店舗数・レッスン形式で比較しています。マシンのグループ月4回はBDCが16,280円、zen placeが${fmtYen(ZP.rg4)}です（税込。BDCは2026年10月17日、zen placeは${ZP.checkedAt}に公式で確認）。マットの料金も解説しています。`,
   keywords: ['bdc pilates', 'zen place', 'ピラティス 比較', 'どちら', '料金'],
 };
 
@@ -20,7 +20,7 @@ const rows = [
 ];
 
 const faqs = [
-  { q: 'BDC PILATESとzen placeでは、どちらの料金が安いですか？', a: `各社の公式料金表（2026年10月17日確認・税込）では、マシンのグループレッスン月4回はzen place pilatesが${fmtYen(ZP.rg4)}、BDC PILATESが16,280円です。zen placeはマットグループ月4回であれば${fmtYen(ZP.mat4.g2)}（グレード02のスタジオ。グレード01は${fmtYen(ZP.mat4.g1)}）から受講できます。費用を抑えたい方にはzen place、少人数制でじっくり指導を受けたい方にはBDCが向いています。料金は変更されることがあるため、申し込み前に公式サイトでご確認ください。` },
+  { q: 'BDC PILATESとzen placeでは、どちらの料金が安いですか？', a: `各社の公式料金表（税込。BDC PILATESは2026年10月17日、zen place pilatesは${ZP.checkedAt}確認）では、マシンのグループレッスン月4回はzen place pilatesが${fmtYen(ZP.rg4)}、BDC PILATESが16,280円です。zen placeはマットグループ月4回であれば${fmtYen(ZP.mat4.g2)}（グレード02のスタジオ。グレード01は${fmtYen(ZP.mat4.g1)}）から受講できます。費用を抑えたい方にはzen place、少人数制でじっくり指導を受けたい方にはBDCが向いています。料金は変更されることがあるため、申し込み前に公式サイトでご確認ください。` },
   { q: '初心者にはどちらがおすすめですか？', a: 'どちらも初心者向けクラスがあります。少人数制でフォームを丁寧に見てほしい方にはBDC、手頃な料金で始めて続けやすさを重視したい方にはzen placeが向いています。マットから始めたい方には、マットに対応するzen placeが選択肢になります。' },
   { q: '通いやすさ（店舗数）はどちらが優れていますか？', a: '店舗数はzen place pilatesが全国約150店舗と多く、全店舗の相互利用も可能です（一部のスタジオでは差額あり）。BDCは都内中心の展開のため、地方にお住まいの方や、引っ越し・出張が多い方にはzen placeが通いやすいと考えられます。' },
   { q: 'マシンピラティスに取り組みたい場合はどちらが向いていますか？', a: 'どちらもマシン（リフォーマー等）に対応しています。BDCはマシン専門スタジオ、zen placeはマットとマシンの両方から選べます。マシンに専念したい方にはBDC、日によって使い分けたい方にはzen placeが向いています。' },
@@ -76,7 +76,7 @@ export default function BdcVsZenplacePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mb-8">※料金は2026年10月17日に各社の公式料金表（<a href="https://bdcpilates.com/#pilates_plan" target="_blank" rel="noopener noreferrer" className="underline">BDC PILATES</a>・<a href="https://www.zenplace.co.jp/price" target="_blank" rel="noopener noreferrer" className="underline">zen place</a>）で確認した税込金額です。入会金・設備費は別途かかります。店舗数は2026年時点の目安です。最新の情報は公式サイトでご確認ください。</p>
+          <p className="text-xs text-gray-500 mb-8">※料金は各社の公式料金表（<a href="https://bdcpilates.com/#pilates_plan" target="_blank" rel="noopener noreferrer" className="underline">BDC PILATES</a>・<a href="https://www.zenplace.co.jp/price" target="_blank" rel="noopener noreferrer" className="underline">zen place</a>）で確認した税込金額です（BDC PILATESは2026年10月17日、zen place pilatesは{ZP.checkedAt}確認）。入会金・設備費は別途かかります。店舗数は2026年時点の目安です。最新の情報は公式サイトでご確認ください。</p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             <Link href="/review/bdc/" className="block rounded-xl border border-gray-200 p-5 hover:shadow-md transition">

@@ -145,6 +145,8 @@ export const UC_ADMIN_FEE_TEXT = `${UC_ADMIN_FEE.startMonth}か月目の月会�
 
 /**
  * zen place 公式料金ページ（https://www.zenplace.co.jp/price）の料金（税込）。2026年11月3日確認。
+ * 2026年11月25日：料金ページで下記の全項目を再照合し、すべて同額（値の訂正なし）。サイト表示の zen place 料金の確認日はこの checkedAt から出す。
+ *   同日、よくある質問（入会金 22,000円〜33,000円・体験当日の入会で入会金無料）と体験キャンペーン（マットグループ 1,000円・マシングループ 3,000円）も同表記を確認。
  * スタジオはグレード01／02の2区分（g1／g2）。
  * - マットグループ 月4：グレード01 10,450円／グレード02 9,625円
  * - マットグループ フリー（無制限）：グレード01 16,940円／グレード02 14,960円
@@ -154,7 +156,7 @@ export const UC_ADMIN_FEE_TEXT = `${UC_ADMIN_FEE.startMonth}か月目の月会�
  * - スタジオ利用料（グレード02会員がグレード01スタジオで受講）：プライベート（チケット利用）1,500円・その他 500円
  */
 export const ZENPLACE_PRICES = {
-  checkedAt: "2026年11月3日",
+  checkedAt: "2026年11月25日",
   source: "https://www.zenplace.co.jp/price",
   mat4: { g1: 10450, g2: 9625 },
   matFree: { g1: 16940, g2: 14960 },
@@ -492,7 +494,7 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
 export const MONTHLY_SHORT_EXTRA: Record<string, { monthlyShort: string; perVisit?: string; checkedAt: string; source: string }> = {
   "zenplace": {
     monthlyShort: `マット月4回 ${fmtYen(ZP.mat4.g2)}〜・マシン月4回 ${fmtYen(ZP.rg4)}（税込）`,
-    checkedAt: "2026年10月28日",
+    checkedAt: ZP.checkedAt,
     source: "https://www.zenplace.co.jp/price",
   },
   "melmake": {
@@ -557,10 +559,10 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
   // 料金ページ「マットグループ月4回 グレード02 9,625円」「RG4 リフォーマーグループ 月4回 15,400円」「設備運営管理費 550円」「入会金 グレード02 22,000円」
   { slug: "zenplace", name: "zen place pilates", yen: ZP.mat4.g2, plan: "マットグループ 月4", style: "マットのグループ", note: `グレード02のスタジオ。グレード01のスタジオは${fmtYen(ZP.mat4.g1)}`, kind: "group",
     monthlyExtraYen: ZP.facilityFee, monthlyExtraNote: `設備運営管理費 月${fmtYen(ZP.facilityFee)}`, joinNote: `入会金 ${fmtYen(ZP.joinFee.g2)}（グレード02）`,
-    checkedAt: "2026年10月29日", source: "https://www.zenplace.co.jp/price" },
+    checkedAt: ZP.checkedAt, source: ZP.source },
   { slug: "zenplace", name: "zen place pilates", yen: ZP.rg4, plan: "リフォーマーグループ 月4回", style: "マシンのグループ", note: "開催スタジオのみ", kind: "group",
     monthlyExtraYen: ZP.facilityFee, monthlyExtraNote: `設備運営管理費 月${fmtYen(ZP.facilityFee)}`,
-    checkedAt: "2026年10月29日", source: "https://www.zenplace.co.jp/price" },
+    checkedAt: ZP.checkedAt, source: ZP.source },
   // 以下は BRAND_FACTS / MONTHLY_SHORT_EXTRA の確認値
   { slug: "club-pilates", name: "CLUB PILATES", yen: CP.m4.min, plan: "月4回", style: "マシンのグループ", note: "店舗ごとに設定。店舗ページに税込・税別の記載なし", kind: "group",
     joinNote: `入会金 ${fmtYen(CP.joinFee)}＋事務手数料 ${fmtYen(CP.adminFee)}`, checkedAt: CP.checkedAt, source: "https://clubpilates.co.jp/studio/" },
@@ -618,7 +620,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = "2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月22日";
+export const TRIAL_FEES_CHECKED_AT = `2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月22日・zen place は${ZP.checkedAt.replace(/^\d+年/, "")}`;
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -635,7 +637,7 @@ export const TRIAL_FEES: TrialFee[] = [
   // 2026-11-20: 週1再確認。公式トップ「体験レッスン お一人様1回限り無料」・青葉台／阿佐ヶ谷の店舗ページ「体験（お１人様１回まで）0 円」（一致。2,200円の記載は店舗ページのコメントアウト内のみ）
   { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月20日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
-  { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: "2026年10月30日", source: "https://www.zenplace.co.jp/price" },
+  { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: ZP.checkedAt, source: ZP.source },
   // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
   { slug: "celestia", name: "Celestia", minYen: CEL.trial, text: `30分${fmtYen(CEL.trial)}`, campaign: "体験案内ページでは「体験無料」の案内あり", checkedAt: CELESTIA_TRIAL_SOURCES.checkedAt, source: CELESTIA_TRIAL_SOURCES.price },
   // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
@@ -710,7 +712,7 @@ export const UNLIMITED_GROUP_LOWEST: UnlimitedPlan[] = [
   // 川崎店ページの料金表画像の alt「レギュラー 11,800円（税込12,980円） 通い放題 ※１日１回まで」
   { slug: "urban-classic", name: "URBAN CLASSIC PILATES", yen: 12980, plan: "レギュラー", note: "1日1回まで・全店共通", checkedAt: "2026年11月2日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 料金ページ「フリー マットグループ無制限 グレード01 16,940円／グレード02 14,960円（税込）」
-  { slug: "zenplace", name: "zen place pilates", yen: ZP.matFree.g2, plan: "マットグループ フリー", note: `マットのグループ。グレード01のスタジオは${fmtYen(ZP.matFree.g1)}`, checkedAt: "2026年11月2日", source: "https://www.zenplace.co.jp/price" },
+  { slug: "zenplace", name: "zen place pilates", yen: ZP.matFree.g2, plan: "マットグループ フリー", note: `マットのグループ。グレード01のスタジオは${fmtYen(ZP.matFree.g1)}`, checkedAt: ZP.checkedAt, source: ZP.source },
   // BRAND_FACTS club-pilates の店舗ページ確認値（通い放題 17,490円〜40,590円）
   { slug: "club-pilates", name: "CLUB PILATES", yen: CP.unlimited.min, plan: "通い放題", note: `店舗ごとに設定。店舗により${fmtYen(CP.unlimited.max)}まで。店舗ページに税込・税別の記載なし`, checkedAt: CP.checkedAt, source: "https://clubpilates.co.jp/studio/" },
   // PILATES_K_PRICES.premium（マンスリープレミアムメンバー・毎日2レッスンまで）

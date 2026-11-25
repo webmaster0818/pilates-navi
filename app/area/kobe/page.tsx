@@ -49,7 +49,7 @@ const SANNOMIYA_BRANDS: SannomiyaBrand[] = [
     access: "JR「三ノ宮駅」中央改札口から徒歩8分、地下鉄海岸線「三宮・花時計前駅」4番出口から徒歩1分",
     target: "マット・マシン（リフォーマー）・プライベート",
     trial: `マットグループ ${fmtYen(ZP.trial.mat.g2)}〜（初回キャンペーン 1,000円）、マシングループ ${fmtYen(ZP.trial.machine)}〜（初回キャンペーン 3,000円）、プライベート ${fmtYen(ZP.trial.private.g2)}〜`,
-    monthly: `グレード02：マットグループ 月4回 ${fmtYen(ZP.mat4.g2)}、マシングループ 月4回 ${fmtYen(ZP.rg4)}（税込・公式料金表 2026年11月12日確認）`,
+    monthly: `グレード02：マットグループ 月4回 ${fmtYen(ZP.mat4.g2)}、マシングループ 月4回 ${fmtYen(ZP.rg4)}（税込・公式料金表 ${ZP.checkedAt}確認）`,
     m4: ZP.mat4.g2,
     source: "https://www.zenplace.co.jp/studios/pilates-sannomiya",
   },

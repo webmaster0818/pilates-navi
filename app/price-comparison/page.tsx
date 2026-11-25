@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // 各スタジオの料金は当サイト各レビューの調査値（2026年時点）。最新・正確な料金は各公式でご確認ください。
 type Studio = { slug: string; name: string; price: string; type: string; note: string };
 const studios: Studio[] = [
-  { slug: "zenplace", name: "zen place pilates", price: `マシン月4回 ${fmtYen(ZENPLACE_PRICES.rg4)}／マット月4回 ${fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（税込）`, type: "マシン/マットピラティス", note: "全国展開・店舗数最多クラス。グループレッスン中心。マシンのグループは開催スタジオのみ（2026年10月19日公式料金表で確認）" },
+  { slug: "zenplace", name: "zen place pilates", price: `マシン月4回 ${fmtYen(ZENPLACE_PRICES.rg4)}／マット月4回 ${fmtYen(ZENPLACE_PRICES.mat4.g2)}〜（税込）`, type: "マシン/マットピラティス", note: `全国展開・店舗数最多クラス。グループレッスン中心。マシンのグループは開催スタジオのみ（${ZENPLACE_PRICES.checkedAt}公式料金表で確認）` },
   { slug: "pilates-k", name: "ピラティスK", price: `${BRAND_FACTS["pilates-k"].monthlyShort}。入会金${BRAND_FACTS["pilates-k"].joinFee}`, type: "女性専用マシンピラティス", note: "女性専用・マシン専門。駅近の店舗が中心" },
   { slug: "the-silk", name: "the SILK", price: `月額${fmtYen(THE_SILK_PRICES.light3.b)}〜（月3回・エリアB）`, type: "マシンピラティス", note: "内装・空間にこだわるスタジオ" },
   { slug: "club-pilates", name: "CLUB PILATES", price: `月4回 ${fmtYen(CP.m4.min)}〜${fmtYen(CP.m4.max)}（店舗ごとに設定。最も多いのは${fmtYen(CP.m4.mode)}。店舗ページに税込・税別の記載なし）`, type: "マシンピラティス（米国発）", note: `世界展開ブランド。レベル別レッスン体系。月額は各店舗ページの料金プラン欄（${CP.checkedAt}に${CP.checkedCount}で確認）` },
