@@ -26,10 +26,13 @@ const LISTED = loadArea("kyoto").listed.length;
 // 2026-11-21: 12店舗の公式店舗ページと zen place 料金ページで駅からの距離・体験・月額を再照合。URBAN CLASSIC の運営管理費が
 //   「3ヶ月目の月会費より」→「4ヶ月目の月会費より」に変わっていたため訂正（四条河原町・西院とも同じ記載）。ほかの値はすべて同じ。
 //   Rintosull 2店舗の「開催中のキャンペーン」欄（11月末まで・通い放題 16,800円→1,980円・3か月目に5,940円・12か月継続が条件・運営管理費680円）も同じ。
+// 2026-11-26: 12店舗の公式店舗ページ・zen place 料金ページ・ピラティスK 料金ページで、所在地（駅からの距離）・体験・月額・入会時費用・
+//   運営管理費（UC 4ヶ月目から480円・Rintosull 680円・zen place 550円・ピラティスK 施設維持費825円）を再照合。すべて一致（値の訂正なし）。
+//   Rintosull 2店舗のキャンペーン欄（11月末まで）も同表記。確認日を11月26日に更新。
 // zen place の月額は店舗ページに記載がないため、同社公式の料金ページ（京都・京都西院はいずれもグレード01）の額。
 // Celestia 京都店は店舗ページに料金の記載がなく、Pilates Mirror は月4回のプランがない（月6回まで 12,100円）ため、m4 を null にして集計から除く。
 // m4 は月4回プランの月額（冒頭の料金の目安に使う）。
-const CHAIN_CHECKED_AT = "2026年11月21日";
+const CHAIN_CHECKED_AT = "2026年11月26日";
 const ZEN_PRICE = "https://www.zenplace.co.jp/price";
 type Chain = { area: string; name: string; review?: string; access: string; trial: string; monthly: string; m4: number | null; source: string };
 const RINTOSULL_MONTHLY = `${rintosullStoreText(RIN.stores.standard)}。運営管理費 月${fmtYen(RIN.adminFee)}（税込）。${RINTOSULL_JOIN_TEXT}`;

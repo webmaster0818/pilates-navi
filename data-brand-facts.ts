@@ -383,6 +383,23 @@ export const CELESTIA_PRICES = {
 const CEL = CELESTIA_PRICES;
 const RIN = RINTOSULL_PRICES;
 
+/**
+ * ピラティスK 公式料金ページ（https://pilates-k.jp/price）のマンスリープラン（税込）。
+ * 「ご利用のスタジオにより受講料が異なります」と記載があり、金額は全店舗の下限〜上限。2026年10月30日確認。
+ * 2026年11月26日：料金ページで月4（¥11,220〜¥13,420）・月8（¥15,070〜¥16,170）・プレミアム（¥17,820〜¥18,920）・
+ *   施設維持費 ¥825/月・初期費用 ¥13,530（入会金 ¥5,500）・「¥0から体験可能」を再照合し、すべて一致（値の訂正なし）。
+ *   サイト表示のピラティスKの料金確認日はこの checkedAt から出す（BRAND_FACTS["pilates-k"] も参照）。
+ */
+export const PILATES_K_PRICES = {
+  checkedAt: "2026年11月26日",
+  source: "https://pilates-k.jp/price",
+  monthly4: "11,220円〜13,420円",
+  monthly8: "15,070円〜16,170円",
+  /** マンスリープレミアムメンバー（毎日2レッスンまで） */
+  premium: "17,820円〜18,920円",
+  maintenance: "825円",
+};
+
 export type BrandFacts = {
   /** レッスン形態 */
   style: string;
@@ -409,13 +426,13 @@ export type BrandFacts = {
 export const BRAND_FACTS: Record<string, BrandFacts> = {
   "pilates-k": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
-    monthly: "マンスリー4メンバー（月4回）・マンスリー8メンバー（月8回）・マンスリープレミアムメンバー（毎日2レッスンまで）などのマンスリープラン（公式料金ページ・2026年10月30日確認）",
+    monthly: `マンスリー4メンバー（月4回）・マンスリー8メンバー（月8回）・マンスリープレミアムメンバー（毎日2レッスンまで）などのマンスリープラン（公式料金ページ・${PILATES_K_PRICES.checkedAt}確認）`,
     joinFee: "5,500円（初期費用は入会時13,530円）",
     monthlyExtra: "施設維持費 825円／月",
     trial: "0円から体験可能",
     source: "https://pilates-k.jp/price",
-    // 2026-11-13: 公式料金ページでマンスリー4/8/プレミアム（毎日2レッスン）・「¥0から体験可能」を照合（一致）
-    checkedAt: "2026年11月13日",
+    // 2026-11-13: 公式料金ページでマンスリー4/8/プレミアム（毎日2レッスン）・「¥0から体験可能」を照合（一致）。11-26 にも同じ項目を再照合（一致）
+    checkedAt: PILATES_K_PRICES.checkedAt,
     // 公式料金ページ「マンスリー4メンバー ¥11,220〜¥13,420（税込）」2026年10月28日確認・11月2日再確認（同額）
     monthlyShort: "月4回 11,220円〜（税込・店舗により異なる）",
   },
@@ -583,20 +600,6 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
   { slug: "melmake", name: "メルメイク", yen: 33000, plan: "プライベート4", style: "50分のプライベート", kind: "personal",
     checkedAt: "2026年10月26日", source: "https://mermake.co.jp/menu-pilates/" },
 ];
-
-/**
- * ピラティスK 公式料金ページ（https://pilates-k.jp/price）のマンスリープラン（税込）。
- * 「ご利用のスタジオにより受講料が異なります」と記載があり、金額は全店舗の下限〜上限。2026年10月30日確認。
- */
-export const PILATES_K_PRICES = {
-  checkedAt: "2026年10月30日",
-  source: "https://pilates-k.jp/price",
-  monthly4: "11,220円〜13,420円",
-  monthly8: "15,070円〜16,170円",
-  /** マンスリープレミアムメンバー（毎日2レッスンまで） */
-  premium: "17,820円〜18,920円",
-  maintenance: "825円",
-};
 
 /**
  * 体験レッスンの料金（税込・通常料金の最低額）。各公式サイトで 2026年10月30日に確認した値だけを入れる。
