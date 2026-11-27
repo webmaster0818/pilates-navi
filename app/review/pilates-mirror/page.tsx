@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "体験レッスンは無料ですか？",
-    a: "2026年11月20日時点では無料です。公式サイトの料金欄に「体験レッスン お一人様1回限り無料」、各店舗ページに「体験（お一人様１回まで）0円」と記載されています。2026年10月30日の確認時点では1回2,200円(税込)だったため、ご予約の際に公式サイトで最新の料金をご確認ください。",
+    a: "2026年11月27日時点では無料です。公式サイトの料金欄に「体験レッスン お一人様1回限り無料」、各店舗ページに「体験（お一人様１回まで）0円」と記載されています。2026年10月30日の確認時点では1回2,200円(税込)だったため、ご予約の際に公式サイトで最新の料金をご確認ください。",
   },
   {
     q: "男性も通えますか？支払い方法は？",
@@ -74,7 +74,7 @@ export default function PilatesMirrorReview() {
               ピラティスミラーは、<strong>コナミスポーツが運営</strong>するマシンピラティススタジオです。
               スタジオの<strong>天井に鏡</strong>を設置し、自分の動きを確認しながら<strong>1レッスン30分</strong>・<strong>6〜15名の少人数制</strong>で行うのが特徴です。
               料金は<strong>入会金11,000円＋月会費12,100円(月6回まで)</strong>(2026年11月度に11,000円から改定)で、フルに通えば<strong>1回あたり約2,017円</strong>です。
-              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>という条件があります。体験レッスンは<strong>無料(お一人様1回限り・2026年11月20日確認)</strong>です。
+              ただし、<strong>18歳以上の女性限定</strong>・<strong>支払いはクレジットカードのみ</strong>という条件があります。体験レッスンは<strong>無料(お一人様1回限り・2026年11月27日確認)</strong>です。
             </p>
             <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
               <li className="flex items-start gap-2"><span className="text-[#7C3AED] font-bold">◎</span>短時間(30分)で通いたい方／週1〜2回のペースが合う方</li>
@@ -118,7 +118,7 @@ export default function PilatesMirrorReview() {
                 <tr className="border-t border-gray-100 align-top">
                   <td className="px-3 py-2 font-medium">体験レッスン</td>
                   <td className="px-3 py-2 font-bold text-[#7C3AED]">無料</td>
-                  <td className="px-3 py-2">お一人様1回まで(2026年11月20日確認。10月30日時点は1回2,200円)</td>
+                  <td className="px-3 py-2">お一人様1回まで(2026年11月27日確認。10月30日時点は1回2,200円)</td>
                 </tr>
               </tbody>
             </table>

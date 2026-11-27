@@ -86,7 +86,8 @@ export const BDC_TRIAL = {
  * Full (Day) は「平日(月〜金)OPEN〜15時までに開始するグループレッスンを毎日一回受講可能」。
  */
 export const THE_SILK_PRICES = {
-  checkedAt: "2026年11月1日",
+  // 2026-11-27 に公式料金ページで全8金額と施設利用料を再照合（一致）
+  checkedAt: "2026年11月27日",
   source: "https://the-silk.co.jp/price/",
   light3: { a: 13280, b: 12280 },
   standard4: { a: 15280, b: 14370 },
@@ -201,8 +202,9 @@ export const CLUBPILATES_PRICES = {
   /** 体験クラスの時間（分）。公式トップ「30分間の無料体験クラス」（2026年11月24日にも同表記） */
   trialMinutes: 30,
   /** officialTrial を公式トップで確認した日（レビューFAQの表示）と、体験料金一覧（TRIAL_FEES）の確認日 */
-  officialTrialCheckedAt: "2026年10月26日",
-  trialFeesCheckedAt: "2026年10月30日",
+  // 2026-11-27: 公式トップ「30分間の無料体験クラスを開催しております」を再確認（一致）
+  officialTrialCheckedAt: "2026年11月27日",
+  trialFeesCheckedAt: "2026年11月27日",
   /** storeTrial を店舗ページ（西院・烏丸御池）で確認した日（BRAND_FACTS の体験欄の表示） */
   storeTrialCheckedAt: "2026年11月13日",
   /** 当日入会限定キャンペーンの掲載状況（2026年10月31日に公式のスタジオページ88件を確認し、35件に掲載） */
@@ -445,6 +447,8 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     source: "https://the-silk.co.jp/price/",
     // 公式料金ページ「Light 3 月3回 エリアB ¥12,280（税込）」（THE_SILK_PRICES・別途施設利用料700円/月）
     monthlyShort: `月3回 ${fmtYen(THE_SILK_PRICES.light3.b)}〜（税込・エリアにより異なる）`,
+    // 2026-11-27: 公式料金ページで4プラン×エリアA/Bの月会費・施設利用料700円・エリアA利用時550円、料金ページに入会金の記載がないこと、トップの「グループ：¥0体験」を再照合（一致）
+    checkedAt: "2026年11月27日",
   },
   "rintosull": {
     style: "マシンピラティス", format: "グループ", gender: "女性専用",
@@ -455,29 +459,31 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthlyExtra: `運営管理費 ${fmtYen(RIN.adminFee)}／月`,
     trial: `${RINTOSULL_TRIAL_TEXT}（LAVA店舗内のRintosullスタジオはキャンペーン期間により料金が異なる・2026年11月13日確認）`,
     source: "https://rintosull.jp/price/",
-    // 2026-11-13: 公式料金ページで 4・フルタイム 8,800〜10,800円／ライト 10,800〜15,800円／プレミアム 16,800円（税込）を照合（一致）
-    checkedAt: "2026年11月13日",
+    // 2026-11-13: 公式料金ページで 4・フルタイム 8,800〜10,800円／ライト 10,800〜15,800円／プレミアム 16,800円（税込）を照合（一致）。11-27 にも同じ月額と運営管理費680円・入会金5,000円・登録金5,000円・施設使用料2,500円・無料体験会0円を再照合（一致）
+    checkedAt: "2026年11月27日",
   },
   "bdc": {
     style: "マシンピラティス", format: "グループ＋プライベート", gender: "男女可",
-    monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年10月17日確認）",
-    joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年10月17日確認）",
-    monthlyExtra: "施設維持費 770円／月（税込・2026年10月17日確認）",
+    monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年11月27日確認）",
+    joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年11月27日確認）",
+    monthlyExtra: "施設維持費 770円／月（税込・2026年11月27日確認）",
     trial: `グループレッスンの体験料金は公式サイトに記載なし。プライベートレッスンの体験は${BDC_TRIAL.privateMinutes}分 ${BDC_TRIAL.privateFee}（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは${BDC_TRIAL.privateFeeOmiya}）（${BDC_TRIAL.checkedAt}確認）`,
     source: "https://bdcpilates.com/#pilates_plan",
     // 公式料金プラン欄 2026年10月28日確認
     monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
+    // 2026-11-27: 公式トップの料金プラン欄で月額・入会金・事務手数料・施設維持費を再照合（一致）。体験欄は BDC_TRIAL（11/15）のまま
+    checkedAt: `月額 2026年11月27日・体験 ${BDC_TRIAL.checkedAt}`,
   },
   "pilates-mirror": {
     style: "マシンピラティス（天井の鏡・30分レッスン）", format: "グループ＋パーソナル", gender: "女性専用（18歳以上）",
     // 2026-11-12: 公式トップ・店舗ページ（四条烏丸・山科・別府・茅ヶ崎ほか）で「18歳以上の女性が対象」「月会費 12,100円（税込）」「体験レッスン お一人様1回限り無料」を確認
-    monthly: "12,100円（税込・月6回まで、7回目以降は1回1,100円）。2026年11月度に11,000円から改定（公式・2026年11月12日確認）",
+    monthly: "12,100円（税込・月6回まで、7回目以降は1回1,100円）。2026年11月度に11,000円から改定（公式・2026年11月27日確認）",
     joinFee: "11,000円",
     monthlyExtra: "公式に記載なし",
-    trial: "無料（お一人様1回限り。2026年11月20日に公式サイトで確認。10月30日時点は1回2,200円）",
+    trial: "無料（お一人様1回限り。2026年11月27日に公式サイトで確認。10月30日時点は1回2,200円）",
     source: "https://www.konami.com/sportsclub/pilatesmirror/",
-    // 2026-11-13: 公式トップで月会費12,100円・7回目以降1,100円・体験1回限り無料・18歳以上の女性を再確認（一致）
-    checkedAt: "2026年11月13日",
+    // 2026-11-13: 公式トップで月会費12,100円・7回目以降1,100円・体験1回限り無料・18歳以上の女性を再確認（一致）。11-27 にも同じ項目と入会金11,000円を再照合（一致）
+    checkedAt: "2026年11月27日",
   },
   "celestia": {
     style: "マシンピラティス", format: `セミパーソナル（${CELESTIA_INFO.capacity}）`, gender: "男女可",
@@ -602,7 +608,7 @@ export const MONTHLY4_LOWEST: Monthly4[] = [
 ];
 
 /**
- * 体験レッスンの料金（税込・通常料金の最低額）。各公式サイトで 2026年10月30日に確認した値だけを入れる。
+ * 体験レッスンの料金（税込・通常料金の最低額）。各公式サイトで確認した値だけを入れる（2026年10月30日に初回確認、11月27日に再照合）。
  * 公式に金額の記載がないブランドは minYen: null（範囲の計算に使わない）。
  * TOP・/faq/ の「体験料の目安」はここから算出する（直書きしない）。
  */
@@ -623,22 +629,27 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = `2026年10月30日・BREST は11月11日・ピラティスミラーは11月20日・Celestia は11月22日・zen place は${ZP.checkedAt.replace(/^\d+年/, "")}`;
+export const TRIAL_FEES_CHECKED_AT = `2026年11月27日・BREST は11月11日・BDC は11月15日・Celestia は11月22日・zen place は${ZP.checkedAt.replace(/^\d+年/, "")}`;
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
-  { slug: "pilates-k", name: "ピラティスK", minYen: 0, text: "0円から", checkedAt: "2026年10月30日", source: "https://pilates-k.jp/price" },
+  // 2026-11-27: 公式で再照合（一致）。料金ページ「¥ 0 から体験可能」
+  { slug: "pilates-k", name: "ピラティスK", minYen: 0, text: "0円から", checkedAt: "2026年11月27日", source: "https://pilates-k.jp/price" },
   // トップページの予約ボタン画像 alt「グループ：¥0体験」（パーソナル体験の料金は記載なし）
-  { slug: "the-silk", name: "the SILK", minYen: 0, text: "グループレッスン0円", scope: "グループレッスン", checkedAt: "2026年10月30日", source: "https://the-silk.co.jp/" },
+  // 2026-11-27: 公式で再照合（一致）。トップの予約ボタン画像 alt「グループ：¥0体験」
+  { slug: "the-silk", name: "the SILK", minYen: 0, text: "グループレッスン0円", scope: "グループレッスン", checkedAt: "2026年11月27日", source: "https://the-silk.co.jp/" },
   // 料金ページ「無料体験会 0円」（LAVAコラボ店舗は店舗ごとに異なる）
-  { slug: "rintosull", name: "Rintosull", minYen: RIN.trial, text: `${RINTOSULL_TRIAL_LABEL}${fmtYen(RIN.trial)}（LAVAコラボ店舗は店舗ごとに異なる）`, scope: "LAVAコラボ店舗を除く", checkedAt: "2026年10月30日", source: "https://rintosull.jp/price/" },
+  // 2026-11-27: 公式で再照合（一致）。料金ページ「無料体験会 0 円」
+  { slug: "rintosull", name: "Rintosull", minYen: RIN.trial, text: `${RINTOSULL_TRIAL_LABEL}${fmtYen(RIN.trial)}（LAVAコラボ店舗は店舗ごとに異なる）`, scope: "LAVAコラボ店舗を除く", checkedAt: "2026年11月27日", source: "https://rintosull.jp/price/" },
   // トップページ「30分間の無料体験クラスを開催しております」
   { slug: "club-pilates", name: "CLUB PILATES", minYen: 0, text: CP.officialTrial, checkedAt: CP.trialFeesCheckedAt, source: "https://www.clubpilates.co.jp/" },
   // 店舗ページ「無料体験予約はこちら」
-  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年10月30日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
+  // 2026-11-27: 公式で再照合（一致）。川崎店ページ「無料体験予約はこちら」
+  { slug: "urban-classic", name: "URBAN CLASSIC PILATES", minYen: 0, text: "無料体験", checkedAt: "2026年11月27日", source: "https://urbanclassic.jp/pilates-studio/kawasaki/" },
   // 2026-11-12: 公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ「体験（お一人様１回まで）0円」（10/30 時点は 1回 2,200円）
   // 2026-11-20: 週1再確認。公式トップ「体験レッスン お一人様1回限り無料」・青葉台／阿佐ヶ谷の店舗ページ「体験（お１人様１回まで）0 円」（一致。2,200円の記載は店舗ページのコメントアウト内のみ）
-  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月20日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
+  // 2026-11-27: 週1再確認。公式トップ「体験レッスン お一人様1回限り無料」・店舗ページ125件すべて「体験（お１人様１回まで）0 円」（一致。2,200円は店舗ページのコメントアウト内のみ）
+  { slug: "pilates-mirror", name: "ピラティスミラー", minYen: 0, text: "無料（お一人様1回限り）", checkedAt: "2026年11月27日", source: "https://www.konami.com/sportsclub/pilatesmirror/" },
   // 料金ページ「体験料金 マットグループ1回 グレード01 3,300円／グレード02 2,200円、マシングループ1回 5,000円」
   { slug: "zenplace", name: "zen place pilates", minYen: ZP.trial.mat.g2, text: `マットグループ${fmtYen(ZP.trial.mat.g2)}〜${fmtYen(ZP.trial.mat.g1)}・マシングループ${fmtYen(ZP.trial.machine)}`, checkedAt: ZP.checkedAt, source: ZP.source },
   // 料金ページ「体験受付中！30分 3,000円」、体験案内ページ（/lp/trial01/）の画像は「体験無料！」「オープン記念キャンペーン実施中！」（期間の記載なし・2026-11-13確認）
@@ -646,7 +657,8 @@ export const TRIAL_FEES: TrialFee[] = [
   // 店舗ページのキャンペーン画像「体験料 4,800円（税込5,280円）→ 455円（税込500円）」先着20名（2026-11-11 全16店舗ページで確認。10/30 時点は税込980円）
   { slug: "brest", name: "BREST PILATES & BODYMAKE", minYen: 5280, text: "5,280円", campaign: "先着20名のキャンペーン時500円", checkedAt: "2026年11月11日", source: "https://brest-gym.jp/studio/daikanyama/" },
   // 「50分の体験レッスン 5,500円（税込） 当日入会で5,500円→0円」（ホームページ限定）
-  { slug: "melmake", name: "メルメイク", minYen: 5500, text: "50分5,500円", campaign: "当日入会で0円", checkedAt: "2026年10月30日", source: "https://mermake.co.jp/menu-pilates/" },
+  // 2026-11-27: 公式で再照合（一致）。「50分の体験レッスン 5,500 円（税込） 当日入会で5,500円→0円」（ホームページ限定）
+  { slug: "melmake", name: "メルメイク", minYen: 5500, text: "50分5,500円", campaign: "当日入会で0円", checkedAt: "2026年11月27日", source: "https://mermake.co.jp/menu-pilates/" },
   // グループの体験料金：トップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし（2026年10月30日確認）。
   // プライベート体験：/private_lessons「プライベート体験レッスン(60分)：10,000円(税込 11,000円)」、
   //   恵比寿・二子玉川「プライベートレッスンは10,000円 (税込11,000円)で体験いただけます」、大宮「9,000円 (税込9,900円)」。
