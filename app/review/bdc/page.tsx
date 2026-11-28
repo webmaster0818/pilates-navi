@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import BrandAreaLinks from "@/components/BrandAreaLinks";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { BDC_TRIAL as BT, BRAND_FACTS } from "@/data-brand-facts";
+import { BDC_TRIAL as BT, BDC_TRIAL_CAMPAIGN as BCP, BRAND_FACTS, isCampaignActive } from "@/data-brand-facts";
+
+const SHOW_BCP = isCampaignActive(BCP);
 
 export const metadata: Metadata = {
   title: "BDC PILATESの口コミ・料金・体験レッスン｜評判と銀座などの店舗情報【2026年】",
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "BDC PILATESの料金プランは？", a: "公式サイトの料金表（2026年11月15日確認）では、グループレッスンの月4回プランが月額16,280円（税込）です。月6回23,100円・月8回29,260円、プライベートレッスンの月1回11,000円・月2回20,900円（いずれも税込）もあります。料金・キャンペーンは変更されることがあるため、申し込み前に公式サイトでご確認ください。" },
   { q: "BDC PILATESの口コミ・評判は良い？", a: "「少人数制で指導が丁寧」「プロダンサー考案メソッドで体幹・姿勢に効く」といった声が見られる一方、「料金がやや高め」「店舗が東京中心で通いにくい」という指摘もあります。評価は受講者の目的や通うエリアによって異なります。" },
-  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。公式サイトでは、プライベートレッスンの体験は${BT.privateMinutes}分 ${BT.privateFee}と記載されています（大宮スタジオのページは${BT.privateFeeOmiya}）。グループレッスンは1回${BT.groupMinutes}分で、体験料金は公式サイトに記載されていません（${BT.checkedAt}確認）。料金はスタジオにより異なる場合があるため、予約時に公式サイトでご確認ください。` },
+  { q: "体験レッスンはありますか？料金は？", a: `はい、入会前に体験レッスンを受けられます。公式サイトでは、プライベートレッスンの体験は${BT.privateMinutes}分 ${BT.privateFee}と記載されています（大宮スタジオのページは${BT.privateFeeOmiya}）。グループレッスンの体験は1回${BT.groupMinutes}分で、通常の体験料は${BT.groupFee}です（${BT.checkedAt}確認）。${SHOW_BCP ? `なお、${BCP.conditionText}は、キャンペーン価格の${BCP.fee}で体験できます。` : ""}料金はスタジオにより異なる場合があるため、予約時に公式サイトでご確認ください。` },
   { q: "予約方法は？", a: "公式サイトから希望のスタジオ・日時を選んで申し込むのが基本です。空き状況や予約システムはスタジオにより異なる場合があるため、公式サイトでご確認ください。" },
   { q: "キャンセルはできますか？", a: "予約のキャンセル可否・期限・ペナルティの有無はプランやスタジオの規約によります。トラブルを避けるため、入会・予約前に公式サイトの利用規約をご確認ください。" },
   { q: "ダンス経験がなくても大丈夫ですか？", a: "はい、ダンス経験は不要です。プロダンサーが考案したメソッドですが、ピラティスとして運動経験を問わず参加できます。" },
@@ -52,7 +54,7 @@ const prices = [
   { plan: "追加レッスン（グループ）", price: "1回 4,070円（税込）", note: "所属店舗以外で受講する場合も追加レッスン料が必要です。" },
   { plan: "プライベートレッスン", price: "月1回 11,000円／月2回 20,900円（税込）", note: "マンツーマン指導です。追加レッスンは1回11,000円（税込）です。" },
   { plan: "プライベート体験レッスン", price: `${BT.privateMinutes}分 ${BT.privateFee}`, note: `公式「プライベートレッスン」ページの記載です。大宮スタジオのページは${BT.privateFeeOmiya}です（${BT.checkedAt}確認）。` },
-  { plan: "グループ体験レッスン", price: "公式サイトに記載なし", note: `グループレッスンは1回${BT.groupMinutes}分です。体験料金は予約時にご確認ください（${BT.checkedAt}確認）。` },
+  { plan: "グループ体験レッスン", price: `${BT.groupMinutes}分 通常${BT.groupFee}`, note: `公式トップ・各スタジオページのキャンペーン案内に記載された通常料金です（${BT.checkedAt}確認）。${SHOW_BCP ? `${BCP.conditionText}は、キャンペーン価格の${BCP.fee}です。` : ""}` },
 ];
 
 const stores = [
@@ -172,7 +174,7 @@ export default function BdcPilatesReview() {
           </div>
           <p className="mt-4 text-xs text-gray-500 leading-relaxed">
             ※料金プランの出典：<a href="https://bdcpilates.com/#pilates_plan" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">BDC PILATES 公式サイト「料金プラン」</a>（スタジオ別のタブ・2026年11月15日確認）。<br />
-            ※体験レッスンの出典：<a href={BT.privateSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">BDC PILATES 公式サイト「プライベートレッスン」</a>・<a href={BT.omiyaSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">大宮スタジオ</a>・<a href={BT.groupSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">グループレッスン</a>（{BT.checkedAt}確認）。<br />
+            ※体験レッスンの出典：<a href={BT.privateSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">BDC PILATES 公式サイト「プライベートレッスン」</a>・<a href={BT.omiyaSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">大宮スタジオ</a>・<a href={BT.groupSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">グループレッスン</a>・<a href={BT.groupFeeSource} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-700">公式トップ（グループ体験の料金）</a>（{BT.checkedAt}確認）。<br />
             ※「要確認」の項目は、公式サイトで価格が明示されていないか、変動が大きいため記載を控えています。推測による記載は行っていません。料金比較は<a href="/price-comparison/" className="text-violet-600 underline">ピラティス料金比較</a>もあわせてご覧ください。
           </p>
         </div>
@@ -292,7 +294,7 @@ export default function BdcPilatesReview() {
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <h3 className="text-sm font-bold text-gray-800 mb-2">予約・体験レッスン前の確認事項</h3>
             <ul className="space-y-1.5 text-xs text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金・キャンペーンの有無と適用条件（2026年11月15日時点の公式トップページ・各スタジオページでは、グループコースの体験申込みで適用される人数限定（各スタジオ20名）のキャンペーンが11月30日まで案内されています。内容は公式サイトでご確認ください）</li>
+              <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>体験レッスンの料金・キャンペーンの有無と適用条件（{SHOW_BCP ? `${BCP.checkedAt}時点の公式トップページ・各スタジオページでは、グループコースの体験申込みで適用される人数限定（各スタジオ20名）のキャンペーンが11月30日まで案内されており、体験料は通常${BT.groupFee}のところ${BCP.fee}です。` : ""}内容は公式サイトでご確認ください）</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>持ち物・ウェア／靴下のレンタルや購入の要否</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>予約のキャンセル可否・期限・ペナルティの有無</li>
               <li className="flex items-start gap-2"><span className="text-[#7C3AED]">・</span>希望店舗・希望時間帯の空き状況</li>

@@ -66,10 +66,17 @@ export const CELESTIA_INFO = {
  *   恵比寿・二子玉川のスタジオページも同額、大宮のスタジオページは「9,000円 (税込9,900円)」。
  *   銀座・銀座並木・池袋・吉祥寺・表参道のスタジオページには記載なし。
  * - グループ：/group_lessons「レッスンは55分間です」、FAQ「体験レッスン当日…レッスン時間は55分です」。
- *   体験料金はトップ・FAQ・初めての方へ・グループレッスン・全8スタジオのページに記載なし。
+ *   体験料金：2026年11月28日、公式トップと全8スタジオのページのキャンペーン画像の alt に
+ *   「体験レッスン料 通常3,700円（税込4,070円）が今だけ1,000円（税込1,100円）」と記載されていることを確認
+ *   （11/15 時点は「記載なし」としていたが、alt 内の通常料金を見落としていた）。テキスト本文・FAQ・グループレッスンのページには記載なし。
+ * - 2026-11-28: プライベート（/private_lessons・恵比寿・大宮）の金額も再照合（一致）。
  */
 export const BDC_TRIAL = {
-  checkedAt: "2026年11月15日",
+  checkedAt: "2026年11月28日",
+  /** グループ体験の通常料金（公式トップ・各スタジオページのキャンペーン画像 alt の「通常」の額） */
+  groupFee: "3,700円（税込4,070円）",
+  groupFeeYen: 4070,
+  groupFeeSource: "https://bdcpilates.com/",
   privateMinutes: 60,
   privateFee: "10,000円（税込11,000円）",
   privateFeeOmiya: "9,000円（税込9,900円）",
@@ -77,6 +84,21 @@ export const BDC_TRIAL = {
   omiyaSource: "https://bdcpilates.com/omiya",
   groupMinutes: 55,
   groupSource: "https://bdcpilates.com/group_lessons",
+};
+
+/**
+ * BDC PILATES のスペシャルキャンペーン（公式トップ・全8スタジオのページ・2026年11月28日確認）。
+ * 「11/30（月）まで 体験申込みで適用 グループコース」「限定20名」（スタジオ別）。
+ * 体験レッスン料 通常3,700円（税込4,070円）→ 1,000円（税込1,100円）。体験当日の入会で体験料をキャッシュバック（0円）・入会金0円などの特典あり。
+ * endsAt を過ぎると isCampaignActive() が false になり、キャンペーンの記載が消える（判定はビルド時）。
+ */
+export const BDC_TRIAL_CAMPAIGN = {
+  checkedAt: "2026年11月28日",
+  source: "https://bdcpilates.com/",
+  fee: "1,000円（税込1,100円）",
+  /** 一覧・本文に添える条件（括弧の入れ子を避けるため「・」で区切る） */
+  conditionText: "2026年11月30日までの体験申込み・グループコース・各スタジオ限定20名",
+  endsAt: "2026-11-30T23:59:59+09:00",
 };
 
 /**
@@ -467,11 +489,12 @@ export const BRAND_FACTS: Record<string, BrandFacts> = {
     monthly: "グループ 月4回16,280円／月6回23,100円／月8回29,260円、プライベート 月1回11,000円／月2回20,900円（税込・全店共通。一部店舗は月3回12,375円もあり・2026年11月27日確認）",
     joinFee: "入会金11,000円・事務手数料2,200円（税込・2026年11月27日確認）",
     monthlyExtra: "施設維持費 770円／月（税込・2026年11月27日確認）",
-    trial: `グループレッスンの体験料金は公式サイトに記載なし。プライベートレッスンの体験は${BDC_TRIAL.privateMinutes}分 ${BDC_TRIAL.privateFee}（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは${BDC_TRIAL.privateFeeOmiya}）（${BDC_TRIAL.checkedAt}確認）`,
+    trial: `グループレッスンの体験は${BDC_TRIAL.groupMinutes}分 通常${BDC_TRIAL.groupFee}（公式トップ・各スタジオページの記載）。${isCampaignActive(BDC_TRIAL_CAMPAIGN) ? `キャンペーン期間中は${BDC_TRIAL_CAMPAIGN.fee}（${BDC_TRIAL_CAMPAIGN.conditionText}）。` : ""}プライベートレッスンの体験は${BDC_TRIAL.privateMinutes}分 ${BDC_TRIAL.privateFee}（公式「プライベートレッスン」ページ・恵比寿・二子玉川スタジオのページの記載。大宮スタジオのページは${BDC_TRIAL.privateFeeOmiya}）（${BDC_TRIAL.checkedAt}確認）`,
     source: "https://bdcpilates.com/#pilates_plan",
     // 公式料金プラン欄 2026年10月28日確認
     monthlyShort: "グループ月4回 16,280円・プライベート月1回 11,000円（税込）",
-    // 2026-11-27: 公式トップの料金プラン欄で月額・入会金・事務手数料・施設維持費を再照合（一致）。体験欄は BDC_TRIAL（11/15）のまま
+    // 2026-11-27: 公式トップの料金プラン欄で月額・入会金・事務手数料・施設維持費を再照合（一致）。
+    // 2026-11-28: 体験欄を訂正（グループ体験の通常料金 3,700円（税込4,070円）が公式トップ・各スタジオページのキャンペーン画像 alt に記載）
     checkedAt: `月額 2026年11月27日・体験 ${BDC_TRIAL.checkedAt}`,
   },
   "pilates-mirror": {
@@ -629,7 +652,7 @@ export type TrialFee = {
   source: string;
 };
 
-export const TRIAL_FEES_CHECKED_AT = `2026年11月27日・BREST は11月11日・BDC は11月15日・Celestia は11月22日・zen place は${ZP.checkedAt.replace(/^\d+年/, "")}`;
+export const TRIAL_FEES_CHECKED_AT = `2026年11月27日・BREST は11月11日・BDC は11月28日・Celestia は11月22日・zen place は${ZP.checkedAt.replace(/^\d+年/, "")}`;
 
 export const TRIAL_FEES: TrialFee[] = [
   // 料金ページ「¥0 から体験可能」
@@ -664,7 +687,9 @@ export const TRIAL_FEES: TrialFee[] = [
   //   恵比寿・二子玉川「プライベートレッスンは10,000円 (税込11,000円)で体験いただけます」、大宮「9,000円 (税込9,900円)」。
   //   銀座・銀座並木・池袋・吉祥寺・表参道のページには記載なし。
   // 他ブランドの minYen は「そのブランドで最も安い体験」の額のため、グループの額が不明な BDC のプライベート体験は混ぜずに別記する。
-  { slug: "bdc", name: "BDC PILATES", minYen: null, text: "グループレッスンの体験料金が公式サイトに記載されていないため、集計から除いています", separateNote: "プライベートレッスンの体験は60分 10,000円（税込11,000円）と記載されています（大宮スタジオのページは税込9,900円）", checkedAt: "2026年11月15日", source: "https://bdcpilates.com/private_lessons" },
+  // 2026-11-28 訂正：公式トップ・全8スタジオページのキャンペーン画像 alt「体験レッスン料 通常3,700円（税込4,070円）が今だけ1,000円（税込1,100円）」
+  //   （11/30まで・グループコース・各スタジオ限定20名）。通常料金の税込4,070円を minYen に入れ、キャンペーン価格は campaign に分けて書く。
+  { slug: "bdc", name: "BDC PILATES", minYen: BDC_TRIAL.groupFeeYen, text: `グループ${BDC_TRIAL.groupMinutes}分${fmtYen(BDC_TRIAL.groupFeeYen)}`, campaign: isCampaignActive(BDC_TRIAL_CAMPAIGN) ? `キャンペーン時1,100円・${BDC_TRIAL_CAMPAIGN.conditionText}` : undefined, checkedAt: "2026年11月28日", source: BDC_TRIAL.groupFeeSource },
 ];
 
 /** 体験料の範囲（目安）と母数。金額を確認できたブランドだけで計算する。 */
